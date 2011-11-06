@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[fs.write(${1:file_handler}, ${2:buffer},
+    ${3:offset}, ${4:len}, ${5:pos}, function(${6:err}, ${7:written}, {$8:buffer}) {
+      if (${6:err}) throw ${6:err};
+});]]></content>
+  <tabTrigger>no.fs.write</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.write</description>
+</snippet>

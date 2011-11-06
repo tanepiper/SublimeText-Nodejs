@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[fs.unwatchFile(${1:filename});]]></content>
+  <tabTrigger>no.fs.unwatchFile</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.unwatchFile</description>
+</snippet>

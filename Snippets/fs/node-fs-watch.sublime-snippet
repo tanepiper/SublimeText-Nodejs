@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.watch(${1:path}, ${2:options}, function(${3:event}, ${4:filename}) {
+
+});]]></content>
+  <tabTrigger>no.fs.watch</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.watch</description>
+</snippet>

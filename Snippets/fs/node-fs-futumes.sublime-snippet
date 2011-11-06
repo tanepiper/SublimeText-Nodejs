@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.futimes(${1:file_handler}, ${2:atime}, ${3:mtime}, function(${4:err}, ${5:fd}) {
+  if (${4:err}) throw ${4:err};
+});]]></content>
+  <tabTrigger>no.fs.futimes</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.futimes</description>
+</snippet>

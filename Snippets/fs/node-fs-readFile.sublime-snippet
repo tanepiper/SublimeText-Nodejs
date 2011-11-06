@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.readFile(${1:filename}, ${2:encoding}, function(${3:err}, ${4:data}) {
+  if (${3:err}) throw ${3:err};
+});]]></content>
+  <tabTrigger>no.fs.readFile</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.readFile</description>
+</snippet>

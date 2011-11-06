@@ -1,0 +1,6 @@
+<snippet>
+  <content><![CDATA[var ${1:read_stream} = fs.createReadStream(${2:path}, ${3:options});]]></content>
+  <tabTrigger>no.fs.createReadStream</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.createReadStream</description>
+</snippet>
