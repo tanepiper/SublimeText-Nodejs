@@ -2,7 +2,7 @@
   <content><![CDATA[process.on('exit', function () {
   console.log('About to exit.');
 });]]></content>
-  <tabTrigger>no.pr.exit</tabTrigger>
+  <tabTrigger>no.process.exit</tabTrigger>
   <scope>source.js</scope>
-  <description>Event: exit</description>
+  <description>process.exit</description>
 </snippet>

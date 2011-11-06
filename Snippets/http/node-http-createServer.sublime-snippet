@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[var ${1:server} = http.createServer(function (${2:req}, ${3:res}) {
+  ${3:res}.writeHead(${4:code}, {'Content-Type': ${5:content_type}});
+  ${3:res}.end('Hello World\n');
+}).listen(${6:port}, ${7:host});
+console.log('Server running at http://${7:host}:${6:port}/');]]></content>
+  <tabTrigger>no.http.createServer</tabTrigger>
+  <scope>source.js</scope>
+  <description>http.createServer</description>
+</snippet>

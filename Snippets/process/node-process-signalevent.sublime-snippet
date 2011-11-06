@@ -5,7 +5,7 @@ process.stdin.resume();
 process.on('SIGINT', function () {
   console.log('Got SIGINT.  Press Control-D to exit.');
 });]]></content>
-  <tabTrigger>no.pr.signalevent</tabTrigger>
+  <tabTrigger>no.process.signalevent</tabTrigger>
   <scope>source.js</scope>
-  <description>Util: Signal Events</description>
+  <description>process.signalevent</description>
 </snippet>
