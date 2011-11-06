@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.fchown(${1:file_handler}, ${2:uid}, ${3:gid}, function(err) {
+  if (err) throw err;
+});]]></content>
+  <tabTrigger>no.fs.fchown</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.fchown</description>
+</snippet>

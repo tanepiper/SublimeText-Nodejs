@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[// Ensure you have var fs = require('fs') in your header
+fs.readdir(${1:dirname}, function(${2:data}) {
+  data.forEach(function(dir) {
+    console.log(dir);
+  });
+});]]></content>
+  <tabTrigger>no.fs.readdir</tabTrigger>
+  <scope>source.js</scope>
+  <description>Function to read the contents of a directory</description>
+</snippet>

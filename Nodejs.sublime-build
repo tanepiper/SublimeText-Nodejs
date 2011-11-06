@@ -1,0 +1,10 @@
+{
+  "selector": "source.js",
+  "cmd": ["node", "$file",
+    "browser: true",
+    "es5: true",
+    "v8: true",
+    "trailing: true",
+    "onevar: true",
+    "sub: true"]
+}

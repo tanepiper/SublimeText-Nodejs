@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[process.on('uncaughtException', function (err) {
+  console.log('Caught exception: ' + err);
+});]]></content>
+  <tabTrigger>no.pr.uncaughtException</tabTrigger>
+  <scope>source.js</scope>
+  <description>Event: uncaughtException</description>
+</snippet>
