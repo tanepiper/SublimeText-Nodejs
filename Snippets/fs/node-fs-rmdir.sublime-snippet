@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[fs.rmdir(${1:path}, function(${2:err}) {
+  if (${2:err}) throw ${2:err};
+  // Do something with stats object
+});]]></content>
+  <tabTrigger>no.fs.rmdir</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.rmdir</description>
+</snippet>

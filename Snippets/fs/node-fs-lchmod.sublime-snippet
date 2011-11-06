@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.lchmod(${1:path1}, ${2:mode}, function(${3:err}) {
+  if (${3:err}) throw ${3:err};
+});]]></content>
+  <tabTrigger>no.fs.lchmod</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.lchmod</description>
+</snippet>

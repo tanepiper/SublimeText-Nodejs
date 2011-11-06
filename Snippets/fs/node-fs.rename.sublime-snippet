@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.rename(${1:path1}, ${2:path2}, function(${3:err}) {
+  if (${3:err}) throw ${3:err};
+});]]></content>
+  <tabTrigger>no.fs.rename</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.rename</description>
+</snippet>

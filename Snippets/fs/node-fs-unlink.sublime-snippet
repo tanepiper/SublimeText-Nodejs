@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[fs.unlink(${1:path}, function(${2:err}) {
+  if (${2:err}) throw ${2:err};
+  // Do something with stats object
+});]]></content>
+  <tabTrigger>no.fs.unlink</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.unlink</description>
+</snippet>

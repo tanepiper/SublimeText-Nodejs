@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[fs.readdir(${1:dirname}, function(${2:data}) {
+  ${2:data}.forEach(function(dir) {
+    console.log(dir);
+  });
+});]]></content>
+  <tabTrigger>no.fs.readdir</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.readdir</description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[fs.stat(${1:path1}, function(${2:err}, ${3:stats}) {
+  if (${2:err}) throw ${2:err};
+  // Do something with stats object
+});]]></content>
+  <tabTrigger>no.fs.stat</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.stat</description>
+</snippet>

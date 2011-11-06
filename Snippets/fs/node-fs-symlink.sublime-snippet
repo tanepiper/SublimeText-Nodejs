@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[fs.symlink(${1:src_path}, ${2:dest_path}, function(${3:err}) {
+  if (${3:err}) throw ${3:err};
+  // Do something with stats object
+});]]></content>
+  <tabTrigger>no.fs.symlink</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.symlink</description>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+  <content><![CDATA[fs.chown(${1:path}, ${2:uid}, ${3:gid}, function(${4:err}) {
+  if (${4:err}) throw ${4:err};
+});]]></content>
+  <tabTrigger>no.fs.chown</tabTrigger>
+  <scope>source.js</scope>
+  <description>fs.chown</description>
+</snippet>
