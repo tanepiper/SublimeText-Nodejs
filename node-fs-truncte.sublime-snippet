@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.truncate(${1:file_handler}, ${2:length}, function(err) {
-  if (err) throw err;
-});]]></content>
-  <tabTrigger>no.fs.trucate</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.trucate</description>
-</snippet>

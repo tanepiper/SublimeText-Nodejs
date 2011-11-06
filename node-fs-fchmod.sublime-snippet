@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.fchmod(${1:file_handler}, ${2:mode}, function(err) {
-  if (err) throw err;
-});]]></content>
-  <tabTrigger>no.fs.fchmod</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.fchmod</description>
-</snippet>
