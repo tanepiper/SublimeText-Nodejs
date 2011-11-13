@@ -8,14 +8,7 @@ class Nodejs(sublime_plugin.TextCommand):
     currLineRegion = v.line(currPos)
 
     regx = re.compile(" ")
-    output = commands.getoutput("node " +
-      regx.sub("\ ", self.view.file_name()) +
-        " browser:\ true" +
-        " es5:\ true" +
-        " v8:\ true" +
-        " trailing:\ true" +
-        " onevar:\ true" +
-        " sub:\ true")
+    output = commands.getoutput("node " + regx.sub("\ ", self.view.file_name()))
 
     if len(lint) > 0:
       v.insert(edit, 0, output)

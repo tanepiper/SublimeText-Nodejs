@@ -1,10 +1,7 @@
 {
-  rulers: [80, 120],
-  tabSize: 2,
-  translateTabsToSpaces: true,
-  useTabStops: true,
-  autoIndent: true,
-  wordWrap: false,
-  detectIndentation: true,
-  trimTrailingWhiteSpaceOnSave: true
+  // save before running commands
+  "save_first": true,
+  // if present, use this command instead of plain "node"
+  // e.g. "/usr/bin/node" or "C:\bin\node.exe"
+  "node_command": false
 }
