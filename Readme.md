@@ -12,6 +12,15 @@ For example, type `fs` then Ctrl + Space, you get this:
 
 ![A picture of the file system context menu](http://i.imgur.com/QLVPt.jpg)
 
+Install
+-------
+
+MacOSX
+`git clone git://github.com/tanepiper/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Nodejs`
+
+Windows
+`git clone git://github.com/tanepiper/SublimeText-Nodejs.git %APPDATA%\Sublime Text 2\Packages\Nodejs`
+
 Build Systems
 -------------
 
