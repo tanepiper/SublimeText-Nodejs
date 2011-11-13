@@ -40,5 +40,6 @@ Possible Improvements
 
 Author & Contributors
 ----------------------
-[Tane Piper](http://twitter.com/tanepiper)
+[Tane Piper](http://twitter.com/tanepiper) - if you find this plugin useful then please ping me if you would like to
+donate to my Sublime Text 2 licence fund
 
