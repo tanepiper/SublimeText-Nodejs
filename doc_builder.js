@@ -10,10 +10,7 @@ var exec = require('child_process').exec;
 var path = require('path');
 
 var nodelib = path.resolve('C:\\Users\\tanepiper\\Desktop\\nodelib');
-console.log('Node Lib ' + nodelib);
 var autodoc = path.resolve('C:\\Users\\tanepiper\\source\\node-autodoc\\autodoc.co');
-console.log('Autodoc Path ' + autodoc);
-
 var snippet_path = path.resolve('C:\\Users\\tanepiper\\AppData\\Roaming\\Sublime Text 2\\Packages\\Nodejs\\Snippets');
 
 
@@ -69,7 +66,6 @@ var createSnippet = function(file, key, args) {
     output.push('   <scope>source.js</scope>');
     output.push('   <description>' + file + '.' + key + '</description>');
   output.push('</snippet>');
-  //console.log(output.join("\n"));
   saveFile(file, key, output.join("\n"));
 }
 
@@ -90,8 +86,6 @@ var readFile = function(filename) {
     } catch(exp) {
       //console.log(fileobj.basename, exp);
     }
-    console.log(fileobj.basename, obj);
-
     var key;
     if (obj && obj.properties) {
       for(key in obj.properties) {
