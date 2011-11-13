@@ -1,0 +1,6 @@
+<snippet>
+   <content>querystring.escape(str);</content>
+   <tabTrigger>querystring.escape</tabTrigger>
+   <scope>source.js</scope>
+   <description>querystring.escape</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.sendfileSync(outFd, inFd, inOffset, length);</content>
+   <tabTrigger>fs.sendfileSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.sendfileSync</description>
+</snippet>

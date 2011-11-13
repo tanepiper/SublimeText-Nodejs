@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.utimes(path, atime, mtime, callback);</content>
+   <tabTrigger>fs.utimes</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.utimes</description>
+</snippet>

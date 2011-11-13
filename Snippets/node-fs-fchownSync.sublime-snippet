@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.fchownSync(fd, uid, gid);</content>
+   <tabTrigger>fs.fchownSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.fchownSync</description>
+</snippet>

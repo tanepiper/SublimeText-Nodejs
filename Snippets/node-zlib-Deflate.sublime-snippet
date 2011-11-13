@@ -1,0 +1,6 @@
+<snippet>
+   <content>zlib.deflate(buffer, callback);</content>
+   <tabTrigger>zlib.deflate</tabTrigger>
+   <scope>source.js</scope>
+   <description>zlib.deflate</description>
+</snippet>

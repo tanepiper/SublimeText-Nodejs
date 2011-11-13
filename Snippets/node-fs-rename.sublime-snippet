@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.rename(oldPath, newPath, callback);</content>
+   <tabTrigger>fs.rename</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.rename</description>
+</snippet>

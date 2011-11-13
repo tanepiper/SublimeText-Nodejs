@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.fstat(${1:file_handler}, function(${2:err}, ${3:stats}) {
-  if (${2:err}) throw ${2:err};
-  // Do something with stats object
-});]]></content>
-  <tabTrigger>no.fs.fstat</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.fstat</description>
-</snippet>

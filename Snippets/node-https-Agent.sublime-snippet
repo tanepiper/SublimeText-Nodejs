@@ -1,0 +1,6 @@
+<snippet>
+   <content>https.Agent(options);</content>
+   <tabTrigger>https.Agent</tabTrigger>
+   <scope>source.js</scope>
+   <description>https.Agent</description>
+</snippet>

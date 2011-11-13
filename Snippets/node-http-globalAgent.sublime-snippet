@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.globalAgent();</content>
+   <tabTrigger>http.globalAgent</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.globalAgent</description>
+</snippet>

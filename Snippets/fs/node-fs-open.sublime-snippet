@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.open(${1:path}, ${2:flags}, ${3:mode}, function(${4:err}, ${5:fd}) {
-  if (${4:err}) throw ${4:err};
-});]]></content>
-  <tabTrigger>no.fs.open</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.open</description>
-</snippet>

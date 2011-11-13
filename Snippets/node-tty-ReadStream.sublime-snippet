@@ -1,0 +1,6 @@
+<snippet>
+   <content>tty.ReadStream(fd);</content>
+   <tabTrigger>tty.ReadStream</tabTrigger>
+   <scope>source.js</scope>
+   <description>tty.ReadStream</description>
+</snippet>

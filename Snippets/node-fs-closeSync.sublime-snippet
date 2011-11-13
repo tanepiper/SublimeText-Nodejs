@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.closeSync(fd);</content>
+   <tabTrigger>fs.closeSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.closeSync</description>
+</snippet>

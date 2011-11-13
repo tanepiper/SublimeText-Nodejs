@@ -1,9 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.link(${1:src_path}, ${2:dest_path}, function(${3:err}) {
-  if (${3:err}) throw ${3:err};
-  // Do something with stats object
-});]]></content>
-  <tabTrigger>no.fs.link</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.link</description>
-</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>_linklist.isEmpty(list);</content>
+   <tabTrigger>_linklist.isEmpty</tabTrigger>
+   <scope>source.js</scope>
+   <description>_linklist.isEmpty</description>
+</snippet>

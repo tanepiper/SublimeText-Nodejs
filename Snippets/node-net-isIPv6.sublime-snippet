@@ -1,0 +1,6 @@
+<snippet>
+   <content>net.isIPv6(input);</content>
+   <tabTrigger>net.isIPv6</tabTrigger>
+   <scope>source.js</scope>
+   <description>net.isIPv6</description>
+</snippet>

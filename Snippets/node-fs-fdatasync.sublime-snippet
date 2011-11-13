@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.fdatasync(fd, callback);</content>
+   <tabTrigger>fs.fdatasync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.fdatasync</description>
+</snippet>

@@ -1,0 +1,10 @@
+{
+  rulers: [80, 120],
+  tabSize: 2,
+  translateTabsToSpaces: true,
+  useTabStops: true,
+  autoIndent: true,
+  wordWrap: false,
+  detectIndentation: true,
+  trimTrailingWhiteSpaceOnSave: true
+}

@@ -1,0 +1,6 @@
+<snippet>
+   <content>tls.Server();</content>
+   <tabTrigger>tls.Server</tabTrigger>
+   <scope>source.js</scope>
+   <description>tls.Server</description>
+</snippet>

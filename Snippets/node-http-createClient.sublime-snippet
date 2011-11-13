@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.createClient(port, host);</content>
+   <tabTrigger>http.createClient</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.createClient</description>
+</snippet>

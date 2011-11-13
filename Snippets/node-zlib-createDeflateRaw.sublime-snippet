@@ -1,0 +1,6 @@
+<snippet>
+   <content>zlib.createDeflateRaw(o);</content>
+   <tabTrigger>zlib.createDeflateRaw</tabTrigger>
+   <scope>source.js</scope>
+   <description>zlib.createDeflateRaw</description>
+</snippet>

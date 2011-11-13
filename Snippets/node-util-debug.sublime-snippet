@@ -1,0 +1,6 @@
+<snippet>
+   <content>util.debug(x);</content>
+   <tabTrigger>util.debug</tabTrigger>
+   <scope>source.js</scope>
+   <description>util.debug</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>tty.isatty(fd);</content>
+   <tabTrigger>tty.isatty</tabTrigger>
+   <scope>source.js</scope>
+   <description>tty.isatty</description>
+</snippet>

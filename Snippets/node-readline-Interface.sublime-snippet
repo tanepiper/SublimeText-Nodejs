@@ -1,0 +1,6 @@
+<snippet>
+   <content>readline.Interface(input, output, completer);</content>
+   <tabTrigger>readline.Interface</tabTrigger>
+   <scope>source.js</scope>
+   <description>readline.Interface</description>
+</snippet>

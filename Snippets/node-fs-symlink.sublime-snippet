@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.symlink(destination, path, mode_, callback);</content>
+   <tabTrigger>fs.symlink</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.symlink</description>
+</snippet>

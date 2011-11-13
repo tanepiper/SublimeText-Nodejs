@@ -1,0 +1,6 @@
+<snippet>
+   <content>buffer.Buffer(subject, encoding, offset);</content>
+   <tabTrigger>buffer.Buffer</tabTrigger>
+   <scope>source.js</scope>
+   <description>buffer.Buffer</description>
+</snippet>

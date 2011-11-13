@@ -1,0 +1,6 @@
+<snippet>
+   <content>util.isRegExp(re);</content>
+   <tabTrigger>util.isRegExp</tabTrigger>
+   <scope>source.js</scope>
+   <description>util.isRegExp</description>
+</snippet>

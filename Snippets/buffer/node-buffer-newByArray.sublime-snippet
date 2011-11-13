@@ -1,6 +1,0 @@
-<snippet>
-  <content><![CDATA[var ${1:buf} = new Buffer(${2:array});]]></content>
-  <tabTrigger>no.buffer.newByArray</tabTrigger>
-  <scope>source.js</scope>
-  <description>new Buffer(array)</description>
-</snippet>

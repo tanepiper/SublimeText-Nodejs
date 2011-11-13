@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[process.on('exit', function () {
-  console.log('About to exit.');
-});]]></content>
-  <tabTrigger>no.process.exit</tabTrigger>
-  <scope>source.js</scope>
-  <description>process.exit</description>
-</snippet>

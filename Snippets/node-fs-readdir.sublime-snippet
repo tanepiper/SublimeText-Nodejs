@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.readdir(path, callback);</content>
+   <tabTrigger>fs.readdir</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.readdir</description>
+</snippet>

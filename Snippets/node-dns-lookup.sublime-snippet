@@ -1,0 +1,6 @@
+<snippet>
+   <content>dns.lookup(domain, family, callback);</content>
+   <tabTrigger>dns.lookup</tabTrigger>
+   <scope>source.js</scope>
+   <description>dns.lookup</description>
+</snippet>

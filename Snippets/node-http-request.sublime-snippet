@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.request(options, cb);</content>
+   <tabTrigger>http.request</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.request</description>
+</snippet>

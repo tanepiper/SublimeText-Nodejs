@@ -1,0 +1,6 @@
+<snippet>
+   <content>net.Server();</content>
+   <tabTrigger>net.Server</tabTrigger>
+   <scope>source.js</scope>
+   <description>net.Server</description>
+</snippet>

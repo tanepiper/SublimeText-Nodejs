@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.utimes(${1:path}, ${2:atime}, ${3:mtime}, function(${4:err}, ${5:fd}) {
-  if (${4:err}) throw ${4:err};
-});]]></content>
-  <tabTrigger>no.fs.utimes</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.utimes</description>
-</snippet>

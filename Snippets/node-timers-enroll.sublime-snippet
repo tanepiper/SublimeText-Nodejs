@@ -1,0 +1,6 @@
+<snippet>
+   <content>timers.enroll(item, msecs);</content>
+   <tabTrigger>timers.enroll</tabTrigger>
+   <scope>source.js</scope>
+   <description>timers.enroll</description>
+</snippet>

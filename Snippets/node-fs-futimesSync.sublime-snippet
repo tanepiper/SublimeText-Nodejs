@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.futimesSync(fd, atime, mtime);</content>
+   <tabTrigger>fs.futimesSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.futimesSync</description>
+</snippet>

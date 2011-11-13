@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.Server(requestListener);</content>
+   <tabTrigger>http.Server</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.Server</description>
+</snippet>

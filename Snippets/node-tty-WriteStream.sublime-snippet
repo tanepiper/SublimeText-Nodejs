@@ -1,0 +1,6 @@
+<snippet>
+   <content>tty.WriteStream(fd);</content>
+   <tabTrigger>tty.WriteStream</tabTrigger>
+   <scope>source.js</scope>
+   <description>tty.WriteStream</description>
+</snippet>

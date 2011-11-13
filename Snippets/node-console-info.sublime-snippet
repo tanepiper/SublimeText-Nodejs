@@ -1,0 +1,6 @@
+<snippet>
+   <content>console.info();</content>
+   <tabTrigger>console.info</tabTrigger>
+   <scope>source.js</scope>
+   <description>console.info</description>
+</snippet>

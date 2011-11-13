@@ -1,8 +1,0 @@
-<snippet>
-  <content><![CDATA[fs.chmod(${1:path}, ${2:mode}, function(${3:err}) {
-  if (${3:err}) throw ${3:err};
-});]]></content>
-  <tabTrigger>no.fs.chmod</tabTrigger>
-  <scope>source.js</scope>
-  <description>fs.chmod</description>
-</snippet>

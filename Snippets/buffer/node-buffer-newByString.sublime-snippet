@@ -1,6 +1,0 @@
-<snippet>
-  <content><![CDATA[var ${1:buf} = new Buffer(${2:string}, ${3:encoding});]]></content>
-  <tabTrigger>no.buffer.newByString</tabTrigger>
-  <scope>source.js</scope>
-  <description>new Buffer(string, encoding)</description>
-</snippet>
