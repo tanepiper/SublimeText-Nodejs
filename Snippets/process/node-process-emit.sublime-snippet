@@ -1,0 +1,6 @@
+<snippet>
+   <content>emit()</content>
+   <tabTrigger>emit</tabTrigger>
+   <scope>source.js</scope>
+   <description>emit</description>
+</snippet>

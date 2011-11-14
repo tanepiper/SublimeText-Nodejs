@@ -1,0 +1,6 @@
+<snippet>
+   <content>_linklist.peek(list)</content>
+   <tabTrigger>_linklist.peek</tabTrigger>
+   <scope>source.js</scope>
+   <description>_linklist.peek</description>
+</snippet>

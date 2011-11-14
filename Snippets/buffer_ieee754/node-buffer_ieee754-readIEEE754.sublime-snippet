@@ -1,0 +1,6 @@
+<snippet>
+   <content>buffer_ieee754.readIEEE754(buffer, offset, isBE, mLen, nBytes)</content>
+   <tabTrigger>buffer_ieee754.readIEEE754</tabTrigger>
+   <scope>source.js</scope>
+   <description>buffer_ieee754.readIEEE754</description>
+</snippet>

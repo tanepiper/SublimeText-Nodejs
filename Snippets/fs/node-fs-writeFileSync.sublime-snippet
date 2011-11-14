@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.writeFileSync(path, data, encoding)</content>
+   <tabTrigger>fs.writeFileSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.writeFileSync</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>_byteLength()</content>
+   <tabTrigger>_byteLength</tabTrigger>
+   <scope>source.js</scope>
+   <description>_byteLength</description>
+</snippet>

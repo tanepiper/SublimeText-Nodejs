@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.chmodSync(path, mode)</content>
+   <tabTrigger>fs.chmodSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.chmodSync</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>sys.pump(readStream, writeStream, callback)</content>
+   <tabTrigger>sys.pump</tabTrigger>
+   <scope>source.js</scope>
+   <description>sys.pump</description>
+</snippet>

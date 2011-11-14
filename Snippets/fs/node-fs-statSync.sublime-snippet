@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.statSync(path)</content>
+   <tabTrigger>fs.statSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.statSync</description>
+</snippet>

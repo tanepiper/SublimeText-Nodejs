@@ -1,0 +1,6 @@
+<snippet>
+   <content>net.Socket(options)</content>
+   <tabTrigger>net.Socket</tabTrigger>
+   <scope>source.js</scope>
+   <description>net.Socket</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.createServer(requestListener)</content>
+   <tabTrigger>http.createServer</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.createServer</description>
+</snippet>

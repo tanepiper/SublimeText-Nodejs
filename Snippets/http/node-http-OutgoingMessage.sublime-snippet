@@ -1,0 +1,6 @@
+<snippet>
+   <content>http.OutgoingMessage()</content>
+   <tabTrigger>http.OutgoingMessage</tabTrigger>
+   <scope>source.js</scope>
+   <description>http.OutgoingMessage</description>
+</snippet>

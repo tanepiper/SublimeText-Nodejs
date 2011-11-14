@@ -1,0 +1,6 @@
+<snippet>
+   <content>nextTick(callback)</content>
+   <tabTrigger>nextTick</tabTrigger>
+   <scope>source.js</scope>
+   <description>nextTick</description>
+</snippet>

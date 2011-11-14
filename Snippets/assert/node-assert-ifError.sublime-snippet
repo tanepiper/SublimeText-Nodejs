@@ -1,0 +1,6 @@
+<snippet>
+   <content>assert.ifError(err)</content>
+   <tabTrigger>assert.ifError</tabTrigger>
+   <scope>source.js</scope>
+   <description>assert.ifError</description>
+</snippet>

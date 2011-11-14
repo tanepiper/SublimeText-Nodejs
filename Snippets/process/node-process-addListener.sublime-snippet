@@ -1,0 +1,6 @@
+<snippet>
+   <content>addListener(type, listener)</content>
+   <tabTrigger>addListener</tabTrigger>
+   <scope>source.js</scope>
+   <description>addListener</description>
+</snippet>

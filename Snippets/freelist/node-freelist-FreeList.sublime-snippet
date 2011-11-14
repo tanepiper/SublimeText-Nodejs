@@ -1,0 +1,6 @@
+<snippet>
+   <content>freelist.FreeList(name, max, constructor)</content>
+   <tabTrigger>freelist.FreeList</tabTrigger>
+   <scope>source.js</scope>
+   <description>freelist.FreeList</description>
+</snippet>

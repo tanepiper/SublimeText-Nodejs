@@ -1,0 +1,6 @@
+<snippet>
+   <content>querystring.parse(qs, sep, eq)</content>
+   <tabTrigger>querystring.parse</tabTrigger>
+   <scope>source.js</scope>
+   <description>querystring.parse</description>
+</snippet>

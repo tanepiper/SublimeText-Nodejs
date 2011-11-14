@@ -1,0 +1,6 @@
+<snippet>
+   <content>ArrayBuffer()</content>
+   <tabTrigger>ArrayBuffer</tabTrigger>
+   <scope>source.js</scope>
+   <description>ArrayBuffer</description>
+</snippet>

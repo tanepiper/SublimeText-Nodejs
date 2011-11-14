@@ -1,0 +1,6 @@
+<snippet>
+   <content>_needTickCallback()</content>
+   <tabTrigger>_needTickCallback</tabTrigger>
+   <scope>source.js</scope>
+   <description>_needTickCallback</description>
+</snippet>

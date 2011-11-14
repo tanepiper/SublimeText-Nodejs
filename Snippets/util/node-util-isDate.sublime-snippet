@@ -1,0 +1,6 @@
+<snippet>
+   <content>util.isDate(d)</content>
+   <tabTrigger>util.isDate</tabTrigger>
+   <scope>source.js</scope>
+   <description>util.isDate</description>
+</snippet>

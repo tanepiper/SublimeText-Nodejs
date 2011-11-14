@@ -1,0 +1,6 @@
+<snippet>
+   <content>setMaxListeners(n)</content>
+   <tabTrigger>setMaxListeners</tabTrigger>
+   <scope>source.js</scope>
+   <description>setMaxListeners</description>
+</snippet>

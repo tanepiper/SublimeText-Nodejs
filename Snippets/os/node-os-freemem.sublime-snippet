@@ -1,0 +1,6 @@
+<snippet>
+   <content>os.freemem()</content>
+   <tabTrigger>os.freemem</tabTrigger>
+   <scope>source.js</scope>
+   <description>os.freemem</description>
+</snippet>

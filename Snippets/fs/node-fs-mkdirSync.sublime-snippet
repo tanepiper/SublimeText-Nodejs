@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.mkdirSync(path, mode)</content>
+   <tabTrigger>fs.mkdirSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.mkdirSync</description>
+</snippet>

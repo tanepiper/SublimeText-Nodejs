@@ -1,0 +1,6 @@
+<snippet>
+   <content>child_process._forkChild()</content>
+   <tabTrigger>child_process._forkChild</tabTrigger>
+   <scope>source.js</scope>
+   <description>child_process._forkChild</description>
+</snippet>

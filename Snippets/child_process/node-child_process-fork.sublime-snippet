@@ -1,0 +1,6 @@
+<snippet>
+   <content>child_process.fork(modulePath, args, options)</content>
+   <tabTrigger>child_process.fork</tabTrigger>
+   <scope>source.js</scope>
+   <description>child_process.fork</description>
+</snippet>

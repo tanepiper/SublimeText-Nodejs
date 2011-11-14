@@ -1,0 +1,6 @@
+<snippet>
+   <content>os.totalmem()</content>
+   <tabTrigger>os.totalmem</tabTrigger>
+   <scope>source.js</scope>
+   <description>os.totalmem</description>
+</snippet>

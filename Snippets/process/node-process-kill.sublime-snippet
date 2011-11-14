@@ -1,0 +1,6 @@
+<snippet>
+   <content>kill(pid, sig)</content>
+   <tabTrigger>kill</tabTrigger>
+   <scope>source.js</scope>
+   <description>kill</description>
+</snippet>

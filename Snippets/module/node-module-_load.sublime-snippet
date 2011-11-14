@@ -1,0 +1,6 @@
+<snippet>
+   <content>module._load(request, parent, isMain)</content>
+   <tabTrigger>module._load</tabTrigger>
+   <scope>source.js</scope>
+   <description>module._load</description>
+</snippet>

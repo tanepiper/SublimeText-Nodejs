@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.readdirSync(path)</content>
+   <tabTrigger>fs.readdirSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.readdirSync</description>
+</snippet>

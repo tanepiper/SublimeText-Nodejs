@@ -1,0 +1,6 @@
+<snippet>
+   <content>Uint16Array()</content>
+   <tabTrigger>Uint16Array</tabTrigger>
+   <scope>source.js</scope>
+   <description>Uint16Array</description>
+</snippet>

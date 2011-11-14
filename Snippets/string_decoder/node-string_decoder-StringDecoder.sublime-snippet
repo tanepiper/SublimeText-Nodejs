@@ -1,0 +1,6 @@
+<snippet>
+   <content>string_decoder.StringDecoder(encoding)</content>
+   <tabTrigger>string_decoder.StringDecoder</tabTrigger>
+   <scope>source.js</scope>
+   <description>string_decoder.StringDecoder</description>
+</snippet>

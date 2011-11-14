@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.utimesSync(path, atime, mtime)</content>
+   <tabTrigger>fs.utimesSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.utimesSync</description>
+</snippet>

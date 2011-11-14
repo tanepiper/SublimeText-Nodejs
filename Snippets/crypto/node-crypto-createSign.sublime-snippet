@@ -1,0 +1,6 @@
+<snippet>
+   <content>crypto.createSign(algorithm)</content>
+   <tabTrigger>crypto.createSign</tabTrigger>
+   <scope>source.js</scope>
+   <description>crypto.createSign</description>
+</snippet>

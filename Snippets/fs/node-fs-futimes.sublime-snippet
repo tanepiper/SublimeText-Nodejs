@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.futimes(fd, atime, mtime, callback)</content>
+   <tabTrigger>fs.futimes</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.futimes</description>
+</snippet>

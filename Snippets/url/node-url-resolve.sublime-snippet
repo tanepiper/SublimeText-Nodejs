@@ -1,0 +1,6 @@
+<snippet>
+   <content>url.resolve(source, relative)</content>
+   <tabTrigger>url.resolve</tabTrigger>
+   <scope>source.js</scope>
+   <description>url.resolve</description>
+</snippet>

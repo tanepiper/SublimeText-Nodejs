@@ -1,0 +1,6 @@
+<snippet>
+   <content>https.get(options, cb)</content>
+   <tabTrigger>https.get</tabTrigger>
+   <scope>source.js</scope>
+   <description>https.get</description>
+</snippet>

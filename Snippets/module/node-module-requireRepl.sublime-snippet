@@ -1,0 +1,6 @@
+<snippet>
+   <content>module.requireRepl()</content>
+   <tabTrigger>module.requireRepl</tabTrigger>
+   <scope>source.js</scope>
+   <description>module.requireRepl</description>
+</snippet>

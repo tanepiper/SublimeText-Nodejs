@@ -1,0 +1,6 @@
+<snippet>
+   <content>exit(code)</content>
+   <tabTrigger>exit</tabTrigger>
+   <scope>source.js</scope>
+   <description>exit</description>
+</snippet>

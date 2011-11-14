@@ -1,0 +1,6 @@
+<snippet>
+   <content>net.connect(port /* [host], [cb] */)</content>
+   <tabTrigger>net.connect</tabTrigger>
+   <scope>source.js</scope>
+   <description>net.connect</description>
+</snippet>

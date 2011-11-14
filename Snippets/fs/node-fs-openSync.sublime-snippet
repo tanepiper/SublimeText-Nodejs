@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.openSync(path, flags, mode)</content>
+   <tabTrigger>fs.openSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.openSync</description>
+</snippet>

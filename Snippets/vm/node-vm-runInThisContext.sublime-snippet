@@ -1,0 +1,6 @@
+<snippet>
+   <content>vm.runInThisContext()</content>
+   <tabTrigger>vm.runInThisContext</tabTrigger>
+   <scope>source.js</scope>
+   <description>vm.runInThisContext</description>
+</snippet>

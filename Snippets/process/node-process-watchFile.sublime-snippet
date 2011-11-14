@@ -1,0 +1,6 @@
+<snippet>
+   <content>watchFile()</content>
+   <tabTrigger>watchFile</tabTrigger>
+   <scope>source.js</scope>
+   <description>watchFile</description>
+</snippet>

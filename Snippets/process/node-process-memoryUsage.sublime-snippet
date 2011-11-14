@@ -1,0 +1,6 @@
+<snippet>
+   <content>memoryUsage()</content>
+   <tabTrigger>memoryUsage</tabTrigger>
+   <scope>source.js</scope>
+   <description>memoryUsage</description>
+</snippet>

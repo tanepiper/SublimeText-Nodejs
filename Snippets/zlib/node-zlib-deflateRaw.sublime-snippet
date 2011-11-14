@@ -1,0 +1,6 @@
+<snippet>
+   <content>zlib.deflateRaw(buffer, callback)</content>
+   <tabTrigger>zlib.deflateRaw</tabTrigger>
+   <scope>source.js</scope>
+   <description>zlib.deflateRaw</description>
+</snippet>

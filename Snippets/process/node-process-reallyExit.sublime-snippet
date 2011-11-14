@@ -1,0 +1,6 @@
+<snippet>
+   <content>reallyExit()</content>
+   <tabTrigger>reallyExit</tabTrigger>
+   <scope>source.js</scope>
+   <description>reallyExit</description>
+</snippet>

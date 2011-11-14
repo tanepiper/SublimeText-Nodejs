@@ -1,0 +1,6 @@
+<snippet>
+   <content>error()</content>
+   <tabTrigger>error</tabTrigger>
+   <scope>source.js</scope>
+   <description>error</description>
+</snippet>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>querystring.encode(obj, sep, eq, name)</content>
+   <tabTrigger>querystring.encode</tabTrigger>
+   <scope>source.js</scope>
+   <description>querystring.encode</description>
+</snippet>

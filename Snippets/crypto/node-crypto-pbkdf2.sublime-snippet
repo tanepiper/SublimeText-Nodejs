@@ -1,0 +1,6 @@
+<snippet>
+   <content>crypto.pbkdf2()</content>
+   <tabTrigger>crypto.pbkdf2</tabTrigger>
+   <scope>source.js</scope>
+   <description>crypto.pbkdf2</description>
+</snippet>

@@ -9,22 +9,53 @@ var createSnippets = function(snippets) {
   for(;i<j;i++) {
     var item = snippets[i];
 
+    var html_output = [];
+    var html_groups = [];
+
     var output = [];
     output.push('<snippet>');
       output.push('   <content>' + item.f_string + '</content>');
       output.push('   <tabTrigger>'+ item.name + '</tabTrigger>');
       output.push('   <scope>source.js</scope>');
-      output.push('   <description>' + item.type + '.' + item.key + '</description>');
+      output.push('   <description>' + item.name + '</description>');
     output.push('</snippet>');
-
     console.log(output.join("\n"));
+
+    /*
+    html_outp   ut.push('<div class="snippet">');
+      html_output.push('<strong>' + item.name + '</strong>');
+      html_output.push('<pre>' + item.reflection.body + '</pre>');
+    html_output.push('</div>');
+
+    var i = {};
+    i[item.name] = html_output;
+    html_groups.push(i);
+
+    var final_groups = [];
+    var hgkey;
+    for (hgkey in html_groups) {
+      var o = [];
+      o.push('<div class="function">');
+        o.push('<h2>' + hgkey + '</h2>');
+        o.push(html_groups[hgkey]);
+      o.push('</div>');
+      final_groups.push(o);
+    }
+    console.log(final_groups);
+    */
+
     saveFile(item.type, item.key, output.join("\n"));
   }
 
 }
 
 var saveFile = function(file, key, output) {
-  fs.writeFile(path.resolve(snippet_path, 'node-' + file + '-' + key + '.sublime-snippet'), output);
+  fs.mkdir(path.resolve(snippet_path, file), function() {
+    var p = path.resolve(snippet_path, file, 'node-' + file + '-' + key + '.sublime-snippet');
+    //console.log(p);
+    fs.writeFile(p, output);
+  })
+  
 }
 
 /**
@@ -54,7 +85,7 @@ var FunctionReflect = function(fn) {
    this.body = s.substring(s.indexOf('{') + 1, s.indexOf('}') - 1); 
    return this;
 }
-
+  
 var readdir = function(err, files) {
   if (err) throw err;
 

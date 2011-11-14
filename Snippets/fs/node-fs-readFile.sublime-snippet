@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.readFile(path, encoding_)</content>
+   <tabTrigger>fs.readFile</tabTrigger>
+   <scope>source.js</scope>
+   <description>fs.readFile</description>
+</snippet>
