@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.readSync(fd, buffer, offset, length, position);</content>
+   <content><![CDATA[fs.readSync(fd, buffer, offset, length, position);]]></content>
    <tabTrigger>fs.readSync</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, buffer, offset, length, position)</description>

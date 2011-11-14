@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.Client(port, host);</content>
+   <content><![CDATA[http.Client(port, host);]]></content>
    <tabTrigger>http.Client</tabTrigger>
    <scope>source.js</scope>
    <description>(port, host)</description>

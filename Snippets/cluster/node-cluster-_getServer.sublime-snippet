@@ -1,5 +1,5 @@
 <snippet>
-   <content>cluster._getServer(address, port, addressType, cb);</content>
+   <content><![CDATA[cluster._getServer(address, port, addressType, cb);]]></content>
    <tabTrigger>cluster._getServer</tabTrigger>
    <scope>source.js</scope>
    <description>(address, port, addressType, cb)</description>

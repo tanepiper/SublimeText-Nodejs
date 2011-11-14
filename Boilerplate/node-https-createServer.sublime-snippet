@@ -14,5 +14,5 @@ https.createServer(options, function (req, res) {
 ]]></content>
    <tabTrigger>node.https.createServer</tabTrigger>
    <scope>source.js</scope>
-   <description>Snippet</description>
+   <description>Snippet: HTTPS Create Server</description>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.inherits(ctor, superCtor);</content>
+   <content><![CDATA[util.inherits(ctor, superCtor);]]></content>
    <tabTrigger>util.inherits</tabTrigger>
    <scope>source.js</scope>
    <description>(ctor, superCtor)</description>

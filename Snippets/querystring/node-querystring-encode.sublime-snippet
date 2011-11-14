@@ -1,5 +1,5 @@
 <snippet>
-   <content>querystring.encode(obj, sep, eq, name);</content>
+   <content><![CDATA[querystring.encode(obj, sep, eq, name);]]></content>
    <tabTrigger>querystring.encode</tabTrigger>
    <scope>source.js</scope>
    <description>(obj, sep, eq, name)</description>

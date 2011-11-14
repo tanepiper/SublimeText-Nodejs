@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.existsSync(path);</content>
+   <content><![CDATA[path.existsSync(path);]]></content>
    <tabTrigger>path.existsSync</tabTrigger>
    <scope>source.js</scope>
    <description>(path)</description>

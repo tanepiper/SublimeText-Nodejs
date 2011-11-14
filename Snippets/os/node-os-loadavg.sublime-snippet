@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.loadavg();</content>
+   <content><![CDATA[os.loadavg();]]></content>
    <tabTrigger>os.loadavg</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

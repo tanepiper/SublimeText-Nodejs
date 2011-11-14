@@ -1,5 +1,5 @@
 <snippet>
-   <content>module.requireRepl();</content>
+   <content><![CDATA[module.requireRepl();]]></content>
    <tabTrigger>module.requireRepl</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

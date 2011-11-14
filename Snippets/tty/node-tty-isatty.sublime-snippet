@@ -1,5 +1,5 @@
 <snippet>
-   <content>tty.isatty(fd);</content>
+   <content><![CDATA[tty.isatty(fd);]]></content>
    <tabTrigger>tty.isatty</tabTrigger>
    <scope>source.js</scope>
    <description>(fd)</description>

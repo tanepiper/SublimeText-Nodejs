@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.SyncWriteStream(fd);</content>
+   <content><![CDATA[fs.SyncWriteStream(fd);]]></content>
    <tabTrigger>fs.SyncWriteStream</tabTrigger>
    <scope>source.js</scope>
    <description>(fd)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>vm.runInThisContext();</content>
+   <content><![CDATA[vm.runInThisContext();]]></content>
    <tabTrigger>vm.runInThisContext</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

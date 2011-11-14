@@ -1,5 +1,5 @@
 <snippet>
-   <content>cluster._startWorker();</content>
+   <content><![CDATA[cluster._startWorker();]]></content>
    <tabTrigger>cluster._startWorker</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

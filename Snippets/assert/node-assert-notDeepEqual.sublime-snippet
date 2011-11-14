@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.notDeepEqual(actual, expected, message);</content>
+   <content><![CDATA[assert.notDeepEqual(actual, expected, message);]]></content>
    <tabTrigger>assert.notDeepEqual</tabTrigger>
    <scope>source.js</scope>
    <description>(actual, expected, message)</description>

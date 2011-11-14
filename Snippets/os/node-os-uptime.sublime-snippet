@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.uptime();</content>
+   <content><![CDATA[os.uptime();]]></content>
    <tabTrigger>os.uptime</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.writeSync(fd, buffer, offset, length, position);</content>
+   <content><![CDATA[fs.writeSync(fd, buffer, offset, length, position);]]></content>
    <tabTrigger>fs.writeSync</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, buffer, offset, length, position)</description>

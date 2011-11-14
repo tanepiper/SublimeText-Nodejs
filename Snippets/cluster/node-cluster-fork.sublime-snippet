@@ -1,5 +1,5 @@
 <snippet>
-   <content>cluster.fork();</content>
+   <content><![CDATA[cluster.fork();]]></content>
    <tabTrigger>cluster.fork</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

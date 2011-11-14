@@ -1,5 +1,5 @@
 <snippet>
-   <content>child_process.fork(modulePath, args, options);</content>
+   <content><![CDATA[child_process.fork(modulePath, args, options);]]></content>
    <tabTrigger>child_process.fork</tabTrigger>
    <scope>source.js</scope>
    <description>(modulePath, args, options)</description>

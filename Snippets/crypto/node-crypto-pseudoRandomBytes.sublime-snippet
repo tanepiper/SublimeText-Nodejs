@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.pseudoRandomBytes();</content>
+   <content><![CDATA[crypto.pseudoRandomBytes();]]></content>
    <tabTrigger>crypto.pseudoRandomBytes</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

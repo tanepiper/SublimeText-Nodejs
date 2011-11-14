@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.read(fd, buffer, offset, length, position, callback);</content>
+   <content><![CDATA[fs.read(fd, buffer, offset, length, position, callback);]]></content>
    <tabTrigger>fs.read</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, buffer, offset, length, position, callback)</description>

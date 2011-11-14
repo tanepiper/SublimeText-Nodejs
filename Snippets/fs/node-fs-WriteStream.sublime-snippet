@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.WriteStream(path, options);</content>
+   <content><![CDATA[fs.WriteStream(path, options);]]></content>
    <tabTrigger>fs.WriteStream</tabTrigger>
    <scope>source.js</scope>
    <description>(path, options)</description>

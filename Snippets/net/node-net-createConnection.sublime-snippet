@@ -1,5 +1,5 @@
 <snippet>
-   <content>net.createConnection(port /* [host], [cb] */);</content>
+   <content><![CDATA[net.createConnection(port /* [host], [cb] */);]]></content>
    <tabTrigger>net.createConnection</tabTrigger>
    <scope>source.js</scope>
    <description>(port /* [host], [cb] */)</description>

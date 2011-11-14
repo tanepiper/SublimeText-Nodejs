@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.normalize(path);</content>
+   <content><![CDATA[path.normalize(path);]]></content>
    <tabTrigger>path.normalize</tabTrigger>
    <scope>source.js</scope>
    <description>(path)</description>

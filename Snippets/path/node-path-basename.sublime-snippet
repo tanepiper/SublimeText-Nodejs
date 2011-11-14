@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.basename(path, ext);</content>
+   <content><![CDATA[path.basename(path, ext);]]></content>
    <tabTrigger>path.basename</tabTrigger>
    <scope>source.js</scope>
    <description>(path, ext)</description>

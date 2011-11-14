@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.stat(path, callback);</content>
+   <content><![CDATA[fs.stat(path, callback);]]></content>
    <tabTrigger>fs.stat</tabTrigger>
    <scope>source.js</scope>
    <description>(path, callback)</description>

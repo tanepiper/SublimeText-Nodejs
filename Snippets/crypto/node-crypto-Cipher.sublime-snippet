@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.Cipher();</content>
+   <content><![CDATA[crypto.Cipher();]]></content>
    <tabTrigger>crypto.Cipher</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

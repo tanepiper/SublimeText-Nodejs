@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.futimesSync(fd, atime, mtime);</content>
+   <content><![CDATA[fs.futimesSync(fd, atime, mtime);]]></content>
    <tabTrigger>fs.futimesSync</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, atime, mtime)</description>

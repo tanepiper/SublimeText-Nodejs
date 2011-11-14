@@ -1,5 +1,5 @@
 <snippet>
-   <content>sys.puts();</content>
+   <content><![CDATA[sys.puts();]]></content>
    <tabTrigger>sys.puts</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

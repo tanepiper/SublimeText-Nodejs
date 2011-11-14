@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.umask();</content>
+   <content><![CDATA[process.umask();]]></content>
    <tabTrigger>process.umask</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

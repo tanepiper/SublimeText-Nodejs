@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.Int8Array();</content>
+   <content><![CDATA[global.Int8Array();]]></content>
    <tabTrigger>global.Int8Array</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

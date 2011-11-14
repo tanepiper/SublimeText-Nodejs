@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.exists(path, callback);</content>
+   <content><![CDATA[path.exists(path, callback);]]></content>
    <tabTrigger>path.exists</tabTrigger>
    <scope>source.js</scope>
    <description>(path, callback)</description>

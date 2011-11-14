@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.enroll(item, msecs);</content>
+   <content><![CDATA[timers.enroll(item, msecs);]]></content>
    <tabTrigger>timers.enroll</tabTrigger>
    <scope>source.js</scope>
    <description>(item, msecs)</description>

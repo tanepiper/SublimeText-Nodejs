@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.OutgoingMessage();</content>
+   <content><![CDATA[http.OutgoingMessage();]]></content>
    <tabTrigger>http.OutgoingMessage</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

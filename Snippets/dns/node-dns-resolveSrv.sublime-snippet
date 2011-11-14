@@ -1,5 +1,5 @@
 <snippet>
-   <content>dns.resolveSrv(name, callback);</content>
+   <content><![CDATA[dns.resolveSrv(name, callback);]]></content>
    <tabTrigger>dns.resolveSrv</tabTrigger>
    <scope>source.js</scope>
    <description>(name, callback)</description>

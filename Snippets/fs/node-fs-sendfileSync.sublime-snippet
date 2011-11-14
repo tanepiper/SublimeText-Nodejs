@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.sendfileSync(outFd, inFd, inOffset, length);</content>
+   <content><![CDATA[fs.sendfileSync(outFd, inFd, inOffset, length);]]></content>
    <tabTrigger>fs.sendfileSync</tabTrigger>
    <scope>source.js</scope>
    <description>(outFd, inFd, inOffset, length)</description>

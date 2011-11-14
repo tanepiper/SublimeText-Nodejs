@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.notStrictEqual(actual, expected, message);</content>
+   <content><![CDATA[assert.notStrictEqual(actual, expected, message);]]></content>
    <tabTrigger>assert.notStrictEqual</tabTrigger>
    <scope>source.js</scope>
    <description>(actual, expected, message)</description>

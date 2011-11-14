@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.unlinkSync(path);</content>
+   <content><![CDATA[fs.unlinkSync(path);]]></content>
    <tabTrigger>fs.unlinkSync</tabTrigger>
    <scope>source.js</scope>
    <description>(path)</description>

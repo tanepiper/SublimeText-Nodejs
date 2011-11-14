@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.equal(actual, expected, message);</content>
+   <content><![CDATA[assert.equal(actual, expected, message);]]></content>
    <tabTrigger>assert.equal</tabTrigger>
    <scope>source.js</scope>
    <description>(actual, expected, message)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>module._nodeModulePaths(from);</content>
+   <content><![CDATA[module._nodeModulePaths(from);]]></content>
    <tabTrigger>module._nodeModulePaths</tabTrigger>
    <scope>source.js</scope>
    <description>(from)</description>

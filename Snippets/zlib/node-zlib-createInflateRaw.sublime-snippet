@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.createInflateRaw(o);</content>
+   <content><![CDATA[zlib.createInflateRaw(o);]]></content>
    <tabTrigger>zlib.createInflateRaw</tabTrigger>
    <scope>source.js</scope>
    <description>(o)</description>

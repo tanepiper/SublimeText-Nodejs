@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.unenroll(item);</content>
+   <content><![CDATA[timers.unenroll(item);]]></content>
    <tabTrigger>timers.unenroll</tabTrigger>
    <scope>source.js</scope>
    <description>(item)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.pbkdf2();</content>
+   <content><![CDATA[crypto.pbkdf2();]]></content>
    <tabTrigger>crypto.pbkdf2</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

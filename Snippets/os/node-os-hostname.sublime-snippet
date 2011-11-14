@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.hostname();</content>
+   <content><![CDATA[os.hostname();]]></content>
    <tabTrigger>os.hostname</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

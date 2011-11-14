@@ -1,5 +1,5 @@
 <snippet>
-   <content>module._debug();</content>
+   <content><![CDATA[module._debug();]]></content>
    <tabTrigger>module._debug</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

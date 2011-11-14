@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.fail(actual, expected, message, operator, stackStartFunction);</content>
+   <content><![CDATA[assert.fail(actual, expected, message, operator, stackStartFunction);]]></content>
    <tabTrigger>assert.fail</tabTrigger>
    <scope>source.js</scope>
    <description>(actual, expected, message, operator, stackStartFunction)</description>

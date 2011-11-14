@@ -1,5 +1,5 @@
 <snippet>
-   <content>module._findPath(request, paths);</content>
+   <content><![CDATA[module._findPath(request, paths);]]></content>
    <tabTrigger>module._findPath</tabTrigger>
    <scope>source.js</scope>
    <description>(request, paths)</description>

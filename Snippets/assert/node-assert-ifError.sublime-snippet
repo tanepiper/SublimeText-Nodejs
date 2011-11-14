@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.ifError(err);</content>
+   <content><![CDATA[assert.ifError(err);]]></content>
    <tabTrigger>assert.ifError</tabTrigger>
    <scope>source.js</scope>
    <description>(err)</description>

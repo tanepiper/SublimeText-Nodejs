@@ -1,5 +1,5 @@
 <snippet>
-   <content>tty.setRawMode(flag);</content>
+   <content><![CDATA[tty.setRawMode(flag);]]></content>
    <tabTrigger>tty.setRawMode</tabTrigger>
    <scope>source.js</scope>
    <description>(flag)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>_linklist.peek(list);</content>
+   <content><![CDATA[_linklist.peek(list);]]></content>
    <tabTrigger>_linklist.peek</tabTrigger>
    <scope>source.js</scope>
    <description>(list)</description>

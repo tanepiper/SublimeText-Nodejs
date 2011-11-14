@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.networkInterfaces();</content>
+   <content><![CDATA[os.networkInterfaces();]]></content>
    <tabTrigger>os.networkInterfaces</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

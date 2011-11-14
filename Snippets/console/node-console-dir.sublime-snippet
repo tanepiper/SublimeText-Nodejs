@@ -1,5 +1,5 @@
 <snippet>
-   <content>console.dir(object);</content>
+   <content><![CDATA[console.dir(object);]]></content>
    <tabTrigger>console.dir</tabTrigger>
    <scope>source.js</scope>
    <description>(object)</description>

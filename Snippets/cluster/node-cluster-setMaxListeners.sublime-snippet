@@ -1,5 +1,5 @@
 <snippet>
-   <content>cluster.setMaxListeners(n);</content>
+   <content><![CDATA[cluster.setMaxListeners(n);]]></content>
    <tabTrigger>cluster.setMaxListeners</tabTrigger>
    <scope>source.js</scope>
    <description>(n)</description>

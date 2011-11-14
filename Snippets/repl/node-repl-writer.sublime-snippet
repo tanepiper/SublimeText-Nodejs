@@ -1,5 +1,5 @@
 <snippet>
-   <content>repl.writer(obj, showHidden, depth, colors);</content>
+   <content><![CDATA[repl.writer(obj, showHidden, depth, colors);]]></content>
    <tabTrigger>repl.writer</tabTrigger>
    <scope>source.js</scope>
    <description>(obj, showHidden, depth, colors)</description>

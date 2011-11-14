@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.sendfile(outFd, inFd, inOffset, length, callback);</content>
+   <content><![CDATA[fs.sendfile(outFd, inFd, inOffset, length, callback);]]></content>
    <tabTrigger>fs.sendfile</tabTrigger>
    <scope>source.js</scope>
    <description>(outFd, inFd, inOffset, length, callback)</description>

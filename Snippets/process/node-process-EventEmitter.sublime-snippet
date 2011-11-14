@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.EventEmitter();</content>
+   <content><![CDATA[process.EventEmitter();]]></content>
    <tabTrigger>process.EventEmitter</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>punycode.toUnicode(domain);</content>
+   <content><![CDATA[punycode.toUnicode(domain);]]></content>
    <tabTrigger>punycode.toUnicode</tabTrigger>
    <scope>source.js</scope>
    <description>(domain)</description>

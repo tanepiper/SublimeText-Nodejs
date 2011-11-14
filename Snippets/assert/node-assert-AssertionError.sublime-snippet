@@ -1,5 +1,5 @@
 <snippet>
-   <content>assert.AssertionError;</content>
+   <content><![CDATA[assert.AssertionError;]]></content>
    <tabTrigger>assert.AssertionError</tabTrigger>
    <scope>source.js</scope>
    <description></description>

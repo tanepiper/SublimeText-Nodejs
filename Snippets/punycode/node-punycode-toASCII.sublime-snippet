@@ -1,5 +1,5 @@
 <snippet>
-   <content>punycode.toASCII(domain);</content>
+   <content><![CDATA[punycode.toASCII(domain);]]></content>
    <tabTrigger>punycode.toASCII</tabTrigger>
    <scope>source.js</scope>
    <description>(domain)</description>

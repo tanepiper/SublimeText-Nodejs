@@ -1,5 +1,5 @@
 <snippet>
-   <content>punycode.encode(input, preserveCase);</content>
+   <content><![CDATA[punycode.encode(input, preserveCase);]]></content>
    <tabTrigger>punycode.encode</tabTrigger>
    <scope>source.js</scope>
    <description>(input, preserveCase)</description>

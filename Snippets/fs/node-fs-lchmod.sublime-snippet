@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.lchmod(path, mode, callback);</content>
+   <content><![CDATA[fs.lchmod(path, mode, callback);]]></content>
    <tabTrigger>fs.lchmod</tabTrigger>
    <scope>source.js</scope>
    <description>(path, mode, callback)</description>

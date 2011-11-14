@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.createWriteStream(path, options);</content>
+   <content><![CDATA[fs.createWriteStream(path, options);]]></content>
    <tabTrigger>fs.createWriteStream</tabTrigger>
    <scope>source.js</scope>
    <description>(path, options)</description>

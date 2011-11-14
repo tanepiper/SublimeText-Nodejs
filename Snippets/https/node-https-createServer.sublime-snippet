@@ -1,5 +1,5 @@
 <snippet>
-   <content>https.createServer(opts, requestListener);</content>
+   <content><![CDATA[https.createServer(opts, requestListener);]]></content>
    <tabTrigger>https.createServer</tabTrigger>
    <scope>source.js</scope>
    <description>(opts, requestListener)</description>

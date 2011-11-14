@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.createGzip(o);</content>
+   <content><![CDATA[zlib.createGzip(o);]]></content>
    <tabTrigger>zlib.createGzip</tabTrigger>
    <scope>source.js</scope>
    <description>(o)</description>

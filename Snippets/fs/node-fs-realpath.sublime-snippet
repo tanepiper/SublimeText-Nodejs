@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.realpath(p, cache, cb);</content>
+   <content><![CDATA[fs.realpath(p, cache, cb);]]></content>
    <tabTrigger>fs.realpath</tabTrigger>
    <scope>source.js</scope>
    <description>(p, cache, cb)</description>

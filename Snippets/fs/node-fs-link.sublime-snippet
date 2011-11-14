@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.link(srcpath, dstpath, callback);</content>
+   <content><![CDATA[fs.link(srcpath, dstpath, callback);]]></content>
    <tabTrigger>fs.link</tabTrigger>
    <scope>source.js</scope>
    <description>(srcpath, dstpath, callback)</description>

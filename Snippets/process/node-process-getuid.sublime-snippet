@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.getuid();</content>
+   <content><![CDATA[process.getuid();]]></content>
    <tabTrigger>process.getuid</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>freelist.FreeList(name, max, constructor);</content>
+   <content><![CDATA[freelist.FreeList(name, max, constructor);]]></content>
    <tabTrigger>freelist.FreeList</tabTrigger>
    <scope>source.js</scope>
    <description>(name, max, constructor)</description>

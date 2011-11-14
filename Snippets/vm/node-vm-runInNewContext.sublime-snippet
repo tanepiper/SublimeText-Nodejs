@@ -1,5 +1,5 @@
 <snippet>
-   <content>vm.runInNewContext();</content>
+   <content><![CDATA[vm.runInNewContext();]]></content>
    <tabTrigger>vm.runInNewContext</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

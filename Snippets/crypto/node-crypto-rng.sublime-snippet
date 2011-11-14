@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.rng();</content>
+   <content><![CDATA[crypto.rng();]]></content>
    <tabTrigger>crypto.rng</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

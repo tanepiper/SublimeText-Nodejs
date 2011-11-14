@@ -11,5 +11,5 @@ ee.emit('event-name', 'foo', 'bar');
 ]]></content>
    <tabTrigger>node.events.EventEmitter.on</tabTrigger>
    <scope>source.js</scope>
-   <description>Snippet</description>
+   <description>Snippet: NodeJS EventEmitter</description>
 </snippet>

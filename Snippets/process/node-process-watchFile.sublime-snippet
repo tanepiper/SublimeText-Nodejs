@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.watchFile();</content>
+   <content><![CDATA[process.watchFile();]]></content>
    <tabTrigger>process.watchFile</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

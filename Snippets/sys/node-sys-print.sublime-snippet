@@ -1,5 +1,5 @@
 <snippet>
-   <content>sys.print();</content>
+   <content><![CDATA[sys.print();]]></content>
    <tabTrigger>sys.print</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

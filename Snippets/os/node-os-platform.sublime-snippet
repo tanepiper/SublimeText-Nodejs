@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.platform();</content>
+   <content><![CDATA[os.platform();]]></content>
    <tabTrigger>os.platform</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

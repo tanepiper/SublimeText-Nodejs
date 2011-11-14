@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.isError(e);</content>
+   <content><![CDATA[util.isError(e);]]></content>
    <tabTrigger>util.isError</tabTrigger>
    <scope>source.js</scope>
    <description>(e)</description>

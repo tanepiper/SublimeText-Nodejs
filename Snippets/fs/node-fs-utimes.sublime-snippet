@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.utimes(path, atime, mtime, callback);</content>
+   <content><![CDATA[fs.utimes(path, atime, mtime, callback);]]></content>
    <tabTrigger>fs.utimes</tabTrigger>
    <scope>source.js</scope>
    <description>(path, atime, mtime, callback)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>querystring.parse(qs, sep, eq);</content>
+   <content><![CDATA[querystring.parse(qs, sep, eq);]]></content>
    <tabTrigger>querystring.parse</tabTrigger>
    <scope>source.js</scope>
    <description>(qs, sep, eq)</description>

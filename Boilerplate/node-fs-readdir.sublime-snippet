@@ -10,5 +10,5 @@ fs.readdir('/path/to/dir', function(err, items) {
 ]]></content>
    <tabTrigger>node.fs.readdir</tabTrigger>
    <scope>source.js</scope>
-   <description>Snippet</description>
+   <description>Snippet: fs.readdir</description>
 </snippet>

@@ -15,5 +15,5 @@ https.get({ host: 'encrypted.google.com', path: '/' }, function(res) {
 ]]></content>
    <tabTrigger>node.https.get</tabTrigger>
    <scope>source.js</scope>
-   <description>Snippet</description>
+   <description>Snippet: HTTPS Get</description>
 </snippet>

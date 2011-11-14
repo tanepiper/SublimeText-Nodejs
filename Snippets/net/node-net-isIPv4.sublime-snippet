@@ -1,5 +1,5 @@
 <snippet>
-   <content>net.isIPv4(input);</content>
+   <content><![CDATA[net.isIPv4(input);]]></content>
    <tabTrigger>net.isIPv4</tabTrigger>
    <scope>source.js</scope>
    <description>(input)</description>

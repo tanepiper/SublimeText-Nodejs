@@ -1,5 +1,5 @@
 <snippet>
-   <content>net.Stream(options);</content>
+   <content><![CDATA[net.Stream(options);]]></content>
    <tabTrigger>net.Stream</tabTrigger>
    <scope>source.js</scope>
    <description>(options)</description>

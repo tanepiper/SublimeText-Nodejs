@@ -1,5 +1,5 @@
 <snippet>
-   <content>console.info();</content>
+   <content><![CDATA[console.info();]]></content>
    <tabTrigger>console.info</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

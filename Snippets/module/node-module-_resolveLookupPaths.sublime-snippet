@@ -1,5 +1,5 @@
 <snippet>
-   <content>module._resolveLookupPaths(request, parent);</content>
+   <content><![CDATA[module._resolveLookupPaths(request, parent);]]></content>
    <tabTrigger>module._resolveLookupPaths</tabTrigger>
    <scope>source.js</scope>
    <description>(request, parent)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.ServerResponse(req);</content>
+   <content><![CDATA[http.ServerResponse(req);]]></content>
    <tabTrigger>http.ServerResponse</tabTrigger>
    <scope>source.js</scope>
    <description>(req)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>cluster.emit();</content>
+   <content><![CDATA[cluster.emit();]]></content>
    <tabTrigger>cluster.emit</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

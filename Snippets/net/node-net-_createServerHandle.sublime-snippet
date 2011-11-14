@@ -1,5 +1,5 @@
 <snippet>
-   <content>net._createServerHandle(address, port, addressType);</content>
+   <content><![CDATA[net._createServerHandle(address, port, addressType);]]></content>
    <tabTrigger>net._createServerHandle</tabTrigger>
    <scope>source.js</scope>
    <description>(address, port, addressType)</description>

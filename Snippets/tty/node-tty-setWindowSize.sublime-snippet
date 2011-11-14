@@ -1,5 +1,5 @@
 <snippet>
-   <content>tty.setWindowSize();</content>
+   <content><![CDATA[tty.setWindowSize();]]></content>
    <tabTrigger>tty.setWindowSize</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

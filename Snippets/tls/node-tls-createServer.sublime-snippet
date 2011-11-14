@@ -1,5 +1,5 @@
 <snippet>
-   <content>tls.createServer(options, listener);</content>
+   <content><![CDATA[tls.createServer(options, listener);]]></content>
    <tabTrigger>tls.createServer</tabTrigger>
    <scope>source.js</scope>
    <description>(options, listener)</description>

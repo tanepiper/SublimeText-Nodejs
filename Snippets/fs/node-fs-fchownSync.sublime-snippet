@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.fchownSync(fd, uid, gid);</content>
+   <content><![CDATA[fs.fchownSync(fd, uid, gid);]]></content>
    <tabTrigger>fs.fchownSync</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, uid, gid)</description>

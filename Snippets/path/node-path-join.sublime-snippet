@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.join();</content>
+   <content><![CDATA[path.join();]]></content>
    <tabTrigger>path.join</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

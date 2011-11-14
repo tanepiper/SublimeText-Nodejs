@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.Hmac();</content>
+   <content><![CDATA[crypto.Hmac();]]></content>
    <tabTrigger>crypto.Hmac</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

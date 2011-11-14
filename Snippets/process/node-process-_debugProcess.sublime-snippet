@@ -1,5 +1,5 @@
 <snippet>
-   <content>process._debugProcess();</content>
+   <content><![CDATA[process._debugProcess();]]></content>
    <tabTrigger>process._debugProcess</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

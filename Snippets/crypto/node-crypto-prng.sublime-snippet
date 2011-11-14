@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.prng();</content>
+   <content><![CDATA[crypto.prng();]]></content>
    <tabTrigger>crypto.prng</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

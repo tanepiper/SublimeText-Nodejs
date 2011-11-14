@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.nextTick(callback);</content>
+   <content><![CDATA[process.nextTick(callback);]]></content>
    <tabTrigger>process.nextTick</tabTrigger>
    <scope>source.js</scope>
    <description>(callback)</description>

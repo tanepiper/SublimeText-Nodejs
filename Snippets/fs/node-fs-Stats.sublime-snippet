@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.Stats();</content>
+   <content><![CDATA[fs.Stats();]]></content>
    <tabTrigger>fs.Stats</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

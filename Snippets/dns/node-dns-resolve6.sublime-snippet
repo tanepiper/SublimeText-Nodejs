@@ -1,5 +1,5 @@
 <snippet>
-   <content>dns.resolve6(name, callback);</content>
+   <content><![CDATA[dns.resolve6(name, callback);]]></content>
    <tabTrigger>dns.resolve6</tabTrigger>
    <scope>source.js</scope>
    <description>(name, callback)</description>

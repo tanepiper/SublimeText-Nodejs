@@ -1,5 +1,5 @@
 <snippet>
-   <content>net.Socket(options);</content>
+   <content><![CDATA[net.Socket(options);]]></content>
    <tabTrigger>net.Socket</tabTrigger>
    <scope>source.js</scope>
    <description>(options)</description>

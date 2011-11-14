@@ -1,5 +1,5 @@
 <snippet>
-   <content>console.time(label);</content>
+   <content><![CDATA[console.time(label);]]></content>
    <tabTrigger>console.time</tabTrigger>
    <scope>source.js</scope>
    <description>(label)</description>

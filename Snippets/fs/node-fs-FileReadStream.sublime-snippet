@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.FileReadStream(path, options);</content>
+   <content><![CDATA[fs.FileReadStream(path, options);]]></content>
    <tabTrigger>fs.FileReadStream</tabTrigger>
    <scope>source.js</scope>
    <description>(path, options)</description>

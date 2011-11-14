@@ -24,6 +24,6 @@ req.on('error', function(e) {
 ]]></content>
    <tabTrigger>node.https.request</tabTrigger>
    <scope>source.js</scope>
-   <description>Snippet</description>
+   <description>Snippet: HTTPS Request</description>
 </snippet>
 

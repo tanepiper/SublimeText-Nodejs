@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.close(fd, callback);</content>
+   <content><![CDATA[fs.close(fd, callback);]]></content>
    <tabTrigger>fs.close</tabTrigger>
    <scope>source.js</scope>
    <description>(fd, callback)</description>

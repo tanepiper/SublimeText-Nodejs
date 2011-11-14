@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.rmdir(path, callback);</content>
+   <content><![CDATA[fs.rmdir(path, callback);]]></content>
    <tabTrigger>fs.rmdir</tabTrigger>
    <scope>source.js</scope>
    <description>(path, callback)</description>

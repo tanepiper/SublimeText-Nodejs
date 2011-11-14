@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.open(path, flags, mode, callback);</content>
+   <content><![CDATA[fs.open(path, flags, mode, callback);]]></content>
    <tabTrigger>fs.open</tabTrigger>
    <scope>source.js</scope>
    <description>(path, flags, mode, callback)</description>

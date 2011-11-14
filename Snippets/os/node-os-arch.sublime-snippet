@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.arch();</content>
+   <content><![CDATA[os.arch();]]></content>
    <tabTrigger>os.arch</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

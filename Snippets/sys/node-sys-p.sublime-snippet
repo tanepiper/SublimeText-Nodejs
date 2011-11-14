@@ -1,5 +1,5 @@
 <snippet>
-   <content>sys.p();</content>
+   <content><![CDATA[sys.p();]]></content>
    <tabTrigger>sys.p</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

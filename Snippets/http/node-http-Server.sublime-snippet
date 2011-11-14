@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.Server(requestListener);</content>
+   <content><![CDATA[http.Server(requestListener);]]></content>
    <tabTrigger>http.Server</tabTrigger>
    <scope>source.js</scope>
    <description>(requestListener)</description>

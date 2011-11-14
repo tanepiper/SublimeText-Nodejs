@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.error(x);</content>
+   <content><![CDATA[util.error(x);]]></content>
    <tabTrigger>util.error</tabTrigger>
    <scope>source.js</scope>
    <description>(x)</description>

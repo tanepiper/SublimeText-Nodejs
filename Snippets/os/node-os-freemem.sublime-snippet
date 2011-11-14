@@ -1,5 +1,5 @@
 <snippet>
-   <content>os.freemem();</content>
+   <content><![CDATA[os.freemem();]]></content>
    <tabTrigger>os.freemem</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

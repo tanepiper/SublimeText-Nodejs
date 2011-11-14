@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.p();</content>
+   <content><![CDATA[util.p();]]></content>
    <tabTrigger>util.p</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

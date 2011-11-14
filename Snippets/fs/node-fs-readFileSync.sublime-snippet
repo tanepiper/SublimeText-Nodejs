@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.readFileSync(path, encoding);</content>
+   <content><![CDATA[fs.readFileSync(path, encoding);]]></content>
    <tabTrigger>fs.readFileSync</tabTrigger>
    <scope>source.js</scope>
    <description>(path, encoding)</description>

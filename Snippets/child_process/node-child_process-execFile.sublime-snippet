@@ -1,5 +1,5 @@
 <snippet>
-   <content>child_process.execFile(file /* args, options, callback */);</content>
+   <content><![CDATA[child_process.execFile(file /* args, options, callback */);]]></content>
    <tabTrigger>child_process.execFile</tabTrigger>
    <scope>source.js</scope>
    <description>(file /* args, options, callback */)</description>

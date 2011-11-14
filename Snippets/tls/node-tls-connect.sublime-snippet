@@ -1,5 +1,5 @@
 <snippet>
-   <content>tls.connect(port /* host, options, cb */);</content>
+   <content><![CDATA[tls.connect(port /* host, options, cb */);]]></content>
    <tabTrigger>tls.connect</tabTrigger>
    <scope>source.js</scope>
    <description>(port /* host, options, cb */)</description>

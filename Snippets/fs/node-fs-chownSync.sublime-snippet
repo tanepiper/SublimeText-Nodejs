@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.chownSync(path, uid, gid);</content>
+   <content><![CDATA[fs.chownSync(path, uid, gid);]]></content>
    <tabTrigger>fs.chownSync</tabTrigger>
    <scope>source.js</scope>
    <description>(path, uid, gid)</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.deflate(buffer, callback);</content>
+   <content><![CDATA[zlib.deflate(buffer, callback);]]></content>
    <tabTrigger>zlib.deflate</tabTrigger>
    <scope>source.js</scope>
    <description>(buffer, callback)</description>

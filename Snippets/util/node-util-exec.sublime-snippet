@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.exec();</content>
+   <content><![CDATA[util.exec();]]></content>
    <tabTrigger>util.exec</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

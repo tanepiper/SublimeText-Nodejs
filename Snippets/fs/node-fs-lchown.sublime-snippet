@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.lchown(path, uid, gid, callback);</content>
+   <content><![CDATA[fs.lchown(path, uid, gid, callback);]]></content>
    <tabTrigger>fs.lchown</tabTrigger>
    <scope>source.js</scope>
    <description>(path, uid, gid, callback)</description>

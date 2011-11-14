@@ -1,5 +1,5 @@
 <snippet>
-   <content>stream.Stream();</content>
+   <content><![CDATA[stream.Stream();]]></content>
    <tabTrigger>stream.Stream</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.fstatSync(fd);</content>
+   <content><![CDATA[fs.fstatSync(fd);]]></content>
    <tabTrigger>fs.fstatSync</tabTrigger>
    <scope>source.js</scope>
    <description>(fd)</description>

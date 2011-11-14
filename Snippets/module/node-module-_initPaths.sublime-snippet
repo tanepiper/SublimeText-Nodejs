@@ -1,5 +1,5 @@
 <snippet>
-   <content>module._initPaths();</content>
+   <content><![CDATA[module._initPaths();]]></content>
    <tabTrigger>module._initPaths</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

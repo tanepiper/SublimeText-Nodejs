@@ -1,8 +1,8 @@
 <snippet>
-   <content>tls.createSecurePair(credentials,
+   <content><![CDATA[tls.createSecurePair(credentials,
                                     isServer,
                                     requestCert,
-                                    rejectUnauthorized);</content>
+                                    rejectUnauthorized);]]></content>
    <tabTrigger>tls.createSecurePair</tabTrigger>
    <scope>source.js</scope>
    <description>(credentials,

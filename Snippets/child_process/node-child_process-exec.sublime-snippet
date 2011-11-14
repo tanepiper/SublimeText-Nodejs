@@ -1,5 +1,5 @@
 <snippet>
-   <content>child_process.exec(command /*, options, callback */);</content>
+   <content><![CDATA[child_process.exec(command /*, options, callback */);]]></content>
    <tabTrigger>child_process.exec</tabTrigger>
    <scope>source.js</scope>
    <description>(command /*, options, callback */)</description>

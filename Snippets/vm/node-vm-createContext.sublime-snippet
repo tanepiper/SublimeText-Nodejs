@@ -1,5 +1,5 @@
 <snippet>
-   <content>vm.createContext();</content>
+   <content><![CDATA[vm.createContext();]]></content>
    <tabTrigger>vm.createContext</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.getgid();</content>
+   <content><![CDATA[process.getgid();]]></content>
    <tabTrigger>process.getgid</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

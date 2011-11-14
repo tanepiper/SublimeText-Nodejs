@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.setTimeout(callback, after);</content>
+   <content><![CDATA[timers.setTimeout(callback, after);]]></content>
    <tabTrigger>timers.setTimeout</tabTrigger>
    <scope>source.js</scope>
    <description>(callback, after)</description>
