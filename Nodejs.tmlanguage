@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>comment</key>
-  <string>JavaScript Syntax: version 2.0</string>
+  <string>JavaScript (NodeJS) Syntax: version 2.0</string>
   <key>fileTypes</key>
   <array>
     <string>js</string>
@@ -19,7 +19,7 @@
   <key>keyEquivalent</key>
   <string>^~J</string>
   <key>name</key>
-  <string>JavaScript</string>
+  <string>JavaScript (NodeJS)</string>
   <key>patterns</key>
   <array>
     <dict>
