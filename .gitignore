@@ -1,2 +1,3 @@
 *.pyc
+*.cache
 node_modules
