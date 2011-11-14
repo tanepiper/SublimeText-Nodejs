@@ -1,0 +1,7 @@
+<!-- Created on Mon Nov 14 2011 22:10:43 GMT+0000 (GMT Standard Time) by doc_builder.js -->
+<snippet>
+   <content><![CDATA[util.inspect(obj, showHidden, depth, colors);]]></content>
+   <tabTrigger>util.inspect</tabTrigger>
+   <scope>source.js</scope>
+   <description>(obj, showHidden, depth, colors)</description>
+</snippet>

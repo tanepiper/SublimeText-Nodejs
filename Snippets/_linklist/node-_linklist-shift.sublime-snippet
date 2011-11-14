@@ -1,0 +1,7 @@
+<!-- Created on Mon Nov 14 2011 22:10:43 GMT+0000 (GMT Standard Time) by doc_builder.js -->
+<snippet>
+   <content><![CDATA[_linklist.shift(list);]]></content>
+   <tabTrigger>_linklist.shift</tabTrigger>
+   <scope>source.js</scope>
+   <description>(list)</description>
+</snippet>

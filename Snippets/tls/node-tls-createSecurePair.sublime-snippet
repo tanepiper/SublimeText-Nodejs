@@ -1,0 +1,13 @@
+<!-- Created on Mon Nov 14 2011 22:10:43 GMT+0000 (GMT Standard Time) by doc_builder.js -->
+<snippet>
+   <content><![CDATA[tls.createSecurePair(credentials,
+                                    isServer,
+                                    requestCert,
+                                    rejectUnauthorized);]]></content>
+   <tabTrigger>tls.createSecurePair</tabTrigger>
+   <scope>source.js</scope>
+   <description>(credentials,
+                                    isServer,
+                                    requestCert,
+                                    rejectUnauthorized)</description>
+</snippet>

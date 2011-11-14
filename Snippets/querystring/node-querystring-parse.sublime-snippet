@@ -1,0 +1,7 @@
+<!-- Created on Mon Nov 14 2011 22:10:43 GMT+0000 (GMT Standard Time) by doc_builder.js -->
+<snippet>
+   <content><![CDATA[querystring.parse(qs, sep, eq);]]></content>
+   <tabTrigger>querystring.parse</tabTrigger>
+   <scope>source.js</scope>
+   <description>(qs, sep, eq)</description>
+</snippet>
