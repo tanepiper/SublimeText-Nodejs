@@ -1,107 +1,149 @@
-/**
- * This file allows me to build the snippet files by reading the nodejs lib
- * files.
- * It uses autodoc which itself has some dependencies
- * 
- */
-
 var fs = require('fs');
-var exec = require('child_process').exec;
 var path = require('path');
 
 var nodelib = path.resolve('C:\\Users\\tanepiper\\Desktop\\nodelib');
-var autodoc = path.resolve('C:\\Users\\tanepiper\\source\\node-autodoc\\autodoc.co');
 var snippet_path = path.resolve('C:\\Users\\tanepiper\\AppData\\Roaming\\Sublime Text 2\\Packages\\Nodejs\\Snippets');
 
+var createSnippets = function(snippets) {
+  var i = 0, j = snippets.length;
+  for(;i<j;i++) {
+    var item = snippets[i];
 
-/**
- * Process the buffer from the stdout and join together on end
- * @param  {FileHandler} spw The file handler
- * @param  {FUnction} cb  Callback
- * @return none
- */
-var processBuffer = function(spw, cb) {
-  var buf = '';
-  spw.stdout.on('data', function(data) {
-    buf += data;
-  });
-  spw.stdout.on('end', function() {
-    cb(buf);
-  });
-};
+    var html_output = [];
+    var html_groups = [];
 
-/**
- * Execture the file and read the data, pass to callback when done
- * @param  {[type]} fileobj [description]
- * @param  {[type]} cb      [description]
- * @return {[type]}
- */
-var execFile = function(fileobj, cb) {
-  var s = exec('coco ' + autodoc + ' ' + fileobj.nodelib);
+    var output = [];
+    output.push('<snippet>');
+      output.push('   <content>' + item.f_string + '</content>');
+      output.push('   <tabTrigger>'+ item.name + '</tabTrigger>');
+      output.push('   <scope>source.js</scope>');
+      output.push('   <description>' + item.name + '</description>');
+    output.push('</snippet>');
+    console.log(output.join("\n"));
 
-  var data = '';
-  s.stdout.on('data', function(d) {
-    data += d;
-  });
+    /*
+    html_outp   ut.push('<div class="snippet">');
+      html_output.push('<strong>' + item.name + '</strong>');
+      html_output.push('<pre>' + item.reflection.body + '</pre>');
+    html_output.push('</div>');
 
-  s.stdout.on('end', function(){
-    cb(data);
-  });
-}
+    var i = {};
+    i[item.name] = html_output;
+    html_groups.push(i);
 
-var createSnippet = function(file, key, args) {
-  var args_joined_array = [];
-
-  if (args && args.length > 0) {
-    var i = 0, j = args.length;
-    for(;i<j;i++) {
-      args_joined_array.push(args[i].name);
+    var final_groups = [];
+    var hgkey;
+    for (hgkey in html_groups) {
+      var o = [];
+      o.push('<div class="function">');
+        o.push('<h2>' + hgkey + '</h2>');
+        o.push(html_groups[hgkey]);
+      o.push('</div>');
+      final_groups.push(o);
     }
+    console.log(final_groups);
+    */
+
+    saveFile(item.type, item.key, output.join("\n"));
   }
-  var args_joined = args_joined_array.join(', ');
-  var output = [];
-  output.push('<snippet>');
-    output.push('   <content>' + file + '.' + key + '(' + args_joined + ');</content>');
-    output.push('   <tabTrigger>'+ file + '.' + key + '</tabTrigger>');
-    output.push('   <scope>source.js</scope>');
-    output.push('   <description>' + file + '.' + key + '</description>');
-  output.push('</snippet>');
-  saveFile(file, key, output.join("\n"));
+
 }
 
 var saveFile = function(file, key, output) {
-  fs.writeFile(path.resolve(snippet_path, 'node-' + file + '-' + key + '.sublime-snippet'), output);
-}
- 
-var readFile = function(filename) {
-  var fileobj = {
-    filename: filename,
-    basename: path.basename(filename, '.js'),
-    nodelib: path.resolve(nodelib, filename)
-  }
-  execFile(fileobj, function(data) {
-    var obj;
-    try {
-      obj = JSON.parse(data);
-    } catch(exp) {
-      //console.log(fileobj.basename, exp);
-    }
-    var key;
-    if (obj && obj.properties) {
-      for(key in obj.properties) {
-        createSnippet(fileobj.basename, key, obj.properties[key].args);
-      }
-    }
-  });
+  fs.mkdir(path.resolve(snippet_path, file), function() {
+    var p = path.resolve(snippet_path, file, 'node-' + file + '-' + key + '.sublime-snippet');
+    //console.log(p);
+    fs.writeFile(p, output);
+  })
+  
 }
 
+/**
+ * Taken and slightly modified to support args, from http://hiveminds.org/phpBB/viewtopic.php?t=2885
+ * @param {Function} fn function to be reflected
+ */
+var FunctionReflect = function(fn) { 
+   this.fn = fn; 
+    
+   var s = fn.toString(); 
+   var iOpenParams = s.indexOf('('); 
+   var closeParams = s.indexOf(')');
+   this.name = s.substring(s.indexOf('function') + 8, iOpenParams); 
+   this.name = this.name.trim(); 
+
+   this.params = s.slice(iOpenParams, closeParams + 1);
+    
+   this.className = null; 
+   this.methodName = null; 
+   var iUnderscore = this.name.indexOf('_'); 
+    
+   if(iUnderscore >= 0) { 
+      this.className = this.name.substr(0, iUnderscore); 
+      this.methodName = this.name.substr(iUnderscore + 1); 
+   } 
+    
+   this.body = s.substring(s.indexOf('{') + 1, s.indexOf('}') - 1); 
+   return this;
+}
+  
 var readdir = function(err, files) {
   if (err) throw err;
 
+  var output_arr = [];
+
   var i = 0, j = files.length;
   for(;i<j;i++) {
-    readFile(files[i]);
+
+    var p = path.basename(files[i], '.js')
+    var r = require(p);
+
+    var rkey;
+    for(rkey in r) {
+      if (r.hasOwnProperty(rkey)) {
+        if (typeof r[rkey] === 'function') {
+          var doc_output = {}
+          doc_output.type = p;
+          doc_output.key = rkey;
+          doc_output.reflection = FunctionReflect(r[rkey]);
+          doc_output.args = doc_output.reflection.params.trim();
+          doc_output.f_string = '' + p + '.' + rkey + doc_output.args;
+          doc_output.name = '' + p  + '.' + rkey;
+          
+          output_arr.push(doc_output);
+        }
+      }
+    }
   }
+  var pkey;
+  for(pkey in process) {
+    if (typeof process[pkey] === 'function') {
+      var doc_output = {}
+      doc_output.type = 'process';
+      doc_output.key = pkey;
+      doc_output.reflection = FunctionReflect(process[pkey]);
+      doc_output.args = doc_output.reflection.params.trim();
+      doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
+      doc_output.name = '' +  doc_output.key;
+      
+      output_arr.push(doc_output);
+    }
+  }
+  var gkey;
+  for(gkey in global) {
+    if (typeof global[gkey] === 'function') {
+      var doc_output = {}
+      doc_output.type = 'global';
+      doc_output.key = gkey;
+      doc_output.reflection = FunctionReflect(global[gkey]);
+      doc_output.args = doc_output.reflection.params.trim();
+      doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
+      doc_output.name = '' + doc_output.key;
+      
+      output_arr.push(doc_output);
+    }
+  }
+  createSnippets(output_arr);
 }
+
 
 fs.readdir(nodelib, readdir);
