@@ -1,6 +1,5 @@
 {
   "cmd": ["node", "$file"],
   "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-  "selector": "source.js",
-  "path" : "/usr/local/bin"
+  "selector": "source.js"
 }

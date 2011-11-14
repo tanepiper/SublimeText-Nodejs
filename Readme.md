@@ -34,7 +34,7 @@ long running - these are currently being looked in to.
 
 Possible Improvements
 ---------------------
-* Fix files it has a problem reading like assert and event [Fixed]
+* [FIXED] Fix files it has a problem reading like assert and event
 * See if a better Sublime file format can be generated for language stuff
 * Add boilerplate snippets (http(s) servers, crypto functions, etc)
 

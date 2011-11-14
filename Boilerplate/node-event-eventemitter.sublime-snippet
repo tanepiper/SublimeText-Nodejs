@@ -1,0 +1,15 @@
+<snippet>
+   <content><![CDATA[var EventEmitter = require('events').EventEmitter;
+var ee = new EventEmitter();
+
+ee.on('event-name', function(foo, bar) {
+
+});
+
+ee.emit('event-name', 'foo', 'bar');
+
+]]></content>
+   <tabTrigger>node.events.EventEmitter.on</tabTrigger>
+   <scope>source.js</scope>
+   <description>Snippet</description>
+</snippet>

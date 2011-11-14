@@ -1,0 +1,18 @@
+<snippet>
+   <content><![CDATA[var https = require('https');
+var fs = require('fs');
+
+var options = {
+  key: fs.readFileSync('/path/to/ssl-key.pem'),
+  cert: fs.readFileSync('/path/to/ssl-cert.pem')
+};
+
+https.createServer(options, function (req, res) {
+  res.writeHead(200);
+  res.end("hello world\n");
+}).listen(8000);
+]]></content>
+   <tabTrigger>node.https.createServer</tabTrigger>
+   <scope>source.js</scope>
+   <description>Snippet</description>
+</snippet>

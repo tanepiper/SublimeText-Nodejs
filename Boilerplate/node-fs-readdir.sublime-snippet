@@ -1,0 +1,14 @@
+<snippet>
+   <content><![CDATA[var fs = require('fs');
+fs.readdir('/path/to/dir', function(err, items) {
+  var i = 0, j = items.length;
+  for(;i<j;i++) {
+    var item = items[i];
+    // Do something with item here
+  }
+});
+]]></content>
+   <tabTrigger>node.fs.readdir</tabTrigger>
+   <scope>source.js</scope>
+   <description>Snippet</description>
+</snippet>

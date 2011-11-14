@@ -1,0 +1,11 @@
+<snippet>
+   <content><![CDATA[var http = require('http');
+var server = http.createServer(function(req, res) {
+  res.send('Hello World');
+});
+server.listen(9000);
+]]></content>
+   <tabTrigger>node.http.createServer</tabTrigger>
+   <scope>source.js</scope>
+   <description>Snippet</description>
+</snippet>

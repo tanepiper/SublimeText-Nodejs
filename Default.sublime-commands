@@ -1,0 +1,14 @@
+[
+    {
+      "caption": "Node: Run current file",
+      "command": "node_run"
+    },
+    {
+      "caption": "Node: Run current file with arguments",
+      "command": "node_run_arguments"
+    },
+    {
+      "caption": "Node: NPM Command",
+      "command": "node_npm"
+    }
+]

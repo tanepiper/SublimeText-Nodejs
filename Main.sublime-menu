@@ -1,0 +1,20 @@
+[{
+  "id": "tools",
+  "children": [{
+    "caption": "Node",
+    "children": [{
+      "caption": "This file",
+      "children": [
+        { "caption": "Run", "command": "node_run" },
+        { "caption": "Run with arguments", "command": "node_run_arguments" }
+      ]
+    },
+    {
+      "caption": "This folder",
+      "children": [
+        { "caption": "Run", "command": "node_run" },
+        { "caption": "Run with arguments", "command": "node_run_arguments" }
+      ]
+    }]
+  }]
+}]

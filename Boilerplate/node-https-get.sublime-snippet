@@ -1,0 +1,19 @@
+<snippet>
+   <content><![CDATA[var https = require('https');
+
+https.get({ host: 'encrypted.google.com', path: '/' }, function(res) {
+  console.log("statusCode: ", res.statusCode);
+  console.log("headers: ", res.headers);
+
+  res.on('data', function(d) {
+    process.stdout.write(d);
+  });
+
+}).on('error', function(e) {
+  console.error(e);
+});
+]]></content>
+   <tabTrigger>node.https.get</tabTrigger>
+   <scope>source.js</scope>
+   <description>Snippet</description>
+</snippet>
