@@ -1,7 +1,6 @@
 <snippet>
-   <content>zlib.Deflate(opts)</content>
-   <tabTrigger>zlib.Deflate</tabTrigger>
+   <content>zlib.deflate(buffer, callback)</content>
+   <tabTrigger>zlib.deflate</tabTrigger>
    <scope>source.js</scope>
-   <description>zlib.Deflate</description>
-</snippet>>
+   <description>zlib.deflate</description>
 </snippet>
