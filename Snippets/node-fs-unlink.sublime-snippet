@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.unlink(path, callback);</content>
+   <content>fs.unlink(path, callback)</content>
    <tabTrigger>fs.unlink</tabTrigger>
    <scope>source.js</scope>
    <description>fs.unlink</description>

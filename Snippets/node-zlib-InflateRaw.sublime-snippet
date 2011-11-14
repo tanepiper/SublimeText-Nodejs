@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.inflateRaw(buffer, callback);</content>
+   <content>zlib.inflateRaw(buffer, callback)</content>
    <tabTrigger>zlib.inflateRaw</tabTrigger>
    <scope>source.js</scope>
    <description>zlib.inflateRaw</description>

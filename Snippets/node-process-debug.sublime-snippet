@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.debug()</content>
+   <tabTrigger>process.debug</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.debug</description>
+</snippet>

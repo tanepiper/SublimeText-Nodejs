@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.lstat(path, callback);</content>
+   <content>fs.lstat(path, callback)</content>
    <tabTrigger>fs.lstat</tabTrigger>
    <scope>source.js</scope>
    <description>fs.lstat</description>

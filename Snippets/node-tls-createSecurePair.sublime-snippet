@@ -1,5 +1,8 @@
 <snippet>
-   <content>tls.createSecurePair(credentials, isServer, requestCert, rejectUnauthorized);</content>
+   <content>tls.createSecurePair(credentials,
+                                    isServer,
+                                    requestCert,
+                                    rejectUnauthorized)</content>
    <tabTrigger>tls.createSecurePair</tabTrigger>
    <scope>source.js</scope>
    <description>tls.createSecurePair</description>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>assert.strictEqual(actual, expected, message)</content>
+   <tabTrigger>assert.strictEqual</tabTrigger>
+   <scope>source.js</scope>
+   <description>assert.strictEqual</description>
+</snippet>

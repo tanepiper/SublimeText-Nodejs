@@ -1,5 +1,5 @@
 <snippet>
-   <content>https.Server(opts, requestListener);</content>
+   <content>https.Server(opts, requestListener)</content>
    <tabTrigger>https.Server</tabTrigger>
    <scope>source.js</scope>
    <description>https.Server</description>

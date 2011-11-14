@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.EventEmitter()</content>
+   <tabTrigger>process.EventEmitter</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.EventEmitter</description>
+</snippet>

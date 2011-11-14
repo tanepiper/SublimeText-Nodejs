@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.write(fd, buffer, offset, length, position, callback);</content>
+   <content>fs.write(fd, buffer, offset, length, position, callback)</content>
    <tabTrigger>fs.write</tabTrigger>
    <scope>source.js</scope>
    <description>fs.write</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.mkdir(path, mode, callback);</content>
+   <content>fs.mkdir(path, mode, callback)</content>
    <tabTrigger>fs.mkdir</tabTrigger>
    <scope>source.js</scope>
    <description>fs.mkdir</description>

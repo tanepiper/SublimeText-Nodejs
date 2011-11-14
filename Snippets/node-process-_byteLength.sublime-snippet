@@ -1,0 +1,6 @@
+<snippet>
+   <content>process._byteLength()</content>
+   <tabTrigger>process._byteLength</tabTrigger>
+   <scope>source.js</scope>
+   <description>process._byteLength</description>
+</snippet>

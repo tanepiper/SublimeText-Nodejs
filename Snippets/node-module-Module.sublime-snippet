@@ -1,0 +1,6 @@
+<snippet>
+   <content>module.Module(id, parent)</content>
+   <tabTrigger>module.Module</tabTrigger>
+   <scope>source.js</scope>
+   <description>module.Module</description>
+</snippet>

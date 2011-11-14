@@ -1,5 +1,5 @@
 <snippet>
-   <content>crypto.createCipheriv(cipher, key, iv);</content>
+   <content>crypto.createCipheriv(cipher, key, iv)</content>
    <tabTrigger>crypto.createCipheriv</tabTrigger>
    <scope>source.js</scope>
    <description>crypto.createCipheriv</description>

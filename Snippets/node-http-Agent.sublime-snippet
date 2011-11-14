@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.Agent(options);</content>
+   <content>http.Agent(options)</content>
    <tabTrigger>http.Agent</tabTrigger>
    <scope>source.js</scope>
    <description>http.Agent</description>

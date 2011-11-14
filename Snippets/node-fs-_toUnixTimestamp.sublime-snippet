@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs._toUnixTimestamp(time);</content>
+   <content>fs._toUnixTimestamp(time)</content>
    <tabTrigger>fs._toUnixTimestamp</tabTrigger>
    <scope>source.js</scope>
    <description>fs._toUnixTimestamp</description>

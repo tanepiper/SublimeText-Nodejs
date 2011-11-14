@@ -1,0 +1,6 @@
+<snippet>
+   <content>sys.exec()</content>
+   <tabTrigger>sys.exec</tabTrigger>
+   <scope>source.js</scope>
+   <description>sys.exec</description>
+</snippet>

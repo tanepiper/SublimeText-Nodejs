@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.clearInterval(timer);</content>
+   <content>timers.clearInterval(timer)</content>
    <tabTrigger>timers.clearInterval</tabTrigger>
    <scope>source.js</scope>
    <description>timers.clearInterval</description>

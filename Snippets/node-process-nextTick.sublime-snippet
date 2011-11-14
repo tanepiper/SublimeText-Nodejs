@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.nextTick(callback)</content>
+   <tabTrigger>process.nextTick</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.nextTick</description>
+</snippet>

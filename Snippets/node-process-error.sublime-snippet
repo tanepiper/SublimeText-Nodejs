@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.error()</content>
+   <tabTrigger>process.error</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.error</description>
+</snippet>

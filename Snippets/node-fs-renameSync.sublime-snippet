@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.renameSync(oldPath, newPath);</content>
+   <content>fs.renameSync(oldPath, newPath)</content>
    <tabTrigger>fs.renameSync</tabTrigger>
    <scope>source.js</scope>
    <description>fs.renameSync</description>

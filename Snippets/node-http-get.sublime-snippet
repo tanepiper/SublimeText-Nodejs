@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.get(options, cb);</content>
+   <content>http.get(options, cb)</content>
    <tabTrigger>http.get</tabTrigger>
    <scope>source.js</scope>
    <description>http.get</description>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>http.parsers();</content>
-   <tabTrigger>http.parsers</tabTrigger>
-   <scope>source.js</scope>
-   <description>http.parsers</description>
-</snippet>

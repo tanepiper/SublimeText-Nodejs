@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.unwatchFile()</content>
+   <tabTrigger>process.unwatchFile</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.unwatchFile</description>
+</snippet>

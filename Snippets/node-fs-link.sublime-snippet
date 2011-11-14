@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.link(srcpath, dstpath, callback);</content>
+   <content>fs.link(srcpath, dstpath, callback)</content>
    <tabTrigger>fs.link</tabTrigger>
    <scope>source.js</scope>
    <description>fs.link</description>

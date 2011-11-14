@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.inherits()</content>
+   <tabTrigger>process.inherits</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.inherits</description>
+</snippet>

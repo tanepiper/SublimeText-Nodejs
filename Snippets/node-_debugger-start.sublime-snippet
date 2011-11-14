@@ -1,5 +1,5 @@
 <snippet>
-   <content>_debugger.start(argv, stdin, stdout);</content>
+   <content>_debugger.start(argv, stdin, stdout)</content>
    <tabTrigger>_debugger.start</tabTrigger>
    <scope>source.js</scope>
    <description>_debugger.start</description>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>events.EventEmitter()</content>
+   <tabTrigger>events.EventEmitter</tabTrigger>
+   <scope>source.js</scope>
+   <description>events.EventEmitter</description>
+</snippet>

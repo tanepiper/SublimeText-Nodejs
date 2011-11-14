@@ -1,5 +1,5 @@
 <snippet>
-   <content>dgram.createSocket(type, listener);</content>
+   <content>dgram.createSocket(type, listener)</content>
    <tabTrigger>dgram.createSocket</tabTrigger>
    <scope>source.js</scope>
    <description>dgram.createSocket</description>

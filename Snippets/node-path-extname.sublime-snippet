@@ -1,5 +1,5 @@
 <snippet>
-   <content>path.extname(path);</content>
+   <content>path.extname(path)</content>
    <tabTrigger>path.extname</tabTrigger>
    <scope>source.js</scope>
    <description>path.extname</description>

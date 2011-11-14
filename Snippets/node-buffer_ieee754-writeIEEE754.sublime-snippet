@@ -1,5 +1,5 @@
 <snippet>
-   <content>buffer_ieee754.writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);</content>
+   <content>buffer_ieee754.writeIEEE754(buffer, value, offset, isBE, mLen, nBytes)</content>
    <tabTrigger>buffer_ieee754.writeIEEE754</tabTrigger>
    <scope>source.js</scope>
    <description>buffer_ieee754.writeIEEE754</description>

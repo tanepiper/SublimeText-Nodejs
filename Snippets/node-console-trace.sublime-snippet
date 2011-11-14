@@ -1,5 +1,5 @@
 <snippet>
-   <content>console.trace(label);</content>
+   <content>console.trace(label)</content>
    <tabTrigger>console.trace</tabTrigger>
    <scope>source.js</scope>
    <description>console.trace</description>

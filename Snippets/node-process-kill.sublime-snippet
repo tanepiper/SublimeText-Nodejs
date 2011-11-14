@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.kill(pid, sig)</content>
+   <tabTrigger>process.kill</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.kill</description>
+</snippet>

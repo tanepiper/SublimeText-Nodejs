@@ -1,5 +1,5 @@
 <snippet>
-   <content>util.log(msg);</content>
+   <content>util.log(msg)</content>
    <tabTrigger>util.log</tabTrigger>
    <scope>source.js</scope>
    <description>util.log</description>

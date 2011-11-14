@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.addListener(type, listener)</content>
+   <tabTrigger>process.addListener</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.addListener</description>
+</snippet>

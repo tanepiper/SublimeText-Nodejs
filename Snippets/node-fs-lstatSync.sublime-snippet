@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.lstatSync(path);</content>
+   <content>fs.lstatSync(path)</content>
    <tabTrigger>fs.lstatSync</tabTrigger>
    <scope>source.js</scope>
    <description>fs.lstatSync</description>

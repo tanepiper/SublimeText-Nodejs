@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.chmod(path, mode, callback);</content>
+   <content>fs.chmod(path, mode, callback)</content>
    <tabTrigger>fs.chmod</tabTrigger>
    <scope>source.js</scope>
    <description>fs.chmod</description>

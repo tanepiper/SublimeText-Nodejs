@@ -1,5 +1,5 @@
 <snippet>
-   <content>_linklist.append(list, item);</content>
+   <content>_linklist.append(list, item)</content>
    <tabTrigger>_linklist.append</tabTrigger>
    <scope>source.js</scope>
    <description>_linklist.append</description>

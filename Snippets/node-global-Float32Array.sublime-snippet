@@ -1,0 +1,6 @@
+<snippet>
+   <content>global.Float32Array()</content>
+   <tabTrigger>global.Float32Array</tabTrigger>
+   <scope>source.js</scope>
+   <description>global.Float32Array</description>
+</snippet>

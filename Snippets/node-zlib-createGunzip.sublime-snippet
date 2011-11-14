@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.createGunzip(o);</content>
+   <content>zlib.createGunzip(o)</content>
    <tabTrigger>zlib.createGunzip</tabTrigger>
    <scope>source.js</scope>
    <description>zlib.createGunzip</description>

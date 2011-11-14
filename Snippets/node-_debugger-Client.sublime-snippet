@@ -1,5 +1,5 @@
 <snippet>
-   <content>_debugger.Client();</content>
+   <content>_debugger.Client()</content>
    <tabTrigger>_debugger.Client</tabTrigger>
    <scope>source.js</scope>
    <description>_debugger.Client</description>

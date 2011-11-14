@@ -1,5 +1,5 @@
 <snippet>
-   <content>url.format(obj);</content>
+   <content>url.format(obj)</content>
    <tabTrigger>url.format</tabTrigger>
    <scope>source.js</scope>
    <description>url.format</description>

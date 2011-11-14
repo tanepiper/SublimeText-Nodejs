@@ -1,0 +1,6 @@
+<snippet>
+   <content>global.DataView()</content>
+   <tabTrigger>global.DataView</tabTrigger>
+   <scope>source.js</scope>
+   <description>global.DataView</description>
+</snippet>

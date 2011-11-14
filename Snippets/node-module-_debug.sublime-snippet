@@ -1,0 +1,6 @@
+<snippet>
+   <content>module._debug()</content>
+   <tabTrigger>module._debug</tabTrigger>
+   <scope>source.js</scope>
+   <description>module._debug</description>
+</snippet>

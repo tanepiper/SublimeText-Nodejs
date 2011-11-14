@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.watchFile(filename);</content>
+   <content>fs.watchFile(filename)</content>
    <tabTrigger>fs.watchFile</tabTrigger>
    <scope>source.js</scope>
    <description>fs.watchFile</description>

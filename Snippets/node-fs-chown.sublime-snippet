@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.chown(path, uid, gid, callback);</content>
+   <content>fs.chown(path, uid, gid, callback)</content>
    <tabTrigger>fs.chown</tabTrigger>
    <scope>source.js</scope>
    <description>fs.chown</description>

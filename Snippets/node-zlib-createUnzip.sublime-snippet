@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.createUnzip(o);</content>
+   <content>zlib.createUnzip(o)</content>
    <tabTrigger>zlib.createUnzip</tabTrigger>
    <scope>source.js</scope>
    <description>zlib.createUnzip</description>

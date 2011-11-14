@@ -1,5 +1,5 @@
 <snippet>
-   <content>net.createServer();</content>
+   <content>net.createServer()</content>
    <tabTrigger>net.createServer</tabTrigger>
    <scope>source.js</scope>
    <description>net.createServer</description>

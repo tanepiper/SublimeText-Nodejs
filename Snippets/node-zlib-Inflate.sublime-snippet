@@ -1,5 +1,5 @@
 <snippet>
-   <content>zlib.inflate(buffer, callback);</content>
+   <content>zlib.inflate(buffer, callback)</content>
    <tabTrigger>zlib.inflate</tabTrigger>
    <scope>source.js</scope>
    <description>zlib.inflate</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.setInterval(callback, repeat);</content>
+   <content>timers.setInterval(callback, repeat)</content>
    <tabTrigger>timers.setInterval</tabTrigger>
    <scope>source.js</scope>
    <description>timers.setInterval</description>

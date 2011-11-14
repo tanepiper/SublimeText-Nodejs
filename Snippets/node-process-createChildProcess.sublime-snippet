@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.createChildProcess()</content>
+   <tabTrigger>process.createChildProcess</tabTrigger>
+   <scope>source.js</scope>
+   <description>process.createChildProcess</description>
+</snippet>

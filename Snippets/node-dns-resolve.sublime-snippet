@@ -1,5 +1,5 @@
 <snippet>
-   <content>dns.resolve(domain, type_, callback_);</content>
+   <content>dns.resolve(domain, type_, callback_)</content>
    <tabTrigger>dns.resolve</tabTrigger>
    <scope>source.js</scope>
    <description>dns.resolve</description>

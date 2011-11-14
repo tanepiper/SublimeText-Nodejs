@@ -1,0 +1,6 @@
+<snippet>
+   <content>cluster.fork()</content>
+   <tabTrigger>cluster.fork</tabTrigger>
+   <scope>source.js</scope>
+   <description>cluster.fork</description>
+</snippet>

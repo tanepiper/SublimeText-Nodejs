@@ -1,5 +1,5 @@
 <snippet>
-   <content>http.ClientRequest(options, cb);</content>
+   <content>http.ClientRequest(options, cb)</content>
    <tabTrigger>http.ClientRequest</tabTrigger>
    <scope>source.js</scope>
    <description>http.ClientRequest</description>

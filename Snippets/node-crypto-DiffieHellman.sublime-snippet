@@ -1,0 +1,6 @@
+<snippet>
+   <content>crypto.DiffieHellman()</content>
+   <tabTrigger>crypto.DiffieHellman</tabTrigger>
+   <scope>source.js</scope>
+   <description>crypto.DiffieHellman</description>
+</snippet>

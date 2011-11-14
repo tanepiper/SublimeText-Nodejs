@@ -1,5 +1,5 @@
 <snippet>
-   <content>_debugger.Protocol();</content>
+   <content>_debugger.Protocol()</content>
    <tabTrigger>_debugger.Protocol</tabTrigger>
    <scope>source.js</scope>
    <description>_debugger.Protocol</description>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>global.ArrayBuffer()</content>
+   <tabTrigger>global.ArrayBuffer</tabTrigger>
+   <scope>source.js</scope>
+   <description>global.ArrayBuffer</description>
+</snippet>

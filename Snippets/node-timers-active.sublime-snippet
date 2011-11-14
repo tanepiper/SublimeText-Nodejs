@@ -1,5 +1,5 @@
 <snippet>
-   <content>timers.active(item);</content>
+   <content>timers.active(item)</content>
    <tabTrigger>timers.active</tabTrigger>
    <scope>source.js</scope>
    <description>timers.active</description>

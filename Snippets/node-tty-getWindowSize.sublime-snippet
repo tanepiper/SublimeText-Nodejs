@@ -1,5 +1,5 @@
 <snippet>
-   <content>tty.getWindowSize();</content>
+   <content>tty.getWindowSize()</content>
    <tabTrigger>tty.getWindowSize</tabTrigger>
    <scope>source.js</scope>
    <description>tty.getWindowSize</description>

@@ -1,0 +1,6 @@
+<snippet>
+   <content>os.type()</content>
+   <tabTrigger>os.type</tabTrigger>
+   <scope>source.js</scope>
+   <description>os.type</description>
+</snippet>

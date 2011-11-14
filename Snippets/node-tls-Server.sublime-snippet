@@ -1,5 +1,5 @@
 <snippet>
-   <content>tls.Server();</content>
+   <content>tls.Server(/* [options], listener */)</content>
    <tabTrigger>tls.Server</tabTrigger>
    <scope>source.js</scope>
    <description>tls.Server</description>

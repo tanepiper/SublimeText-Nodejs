@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.readlinkSync(path);</content>
+   <content>fs.readlinkSync(path)</content>
    <tabTrigger>fs.readlinkSync</tabTrigger>
    <scope>source.js</scope>
    <description>fs.readlinkSync</description>

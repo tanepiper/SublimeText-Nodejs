@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.fstat(fd, callback);</content>
+   <content>fs.fstat(fd, callback)</content>
    <tabTrigger>fs.fstat</tabTrigger>
    <scope>source.js</scope>
    <description>fs.fstat</description>

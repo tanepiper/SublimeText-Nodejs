@@ -1,5 +1,5 @@
 <snippet>
-   <content>console.timeEnd(label);</content>
+   <content>console.timeEnd(label)</content>
    <tabTrigger>console.timeEnd</tabTrigger>
    <scope>source.js</scope>
    <description>console.timeEnd</description>

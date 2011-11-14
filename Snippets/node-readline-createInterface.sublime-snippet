@@ -1,5 +1,5 @@
 <snippet>
-   <content>readline.createInterface(input, output, completer);</content>
+   <content>readline.createInterface(input, output, completer)</content>
    <tabTrigger>readline.createInterface</tabTrigger>
    <scope>source.js</scope>
    <description>readline.createInterface</description>

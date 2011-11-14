@@ -1,5 +1,5 @@
 <snippet>
-   <content>fs.close(fd, callback);</content>
+   <content>fs.close(fd, callback)</content>
    <tabTrigger>fs.close</tabTrigger>
    <scope>source.js</scope>
    <description>fs.close</description>

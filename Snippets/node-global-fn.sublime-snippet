@@ -1,0 +1,6 @@
+<snippet>
+   <content>global.fn()</content>
+   <tabTrigger>global.fn</tabTrigger>
+   <scope>source.js</scope>
+   <description>global.fn</description>
+</snippet>

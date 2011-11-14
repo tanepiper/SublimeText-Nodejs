@@ -1,0 +1,6 @@
+<snippet>
+   <content>crypto.rng()</content>
+   <tabTrigger>crypto.rng</tabTrigger>
+   <scope>source.js</scope>
+   <description>crypto.rng</description>
+</snippet>
