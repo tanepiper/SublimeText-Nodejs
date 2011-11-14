@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.clearTimeout();]]></content>
+   <content><![CDATA[clearTimeout();]]></content>
    <tabTrigger>global.clearTimeout</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

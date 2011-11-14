@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.Float64Array();]]></content>
+   <content><![CDATA[Float64Array();]]></content>
    <tabTrigger>global.Float64Array</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

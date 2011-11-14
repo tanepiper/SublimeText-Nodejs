@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.ArrayBuffer();]]></content>
+   <content><![CDATA[ArrayBuffer();]]></content>
    <tabTrigger>global.ArrayBuffer</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

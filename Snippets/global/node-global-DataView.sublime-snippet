@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.DataView();]]></content>
+   <content><![CDATA[DataView();]]></content>
    <tabTrigger>global.DataView</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

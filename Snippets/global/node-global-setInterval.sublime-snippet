@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.setInterval();]]></content>
+   <content><![CDATA[setInterval();]]></content>
    <tabTrigger>global.setInterval</tabTrigger>
    <scope>source.js</scope>
    <description>()</description>

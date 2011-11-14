@@ -1,5 +1,5 @@
 <snippet>
-   <content><![CDATA[global.Buffer(subject, encoding, offset);]]></content>
+   <content><![CDATA[Buffer(subject, encoding, offset);]]></content>
    <tabTrigger>global.Buffer</tabTrigger>
    <scope>source.js</scope>
    <description>(subject, encoding, offset)</description>
