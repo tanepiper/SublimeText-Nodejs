@@ -12,12 +12,10 @@ import tempfile
 # Fun discovery: Sublime on windows still requires posix path separators.
 PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '').replace(os.path.sep, '/')
 
-
 def main_thread(callback, *args, **kwargs):
     # sublime.set_timeout gets used to send things onto the main thread
     # most sublime.[something] calls need to be on the main thread
     sublime.set_timeout(functools.partial(callback, *args, **kwargs), 0)
-
 
 def open_url(url):
     sublime.active_window().run_command('open_url', {"url": url})
@@ -209,7 +207,9 @@ class NodeRunArgumentsCommand(NodeTextCommand):
     self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
-    command = ['node', self.view.file_name(), message]
+    command = message.split()
+    command.insert(0, self.view.file_name());
+    command.insert(0, 'node');
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
@@ -220,7 +220,8 @@ class NodeNpmCommand(NodeTextCommand):
     self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
-    command = ['npm', message, self.get_working_dir()]
+    command = message.split()
+    command.insert(0, "npm");
     self.run_command(command, self.command_done)
 
   def command_done(self, result):

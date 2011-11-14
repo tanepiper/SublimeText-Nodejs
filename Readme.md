@@ -45,9 +45,7 @@ The current commands available are:
 
 * Run current script in node
 * Run current script in node with arguments
-* Run current directory with node
-* Run current script in node with arguments
-* NPM command
+* NPM command [Currently broken]
 
 Boilerplate Code
 ----------------
