@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.mixin()</content>
+   <content>mixin()</content>
    <tabTrigger>process.mixin</tabTrigger>
    <scope>source.js</scope>
    <description>process.mixin</description>

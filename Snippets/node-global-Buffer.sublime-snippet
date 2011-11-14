@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.Buffer(subject, encoding, offset)</content>
+   <content>Buffer(subject, encoding, offset)</content>
    <tabTrigger>global.Buffer</tabTrigger>
    <scope>source.js</scope>
    <description>global.Buffer</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.openStdin()</content>
+   <content>openStdin()</content>
    <tabTrigger>process.openStdin</tabTrigger>
    <scope>source.js</scope>
    <description>process.openStdin</description>

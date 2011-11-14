@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.removeListener(type, listener)</content>
+   <content>removeListener(type, listener)</content>
    <tabTrigger>process.removeListener</tabTrigger>
    <scope>source.js</scope>
    <description>process.removeListener</description>

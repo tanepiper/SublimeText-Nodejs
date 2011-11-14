@@ -5,8 +5,6 @@ var nodelib = path.resolve('C:\\Users\\tanepiper\\Desktop\\nodelib');
 var snippet_path = path.resolve('C:\\Users\\tanepiper\\AppData\\Roaming\\Sublime Text 2\\Packages\\Nodejs\\Snippets');
 
 var createSnippets = function(snippets) {
-  //console.log(snippets);
-
   var i = 0, j = snippets.length;
   for(;i<j;i++) {
     var item = snippets[i];
@@ -89,7 +87,7 @@ var readdir = function(err, files) {
       doc_output.key = pkey;
       doc_output.reflection = FunctionReflect(process[pkey]);
       doc_output.args = doc_output.reflection.params.trim();
-      doc_output.f_string = '' + doc_output.type + '.' + doc_output.key + doc_output.reflection.params.trim()
+      doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
       doc_output.name = '' + doc_output.type  + '.' + doc_output.key;
       
       output_arr.push(doc_output);
@@ -103,7 +101,7 @@ var readdir = function(err, files) {
       doc_output.key = gkey;
       doc_output.reflection = FunctionReflect(global[gkey]);
       doc_output.args = doc_output.reflection.params.trim();
-      doc_output.f_string = '' + doc_output.type + '.' + doc_output.key + doc_output.reflection.params.trim()
+      doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
       doc_output.name = '' + doc_output.type  + '.' + doc_output.key;
       
       output_arr.push(doc_output);

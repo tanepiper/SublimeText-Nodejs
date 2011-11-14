@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.Int16Array()</content>
+   <content>Int16Array()</content>
    <tabTrigger>global.Int16Array</tabTrigger>
    <scope>source.js</scope>
    <description>global.Int16Array</description>

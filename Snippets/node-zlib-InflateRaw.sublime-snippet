@@ -1,6 +1,7 @@
 <snippet>
-   <content>zlib.inflateRaw(buffer, callback)</content>
-   <tabTrigger>zlib.inflateRaw</tabTrigger>
+   <content>zlib.InflateRaw(opts)</content>
+   <tabTrigger>zlib.InflateRaw</tabTrigger>
    <scope>source.js</scope>
-   <description>zlib.inflateRaw</description>
+   <description>zlib.InflateRaw</description>
+</snippet>>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>process._needTickCallback()</content>
+   <content>_needTickCallback()</content>
    <tabTrigger>process._needTickCallback</tabTrigger>
    <scope>source.js</scope>
    <description>process._needTickCallback</description>

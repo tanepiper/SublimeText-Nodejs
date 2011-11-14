@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.dlopen()</content>
+   <content>dlopen()</content>
    <tabTrigger>process.dlopen</tabTrigger>
    <scope>source.js</scope>
    <description>process.dlopen</description>

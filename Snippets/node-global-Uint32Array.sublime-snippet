@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.Uint32Array()</content>
+   <content>Uint32Array()</content>
    <tabTrigger>global.Uint32Array</tabTrigger>
    <scope>source.js</scope>
    <description>global.Uint32Array</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.listeners(type)</content>
+   <content>listeners(type)</content>
    <tabTrigger>process.listeners</tabTrigger>
    <scope>source.js</scope>
    <description>process.listeners</description>

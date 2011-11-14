@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.chdir()</content>
+   <content>chdir()</content>
    <tabTrigger>process.chdir</tabTrigger>
    <scope>source.js</scope>
    <description>process.chdir</description>

@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.setMaxListeners(n)</content>
+   <content>setMaxListeners(n)</content>
    <tabTrigger>process.setMaxListeners</tabTrigger>
    <scope>source.js</scope>
    <description>process.setMaxListeners</description>

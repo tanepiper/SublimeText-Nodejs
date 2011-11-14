@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.setInterval()</content>
+   <content>setInterval()</content>
    <tabTrigger>global.setInterval</tabTrigger>
    <scope>source.js</scope>
    <description>global.setInterval</description>

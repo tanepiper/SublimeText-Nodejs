@@ -1,5 +1,5 @@
 <snippet>
-   <content>global.Uint8Array()</content>
+   <content>Uint8Array()</content>
    <tabTrigger>global.Uint8Array</tabTrigger>
    <scope>source.js</scope>
    <description>global.Uint8Array</description>

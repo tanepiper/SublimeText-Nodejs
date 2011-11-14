@@ -1,5 +1,5 @@
 <snippet>
-   <content>process.memoryUsage()</content>
+   <content>memoryUsage()</content>
    <tabTrigger>process.memoryUsage</tabTrigger>
    <scope>source.js</scope>
    <description>process.memoryUsage</description>
