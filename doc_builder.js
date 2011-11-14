@@ -231,7 +231,7 @@ function list(val) {
  * parses the required files
  */
 commander
-  .version('1.0.0')
+  .version('1.0.1')
   .option('-i --input <value>', 'The input path where the source code is located')
   .option('-o --output <value>', 'The location of the output file')
   .option('-n --ns [namespaces]', 'The namespaces you wish to include as a comma separated list', list)
