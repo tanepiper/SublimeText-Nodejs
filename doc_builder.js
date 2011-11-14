@@ -246,7 +246,7 @@ if (commander.global) {
 }
 
 if (commander.ns) {
-  createNamespaces(commander, output);
+  createNamespaces(commander.ns, output);
 }
 
 if (commander.full) {
