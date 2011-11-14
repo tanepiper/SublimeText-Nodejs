@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.Hash();]]></content>
-   <tabTrigger>crypto.Hash</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

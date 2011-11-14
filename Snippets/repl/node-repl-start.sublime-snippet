@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[repl.start(prompt, source, eval, useGlobal);]]></content>
-   <tabTrigger>repl.start</tabTrigger>
-   <scope>source.js</scope>
-   <description>(prompt, source, eval, useGlobal)</description>
-</snippet>

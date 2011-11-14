@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.statSync(path);]]></content>
-   <tabTrigger>fs.statSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path)</description>
-</snippet>

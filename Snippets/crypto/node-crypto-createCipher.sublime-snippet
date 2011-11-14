@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.createCipher(cipher, password);]]></content>
-   <tabTrigger>crypto.createCipher</tabTrigger>
-   <scope>source.js</scope>
-   <description>(cipher, password)</description>
-</snippet>

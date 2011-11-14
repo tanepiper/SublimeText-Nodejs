@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.utimesSync(path, atime, mtime);]]></content>
-   <tabTrigger>fs.utimesSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, atime, mtime)</description>
-</snippet>

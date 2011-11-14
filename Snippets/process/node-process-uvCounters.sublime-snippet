@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.uvCounters();]]></content>
-   <tabTrigger>process.uvCounters</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

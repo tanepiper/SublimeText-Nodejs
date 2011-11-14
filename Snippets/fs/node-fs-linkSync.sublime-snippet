@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.linkSync(srcpath, dstpath);]]></content>
-   <tabTrigger>fs.linkSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(srcpath, dstpath)</description>
-</snippet>

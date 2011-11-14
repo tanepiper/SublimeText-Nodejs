@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[assert.notEqual(actual, expected, message);]]></content>
-   <tabTrigger>assert.notEqual</tabTrigger>
-   <scope>source.js</scope>
-   <description>(actual, expected, message)</description>
-</snippet>

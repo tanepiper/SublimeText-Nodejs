@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[zlib.deflateRaw(buffer, callback);]]></content>
-   <tabTrigger>zlib.deflateRaw</tabTrigger>
-   <scope>source.js</scope>
-   <description>(buffer, callback)</description>
-</snippet>

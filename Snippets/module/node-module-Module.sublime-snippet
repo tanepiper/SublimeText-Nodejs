@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[module.Module(id, parent);]]></content>
-   <tabTrigger>module.Module</tabTrigger>
-   <scope>source.js</scope>
-   <description>(id, parent)</description>
-</snippet>

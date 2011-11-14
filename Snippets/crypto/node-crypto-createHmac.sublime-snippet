@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.createHmac(hmac, key);]]></content>
-   <tabTrigger>crypto.createHmac</tabTrigger>
-   <scope>source.js</scope>
-   <description>(hmac, key)</description>
-</snippet>

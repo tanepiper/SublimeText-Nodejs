@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[sys.inherits(ctor, superCtor);]]></content>
-   <tabTrigger>sys.inherits</tabTrigger>
-   <scope>source.js</scope>
-   <description>(ctor, superCtor)</description>
-</snippet>

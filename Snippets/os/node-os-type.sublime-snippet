@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[os.type();]]></content>
-   <tabTrigger>os.type</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

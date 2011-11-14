@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.DiffieHellman();]]></content>
-   <tabTrigger>crypto.DiffieHellman</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

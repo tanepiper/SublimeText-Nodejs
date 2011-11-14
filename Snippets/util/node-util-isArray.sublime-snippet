@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.isArray(ar);]]></content>
-   <tabTrigger>util.isArray</tabTrigger>
-   <scope>source.js</scope>
-   <description>(ar)</description>
-</snippet>

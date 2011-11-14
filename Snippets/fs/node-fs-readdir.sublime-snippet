@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.readdir(path, callback);]]></content>
-   <tabTrigger>fs.readdir</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, callback)</description>
-</snippet>

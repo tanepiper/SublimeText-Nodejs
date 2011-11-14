@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[assert.ifError(err);]]></content>
-   <tabTrigger>assert.ifError</tabTrigger>
-   <scope>source.js</scope>
-   <description>(err)</description>
-</snippet>

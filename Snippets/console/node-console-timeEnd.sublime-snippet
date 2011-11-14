@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[console.timeEnd(label);]]></content>
-   <tabTrigger>console.timeEnd</tabTrigger>
-   <scope>source.js</scope>
-   <description>(label)</description>
-</snippet>

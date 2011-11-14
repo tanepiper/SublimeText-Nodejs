@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[Float32Array();]]></content>
-   <tabTrigger>global.Float32Array</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.lstat(path, callback);]]></content>
-   <tabTrigger>fs.lstat</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, callback)</description>
-</snippet>

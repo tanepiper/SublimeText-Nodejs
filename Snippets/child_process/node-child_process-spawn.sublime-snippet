@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[child_process.spawn(file, args, options);]]></content>
-   <tabTrigger>child_process.spawn</tabTrigger>
-   <scope>source.js</scope>
-   <description>(file, args, options)</description>
-</snippet>

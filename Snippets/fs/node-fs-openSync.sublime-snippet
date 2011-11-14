@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.openSync(path, flags, mode);]]></content>
-   <tabTrigger>fs.openSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, flags, mode)</description>
-</snippet>

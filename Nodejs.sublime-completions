@@ -1,0 +1,1795 @@
+{
+    "scope": "source.js - variable.other.js",
+    "completions": [
+        {
+            "trigger": "global.ArrayBuffer",
+            "contents": "ArrayBuffer();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Int8Array",
+            "contents": "Int8Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Uint8Array",
+            "contents": "Uint8Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Int16Array",
+            "contents": "Int16Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Uint16Array",
+            "contents": "Uint16Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Int32Array",
+            "contents": "Int32Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Uint32Array",
+            "contents": "Uint32Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Float32Array",
+            "contents": "Float32Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Float64Array",
+            "contents": "Float64Array();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.DataView",
+            "contents": "DataView();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.Buffer",
+            "contents": "Buffer(subject, encoding, offset);",
+            "description": "(subject, encoding, offset)"
+        },
+        {
+            "trigger": "global.setTimeout",
+            "contents": "setTimeout();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.setInterval",
+            "contents": "setInterval();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.clearTimeout",
+            "contents": "clearTimeout();",
+            "description": "()"
+        },
+        {
+            "trigger": "global.clearInterval",
+            "contents": "clearInterval();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.EventEmitter",
+            "contents": "process.EventEmitter();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.assert",
+            "contents": "process.assert();",
+            "description": "()"
+        },
+        {
+            "trigger": "process._tickCallback",
+            "contents": "process._tickCallback();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.nextTick",
+            "contents": "process.nextTick(callback);",
+            "description": "(callback)"
+        },
+        {
+            "trigger": "process.openStdin",
+            "contents": "process.openStdin();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.exit",
+            "contents": "process.exit(code);",
+            "description": "(code)"
+        },
+        {
+            "trigger": "process.kill",
+            "contents": "process.kill(pid, sig);",
+            "description": "(pid, sig)"
+        },
+        {
+            "trigger": "process.addListener",
+            "contents": "process.addListener(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "process._needTickCallback",
+            "contents": "process._needTickCallback();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.on",
+            "contents": "process.on(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "process.reallyExit",
+            "contents": "process.reallyExit();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.removeListener",
+            "contents": "process.removeListener(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "process.chdir",
+            "contents": "process.chdir();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.debug",
+            "contents": "process.debug();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.cwd",
+            "contents": "process.cwd();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.error",
+            "contents": "process.error();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.watchFile",
+            "contents": "process.watchFile();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.umask",
+            "contents": "process.umask();",
+            "description": "()"
+        },
+        {
+            "trigger": "process._kill",
+            "contents": "process._kill();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.unwatchFile",
+            "contents": "process.unwatchFile();",
+            "description": "()"
+        },
+        {
+            "trigger": "process._debugProcess",
+            "contents": "process._debugProcess();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.mixin",
+            "contents": "process.mixin();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.dlopen",
+            "contents": "process.dlopen();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.createChildProcess",
+            "contents": "process.createChildProcess();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.inherits",
+            "contents": "process.inherits();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.uptime",
+            "contents": "process.uptime();",
+            "description": "()"
+        },
+        {
+            "trigger": "process._byteLength",
+            "contents": "process._byteLength();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.memoryUsage",
+            "contents": "process.memoryUsage();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.uvCounters",
+            "contents": "process.uvCounters();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.binding",
+            "contents": "process.binding();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.setMaxListeners",
+            "contents": "process.setMaxListeners(n);",
+            "description": "(n)"
+        },
+        {
+            "trigger": "process.emit",
+            "contents": "process.emit();",
+            "description": "()"
+        },
+        {
+            "trigger": "process.once",
+            "contents": "process.once(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "process.removeAllListeners",
+            "contents": "process.removeAllListeners(type);",
+            "description": "(type)"
+        },
+        {
+            "trigger": "process.listeners",
+            "contents": "process.listeners(type);",
+            "description": "(type)"
+        },
+        {
+            "trigger": "require.resolve",
+            "contents": "require.resolve(request);",
+            "description": "(request)"
+        },
+        {
+            "trigger": "require.registerExtension",
+            "contents": "require.registerExtension();",
+            "description": "()"
+        },
+        {
+            "trigger": "_debugger.start",
+            "contents": "_debugger.start(argv, stdin, stdout);",
+            "description": "(argv, stdin, stdout)"
+        },
+        {
+            "trigger": "_debugger.Protocol",
+            "contents": "_debugger.Protocol();",
+            "description": "()"
+        },
+        {
+            "trigger": "_debugger.Client",
+            "contents": "_debugger.Client();",
+            "description": "()"
+        },
+        {
+            "trigger": "_linklist.init",
+            "contents": "_linklist.init(list);",
+            "description": "(list)"
+        },
+        {
+            "trigger": "_linklist.peek",
+            "contents": "_linklist.peek(list);",
+            "description": "(list)"
+        },
+        {
+            "trigger": "_linklist.shift",
+            "contents": "_linklist.shift(list);",
+            "description": "(list)"
+        },
+        {
+            "trigger": "_linklist.remove",
+            "contents": "_linklist.remove(item);",
+            "description": "(item)"
+        },
+        {
+            "trigger": "_linklist.append",
+            "contents": "_linklist.append(list, item);",
+            "description": "(list, item)"
+        },
+        {
+            "trigger": "_linklist.isEmpty",
+            "contents": "_linklist.isEmpty(list);",
+            "description": "(list)"
+        },
+        {
+            "trigger": "assert.AssertionError",
+            "contents": "assert.AssertionError;",
+            "description": ""
+        },
+        {
+            "trigger": "assert.fail",
+            "contents": "assert.fail(actual, expected, message, operator, stackStartFunction);",
+            "description": "(actual, expected, message, operator, stackStartFunction)"
+        },
+        {
+            "trigger": "assert.ok",
+            "contents": "assert.ok(value, message);",
+            "description": "(value, message)"
+        },
+        {
+            "trigger": "assert.equal",
+            "contents": "assert.equal(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.notEqual",
+            "contents": "assert.notEqual(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.deepEqual",
+            "contents": "assert.deepEqual(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.notDeepEqual",
+            "contents": "assert.notDeepEqual(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.strictEqual",
+            "contents": "assert.strictEqual(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.notStrictEqual",
+            "contents": "assert.notStrictEqual(actual, expected, message);",
+            "description": "(actual, expected, message)"
+        },
+        {
+            "trigger": "assert.throws",
+            "contents": "assert.throws(block, /*optional*/error, /*optional*/message);",
+            "description": "(block, /*optional*/error, /*optional*/message)"
+        },
+        {
+            "trigger": "assert.doesNotThrow",
+            "contents": "assert.doesNotThrow(block, /*optional*/error, /*optional*/message);",
+            "description": "(block, /*optional*/error, /*optional*/message)"
+        },
+        {
+            "trigger": "assert.ifError",
+            "contents": "assert.ifError(err);",
+            "description": "(err)"
+        },
+        {
+            "trigger": "buffer.SlowBuffer",
+            "contents": "buffer.SlowBuffer();",
+            "description": "()"
+        },
+        {
+            "trigger": "buffer.Buffer",
+            "contents": "buffer.Buffer(subject, encoding, offset);",
+            "description": "(subject, encoding, offset)"
+        },
+        {
+            "trigger": "buffer_ieee754.readIEEE754",
+            "contents": "buffer_ieee754.readIEEE754(buffer, offset, isBE, mLen, nBytes);",
+            "description": "(buffer, offset, isBE, mLen, nBytes)"
+        },
+        {
+            "trigger": "buffer_ieee754.writeIEEE754",
+            "contents": "buffer_ieee754.writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);",
+            "description": "(buffer, value, offset, isBE, mLen, nBytes)"
+        },
+        {
+            "trigger": "child_process.fork",
+            "contents": "child_process.fork(modulePath, args, options);",
+            "description": "(modulePath, args, options)"
+        },
+        {
+            "trigger": "child_process._forkChild",
+            "contents": "child_process._forkChild();",
+            "description": "()"
+        },
+        {
+            "trigger": "child_process.exec",
+            "contents": "child_process.exec(command /*, options, callback */);",
+            "description": "(command /*, options, callback */)"
+        },
+        {
+            "trigger": "child_process.execFile",
+            "contents": "child_process.execFile(file /* args, options, callback */);",
+            "description": "(file /* args, options, callback */)"
+        },
+        {
+            "trigger": "child_process.spawn",
+            "contents": "child_process.spawn(file, args, options);",
+            "description": "(file, args, options)"
+        },
+        {
+            "trigger": "cluster.fork",
+            "contents": "cluster.fork();",
+            "description": "()"
+        },
+        {
+            "trigger": "cluster._startWorker",
+            "contents": "cluster._startWorker();",
+            "description": "()"
+        },
+        {
+            "trigger": "cluster._getServer",
+            "contents": "cluster._getServer(address, port, addressType, cb);",
+            "description": "(address, port, addressType, cb)"
+        },
+        {
+            "trigger": "cluster.setMaxListeners",
+            "contents": "cluster.setMaxListeners(n);",
+            "description": "(n)"
+        },
+        {
+            "trigger": "cluster.emit",
+            "contents": "cluster.emit();",
+            "description": "()"
+        },
+        {
+            "trigger": "cluster.addListener",
+            "contents": "cluster.addListener(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "cluster.on",
+            "contents": "cluster.on(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "cluster.once",
+            "contents": "cluster.once(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "cluster.removeListener",
+            "contents": "cluster.removeListener(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "cluster.removeAllListeners",
+            "contents": "cluster.removeAllListeners(type);",
+            "description": "(type)"
+        },
+        {
+            "trigger": "cluster.listeners",
+            "contents": "cluster.listeners(type);",
+            "description": "(type)"
+        },
+        {
+            "trigger": "console.log",
+            "contents": "console.log();",
+            "description": "()"
+        },
+        {
+            "trigger": "console.info",
+            "contents": "console.info();",
+            "description": "()"
+        },
+        {
+            "trigger": "console.warn",
+            "contents": "console.warn();",
+            "description": "()"
+        },
+        {
+            "trigger": "console.error",
+            "contents": "console.error();",
+            "description": "()"
+        },
+        {
+            "trigger": "console.dir",
+            "contents": "console.dir(object);",
+            "description": "(object)"
+        },
+        {
+            "trigger": "console.time",
+            "contents": "console.time(label);",
+            "description": "(label)"
+        },
+        {
+            "trigger": "console.timeEnd",
+            "contents": "console.timeEnd(label);",
+            "description": "(label)"
+        },
+        {
+            "trigger": "console.trace",
+            "contents": "console.trace(label);",
+            "description": "(label)"
+        },
+        {
+            "trigger": "console.assert",
+            "contents": "console.assert(expression);",
+            "description": "(expression)"
+        },
+        {
+            "trigger": "crypto.Credentials",
+            "contents": "crypto.Credentials(secureProtocol, flags, context);",
+            "description": "(secureProtocol, flags, context)"
+        },
+        {
+            "trigger": "crypto.createCredentials",
+            "contents": "crypto.createCredentials(options, context);",
+            "description": "(options, context)"
+        },
+        {
+            "trigger": "crypto.Hash",
+            "contents": "crypto.Hash();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createHash",
+            "contents": "crypto.createHash(hash);",
+            "description": "(hash)"
+        },
+        {
+            "trigger": "crypto.Hmac",
+            "contents": "crypto.Hmac();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createHmac",
+            "contents": "crypto.createHmac(hmac, key);",
+            "description": "(hmac, key)"
+        },
+        {
+            "trigger": "crypto.Cipher",
+            "contents": "crypto.Cipher();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createCipher",
+            "contents": "crypto.createCipher(cipher, password);",
+            "description": "(cipher, password)"
+        },
+        {
+            "trigger": "crypto.createCipheriv",
+            "contents": "crypto.createCipheriv(cipher, key, iv);",
+            "description": "(cipher, key, iv)"
+        },
+        {
+            "trigger": "crypto.Decipher",
+            "contents": "crypto.Decipher();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createDecipher",
+            "contents": "crypto.createDecipher(cipher, password);",
+            "description": "(cipher, password)"
+        },
+        {
+            "trigger": "crypto.createDecipheriv",
+            "contents": "crypto.createDecipheriv(cipher, key, iv);",
+            "description": "(cipher, key, iv)"
+        },
+        {
+            "trigger": "crypto.Sign",
+            "contents": "crypto.Sign();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createSign",
+            "contents": "crypto.createSign(algorithm);",
+            "description": "(algorithm)"
+        },
+        {
+            "trigger": "crypto.Verify",
+            "contents": "crypto.Verify();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createVerify",
+            "contents": "crypto.createVerify(algorithm);",
+            "description": "(algorithm)"
+        },
+        {
+            "trigger": "crypto.DiffieHellman",
+            "contents": "crypto.DiffieHellman();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.createDiffieHellman",
+            "contents": "crypto.createDiffieHellman(size_or_key, enc);",
+            "description": "(size_or_key, enc)"
+        },
+        {
+            "trigger": "crypto.pbkdf2",
+            "contents": "crypto.pbkdf2();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.randomBytes",
+            "contents": "crypto.randomBytes();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.pseudoRandomBytes",
+            "contents": "crypto.pseudoRandomBytes();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.rng",
+            "contents": "crypto.rng();",
+            "description": "()"
+        },
+        {
+            "trigger": "crypto.prng",
+            "contents": "crypto.prng();",
+            "description": "()"
+        },
+        {
+            "trigger": "dgram.Socket",
+            "contents": "dgram.Socket(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "dgram.createSocket",
+            "contents": "dgram.createSocket(type, listener);",
+            "description": "(type, listener)"
+        },
+        {
+            "trigger": "dns.lookup",
+            "contents": "dns.lookup(domain, family, callback);",
+            "description": "(domain, family, callback)"
+        },
+        {
+            "trigger": "dns.resolve4",
+            "contents": "dns.resolve4(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolve6",
+            "contents": "dns.resolve6(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolveCname",
+            "contents": "dns.resolveCname(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolveMx",
+            "contents": "dns.resolveMx(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolveNs",
+            "contents": "dns.resolveNs(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolveTxt",
+            "contents": "dns.resolveTxt(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolveSrv",
+            "contents": "dns.resolveSrv(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.reverse",
+            "contents": "dns.reverse(name, callback);",
+            "description": "(name, callback)"
+        },
+        {
+            "trigger": "dns.resolve",
+            "contents": "dns.resolve(domain, type_, callback_);",
+            "description": "(domain, type_, callback_)"
+        },
+        {
+            "trigger": "events.EventEmitter",
+            "contents": "events.EventEmitter();",
+            "description": "()"
+        },
+        {
+            "trigger": "freelist.FreeList",
+            "contents": "freelist.FreeList(name, max, constructor);",
+            "description": "(name, max, constructor)"
+        },
+        {
+            "trigger": "fs.Stats",
+            "contents": "fs.Stats();",
+            "description": "()"
+        },
+        {
+            "trigger": "fs.readFile",
+            "contents": "fs.readFile(path, encoding_);",
+            "description": "(path, encoding_)"
+        },
+        {
+            "trigger": "fs.readFileSync",
+            "contents": "fs.readFileSync(path, encoding);",
+            "description": "(path, encoding)"
+        },
+        {
+            "trigger": "fs.close",
+            "contents": "fs.close(fd, callback);",
+            "description": "(fd, callback)"
+        },
+        {
+            "trigger": "fs.closeSync",
+            "contents": "fs.closeSync(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "fs.open",
+            "contents": "fs.open(path, flags, mode, callback);",
+            "description": "(path, flags, mode, callback)"
+        },
+        {
+            "trigger": "fs.openSync",
+            "contents": "fs.openSync(path, flags, mode);",
+            "description": "(path, flags, mode)"
+        },
+        {
+            "trigger": "fs.read",
+            "contents": "fs.read(fd, buffer, offset, length, position, callback);",
+            "description": "(fd, buffer, offset, length, position, callback)"
+        },
+        {
+            "trigger": "fs.readSync",
+            "contents": "fs.readSync(fd, buffer, offset, length, position);",
+            "description": "(fd, buffer, offset, length, position)"
+        },
+        {
+            "trigger": "fs.write",
+            "contents": "fs.write(fd, buffer, offset, length, position, callback);",
+            "description": "(fd, buffer, offset, length, position, callback)"
+        },
+        {
+            "trigger": "fs.writeSync",
+            "contents": "fs.writeSync(fd, buffer, offset, length, position);",
+            "description": "(fd, buffer, offset, length, position)"
+        },
+        {
+            "trigger": "fs.rename",
+            "contents": "fs.rename(oldPath, newPath, callback);",
+            "description": "(oldPath, newPath, callback)"
+        },
+        {
+            "trigger": "fs.renameSync",
+            "contents": "fs.renameSync(oldPath, newPath);",
+            "description": "(oldPath, newPath)"
+        },
+        {
+            "trigger": "fs.truncate",
+            "contents": "fs.truncate(fd, len, callback);",
+            "description": "(fd, len, callback)"
+        },
+        {
+            "trigger": "fs.truncateSync",
+            "contents": "fs.truncateSync(fd, len);",
+            "description": "(fd, len)"
+        },
+        {
+            "trigger": "fs.rmdir",
+            "contents": "fs.rmdir(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.rmdirSync",
+            "contents": "fs.rmdirSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.fdatasync",
+            "contents": "fs.fdatasync(fd, callback);",
+            "description": "(fd, callback)"
+        },
+        {
+            "trigger": "fs.fdatasyncSync",
+            "contents": "fs.fdatasyncSync(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "fs.fsync",
+            "contents": "fs.fsync(fd, callback);",
+            "description": "(fd, callback)"
+        },
+        {
+            "trigger": "fs.fsyncSync",
+            "contents": "fs.fsyncSync(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "fs.mkdir",
+            "contents": "fs.mkdir(path, mode, callback);",
+            "description": "(path, mode, callback)"
+        },
+        {
+            "trigger": "fs.mkdirSync",
+            "contents": "fs.mkdirSync(path, mode);",
+            "description": "(path, mode)"
+        },
+        {
+            "trigger": "fs.sendfile",
+            "contents": "fs.sendfile(outFd, inFd, inOffset, length, callback);",
+            "description": "(outFd, inFd, inOffset, length, callback)"
+        },
+        {
+            "trigger": "fs.sendfileSync",
+            "contents": "fs.sendfileSync(outFd, inFd, inOffset, length);",
+            "description": "(outFd, inFd, inOffset, length)"
+        },
+        {
+            "trigger": "fs.readdir",
+            "contents": "fs.readdir(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.readdirSync",
+            "contents": "fs.readdirSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.fstat",
+            "contents": "fs.fstat(fd, callback);",
+            "description": "(fd, callback)"
+        },
+        {
+            "trigger": "fs.lstat",
+            "contents": "fs.lstat(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.stat",
+            "contents": "fs.stat(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.fstatSync",
+            "contents": "fs.fstatSync(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "fs.lstatSync",
+            "contents": "fs.lstatSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.statSync",
+            "contents": "fs.statSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.readlink",
+            "contents": "fs.readlink(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.readlinkSync",
+            "contents": "fs.readlinkSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.symlink",
+            "contents": "fs.symlink(destination, path, mode_, callback);",
+            "description": "(destination, path, mode_, callback)"
+        },
+        {
+            "trigger": "fs.symlinkSync",
+            "contents": "fs.symlinkSync(destination, path, mode);",
+            "description": "(destination, path, mode)"
+        },
+        {
+            "trigger": "fs.link",
+            "contents": "fs.link(srcpath, dstpath, callback);",
+            "description": "(srcpath, dstpath, callback)"
+        },
+        {
+            "trigger": "fs.linkSync",
+            "contents": "fs.linkSync(srcpath, dstpath);",
+            "description": "(srcpath, dstpath)"
+        },
+        {
+            "trigger": "fs.unlink",
+            "contents": "fs.unlink(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "fs.unlinkSync",
+            "contents": "fs.unlinkSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "fs.fchmod",
+            "contents": "fs.fchmod(fd, mode, callback);",
+            "description": "(fd, mode, callback)"
+        },
+        {
+            "trigger": "fs.fchmodSync",
+            "contents": "fs.fchmodSync(fd, mode);",
+            "description": "(fd, mode)"
+        },
+        {
+            "trigger": "fs.chmod",
+            "contents": "fs.chmod(path, mode, callback);",
+            "description": "(path, mode, callback)"
+        },
+        {
+            "trigger": "fs.chmodSync",
+            "contents": "fs.chmodSync(path, mode);",
+            "description": "(path, mode)"
+        },
+        {
+            "trigger": "fs.fchown",
+            "contents": "fs.fchown(fd, uid, gid, callback);",
+            "description": "(fd, uid, gid, callback)"
+        },
+        {
+            "trigger": "fs.fchownSync",
+            "contents": "fs.fchownSync(fd, uid, gid);",
+            "description": "(fd, uid, gid)"
+        },
+        {
+            "trigger": "fs.chown",
+            "contents": "fs.chown(path, uid, gid, callback);",
+            "description": "(path, uid, gid, callback)"
+        },
+        {
+            "trigger": "fs.chownSync",
+            "contents": "fs.chownSync(path, uid, gid);",
+            "description": "(path, uid, gid)"
+        },
+        {
+            "trigger": "fs._toUnixTimestamp",
+            "contents": "fs._toUnixTimestamp(time);",
+            "description": "(time)"
+        },
+        {
+            "trigger": "fs.utimes",
+            "contents": "fs.utimes(path, atime, mtime, callback);",
+            "description": "(path, atime, mtime, callback)"
+        },
+        {
+            "trigger": "fs.utimesSync",
+            "contents": "fs.utimesSync(path, atime, mtime);",
+            "description": "(path, atime, mtime)"
+        },
+        {
+            "trigger": "fs.futimes",
+            "contents": "fs.futimes(fd, atime, mtime, callback);",
+            "description": "(fd, atime, mtime, callback)"
+        },
+        {
+            "trigger": "fs.futimesSync",
+            "contents": "fs.futimesSync(fd, atime, mtime);",
+            "description": "(fd, atime, mtime)"
+        },
+        {
+            "trigger": "fs.writeFile",
+            "contents": "fs.writeFile(path, data, encoding_, callback);",
+            "description": "(path, data, encoding_, callback)"
+        },
+        {
+            "trigger": "fs.writeFileSync",
+            "contents": "fs.writeFileSync(path, data, encoding);",
+            "description": "(path, data, encoding)"
+        },
+        {
+            "trigger": "fs.watch",
+            "contents": "fs.watch(filename);",
+            "description": "(filename)"
+        },
+        {
+            "trigger": "fs.watchFile",
+            "contents": "fs.watchFile(filename);",
+            "description": "(filename)"
+        },
+        {
+            "trigger": "fs.unwatchFile",
+            "contents": "fs.unwatchFile(filename);",
+            "description": "(filename)"
+        },
+        {
+            "trigger": "fs.realpathSync",
+            "contents": "fs.realpathSync(p, cache);",
+            "description": "(p, cache)"
+        },
+        {
+            "trigger": "fs.realpath",
+            "contents": "fs.realpath(p, cache, cb);",
+            "description": "(p, cache, cb)"
+        },
+        {
+            "trigger": "fs.createReadStream",
+            "contents": "fs.createReadStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.ReadStream",
+            "contents": "fs.ReadStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.FileReadStream",
+            "contents": "fs.FileReadStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.createWriteStream",
+            "contents": "fs.createWriteStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.WriteStream",
+            "contents": "fs.WriteStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.FileWriteStream",
+            "contents": "fs.FileWriteStream(path, options);",
+            "description": "(path, options)"
+        },
+        {
+            "trigger": "fs.SyncWriteStream",
+            "contents": "fs.SyncWriteStream(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "http.IncomingMessage",
+            "contents": "http.IncomingMessage(socket);",
+            "description": "(socket)"
+        },
+        {
+            "trigger": "http.OutgoingMessage",
+            "contents": "http.OutgoingMessage();",
+            "description": "()"
+        },
+        {
+            "trigger": "http.ServerResponse",
+            "contents": "http.ServerResponse(req);",
+            "description": "(req)"
+        },
+        {
+            "trigger": "http.Agent",
+            "contents": "http.Agent(options);",
+            "description": "(options)"
+        },
+        {
+            "trigger": "http.ClientRequest",
+            "contents": "http.ClientRequest(options, cb);",
+            "description": "(options, cb)"
+        },
+        {
+            "trigger": "http.request",
+            "contents": "http.request(options, cb);",
+            "description": "(options, cb)"
+        },
+        {
+            "trigger": "http.get",
+            "contents": "http.get(options, cb);",
+            "description": "(options, cb)"
+        },
+        {
+            "trigger": "http.Server",
+            "contents": "http.Server(requestListener);",
+            "description": "(requestListener)"
+        },
+        {
+            "trigger": "http.createServer",
+            "contents": "http.createServer(requestListener);",
+            "description": "(requestListener)"
+        },
+        {
+            "trigger": "http._connectionListener",
+            "contents": "http._connectionListener(socket);",
+            "description": "(socket)"
+        },
+        {
+            "trigger": "http.Client",
+            "contents": "http.Client(port, host);",
+            "description": "(port, host)"
+        },
+        {
+            "trigger": "http.createClient",
+            "contents": "http.createClient(port, host);",
+            "description": "(port, host)"
+        },
+        {
+            "trigger": "https.Server",
+            "contents": "https.Server(opts, requestListener);",
+            "description": "(opts, requestListener)"
+        },
+        {
+            "trigger": "https.createServer",
+            "contents": "https.createServer(opts, requestListener);",
+            "description": "(opts, requestListener)"
+        },
+        {
+            "trigger": "https.Agent",
+            "contents": "https.Agent(options);",
+            "description": "(options)"
+        },
+        {
+            "trigger": "https.request",
+            "contents": "https.request(options, cb);",
+            "description": "(options, cb)"
+        },
+        {
+            "trigger": "https.get",
+            "contents": "https.get(options, cb);",
+            "description": "(options, cb)"
+        },
+        {
+            "trigger": "module.wrap",
+            "contents": "module.wrap(script);",
+            "description": "(script)"
+        },
+        {
+            "trigger": "module._debug",
+            "contents": "module._debug();",
+            "description": "()"
+        },
+        {
+            "trigger": "module._findPath",
+            "contents": "module._findPath(request, paths);",
+            "description": "(request, paths)"
+        },
+        {
+            "trigger": "module._nodeModulePaths",
+            "contents": "module._nodeModulePaths(from);",
+            "description": "(from)"
+        },
+        {
+            "trigger": "module._resolveLookupPaths",
+            "contents": "module._resolveLookupPaths(request, parent);",
+            "description": "(request, parent)"
+        },
+        {
+            "trigger": "module._load",
+            "contents": "module._load(request, parent, isMain);",
+            "description": "(request, parent, isMain)"
+        },
+        {
+            "trigger": "module._resolveFilename",
+            "contents": "module._resolveFilename(request, parent);",
+            "description": "(request, parent)"
+        },
+        {
+            "trigger": "module.runMain",
+            "contents": "module.runMain();",
+            "description": "()"
+        },
+        {
+            "trigger": "module._initPaths",
+            "contents": "module._initPaths();",
+            "description": "()"
+        },
+        {
+            "trigger": "module.requireRepl",
+            "contents": "module.requireRepl();",
+            "description": "()"
+        },
+        {
+            "trigger": "module.Module",
+            "contents": "module.Module(id, parent);",
+            "description": "(id, parent)"
+        },
+        {
+            "trigger": "net.createServer",
+            "contents": "net.createServer();",
+            "description": "()"
+        },
+        {
+            "trigger": "net.createConnection",
+            "contents": "net.createConnection(port /* [host], [cb] */);",
+            "description": "(port /* [host], [cb] */)"
+        },
+        {
+            "trigger": "net.connect",
+            "contents": "net.connect(port /* [host], [cb] */);",
+            "description": "(port /* [host], [cb] */)"
+        },
+        {
+            "trigger": "net.Socket",
+            "contents": "net.Socket(options);",
+            "description": "(options)"
+        },
+        {
+            "trigger": "net.Stream",
+            "contents": "net.Stream(options);",
+            "description": "(options)"
+        },
+        {
+            "trigger": "net.Server",
+            "contents": "net.Server(/* [ options, ] listener */);",
+            "description": "(/* [ options, ] listener */)"
+        },
+        {
+            "trigger": "net._createServerHandle",
+            "contents": "net._createServerHandle(address, port, addressType);",
+            "description": "(address, port, addressType)"
+        },
+        {
+            "trigger": "net.isIP",
+            "contents": "net.isIP(input);",
+            "description": "(input)"
+        },
+        {
+            "trigger": "net.isIPv4",
+            "contents": "net.isIPv4(input);",
+            "description": "(input)"
+        },
+        {
+            "trigger": "net.isIPv6",
+            "contents": "net.isIPv6(input);",
+            "description": "(input)"
+        },
+        {
+            "trigger": "os.hostname",
+            "contents": "os.hostname();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.loadavg",
+            "contents": "os.loadavg();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.uptime",
+            "contents": "os.uptime();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.freemem",
+            "contents": "os.freemem();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.totalmem",
+            "contents": "os.totalmem();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.cpus",
+            "contents": "os.cpus();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.type",
+            "contents": "os.type();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.release",
+            "contents": "os.release();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.networkInterfaces",
+            "contents": "os.networkInterfaces();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.arch",
+            "contents": "os.arch();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.platform",
+            "contents": "os.platform();",
+            "description": "()"
+        },
+        {
+            "trigger": "os.getNetworkInterfaces",
+            "contents": "os.getNetworkInterfaces();",
+            "description": "()"
+        },
+        {
+            "trigger": "path.resolve",
+            "contents": "path.resolve();",
+            "description": "()"
+        },
+        {
+            "trigger": "path.normalize",
+            "contents": "path.normalize(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "path.join",
+            "contents": "path.join();",
+            "description": "()"
+        },
+        {
+            "trigger": "path.relative",
+            "contents": "path.relative(from, to);",
+            "description": "(from, to)"
+        },
+        {
+            "trigger": "path.dirname",
+            "contents": "path.dirname(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "path.basename",
+            "contents": "path.basename(path, ext);",
+            "description": "(path, ext)"
+        },
+        {
+            "trigger": "path.extname",
+            "contents": "path.extname(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "path.exists",
+            "contents": "path.exists(path, callback);",
+            "description": "(path, callback)"
+        },
+        {
+            "trigger": "path.existsSync",
+            "contents": "path.existsSync(path);",
+            "description": "(path)"
+        },
+        {
+            "trigger": "punycode.decode",
+            "contents": "punycode.decode(input, preserveCase);",
+            "description": "(input, preserveCase)"
+        },
+        {
+            "trigger": "punycode.encode",
+            "contents": "punycode.encode(input, preserveCase);",
+            "description": "(input, preserveCase)"
+        },
+        {
+            "trigger": "punycode.toASCII",
+            "contents": "punycode.toASCII(domain);",
+            "description": "(domain)"
+        },
+        {
+            "trigger": "punycode.toUnicode",
+            "contents": "punycode.toUnicode(domain);",
+            "description": "(domain)"
+        },
+        {
+            "trigger": "querystring.unescapeBuffer",
+            "contents": "querystring.unescapeBuffer(s, decodeSpaces);",
+            "description": "(s, decodeSpaces)"
+        },
+        {
+            "trigger": "querystring.unescape",
+            "contents": "querystring.unescape(s, decodeSpaces);",
+            "description": "(s, decodeSpaces)"
+        },
+        {
+            "trigger": "querystring.escape",
+            "contents": "querystring.escape(str);",
+            "description": "(str)"
+        },
+        {
+            "trigger": "querystring.encode",
+            "contents": "querystring.encode(obj, sep, eq, name);",
+            "description": "(obj, sep, eq, name)"
+        },
+        {
+            "trigger": "querystring.stringify",
+            "contents": "querystring.stringify(obj, sep, eq, name);",
+            "description": "(obj, sep, eq, name)"
+        },
+        {
+            "trigger": "querystring.decode",
+            "contents": "querystring.decode(qs, sep, eq);",
+            "description": "(qs, sep, eq)"
+        },
+        {
+            "trigger": "querystring.parse",
+            "contents": "querystring.parse(qs, sep, eq);",
+            "description": "(qs, sep, eq)"
+        },
+        {
+            "trigger": "readline.createInterface",
+            "contents": "readline.createInterface(input, output, completer);",
+            "description": "(input, output, completer)"
+        },
+        {
+            "trigger": "readline.Interface",
+            "contents": "readline.Interface(input, output, completer);",
+            "description": "(input, output, completer)"
+        },
+        {
+            "trigger": "repl.writer",
+            "contents": "repl.writer(obj, showHidden, depth, colors);",
+            "description": "(obj, showHidden, depth, colors)"
+        },
+        {
+            "trigger": "repl.REPLServer",
+            "contents": "repl.REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined);",
+            "description": "(prompt, stream, eval, useGlobal, ignoreUndefined)"
+        },
+        {
+            "trigger": "repl.start",
+            "contents": "repl.start(prompt, source, eval, useGlobal);",
+            "description": "(prompt, source, eval, useGlobal)"
+        },
+        {
+            "trigger": "stream.super_",
+            "contents": "stream.super_();",
+            "description": "()"
+        },
+        {
+            "trigger": "stream.Stream",
+            "contents": "stream.Stream();",
+            "description": "()"
+        },
+        {
+            "trigger": "string_decoder.StringDecoder",
+            "contents": "string_decoder.StringDecoder(encoding);",
+            "description": "(encoding)"
+        },
+        {
+            "trigger": "sys.print",
+            "contents": "sys.print();",
+            "description": "()"
+        },
+        {
+            "trigger": "sys.puts",
+            "contents": "sys.puts();",
+            "description": "()"
+        },
+        {
+            "trigger": "sys.debug",
+            "contents": "sys.debug(x);",
+            "description": "(x)"
+        },
+        {
+            "trigger": "sys.error",
+            "contents": "sys.error(x);",
+            "description": "(x)"
+        },
+        {
+            "trigger": "sys.inspect",
+            "contents": "sys.inspect(obj, showHidden, depth, colors);",
+            "description": "(obj, showHidden, depth, colors)"
+        },
+        {
+            "trigger": "sys.p",
+            "contents": "sys.p();",
+            "description": "()"
+        },
+        {
+            "trigger": "sys.log",
+            "contents": "sys.log(msg);",
+            "description": "(msg)"
+        },
+        {
+            "trigger": "sys.exec",
+            "contents": "sys.exec();",
+            "description": "()"
+        },
+        {
+            "trigger": "sys.pump",
+            "contents": "sys.pump(readStream, writeStream, callback);",
+            "description": "(readStream, writeStream, callback)"
+        },
+        {
+            "trigger": "sys.inherits",
+            "contents": "sys.inherits(ctor, superCtor);",
+            "description": "(ctor, superCtor)"
+        },
+        {
+            "trigger": "timers.unenroll",
+            "contents": "timers.unenroll(item);",
+            "description": "(item)"
+        },
+        {
+            "trigger": "timers.enroll",
+            "contents": "timers.enroll(item, msecs);",
+            "description": "(item, msecs)"
+        },
+        {
+            "trigger": "timers.active",
+            "contents": "timers.active(item);",
+            "description": "(item)"
+        },
+        {
+            "trigger": "timers.setTimeout",
+            "contents": "timers.setTimeout(callback, after);",
+            "description": "(callback, after)"
+        },
+        {
+            "trigger": "timers.clearTimeout",
+            "contents": "timers.clearTimeout(timer);",
+            "description": "(timer)"
+        },
+        {
+            "trigger": "timers.setInterval",
+            "contents": "timers.setInterval(callback, repeat);",
+            "description": "(callback, repeat)"
+        },
+        {
+            "trigger": "timers.clearInterval",
+            "contents": "timers.clearInterval(timer);",
+            "description": "(timer)"
+        },
+        {
+            "trigger": "tls.createSecurePair",
+            "contents": "tls.createSecurePair(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized);",
+            "description": "(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized)"
+        },
+        {
+            "trigger": "tls.Server",
+            "contents": "tls.Server(/* [options], listener */);",
+            "description": "(/* [options], listener */)"
+        },
+        {
+            "trigger": "tls.createServer",
+            "contents": "tls.createServer(options, listener);",
+            "description": "(options, listener)"
+        },
+        {
+            "trigger": "tls.connect",
+            "contents": "tls.connect(port /* host, options, cb */);",
+            "description": "(port /* host, options, cb */)"
+        },
+        {
+            "trigger": "tty.isatty",
+            "contents": "tty.isatty(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "tty.setRawMode",
+            "contents": "tty.setRawMode(flag);",
+            "description": "(flag)"
+        },
+        {
+            "trigger": "tty.getWindowSize",
+            "contents": "tty.getWindowSize();",
+            "description": "()"
+        },
+        {
+            "trigger": "tty.setWindowSize",
+            "contents": "tty.setWindowSize();",
+            "description": "()"
+        },
+        {
+            "trigger": "tty.ReadStream",
+            "contents": "tty.ReadStream(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "tty.WriteStream",
+            "contents": "tty.WriteStream(fd);",
+            "description": "(fd)"
+        },
+        {
+            "trigger": "url.parse",
+            "contents": "url.parse(url, parseQueryString, slashesDenoteHost);",
+            "description": "(url, parseQueryString, slashesDenoteHost)"
+        },
+        {
+            "trigger": "url.resolve",
+            "contents": "url.resolve(source, relative);",
+            "description": "(source, relative)"
+        },
+        {
+            "trigger": "url.resolveObject",
+            "contents": "url.resolveObject(source, relative);",
+            "description": "(source, relative)"
+        },
+        {
+            "trigger": "url.format",
+            "contents": "url.format(obj);",
+            "description": "(obj)"
+        },
+        {
+            "trigger": "util.format",
+            "contents": "util.format(f);",
+            "description": "(f)"
+        },
+        {
+            "trigger": "util.print",
+            "contents": "util.print();",
+            "description": "()"
+        },
+        {
+            "trigger": "util.puts",
+            "contents": "util.puts();",
+            "description": "()"
+        },
+        {
+            "trigger": "util.debug",
+            "contents": "util.debug(x);",
+            "description": "(x)"
+        },
+        {
+            "trigger": "util.error",
+            "contents": "util.error(x);",
+            "description": "(x)"
+        },
+        {
+            "trigger": "util.inspect",
+            "contents": "util.inspect(obj, showHidden, depth, colors);",
+            "description": "(obj, showHidden, depth, colors)"
+        },
+        {
+            "trigger": "util.isArray",
+            "contents": "util.isArray(ar);",
+            "description": "(ar)"
+        },
+        {
+            "trigger": "util.isRegExp",
+            "contents": "util.isRegExp(re);",
+            "description": "(re)"
+        },
+        {
+            "trigger": "util.isDate",
+            "contents": "util.isDate(d);",
+            "description": "(d)"
+        },
+        {
+            "trigger": "util.isError",
+            "contents": "util.isError(e);",
+            "description": "(e)"
+        },
+        {
+            "trigger": "util.p",
+            "contents": "util.p();",
+            "description": "()"
+        },
+        {
+            "trigger": "util.log",
+            "contents": "util.log(msg);",
+            "description": "(msg)"
+        },
+        {
+            "trigger": "util.exec",
+            "contents": "util.exec();",
+            "description": "()"
+        },
+        {
+            "trigger": "util.pump",
+            "contents": "util.pump(readStream, writeStream, callback);",
+            "description": "(readStream, writeStream, callback)"
+        },
+        {
+            "trigger": "util.inherits",
+            "contents": "util.inherits(ctor, superCtor);",
+            "description": "(ctor, superCtor)"
+        },
+        {
+            "trigger": "vm.Script",
+            "contents": "vm.Script();",
+            "description": "()"
+        },
+        {
+            "trigger": "vm.createScript",
+            "contents": "vm.createScript(code, ctx, name);",
+            "description": "(code, ctx, name)"
+        },
+        {
+            "trigger": "vm.createContext",
+            "contents": "vm.createContext();",
+            "description": "()"
+        },
+        {
+            "trigger": "vm.runInContext",
+            "contents": "vm.runInContext();",
+            "description": "()"
+        },
+        {
+            "trigger": "vm.runInThisContext",
+            "contents": "vm.runInThisContext();",
+            "description": "()"
+        },
+        {
+            "trigger": "vm.runInNewContext",
+            "contents": "vm.runInNewContext();",
+            "description": "()"
+        },
+        {
+            "trigger": "zlib.Deflate",
+            "contents": "zlib.Deflate(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.Inflate",
+            "contents": "zlib.Inflate(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.Gzip",
+            "contents": "zlib.Gzip(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.Gunzip",
+            "contents": "zlib.Gunzip(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.DeflateRaw",
+            "contents": "zlib.DeflateRaw(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.InflateRaw",
+            "contents": "zlib.InflateRaw(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.Unzip",
+            "contents": "zlib.Unzip(opts);",
+            "description": "(opts)"
+        },
+        {
+            "trigger": "zlib.createDeflate",
+            "contents": "zlib.createDeflate(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createInflate",
+            "contents": "zlib.createInflate(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createDeflateRaw",
+            "contents": "zlib.createDeflateRaw(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createInflateRaw",
+            "contents": "zlib.createInflateRaw(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createGzip",
+            "contents": "zlib.createGzip(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createGunzip",
+            "contents": "zlib.createGunzip(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.createUnzip",
+            "contents": "zlib.createUnzip(o);",
+            "description": "(o)"
+        },
+        {
+            "trigger": "zlib.deflate",
+            "contents": "zlib.deflate(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.gzip",
+            "contents": "zlib.gzip(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.deflateRaw",
+            "contents": "zlib.deflateRaw(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.unzip",
+            "contents": "zlib.unzip(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.inflate",
+            "contents": "zlib.inflate(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.gunzip",
+            "contents": "zlib.gunzip(buffer, callback);",
+            "description": "(buffer, callback)"
+        },
+        {
+            "trigger": "zlib.inflateRaw",
+            "contents": "zlib.inflateRaw(buffer, callback);",
+            "description": "(buffer, callback)"
+        }
+    ]
+}

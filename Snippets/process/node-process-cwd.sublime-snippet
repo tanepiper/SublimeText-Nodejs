@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.cwd();]]></content>
-   <tabTrigger>process.cwd</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

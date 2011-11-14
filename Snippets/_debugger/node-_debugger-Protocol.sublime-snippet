@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[_debugger.Protocol();]]></content>
-   <tabTrigger>_debugger.Protocol</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

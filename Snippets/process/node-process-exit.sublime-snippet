@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.exit(code);]]></content>
-   <tabTrigger>process.exit</tabTrigger>
-   <scope>source.js</scope>
-   <description>(code)</description>
-</snippet>

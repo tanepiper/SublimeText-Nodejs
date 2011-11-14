@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.fchmodSync(fd, mode);]]></content>
-   <tabTrigger>fs.fchmodSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, mode)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[http.createServer(requestListener);]]></content>
-   <tabTrigger>http.createServer</tabTrigger>
-   <scope>source.js</scope>
-   <description>(requestListener)</description>
-</snippet>

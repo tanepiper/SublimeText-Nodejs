@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[dns.lookup(domain, family, callback);]]></content>
-   <tabTrigger>dns.lookup</tabTrigger>
-   <scope>source.js</scope>
-   <description>(domain, family, callback)</description>
-</snippet>

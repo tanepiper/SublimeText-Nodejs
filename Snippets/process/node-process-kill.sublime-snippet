@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.kill(pid, sig);]]></content>
-   <tabTrigger>process.kill</tabTrigger>
-   <scope>source.js</scope>
-   <description>(pid, sig)</description>
-</snippet>

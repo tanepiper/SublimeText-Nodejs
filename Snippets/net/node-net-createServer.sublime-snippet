@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[net.createServer();]]></content>
-   <tabTrigger>net.createServer</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

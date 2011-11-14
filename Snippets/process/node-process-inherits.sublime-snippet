@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.inherits();]]></content>
-   <tabTrigger>process.inherits</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

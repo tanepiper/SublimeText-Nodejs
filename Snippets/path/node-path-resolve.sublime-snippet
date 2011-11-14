@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[path.resolve();]]></content>
-   <tabTrigger>path.resolve</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

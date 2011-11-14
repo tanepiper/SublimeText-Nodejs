@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[readline.createInterface(input, output, completer);]]></content>
-   <tabTrigger>readline.createInterface</tabTrigger>
-   <scope>source.js</scope>
-   <description>(input, output, completer)</description>
-</snippet>

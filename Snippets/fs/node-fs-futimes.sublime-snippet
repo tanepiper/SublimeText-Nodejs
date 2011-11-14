@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.futimes(fd, atime, mtime, callback);]]></content>
-   <tabTrigger>fs.futimes</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, atime, mtime, callback)</description>
-</snippet>

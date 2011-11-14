@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.binding();]]></content>
-   <tabTrigger>process.binding</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

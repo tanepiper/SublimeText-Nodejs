@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[cluster.removeAllListeners(type);]]></content>
-   <tabTrigger>cluster.removeAllListeners</tabTrigger>
-   <scope>source.js</scope>
-   <description>(type)</description>
-</snippet>

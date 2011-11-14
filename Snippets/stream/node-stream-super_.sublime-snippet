@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[stream.super_();]]></content>
-   <tabTrigger>stream.super_</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

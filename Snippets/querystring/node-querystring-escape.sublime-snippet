@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[querystring.escape(str);]]></content>
-   <tabTrigger>querystring.escape</tabTrigger>
-   <scope>source.js</scope>
-   <description>(str)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[os.freemem();]]></content>
-   <tabTrigger>os.freemem</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

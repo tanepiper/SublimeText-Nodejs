@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.rmdirSync(path);]]></content>
-   <tabTrigger>fs.rmdirSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path)</description>
-</snippet>

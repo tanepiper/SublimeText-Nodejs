@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[require.resolve(request);]]></content>
-   <tabTrigger>require.resolve</tabTrigger>
-   <scope>source.js</scope>
-   <description>(request)</description>
-</snippet>

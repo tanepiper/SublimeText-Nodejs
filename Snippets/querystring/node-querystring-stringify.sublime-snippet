@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[querystring.stringify(obj, sep, eq, name);]]></content>
-   <tabTrigger>querystring.stringify</tabTrigger>
-   <scope>source.js</scope>
-   <description>(obj, sep, eq, name)</description>
-</snippet>

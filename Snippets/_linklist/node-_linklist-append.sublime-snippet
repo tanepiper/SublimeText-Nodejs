@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[_linklist.append(list, item);]]></content>
-   <tabTrigger>_linklist.append</tabTrigger>
-   <scope>source.js</scope>
-   <description>(list, item)</description>
-</snippet>

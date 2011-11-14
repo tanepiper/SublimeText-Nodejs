@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[http._connectionListener(socket);]]></content>
-   <tabTrigger>http._connectionListener</tabTrigger>
-   <scope>source.js</scope>
-   <description>(socket)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[querystring.unescape(s, decodeSpaces);]]></content>
-   <tabTrigger>querystring.unescape</tabTrigger>
-   <scope>source.js</scope>
-   <description>(s, decodeSpaces)</description>
-</snippet>

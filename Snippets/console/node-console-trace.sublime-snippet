@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[console.trace(label);]]></content>
-   <tabTrigger>console.trace</tabTrigger>
-   <scope>source.js</scope>
-   <description>(label)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[path.dirname(path);]]></content>
-   <tabTrigger>path.dirname</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path)</description>
-</snippet>

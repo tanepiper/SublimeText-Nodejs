@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[dgram.Socket(type, listener);]]></content>
-   <tabTrigger>dgram.Socket</tabTrigger>
-   <scope>source.js</scope>
-   <description>(type, listener)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[os.totalmem();]]></content>
-   <tabTrigger>os.totalmem</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.truncateSync(fd, len);]]></content>
-   <tabTrigger>fs.truncateSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, len)</description>
-</snippet>

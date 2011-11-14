@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[net.connect(port /* [host], [cb] */);]]></content>
-   <tabTrigger>net.connect</tabTrigger>
-   <scope>source.js</scope>
-   <description>(port /* [host], [cb] */)</description>
-</snippet>

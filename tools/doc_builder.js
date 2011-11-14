@@ -32,6 +32,33 @@ var createSnippets = function(options, snippets, callback) {
   }
 }
 
+var createCompletions = function(options, snippets, callback) {
+  // Loop over each snippet and save to file
+  var i = 0, j = snippets.length;
+  var output = {
+    "scope": "source.js - variable.other.js",
+    "completions": []
+  };
+  for(;i<j;i++) {
+    var item = snippets[i];
+
+    output.completions.push({
+      "trigger": [item.type, item.name].join('.'),
+      "contents": item.function_string,
+      "description": item.args
+    });
+  }
+  // Call save
+  saveCompletion(options, output, callback);
+}
+
+var saveCompletion = function(options, completions, callback) {
+  var file_path = path.resolve(options.output, 'Nodejs.sublime-completions');
+  var txt = JSON.stringify(completions, null, 4);
+  fs.writeFile(file_path, txt);
+  callback(null, txt)
+}
+
 /**
  * If an output path is specified then the files will be output to that directory
  * as individual snippet files.  If not file is specified then it is output to
@@ -244,6 +271,7 @@ commander
   .option('-n --ns [namespaces]', 'The namespaces you wish to include as a comma separated list', list)
   .option('-g --global', 'Add the global namespaces (global, process, console)')
   .option('-f --full', 'Include the whole nodejs standard library')
+  .option('-t --type', 'Option to create "snippets" or "completion"')
   .parse(process.argv);
 
 var output = [];
@@ -264,7 +292,12 @@ if(commander.input && commander.output) {
   loadDirectory(commander, output);
 }
 
-createSnippets(commander, output, function() {} );
+if (commander.type === 'completions') {
+  
+} else {
+  createSnippets(commander, output, function() {} );
+}
+
 
 
 exports.doc_builder = (function(options, callback) {
@@ -281,5 +314,11 @@ exports.doc_builder = (function(options, callback) {
   if(options.input && options.output) {
     loadDirectory(options, output);
   }
-  createSnippets(options, output, callback);
+
+  if (options.type === 'completions') {
+    createCompletions(options, output, callback);
+  } else {
+    createSnippets(options, output, callback);
+  }
+  
 });

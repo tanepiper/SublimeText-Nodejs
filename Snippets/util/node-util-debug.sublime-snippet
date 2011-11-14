@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.debug(x);]]></content>
-   <tabTrigger>util.debug</tabTrigger>
-   <scope>source.js</scope>
-   <description>(x)</description>
-</snippet>

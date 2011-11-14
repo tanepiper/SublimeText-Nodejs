@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.nextTick(callback);]]></content>
-   <tabTrigger>process.nextTick</tabTrigger>
-   <scope>source.js</scope>
-   <description>(callback)</description>
-</snippet>

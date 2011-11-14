@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[console.log();]]></content>
-   <tabTrigger>console.log</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

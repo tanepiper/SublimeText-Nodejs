@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.Verify();]]></content>
-   <tabTrigger>crypto.Verify</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

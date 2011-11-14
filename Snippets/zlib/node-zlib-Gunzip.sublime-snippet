@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[zlib.gunzip(buffer, callback);]]></content>
-   <tabTrigger>zlib.gunzip</tabTrigger>
-   <scope>source.js</scope>
-   <description>(buffer, callback)</description>
-</snippet>

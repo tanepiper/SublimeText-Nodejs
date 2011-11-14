@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[_linklist.remove(item);]]></content>
-   <tabTrigger>_linklist.remove</tabTrigger>
-   <scope>source.js</scope>
-   <description>(item)</description>
-</snippet>

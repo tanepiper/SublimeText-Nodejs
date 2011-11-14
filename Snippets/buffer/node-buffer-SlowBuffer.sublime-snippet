@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[buffer.SlowBuffer();]]></content>
-   <tabTrigger>buffer.SlowBuffer</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

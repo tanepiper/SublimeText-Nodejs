@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.on(type, listener);]]></content>
-   <tabTrigger>process.on</tabTrigger>
-   <scope>source.js</scope>
-   <description>(type, listener)</description>
-</snippet>

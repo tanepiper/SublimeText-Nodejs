@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[zlib.createDeflateRaw(o);]]></content>
-   <tabTrigger>zlib.createDeflateRaw</tabTrigger>
-   <scope>source.js</scope>
-   <description>(o)</description>
-</snippet>

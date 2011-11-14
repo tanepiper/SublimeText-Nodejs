@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.createHash(hash);]]></content>
-   <tabTrigger>crypto.createHash</tabTrigger>
-   <scope>source.js</scope>
-   <description>(hash)</description>
-</snippet>

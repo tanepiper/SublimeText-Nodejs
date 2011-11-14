@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs._toUnixTimestamp(time);]]></content>
-   <tabTrigger>fs._toUnixTimestamp</tabTrigger>
-   <scope>source.js</scope>
-   <description>(time)</description>
-</snippet>

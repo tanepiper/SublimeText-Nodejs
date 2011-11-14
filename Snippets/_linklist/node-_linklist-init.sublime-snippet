@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[_linklist.init(list);]]></content>
-   <tabTrigger>_linklist.init</tabTrigger>
-   <scope>source.js</scope>
-   <description>(list)</description>
-</snippet>

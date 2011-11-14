@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[url.resolve(source, relative);]]></content>
-   <tabTrigger>url.resolve</tabTrigger>
-   <scope>source.js</scope>
-   <description>(source, relative)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.setMaxListeners(n);]]></content>
-   <tabTrigger>process.setMaxListeners</tabTrigger>
-   <scope>source.js</scope>
-   <description>(n)</description>
-</snippet>

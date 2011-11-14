@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[module.requireRepl();]]></content>
-   <tabTrigger>module.requireRepl</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

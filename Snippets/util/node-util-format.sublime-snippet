@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.format(f);]]></content>
-   <tabTrigger>util.format</tabTrigger>
-   <scope>source.js</scope>
-   <description>(f)</description>
-</snippet>

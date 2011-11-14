@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[net.isIP(input);]]></content>
-   <tabTrigger>net.isIP</tabTrigger>
-   <scope>source.js</scope>
-   <description>(input)</description>
-</snippet>

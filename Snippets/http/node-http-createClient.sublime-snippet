@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[http.createClient(port, host);]]></content>
-   <tabTrigger>http.createClient</tabTrigger>
-   <scope>source.js</scope>
-   <description>(port, host)</description>
-</snippet>

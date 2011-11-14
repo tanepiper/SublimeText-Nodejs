@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[path.relative(from, to);]]></content>
-   <tabTrigger>path.relative</tabTrigger>
-   <scope>source.js</scope>
-   <description>(from, to)</description>
-</snippet>

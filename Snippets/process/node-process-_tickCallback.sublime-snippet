@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process._tickCallback();]]></content>
-   <tabTrigger>process._tickCallback</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

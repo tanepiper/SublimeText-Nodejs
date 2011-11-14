@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.chown(path, uid, gid, callback);]]></content>
-   <tabTrigger>fs.chown</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, uid, gid, callback)</description>
-</snippet>

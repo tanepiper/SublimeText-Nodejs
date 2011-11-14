@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.unlink(path, callback);]]></content>
-   <tabTrigger>fs.unlink</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, callback)</description>
-</snippet>

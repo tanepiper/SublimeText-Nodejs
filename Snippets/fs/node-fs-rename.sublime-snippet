@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.rename(oldPath, newPath, callback);]]></content>
-   <tabTrigger>fs.rename</tabTrigger>
-   <scope>source.js</scope>
-   <description>(oldPath, newPath, callback)</description>
-</snippet>

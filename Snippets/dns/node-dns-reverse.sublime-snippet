@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[dns.reverse(name, callback);]]></content>
-   <tabTrigger>dns.reverse</tabTrigger>
-   <scope>source.js</scope>
-   <description>(name, callback)</description>
-</snippet>

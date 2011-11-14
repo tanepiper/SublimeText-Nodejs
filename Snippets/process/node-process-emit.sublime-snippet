@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.emit();]]></content>
-   <tabTrigger>process.emit</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

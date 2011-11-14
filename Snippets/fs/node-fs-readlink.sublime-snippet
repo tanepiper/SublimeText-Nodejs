@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.readlink(path, callback);]]></content>
-   <tabTrigger>fs.readlink</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, callback)</description>
-</snippet>

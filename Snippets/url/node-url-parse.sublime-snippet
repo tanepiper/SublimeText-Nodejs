@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[url.parse(url, parseQueryString, slashesDenoteHost);]]></content>
-   <tabTrigger>url.parse</tabTrigger>
-   <scope>source.js</scope>
-   <description>(url, parseQueryString, slashesDenoteHost)</description>
-</snippet>

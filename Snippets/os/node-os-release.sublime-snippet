@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[os.release();]]></content>
-   <tabTrigger>os.release</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[module._load(request, parent, isMain);]]></content>
-   <tabTrigger>module._load</tabTrigger>
-   <scope>source.js</scope>
-   <description>(request, parent, isMain)</description>
-</snippet>

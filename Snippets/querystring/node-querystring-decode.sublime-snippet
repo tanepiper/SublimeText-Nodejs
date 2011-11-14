@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[querystring.decode(qs, sep, eq);]]></content>
-   <tabTrigger>querystring.decode</tabTrigger>
-   <scope>source.js</scope>
-   <description>(qs, sep, eq)</description>
-</snippet>

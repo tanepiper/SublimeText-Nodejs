@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[dns.resolveMx(name, callback);]]></content>
-   <tabTrigger>dns.resolveMx</tabTrigger>
-   <scope>source.js</scope>
-   <description>(name, callback)</description>
-</snippet>

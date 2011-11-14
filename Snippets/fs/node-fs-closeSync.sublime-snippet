@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.closeSync(fd);]]></content>
-   <tabTrigger>fs.closeSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd)</description>
-</snippet>

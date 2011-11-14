@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process._kill();]]></content>
-   <tabTrigger>process._kill</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

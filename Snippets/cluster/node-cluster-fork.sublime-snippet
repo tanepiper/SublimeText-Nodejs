@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[cluster.fork();]]></content>
-   <tabTrigger>cluster.fork</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

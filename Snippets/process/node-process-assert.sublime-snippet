@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.assert();]]></content>
-   <tabTrigger>process.assert</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

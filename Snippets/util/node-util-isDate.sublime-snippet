@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.isDate(d);]]></content>
-   <tabTrigger>util.isDate</tabTrigger>
-   <scope>source.js</scope>
-   <description>(d)</description>
-</snippet>

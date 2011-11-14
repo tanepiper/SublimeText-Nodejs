@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[net.Server(/* [ options, ] listener */);]]></content>
-   <tabTrigger>net.Server</tabTrigger>
-   <scope>source.js</scope>
-   <description>(/* [ options, ] listener */)</description>
-</snippet>

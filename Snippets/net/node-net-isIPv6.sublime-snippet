@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[net.isIPv6(input);]]></content>
-   <tabTrigger>net.isIPv6</tabTrigger>
-   <scope>source.js</scope>
-   <description>(input)</description>
-</snippet>

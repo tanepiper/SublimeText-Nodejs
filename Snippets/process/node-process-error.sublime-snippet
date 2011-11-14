@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.error();]]></content>
-   <tabTrigger>process.error</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

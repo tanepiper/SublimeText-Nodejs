@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[https.get(options, cb);]]></content>
-   <tabTrigger>https.get</tabTrigger>
-   <scope>source.js</scope>
-   <description>(options, cb)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.puts();]]></content>
-   <tabTrigger>util.puts</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

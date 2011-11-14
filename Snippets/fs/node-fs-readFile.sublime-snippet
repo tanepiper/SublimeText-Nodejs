@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.readFile(path, encoding_);]]></content>
-   <tabTrigger>fs.readFile</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, encoding_)</description>
-</snippet>

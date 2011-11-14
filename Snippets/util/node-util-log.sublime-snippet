@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.log(msg);]]></content>
-   <tabTrigger>util.log</tabTrigger>
-   <scope>source.js</scope>
-   <description>(msg)</description>
-</snippet>

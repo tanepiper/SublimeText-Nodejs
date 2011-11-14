@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[Buffer(subject, encoding, offset);]]></content>
-   <tabTrigger>global.Buffer</tabTrigger>
-   <scope>source.js</scope>
-   <description>(subject, encoding, offset)</description>
-</snippet>

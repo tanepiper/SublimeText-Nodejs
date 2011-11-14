@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[crypto.createVerify(algorithm);]]></content>
-   <tabTrigger>crypto.createVerify</tabTrigger>
-   <scope>source.js</scope>
-   <description>(algorithm)</description>
-</snippet>

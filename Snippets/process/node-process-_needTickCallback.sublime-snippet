@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process._needTickCallback();]]></content>
-   <tabTrigger>process._needTickCallback</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

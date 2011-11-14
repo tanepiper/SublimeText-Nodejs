@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[ArrayBuffer();]]></content>
-   <tabTrigger>global.ArrayBuffer</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

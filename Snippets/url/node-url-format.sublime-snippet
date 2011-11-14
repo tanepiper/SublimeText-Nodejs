@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[url.format(obj);]]></content>
-   <tabTrigger>url.format</tabTrigger>
-   <scope>source.js</scope>
-   <description>(obj)</description>
-</snippet>

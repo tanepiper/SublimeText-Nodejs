@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[zlib.unzip(buffer, callback);]]></content>
-   <tabTrigger>zlib.unzip</tabTrigger>
-   <scope>source.js</scope>
-   <description>(buffer, callback)</description>
-</snippet>

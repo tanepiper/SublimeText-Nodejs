@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.ReadStream(path, options);]]></content>
-   <tabTrigger>fs.ReadStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>(path, options)</description>
-</snippet>

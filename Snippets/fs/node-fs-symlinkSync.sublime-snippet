@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.symlinkSync(destination, path, mode);]]></content>
-   <tabTrigger>fs.symlinkSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(destination, path, mode)</description>
-</snippet>

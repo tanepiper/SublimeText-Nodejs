@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.close(fd, callback);]]></content>
-   <tabTrigger>fs.close</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, callback)</description>
-</snippet>

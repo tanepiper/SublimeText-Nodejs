@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[tty.WriteStream(fd);]]></content>
-   <tabTrigger>tty.WriteStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd)</description>
-</snippet>

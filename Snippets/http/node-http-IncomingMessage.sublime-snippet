@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[http.IncomingMessage(socket);]]></content>
-   <tabTrigger>http.IncomingMessage</tabTrigger>
-   <scope>source.js</scope>
-   <description>(socket)</description>
-</snippet>

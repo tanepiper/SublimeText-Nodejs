@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.removeAllListeners(type);]]></content>
-   <tabTrigger>process.removeAllListeners</tabTrigger>
-   <scope>source.js</scope>
-   <description>(type)</description>
-</snippet>

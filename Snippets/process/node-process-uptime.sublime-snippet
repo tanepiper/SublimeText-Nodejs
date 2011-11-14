@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.uptime();]]></content>
-   <tabTrigger>process.uptime</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

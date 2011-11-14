@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[_linklist.isEmpty(list);]]></content>
-   <tabTrigger>_linklist.isEmpty</tabTrigger>
-   <scope>source.js</scope>
-   <description>(list)</description>
-</snippet>

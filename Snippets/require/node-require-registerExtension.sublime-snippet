@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[require.registerExtension();]]></content>
-   <tabTrigger>require.registerExtension</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

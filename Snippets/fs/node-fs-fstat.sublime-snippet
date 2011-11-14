@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.fstat(fd, callback);]]></content>
-   <tabTrigger>fs.fstat</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, callback)</description>
-</snippet>

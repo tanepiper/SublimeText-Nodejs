@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[util.isRegExp(re);]]></content>
-   <tabTrigger>util.isRegExp</tabTrigger>
-   <scope>source.js</scope>
-   <description>(re)</description>
-</snippet>

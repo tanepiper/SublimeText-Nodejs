@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[events.EventEmitter();]]></content>
-   <tabTrigger>events.EventEmitter</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

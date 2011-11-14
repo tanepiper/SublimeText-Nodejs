@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[module.wrap(script);]]></content>
-   <tabTrigger>module.wrap</tabTrigger>
-   <scope>source.js</scope>
-   <description>(script)</description>
-</snippet>

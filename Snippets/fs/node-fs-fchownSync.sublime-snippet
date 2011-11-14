@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[fs.fchownSync(fd, uid, gid);]]></content>
-   <tabTrigger>fs.fchownSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>(fd, uid, gid)</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[vm.createScript(code, ctx, name);]]></content>
-   <tabTrigger>vm.createScript</tabTrigger>
-   <scope>source.js</scope>
-   <description>(code, ctx, name)</description>
-</snippet>

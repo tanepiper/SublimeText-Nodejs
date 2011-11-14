@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[console.assert(expression);]]></content>
-   <tabTrigger>console.assert</tabTrigger>
-   <scope>source.js</scope>
-   <description>(expression)</description>
-</snippet>

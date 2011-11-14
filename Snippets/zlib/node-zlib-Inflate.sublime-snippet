@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[zlib.inflate(buffer, callback);]]></content>
-   <tabTrigger>zlib.inflate</tabTrigger>
-   <scope>source.js</scope>
-   <description>(buffer, callback)</description>
-</snippet>
