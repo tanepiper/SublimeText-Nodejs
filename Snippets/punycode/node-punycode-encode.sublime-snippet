@@ -1,6 +1,6 @@
 <snippet>
-   <content>punycode.encode(input);</content>
+   <content>punycode.encode(input, preserveCase);</content>
    <tabTrigger>punycode.encode</tabTrigger>
    <scope>source.js</scope>
-   <description>(input)</description>
+   <description>(input, preserveCase)</description>
 </snippet>

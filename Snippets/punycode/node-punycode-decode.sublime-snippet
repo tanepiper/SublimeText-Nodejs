@@ -1,6 +1,6 @@
 <snippet>
-   <content>punycode.decode(input);</content>
+   <content>punycode.decode(input, preserveCase);</content>
    <tabTrigger>punycode.decode</tabTrigger>
    <scope>source.js</scope>
-   <description>(input)</description>
+   <description>(input, preserveCase)</description>
 </snippet>
