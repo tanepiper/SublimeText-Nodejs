@@ -200,7 +200,7 @@ class NodeRunCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Node Output", syntax=plugin_file("Nodejs.tmLanguage"))
+    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
 
 class NodeRunArgumentsCommand(NodeTextCommand):
   def run(self, edit):
@@ -213,7 +213,7 @@ class NodeRunArgumentsCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Node Output", syntax=plugin_file("Nodejs.tmLanguage"))
+    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
 
 class NodeNpmCommand(NodeTextCommand):
   def run(self, edit):
@@ -225,4 +225,4 @@ class NodeNpmCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="NPM Output", syntax=plugin_file("Nodejs.tmLanguage"))
+    self.scratch(result, title="NPM Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
