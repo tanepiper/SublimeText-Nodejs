@@ -1,0 +1,20 @@
+[{
+  "id": "nodejsmenu",
+  "caption": "Nodejs",
+  "children": [{
+    "id": "nodejsrunmenu",
+    "caption": "Run",
+    "children": [
+      { "id": "nodejsrun", "caption": "Run", "command": "node_run" },
+      { "id": "nodejsrunarguments", "caption": "Run + arguments", "command": "node_run_arguments" }
+    ]
+  },
+  {
+    "id": "nodejsdebugmenu",
+    "caption": "Debug",
+    "children": [
+      { "id": "nodejsdrun", "caption": "Debug", "command": "node_drun" },
+      { "id": "nodejsdrunarguments", "caption": "Debug + arguments", "command": "node_drun_arguments" }
+    ]
+  }] 
+}]

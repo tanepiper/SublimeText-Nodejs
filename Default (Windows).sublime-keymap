@@ -1,0 +1,6 @@
+[
+  {"keys": ["alt+r"], "command": "node_run"},
+  {"keys": ["alt+d"], "command": "node_drun"},
+  {"keys": ["ctrl+alt+r"], "command": "node_run_arguments"},
+  {"keys": ["ctrl+alt+d"], "command": "node_drun_arguments"}
+]

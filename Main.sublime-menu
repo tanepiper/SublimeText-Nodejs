@@ -1,20 +1,23 @@
 [{
   "id": "tools",
   "children": [{
-    "caption": "Node",
+    "id": "nodejsmenu",
+    "caption": "Nodejs",
     "children": [{
-      "caption": "This file",
+      "id": "nodejsrunmenu",
+      "caption": "Run",
       "children": [
-        { "caption": "Run", "command": "node_run" },
-        { "caption": "Run with arguments", "command": "node_run_arguments" }
+        { "id": "nodejsrun", "caption": "Run", "command": "node_run" },
+        { "id": "nodejsrunarguments", "caption": "Run + arguments", "command": "node_run_arguments" }
       ]
     },
     {
-      "caption": "This folder",
+      "id": "nodejsdebugmenu",
+      "caption": "Debug",
       "children": [
-        { "caption": "Run", "command": "node_run" },
-        { "caption": "Run with arguments", "command": "node_run_arguments" }
+        { "id": "nodejsdrun", "caption": "Debug", "command": "node_drun" },
+        { "id": "nodejsdrunarguments", "caption": "Debug + arguments", "command": "node_drun_arguments" }
       ]
-    }]
+    }] 
   }]
 }]

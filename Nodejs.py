@@ -212,6 +212,14 @@ class NodeRunCommand(NodeTextCommand):
   def command_done(self, result):
     self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
 
+class NodeDrunCommand(NodeTextCommand):
+  def run(self, edit):
+    command = ['node', 'debug', self.view.file_name()]
+    self.run_command(command, self.command_done)
+
+  def command_done(self, result):
+    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+
 class NodeRunArgumentsCommand(NodeTextCommand):
   def run(self, edit):
     self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
@@ -219,6 +227,20 @@ class NodeRunArgumentsCommand(NodeTextCommand):
   def on_input(self, message):
     command = message.split()
     command.insert(0, self.view.file_name());
+    command.insert(0, 'node');
+    self.run_command(command, self.command_done)
+
+  def command_done(self, result):
+    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+
+class NodeDrunArgumentsCommand(NodeTextCommand):
+  def run(self, edit):
+    self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
+
+  def on_input(self, message):
+    command = message.split()
+    command.insert(0, self.view.file_name());
+    command.insert(0, 'debug');
     command.insert(0, 'node');
     self.run_command(command, self.command_done)
 
