@@ -10,7 +10,7 @@ type certain namespaces and then Ctrl + Space, you will get autocomplete suggest
 
 For example, type `fs` then Ctrl + Space, you get this:
 
-![A picture of the file system context menu](http://i.imgur.com/QLVPt.jpg)
+![A picture of the file system context menu](http://i.imgur.com/ZCFcC.png)
 
 Install
 -------
