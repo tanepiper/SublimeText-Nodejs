@@ -15,11 +15,14 @@ For example, type `fs` then Ctrl + Space, you get this:
 Install
 -------
 
-MacOSX
+You may install `Nodejs` via the Sublime Text 2 package manager, or using git
+with the below commands:
+
+*MacOSX*
 
     `git clone git://github.com/tanepiper/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Nodejs`
 
-Windows
+*Windows*
 
     `git clone git://github.com/tanepiper/SublimeText-Nodejs.git %APPDATA%\Sublime Text 2\Packages\Nodadejs`
 
@@ -28,15 +31,39 @@ Build Systems
 
 If you have a JavaScript file open, by selecting selecting `Tools -> Build Systems -> Nodejs` and
 then hitting Ctrl + B, you will activate the node build system on your file and node will try to run it.
+You may need to add a `path` variable to the settings object for this if your node executable is not found
 
-Currently it does not accept arguments, and you may need to close Sublime Text to end your process if it's
-long running - these are currently being looked in to.
+Node Commands
+-------------
+
+You can access node commands in two ways.
+
+* Via the menu in `Tools -> Node`
+* By accessing the Command Palette and typing `node`
+
+The current commands available are:
+
+* Run current script in node
+* Run current script in node with arguments
+* Run current directory with node
+* Run current script in node with arguments
+* NPM command
+
+Boilerplate Code
+----------------
+
+There are now some boilerplate snippets included with this package, they include
+functionality such as a http server, reading the contents of a directory, etc.
+
+To access these snippets type `node` in your editor followed by Ctrl + Space
+
+If you have any boilerplate code you would like to see in here, get in touch.
 
 Possible Improvements
 ---------------------
 * [FIXED] Fix files it has a problem reading like assert and event
 * See if a better Sublime file format can be generated for language stuff
-* Add boilerplate snippets (http(s) servers, crypto functions, etc)
+* [FIXED] Add boilerplate snippets (http(s) servers, crypto functions, etc)
 
 Documentation Building
 ----------------------
