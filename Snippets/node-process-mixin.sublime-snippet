@@ -1,6 +1,6 @@
 <snippet>
    <content>mixin()</content>
-   <tabTrigger>process.mixin</tabTrigger>
+   <tabTrigger>mixin</tabTrigger>
    <scope>source.js</scope>
    <description>process.mixin</description>
 </snippet>

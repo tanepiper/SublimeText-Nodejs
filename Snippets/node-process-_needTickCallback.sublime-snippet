@@ -1,6 +1,6 @@
 <snippet>
    <content>_needTickCallback()</content>
-   <tabTrigger>process._needTickCallback</tabTrigger>
+   <tabTrigger>_needTickCallback</tabTrigger>
    <scope>source.js</scope>
    <description>process._needTickCallback</description>
 </snippet>

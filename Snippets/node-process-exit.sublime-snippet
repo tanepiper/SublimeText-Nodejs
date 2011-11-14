@@ -1,6 +1,6 @@
 <snippet>
    <content>exit(code)</content>
-   <tabTrigger>process.exit</tabTrigger>
+   <tabTrigger>exit</tabTrigger>
    <scope>source.js</scope>
    <description>process.exit</description>
 </snippet>

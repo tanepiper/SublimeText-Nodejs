@@ -1,6 +1,6 @@
 <snippet>
    <content>uptime()</content>
-   <tabTrigger>process.uptime</tabTrigger>
+   <tabTrigger>uptime</tabTrigger>
    <scope>source.js</scope>
    <description>process.uptime</description>
 </snippet>

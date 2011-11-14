@@ -1,6 +1,6 @@
 <snippet>
    <content>reallyExit()</content>
-   <tabTrigger>process.reallyExit</tabTrigger>
+   <tabTrigger>reallyExit</tabTrigger>
    <scope>source.js</scope>
    <description>process.reallyExit</description>
 </snippet>

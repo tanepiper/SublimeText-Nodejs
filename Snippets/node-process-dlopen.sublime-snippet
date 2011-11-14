@@ -1,6 +1,6 @@
 <snippet>
    <content>dlopen()</content>
-   <tabTrigger>process.dlopen</tabTrigger>
+   <tabTrigger>dlopen</tabTrigger>
    <scope>source.js</scope>
    <description>process.dlopen</description>
 </snippet>

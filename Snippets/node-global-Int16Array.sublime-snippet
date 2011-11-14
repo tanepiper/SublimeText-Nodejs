@@ -1,6 +1,6 @@
 <snippet>
    <content>Int16Array()</content>
-   <tabTrigger>global.Int16Array</tabTrigger>
+   <tabTrigger>Int16Array</tabTrigger>
    <scope>source.js</scope>
    <description>global.Int16Array</description>
 </snippet>

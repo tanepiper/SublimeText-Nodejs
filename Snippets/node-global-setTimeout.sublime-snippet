@@ -1,6 +1,6 @@
 <snippet>
    <content>setTimeout()</content>
-   <tabTrigger>global.setTimeout</tabTrigger>
+   <tabTrigger>setTimeout</tabTrigger>
    <scope>source.js</scope>
    <description>global.setTimeout</description>
 </snippet>

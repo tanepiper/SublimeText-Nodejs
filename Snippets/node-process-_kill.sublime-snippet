@@ -1,6 +1,6 @@
 <snippet>
    <content>_kill()</content>
-   <tabTrigger>process._kill</tabTrigger>
+   <tabTrigger>_kill</tabTrigger>
    <scope>source.js</scope>
    <description>process._kill</description>
 </snippet>

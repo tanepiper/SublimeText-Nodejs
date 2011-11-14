@@ -1,6 +1,6 @@
 <snippet>
    <content>emit()</content>
-   <tabTrigger>process.emit</tabTrigger>
+   <tabTrigger>emit</tabTrigger>
    <scope>source.js</scope>
    <description>process.emit</description>
 </snippet>

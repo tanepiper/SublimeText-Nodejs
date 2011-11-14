@@ -12,7 +12,7 @@ var createSnippets = function(snippets) {
     var output = [];
     output.push('<snippet>');
       output.push('   <content>' + item.f_string + '</content>');
-      output.push('   <tabTrigger>'+ item.type + '.' + item.key + '</tabTrigger>');
+      output.push('   <tabTrigger>'+ item.name + '</tabTrigger>');
       output.push('   <scope>source.js</scope>');
       output.push('   <description>' + item.type + '.' + item.key + '</description>');
     output.push('</snippet>');
@@ -27,6 +27,10 @@ var saveFile = function(file, key, output) {
   fs.writeFile(path.resolve(snippet_path, 'node-' + file + '-' + key + '.sublime-snippet'), output);
 }
 
+/**
+ * Taken and slightly modified to support args, from http://hiveminds.org/phpBB/viewtopic.php?t=2885
+ * @param {Function} fn function to be reflected
+ */
 var FunctionReflect = function(fn) { 
    this.fn = fn; 
     
@@ -88,7 +92,7 @@ var readdir = function(err, files) {
       doc_output.reflection = FunctionReflect(process[pkey]);
       doc_output.args = doc_output.reflection.params.trim();
       doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
-      doc_output.name = '' + doc_output.type  + '.' + doc_output.key;
+      doc_output.name = '' +  doc_output.key;
       
       output_arr.push(doc_output);
     }
@@ -102,7 +106,7 @@ var readdir = function(err, files) {
       doc_output.reflection = FunctionReflect(global[gkey]);
       doc_output.args = doc_output.reflection.params.trim();
       doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim()
-      doc_output.name = '' + doc_output.type  + '.' + doc_output.key;
+      doc_output.name = '' + doc_output.key;
       
       output_arr.push(doc_output);
     }

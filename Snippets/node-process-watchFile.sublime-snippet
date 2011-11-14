@@ -1,6 +1,6 @@
 <snippet>
    <content>watchFile()</content>
-   <tabTrigger>process.watchFile</tabTrigger>
+   <tabTrigger>watchFile</tabTrigger>
    <scope>source.js</scope>
    <description>process.watchFile</description>
 </snippet>
