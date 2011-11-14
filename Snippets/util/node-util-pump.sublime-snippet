@@ -1,7 +1,0 @@
-<!-- Created on Mon Nov 14 2011 22:03:38 GMT+0000 (GMT Standard Time) by doc_builder.js -->
-<snippet>
-   <content><![CDATA[util.pump(readStream, writeStream, callback);]]></content>
-   <tabTrigger>util.pump</tabTrigger>
-   <scope>source.js</scope>
-   <description>(readStream, writeStream, callback)</description>
-</snippet>

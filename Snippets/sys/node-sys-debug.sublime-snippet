@@ -1,7 +1,0 @@
-<!-- Created on Mon Nov 14 2011 22:03:38 GMT+0000 (GMT Standard Time) by doc_builder.js -->
-<snippet>
-   <content><![CDATA[sys.debug(x);]]></content>
-   <tabTrigger>sys.debug</tabTrigger>
-   <scope>source.js</scope>
-   <description>(x)</description>
-</snippet>

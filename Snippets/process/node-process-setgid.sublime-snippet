@@ -1,6 +1,0 @@
-<snippet>
-   <content><![CDATA[process.setgid();]]></content>
-   <tabTrigger>process.setgid</tabTrigger>
-   <scope>source.js</scope>
-   <description>()</description>
-</snippet>

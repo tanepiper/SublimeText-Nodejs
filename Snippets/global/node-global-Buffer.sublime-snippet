@@ -1,7 +1,0 @@
-<!-- Created on Mon Nov 14 2011 22:03:38 GMT+0000 (GMT Standard Time) by doc_builder.js -->
-<snippet>
-   <content><![CDATA[Buffer(subject, encoding, offset);]]></content>
-   <tabTrigger>global.Buffer</tabTrigger>
-   <scope>source.js</scope>
-   <description>(subject, encoding, offset)</description>
-</snippet>

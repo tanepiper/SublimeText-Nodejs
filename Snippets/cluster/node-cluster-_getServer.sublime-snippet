@@ -1,7 +1,0 @@
-<!-- Created on Mon Nov 14 2011 22:03:38 GMT+0000 (GMT Standard Time) by doc_builder.js -->
-<snippet>
-   <content><![CDATA[cluster._getServer(address, port, addressType, cb);]]></content>
-   <tabTrigger>cluster._getServer</tabTrigger>
-   <scope>source.js</scope>
-   <description>(address, port, addressType, cb)</description>
-</snippet>
