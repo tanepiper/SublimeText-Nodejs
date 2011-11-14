@@ -97,7 +97,7 @@ var createGlobals = function(output) {
         reflection: FunctionReflect(global[gKey])
       }
       snippet['args'] = snippet.reflection.params.trim();
-      snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_string'] = '' + snippet.name + snippet.reflection.params.trim() + ';'
       output.push(snippet);
     }
   }
