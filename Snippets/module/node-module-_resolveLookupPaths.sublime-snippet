@@ -1,6 +1,6 @@
 <snippet>
-   <content>module._resolveLookupPaths(request, parent)</content>
+   <content>module._resolveLookupPaths(request, parent);</content>
    <tabTrigger>module._resolveLookupPaths</tabTrigger>
    <scope>source.js</scope>
-   <description>module._resolveLookupPaths</description>
+   <description>(request, parent)</description>
 </snippet>

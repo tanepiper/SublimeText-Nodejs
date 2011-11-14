@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.lchmodSync(path, mode);</content>
+   <tabTrigger>fs.lchmodSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>(path, mode)</description>
+</snippet>

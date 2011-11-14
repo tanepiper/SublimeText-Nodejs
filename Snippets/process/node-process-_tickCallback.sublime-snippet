@@ -1,6 +1,6 @@
 <snippet>
-   <content>_tickCallback()</content>
-   <tabTrigger>_tickCallback</tabTrigger>
+   <content>process._tickCallback();</content>
+   <tabTrigger>process._tickCallback</tabTrigger>
    <scope>source.js</scope>
-   <description>_tickCallback</description>
+   <description>()</description>
 </snippet>

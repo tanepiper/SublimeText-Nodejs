@@ -1,6 +1,6 @@
 <snippet>
-   <content>http._connectionListener(socket)</content>
+   <content>http._connectionListener(socket);</content>
    <tabTrigger>http._connectionListener</tabTrigger>
    <scope>source.js</scope>
-   <description>http._connectionListener</description>
+   <description>(socket)</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-   <content>net.createConnection(port /* [host], [cb] */)</content>
+   <content>net.createConnection(port /* [host], [cb] */);</content>
    <tabTrigger>net.createConnection</tabTrigger>
    <scope>source.js</scope>
-   <description>net.createConnection</description>
+   <description>(port /* [host], [cb] */)</description>
 </snippet>

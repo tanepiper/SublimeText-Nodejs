@@ -1,6 +1,6 @@
 <snippet>
-   <content>assert()</content>
-   <tabTrigger>assert</tabTrigger>
+   <content>process.assert();</content>
+   <tabTrigger>process.assert</tabTrigger>
    <scope>source.js</scope>
-   <description>assert</description>
+   <description>()</description>
 </snippet>

@@ -1,7 +1,6 @@
 <snippet>
-   <content>zlib.Gunzip(opts)</content>
-   <tabTrigger>zlib.Gunzip</tabTrigger>
+   <content>zlib.gunzip(buffer, callback);</content>
+   <tabTrigger>zlib.gunzip</tabTrigger>
    <scope>source.js</scope>
-   <description>zlib.Gunzip</description>
-</snippet>>
+   <description>(buffer, callback)</description>
 </snippet>

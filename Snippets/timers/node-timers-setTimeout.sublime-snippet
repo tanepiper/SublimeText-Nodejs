@@ -1,6 +1,6 @@
 <snippet>
-   <content>timers.setTimeout(callback, after)</content>
+   <content>timers.setTimeout(callback, after);</content>
    <tabTrigger>timers.setTimeout</tabTrigger>
    <scope>source.js</scope>
-   <description>timers.setTimeout</description>
+   <description>(callback, after)</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.Hash()</content>
+   <content>crypto.Hash();</content>
    <tabTrigger>crypto.Hash</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.Hash</description>
+   <description>()</description>
 </snippet>

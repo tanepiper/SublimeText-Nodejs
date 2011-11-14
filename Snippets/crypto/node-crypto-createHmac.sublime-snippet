@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.createHmac(hmac, key)</content>
+   <content>crypto.createHmac(hmac, key);</content>
    <tabTrigger>crypto.createHmac</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.createHmac</description>
+   <description>(hmac, key)</description>
 </snippet>

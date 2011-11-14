@@ -1,6 +1,6 @@
 <snippet>
-   <content>console.time(label)</content>
+   <content>console.time(label);</content>
    <tabTrigger>console.time</tabTrigger>
    <scope>source.js</scope>
-   <description>console.time</description>
+   <description>(label)</description>
 </snippet>

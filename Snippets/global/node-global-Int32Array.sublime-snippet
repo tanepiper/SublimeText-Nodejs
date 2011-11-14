@@ -1,6 +1,6 @@
 <snippet>
-   <content>Int32Array()</content>
-   <tabTrigger>Int32Array</tabTrigger>
+   <content>global.Int32Array();</content>
+   <tabTrigger>global.Int32Array</tabTrigger>
    <scope>source.js</scope>
-   <description>Int32Array</description>
+   <description>()</description>
 </snippet>

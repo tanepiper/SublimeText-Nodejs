@@ -1,6 +1,6 @@
 <snippet>
-   <content>assert.notDeepEqual(actual, expected, message)</content>
+   <content>assert.notDeepEqual(actual, expected, message);</content>
    <tabTrigger>assert.notDeepEqual</tabTrigger>
    <scope>source.js</scope>
-   <description>assert.notDeepEqual</description>
+   <description>(actual, expected, message)</description>
 </snippet>

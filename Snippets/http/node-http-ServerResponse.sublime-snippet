@@ -1,6 +1,6 @@
 <snippet>
-   <content>http.ServerResponse(req)</content>
+   <content>http.ServerResponse(req);</content>
    <tabTrigger>http.ServerResponse</tabTrigger>
    <scope>source.js</scope>
-   <description>http.ServerResponse</description>
+   <description>(req)</description>
 </snippet>

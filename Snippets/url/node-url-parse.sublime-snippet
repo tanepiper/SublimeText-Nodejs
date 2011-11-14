@@ -1,6 +1,6 @@
 <snippet>
-   <content>url.parse(url, parseQueryString, slashesDenoteHost)</content>
+   <content>url.parse(url, parseQueryString, slashesDenoteHost);</content>
    <tabTrigger>url.parse</tabTrigger>
    <scope>source.js</scope>
-   <description>url.parse</description>
+   <description>(url, parseQueryString, slashesDenoteHost)</description>
 </snippet>

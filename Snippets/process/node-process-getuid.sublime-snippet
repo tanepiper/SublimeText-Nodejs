@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.getuid();</content>
+   <tabTrigger>process.getuid</tabTrigger>
+   <scope>source.js</scope>
+   <description>()</description>
+</snippet>

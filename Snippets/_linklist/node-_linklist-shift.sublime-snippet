@@ -1,6 +1,6 @@
 <snippet>
-   <content>_linklist.shift(list)</content>
+   <content>_linklist.shift(list);</content>
    <tabTrigger>_linklist.shift</tabTrigger>
    <scope>source.js</scope>
-   <description>_linklist.shift</description>
+   <description>(list)</description>
 </snippet>

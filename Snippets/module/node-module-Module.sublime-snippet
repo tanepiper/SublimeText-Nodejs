@@ -1,6 +1,6 @@
 <snippet>
-   <content>module.Module(id, parent)</content>
+   <content>module.Module(id, parent);</content>
    <tabTrigger>module.Module</tabTrigger>
    <scope>source.js</scope>
-   <description>module.Module</description>
+   <description>(id, parent)</description>
 </snippet>

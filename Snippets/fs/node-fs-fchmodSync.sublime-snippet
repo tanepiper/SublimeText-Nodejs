@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.fchmodSync(fd, mode)</content>
+   <content>fs.fchmodSync(fd, mode);</content>
    <tabTrigger>fs.fchmodSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.fchmodSync</description>
+   <description>(fd, mode)</description>
 </snippet>

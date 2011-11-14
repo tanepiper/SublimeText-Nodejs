@@ -1,6 +1,6 @@
 <snippet>
-   <content>dns.resolve6(name, callback)</content>
+   <content>dns.resolve6(name, callback);</content>
    <tabTrigger>dns.resolve6</tabTrigger>
    <scope>source.js</scope>
-   <description>dns.resolve6</description>
+   <description>(name, callback)</description>
 </snippet>

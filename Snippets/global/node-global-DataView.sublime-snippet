@@ -1,6 +1,6 @@
 <snippet>
-   <content>DataView()</content>
-   <tabTrigger>DataView</tabTrigger>
+   <content>global.DataView();</content>
+   <tabTrigger>global.DataView</tabTrigger>
    <scope>source.js</scope>
-   <description>DataView</description>
+   <description>()</description>
 </snippet>

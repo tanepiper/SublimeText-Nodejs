@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.realpathSync(p, cache)</content>
+   <content>fs.realpathSync(p, cache);</content>
    <tabTrigger>fs.realpathSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.realpathSync</description>
+   <description>(p, cache)</description>
 </snippet>

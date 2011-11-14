@@ -1,6 +1,6 @@
 <snippet>
-   <content>http.IncomingMessage(socket)</content>
+   <content>http.IncomingMessage(socket);</content>
    <tabTrigger>http.IncomingMessage</tabTrigger>
    <scope>source.js</scope>
-   <description>http.IncomingMessage</description>
+   <description>(socket)</description>
 </snippet>

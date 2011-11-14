@@ -1,6 +1,6 @@
 <snippet>
-   <content>dns.reverse(name, callback)</content>
+   <content>dns.reverse(name, callback);</content>
    <tabTrigger>dns.reverse</tabTrigger>
    <scope>source.js</scope>
-   <description>dns.reverse</description>
+   <description>(name, callback)</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-   <content>sys.inspect(obj, showHidden, depth, colors)</content>
+   <content>sys.inspect(obj, showHidden, depth, colors);</content>
    <tabTrigger>sys.inspect</tabTrigger>
    <scope>source.js</scope>
-   <description>sys.inspect</description>
+   <description>(obj, showHidden, depth, colors)</description>
 </snippet>

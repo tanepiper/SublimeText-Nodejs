@@ -1,6 +1,6 @@
 <snippet>
-   <content>assert.throws(block, /*optional*/error, /*optional*/message)</content>
+   <content>assert.throws(block, /*optional*/error, /*optional*/message);</content>
    <tabTrigger>assert.throws</tabTrigger>
    <scope>source.js</scope>
-   <description>assert.throws</description>
+   <description>(block, /*optional*/error, /*optional*/message)</description>
 </snippet>

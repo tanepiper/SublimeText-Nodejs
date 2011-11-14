@@ -1,6 +1,6 @@
 <snippet>
-   <content>_debugProcess()</content>
-   <tabTrigger>_debugProcess</tabTrigger>
+   <content>process._debugProcess();</content>
+   <tabTrigger>process._debugProcess</tabTrigger>
    <scope>source.js</scope>
-   <description>_debugProcess</description>
+   <description>()</description>
 </snippet>

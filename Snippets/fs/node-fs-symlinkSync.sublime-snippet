@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.symlinkSync(destination, path, mode)</content>
+   <content>fs.symlinkSync(destination, path, mode);</content>
    <tabTrigger>fs.symlinkSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.symlinkSync</description>
+   <description>(destination, path, mode)</description>
 </snippet>

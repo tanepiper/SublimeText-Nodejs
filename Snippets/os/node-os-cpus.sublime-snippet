@@ -1,6 +1,6 @@
 <snippet>
-   <content>os.cpus()</content>
+   <content>os.cpus();</content>
    <tabTrigger>os.cpus</tabTrigger>
    <scope>source.js</scope>
-   <description>os.cpus</description>
+   <description>()</description>
 </snippet>

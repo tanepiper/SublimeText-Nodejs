@@ -1,6 +1,6 @@
 <snippet>
-   <content>sys.print()</content>
+   <content>sys.print();</content>
    <tabTrigger>sys.print</tabTrigger>
    <scope>source.js</scope>
-   <description>sys.print</description>
+   <description>()</description>
 </snippet>

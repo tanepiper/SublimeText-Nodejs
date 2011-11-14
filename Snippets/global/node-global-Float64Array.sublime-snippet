@@ -1,6 +1,6 @@
 <snippet>
-   <content>Float64Array()</content>
-   <tabTrigger>Float64Array</tabTrigger>
+   <content>global.Float64Array();</content>
+   <tabTrigger>global.Float64Array</tabTrigger>
    <scope>source.js</scope>
-   <description>Float64Array</description>
+   <description>()</description>
 </snippet>

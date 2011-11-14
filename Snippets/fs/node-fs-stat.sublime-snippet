@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.stat(path, callback)</content>
+   <content>fs.stat(path, callback);</content>
    <tabTrigger>fs.stat</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.stat</description>
+   <description>(path, callback)</description>
 </snippet>

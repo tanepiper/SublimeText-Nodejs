@@ -1,6 +1,6 @@
 <snippet>
-   <content>net.Stream(options)</content>
+   <content>net.Stream(options);</content>
    <tabTrigger>net.Stream</tabTrigger>
    <scope>source.js</scope>
-   <description>net.Stream</description>
+   <description>(options)</description>
 </snippet>

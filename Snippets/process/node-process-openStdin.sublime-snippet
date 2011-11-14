@@ -1,6 +1,6 @@
 <snippet>
-   <content>openStdin()</content>
-   <tabTrigger>openStdin</tabTrigger>
+   <content>process.openStdin();</content>
+   <tabTrigger>process.openStdin</tabTrigger>
    <scope>source.js</scope>
-   <description>openStdin</description>
+   <description>()</description>
 </snippet>

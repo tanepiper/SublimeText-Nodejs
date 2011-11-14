@@ -1,0 +1,6 @@
+<snippet>
+   <content>cluster.addListener(type, listener);</content>
+   <tabTrigger>cluster.addListener</tabTrigger>
+   <scope>source.js</scope>
+   <description>(type, listener)</description>
+</snippet>

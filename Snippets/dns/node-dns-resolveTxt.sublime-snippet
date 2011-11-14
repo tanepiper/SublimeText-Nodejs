@@ -1,6 +1,6 @@
 <snippet>
-   <content>dns.resolveTxt(name, callback)</content>
+   <content>dns.resolveTxt(name, callback);</content>
    <tabTrigger>dns.resolveTxt</tabTrigger>
    <scope>source.js</scope>
-   <description>dns.resolveTxt</description>
+   <description>(name, callback)</description>
 </snippet>

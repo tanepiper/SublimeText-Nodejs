@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.watch(filename)</content>
+   <content>fs.watch(filename);</content>
    <tabTrigger>fs.watch</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.watch</description>
+   <description>(filename)</description>
 </snippet>

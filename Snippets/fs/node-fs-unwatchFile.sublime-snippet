@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.unwatchFile(filename)</content>
+   <content>fs.unwatchFile(filename);</content>
    <tabTrigger>fs.unwatchFile</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.unwatchFile</description>
+   <description>(filename)</description>
 </snippet>

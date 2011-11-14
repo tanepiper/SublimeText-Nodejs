@@ -1,6 +1,0 @@
-<snippet>
-   <content>punycode.toUnicode(domain)</content>
-   <tabTrigger>punycode.toUnicode</tabTrigger>
-   <scope>source.js</scope>
-   <description>punycode.toUnicode</description>
-</snippet>

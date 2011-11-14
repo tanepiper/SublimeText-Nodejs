@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.prng()</content>
+   <content>crypto.prng();</content>
    <tabTrigger>crypto.prng</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.prng</description>
+   <description>()</description>
 </snippet>

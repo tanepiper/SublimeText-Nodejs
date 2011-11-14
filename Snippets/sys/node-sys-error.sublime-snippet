@@ -1,6 +1,6 @@
 <snippet>
-   <content>sys.error(x)</content>
+   <content>sys.error(x);</content>
    <tabTrigger>sys.error</tabTrigger>
    <scope>source.js</scope>
-   <description>sys.error</description>
+   <description>(x)</description>
 </snippet>

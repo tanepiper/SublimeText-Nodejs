@@ -1,6 +1,6 @@
 <snippet>
-   <content>net.isIP(input)</content>
+   <content>net.isIP(input);</content>
    <tabTrigger>net.isIP</tabTrigger>
    <scope>source.js</scope>
-   <description>net.isIP</description>
+   <description>(input)</description>
 </snippet>

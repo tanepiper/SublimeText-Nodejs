@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.Hmac()</content>
+   <content>crypto.Hmac();</content>
    <tabTrigger>crypto.Hmac</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.Hmac</description>
+   <description>()</description>
 </snippet>

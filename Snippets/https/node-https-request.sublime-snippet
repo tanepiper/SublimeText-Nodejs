@@ -1,6 +1,6 @@
 <snippet>
-   <content>https.request(options, cb)</content>
+   <content>https.request(options, cb);</content>
    <tabTrigger>https.request</tabTrigger>
    <scope>source.js</scope>
-   <description>https.request</description>
+   <description>(options, cb)</description>
 </snippet>

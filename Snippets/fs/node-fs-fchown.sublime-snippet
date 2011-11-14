@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.fchown(fd, uid, gid, callback)</content>
+   <content>fs.fchown(fd, uid, gid, callback);</content>
    <tabTrigger>fs.fchown</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.fchown</description>
+   <description>(fd, uid, gid, callback)</description>
 </snippet>

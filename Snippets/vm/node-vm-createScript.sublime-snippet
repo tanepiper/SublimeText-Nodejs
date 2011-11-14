@@ -1,6 +1,6 @@
 <snippet>
-   <content>vm.createScript(code, ctx, name)</content>
+   <content>vm.createScript(code, ctx, name);</content>
    <tabTrigger>vm.createScript</tabTrigger>
    <scope>source.js</scope>
-   <description>vm.createScript</description>
+   <description>(code, ctx, name)</description>
 </snippet>

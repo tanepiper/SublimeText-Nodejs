@@ -1,6 +1,6 @@
 <snippet>
-   <content>_linklist.remove(item)</content>
+   <content>_linklist.remove(item);</content>
    <tabTrigger>_linklist.remove</tabTrigger>
    <scope>source.js</scope>
-   <description>_linklist.remove</description>
+   <description>(item)</description>
 </snippet>

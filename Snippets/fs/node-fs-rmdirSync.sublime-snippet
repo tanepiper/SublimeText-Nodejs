@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.rmdirSync(path)</content>
+   <content>fs.rmdirSync(path);</content>
    <tabTrigger>fs.rmdirSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.rmdirSync</description>
+   <description>(path)</description>
 </snippet>

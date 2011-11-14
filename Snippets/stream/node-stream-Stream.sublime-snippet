@@ -1,6 +1,6 @@
 <snippet>
-   <content>stream.Stream()</content>
+   <content>stream.Stream();</content>
    <tabTrigger>stream.Stream</tabTrigger>
    <scope>source.js</scope>
-   <description>stream.Stream</description>
+   <description>()</description>
 </snippet>

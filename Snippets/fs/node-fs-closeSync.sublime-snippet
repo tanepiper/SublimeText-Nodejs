@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.closeSync(fd)</content>
+   <content>fs.closeSync(fd);</content>
    <tabTrigger>fs.closeSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.closeSync</description>
+   <description>(fd)</description>
 </snippet>

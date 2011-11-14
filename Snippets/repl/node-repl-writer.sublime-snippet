@@ -1,6 +1,6 @@
 <snippet>
-   <content>repl.writer(obj, showHidden, depth, colors)</content>
+   <content>repl.writer(obj, showHidden, depth, colors);</content>
    <tabTrigger>repl.writer</tabTrigger>
    <scope>source.js</scope>
-   <description>repl.writer</description>
+   <description>(obj, showHidden, depth, colors)</description>
 </snippet>

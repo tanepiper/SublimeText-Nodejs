@@ -1,0 +1,6 @@
+<snippet>
+   <content>process.getgid();</content>
+   <tabTrigger>process.getgid</tabTrigger>
+   <scope>source.js</scope>
+   <description>()</description>
+</snippet>

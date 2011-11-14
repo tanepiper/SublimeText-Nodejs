@@ -1,6 +1,6 @@
 <snippet>
-   <content>buffer.SlowBuffer()</content>
+   <content>buffer.SlowBuffer();</content>
    <tabTrigger>buffer.SlowBuffer</tabTrigger>
    <scope>source.js</scope>
-   <description>buffer.SlowBuffer</description>
+   <description>()</description>
 </snippet>

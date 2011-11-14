@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.truncate(fd, len, callback)</content>
+   <content>fs.truncate(fd, len, callback);</content>
    <tabTrigger>fs.truncate</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.truncate</description>
+   <description>(fd, len, callback)</description>
 </snippet>

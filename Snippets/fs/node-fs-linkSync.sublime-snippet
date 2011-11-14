@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.linkSync(srcpath, dstpath)</content>
+   <content>fs.linkSync(srcpath, dstpath);</content>
    <tabTrigger>fs.linkSync</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.linkSync</description>
+   <description>(srcpath, dstpath)</description>
 </snippet>

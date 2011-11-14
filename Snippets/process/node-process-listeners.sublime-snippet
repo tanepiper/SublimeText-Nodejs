@@ -1,6 +1,6 @@
 <snippet>
-   <content>listeners(type)</content>
-   <tabTrigger>listeners</tabTrigger>
+   <content>process.listeners(type);</content>
+   <tabTrigger>process.listeners</tabTrigger>
    <scope>source.js</scope>
-   <description>listeners</description>
+   <description>(type)</description>
 </snippet>

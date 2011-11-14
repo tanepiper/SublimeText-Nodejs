@@ -1,6 +1,6 @@
 <snippet>
-   <content>assert.ok(value, message)</content>
+   <content>assert.ok(value, message);</content>
    <tabTrigger>assert.ok</tabTrigger>
    <scope>source.js</scope>
-   <description>assert.ok</description>
+   <description>(value, message)</description>
 </snippet>

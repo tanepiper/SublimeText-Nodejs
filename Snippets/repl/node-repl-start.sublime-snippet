@@ -1,6 +1,6 @@
 <snippet>
-   <content>repl.start(prompt, source, eval, useGlobal)</content>
+   <content>repl.start(prompt, source, eval, useGlobal);</content>
    <tabTrigger>repl.start</tabTrigger>
    <scope>source.js</scope>
-   <description>repl.start</description>
+   <description>(prompt, source, eval, useGlobal)</description>
 </snippet>

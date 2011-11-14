@@ -1,6 +1,6 @@
 <snippet>
-   <content>os.release()</content>
+   <content>os.release();</content>
    <tabTrigger>os.release</tabTrigger>
    <scope>source.js</scope>
-   <description>os.release</description>
+   <description>()</description>
 </snippet>

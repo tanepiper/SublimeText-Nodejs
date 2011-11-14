@@ -1,6 +1,6 @@
 <snippet>
-   <content>path.dirname(path)</content>
+   <content>path.dirname(path);</content>
    <tabTrigger>path.dirname</tabTrigger>
    <scope>source.js</scope>
-   <description>path.dirname</description>
+   <description>(path)</description>
 </snippet>

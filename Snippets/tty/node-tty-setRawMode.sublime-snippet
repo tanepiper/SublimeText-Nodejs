@@ -1,6 +1,6 @@
 <snippet>
-   <content>tty.setRawMode(flag)</content>
+   <content>tty.setRawMode(flag);</content>
    <tabTrigger>tty.setRawMode</tabTrigger>
    <scope>source.js</scope>
-   <description>tty.setRawMode</description>
+   <description>(flag)</description>
 </snippet>

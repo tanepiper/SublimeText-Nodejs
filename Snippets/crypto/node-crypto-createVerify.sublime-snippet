@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.createVerify(algorithm)</content>
+   <content>crypto.createVerify(algorithm);</content>
    <tabTrigger>crypto.createVerify</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.createVerify</description>
+   <description>(algorithm)</description>
 </snippet>

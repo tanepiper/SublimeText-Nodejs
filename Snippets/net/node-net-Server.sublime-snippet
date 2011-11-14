@@ -1,6 +1,6 @@
 <snippet>
-   <content>net.Server(/* [ options, ] listener */)</content>
+   <content>net.Server(/* [ options, ] listener */);</content>
    <tabTrigger>net.Server</tabTrigger>
    <scope>source.js</scope>
-   <description>net.Server</description>
+   <description>(/* [ options, ] listener */)</description>
 </snippet>

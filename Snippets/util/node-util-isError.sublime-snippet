@@ -1,6 +1,6 @@
 <snippet>
-   <content>util.isError(e)</content>
+   <content>util.isError(e);</content>
    <tabTrigger>util.isError</tabTrigger>
    <scope>source.js</scope>
-   <description>util.isError</description>
+   <description>(e)</description>
 </snippet>

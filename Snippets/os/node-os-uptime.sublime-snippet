@@ -1,6 +1,6 @@
 <snippet>
-   <content>os.uptime()</content>
+   <content>os.uptime();</content>
    <tabTrigger>os.uptime</tabTrigger>
    <scope>source.js</scope>
-   <description>os.uptime</description>
+   <description>()</description>
 </snippet>

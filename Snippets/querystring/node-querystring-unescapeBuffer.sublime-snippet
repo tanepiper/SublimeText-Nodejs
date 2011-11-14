@@ -1,6 +1,6 @@
 <snippet>
-   <content>querystring.unescapeBuffer(s, decodeSpaces)</content>
+   <content>querystring.unescapeBuffer(s, decodeSpaces);</content>
    <tabTrigger>querystring.unescapeBuffer</tabTrigger>
    <scope>source.js</scope>
-   <description>querystring.unescapeBuffer</description>
+   <description>(s, decodeSpaces)</description>
 </snippet>

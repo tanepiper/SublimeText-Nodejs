@@ -1,6 +1,0 @@
-<snippet>
-   <content>fn()</content>
-   <tabTrigger>fn</tabTrigger>
-   <scope>source.js</scope>
-   <description>fn</description>
-</snippet>

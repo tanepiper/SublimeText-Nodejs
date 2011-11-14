@@ -1,6 +1,6 @@
 <snippet>
-   <content>path.normalize(path)</content>
+   <content>path.normalize(path);</content>
    <tabTrigger>path.normalize</tabTrigger>
    <scope>source.js</scope>
-   <description>path.normalize</description>
+   <description>(path)</description>
 </snippet>

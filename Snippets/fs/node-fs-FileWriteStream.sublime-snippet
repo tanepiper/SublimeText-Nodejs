@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.FileWriteStream(path, options)</content>
+   <content>fs.FileWriteStream(path, options);</content>
    <tabTrigger>fs.FileWriteStream</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.FileWriteStream</description>
+   <description>(path, options)</description>
 </snippet>

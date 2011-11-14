@@ -1,6 +1,6 @@
 <snippet>
-   <content>module.runMain()</content>
+   <content>module.runMain();</content>
    <tabTrigger>module.runMain</tabTrigger>
    <scope>source.js</scope>
-   <description>module.runMain</description>
+   <description>()</description>
 </snippet>

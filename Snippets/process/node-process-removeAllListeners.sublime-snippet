@@ -1,6 +1,6 @@
 <snippet>
-   <content>removeAllListeners(type)</content>
-   <tabTrigger>removeAllListeners</tabTrigger>
+   <content>process.removeAllListeners(type);</content>
+   <tabTrigger>process.removeAllListeners</tabTrigger>
    <scope>source.js</scope>
-   <description>removeAllListeners</description>
+   <description>(type)</description>
 </snippet>

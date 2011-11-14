@@ -1,6 +1,6 @@
 <snippet>
-   <content>os.platform()</content>
+   <content>os.platform();</content>
    <tabTrigger>os.platform</tabTrigger>
    <scope>source.js</scope>
-   <description>os.platform</description>
+   <description>()</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.createDiffieHellman(size_or_key, enc)</content>
+   <content>crypto.createDiffieHellman(size_or_key, enc);</content>
    <tabTrigger>crypto.createDiffieHellman</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.createDiffieHellman</description>
+   <description>(size_or_key, enc)</description>
 </snippet>

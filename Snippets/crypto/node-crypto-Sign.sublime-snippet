@@ -1,6 +1,6 @@
 <snippet>
-   <content>crypto.Sign()</content>
+   <content>crypto.Sign();</content>
    <tabTrigger>crypto.Sign</tabTrigger>
    <scope>source.js</scope>
-   <description>crypto.Sign</description>
+   <description>()</description>
 </snippet>

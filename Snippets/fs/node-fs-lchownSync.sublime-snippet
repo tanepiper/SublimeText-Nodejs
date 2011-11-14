@@ -1,0 +1,6 @@
+<snippet>
+   <content>fs.lchownSync(path, uid, gid);</content>
+   <tabTrigger>fs.lchownSync</tabTrigger>
+   <scope>source.js</scope>
+   <description>(path, uid, gid)</description>
+</snippet>

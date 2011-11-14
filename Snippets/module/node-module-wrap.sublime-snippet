@@ -1,6 +1,6 @@
 <snippet>
-   <content>module.wrap(script)</content>
+   <content>module.wrap(script);</content>
    <tabTrigger>module.wrap</tabTrigger>
    <scope>source.js</scope>
-   <description>module.wrap</description>
+   <description>(script)</description>
 </snippet>

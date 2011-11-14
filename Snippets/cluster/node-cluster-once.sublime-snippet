@@ -1,0 +1,6 @@
+<snippet>
+   <content>cluster.once(type, listener);</content>
+   <tabTrigger>cluster.once</tabTrigger>
+   <scope>source.js</scope>
+   <description>(type, listener)</description>
+</snippet>

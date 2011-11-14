@@ -1,6 +1,6 @@
 <snippet>
-   <content>vm.createContext()</content>
+   <content>vm.createContext();</content>
    <tabTrigger>vm.createContext</tabTrigger>
    <scope>source.js</scope>
-   <description>vm.createContext</description>
+   <description>()</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.writeFile(path, data, encoding_, callback)</content>
+   <content>fs.writeFile(path, data, encoding_, callback);</content>
    <tabTrigger>fs.writeFile</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.writeFile</description>
+   <description>(path, data, encoding_, callback)</description>
 </snippet>

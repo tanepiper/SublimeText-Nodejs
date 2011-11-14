@@ -1,6 +1,6 @@
 <snippet>
-   <content>tls.createServer(options, listener)</content>
+   <content>tls.createServer(options, listener);</content>
    <tabTrigger>tls.createServer</tabTrigger>
    <scope>source.js</scope>
-   <description>tls.createServer</description>
+   <description>(options, listener)</description>
 </snippet>

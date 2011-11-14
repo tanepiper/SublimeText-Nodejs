@@ -1,6 +1,6 @@
 <snippet>
-   <content>setMaxListeners(n)</content>
-   <tabTrigger>setMaxListeners</tabTrigger>
+   <content>process.setMaxListeners(n);</content>
+   <tabTrigger>process.setMaxListeners</tabTrigger>
    <scope>source.js</scope>
-   <description>setMaxListeners</description>
+   <description>(n)</description>
 </snippet>

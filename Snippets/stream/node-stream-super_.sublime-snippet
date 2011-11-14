@@ -1,6 +1,6 @@
 <snippet>
-   <content>stream.super_()</content>
+   <content>stream.super_();</content>
    <tabTrigger>stream.super_</tabTrigger>
    <scope>source.js</scope>
-   <description>stream.super_</description>
+   <description>()</description>
 </snippet>

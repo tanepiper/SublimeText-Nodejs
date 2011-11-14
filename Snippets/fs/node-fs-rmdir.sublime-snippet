@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.rmdir(path, callback)</content>
+   <content>fs.rmdir(path, callback);</content>
    <tabTrigger>fs.rmdir</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.rmdir</description>
+   <description>(path, callback)</description>
 </snippet>

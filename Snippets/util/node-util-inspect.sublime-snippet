@@ -1,6 +1,6 @@
 <snippet>
-   <content>util.inspect(obj, showHidden, depth, colors)</content>
+   <content>util.inspect(obj, showHidden, depth, colors);</content>
    <tabTrigger>util.inspect</tabTrigger>
    <scope>source.js</scope>
-   <description>util.inspect</description>
+   <description>(obj, showHidden, depth, colors)</description>
 </snippet>

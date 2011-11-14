@@ -1,6 +1,6 @@
 <snippet>
-   <content>cluster._getServer(address, port, addressType, cb)</content>
+   <content>cluster._getServer(address, port, addressType, cb);</content>
    <tabTrigger>cluster._getServer</tabTrigger>
    <scope>source.js</scope>
-   <description>cluster._getServer</description>
+   <description>(address, port, addressType, cb)</description>
 </snippet>

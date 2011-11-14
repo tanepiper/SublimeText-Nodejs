@@ -1,6 +1,6 @@
 <snippet>
-   <content>fs.readlink(path, callback)</content>
+   <content>fs.readlink(path, callback);</content>
    <tabTrigger>fs.readlink</tabTrigger>
    <scope>source.js</scope>
-   <description>fs.readlink</description>
+   <description>(path, callback)</description>
 </snippet>

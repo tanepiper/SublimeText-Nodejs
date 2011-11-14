@@ -1,6 +1,6 @@
 <snippet>
-   <content>path.exists(path, callback)</content>
+   <content>path.exists(path, callback);</content>
    <tabTrigger>path.exists</tabTrigger>
    <scope>source.js</scope>
-   <description>path.exists</description>
+   <description>(path, callback)</description>
 </snippet>

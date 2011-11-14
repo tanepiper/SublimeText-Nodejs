@@ -1,6 +1,0 @@
-<snippet>
-   <content>punycode.toASCII(domain)</content>
-   <tabTrigger>punycode.toASCII</tabTrigger>
-   <scope>source.js</scope>
-   <description>punycode.toASCII</description>
-</snippet>

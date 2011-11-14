@@ -1,6 +1,6 @@
 <snippet>
-   <content>clearInterval()</content>
-   <tabTrigger>clearInterval</tabTrigger>
+   <content>global.clearInterval();</content>
+   <tabTrigger>global.clearInterval</tabTrigger>
    <scope>source.js</scope>
-   <description>clearInterval</description>
+   <description>()</description>
 </snippet>

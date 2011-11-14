@@ -1,6 +1,6 @@
 <snippet>
-   <content>sys.debug(x)</content>
+   <content>sys.debug(x);</content>
    <tabTrigger>sys.debug</tabTrigger>
    <scope>source.js</scope>
-   <description>sys.debug</description>
+   <description>(x)</description>
 </snippet>

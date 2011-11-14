@@ -1,6 +1,6 @@
 <snippet>
-   <content>url.resolveObject(source, relative)</content>
+   <content>url.resolveObject(source, relative);</content>
    <tabTrigger>url.resolveObject</tabTrigger>
    <scope>source.js</scope>
-   <description>url.resolveObject</description>
+   <description>(source, relative)</description>
 </snippet>
