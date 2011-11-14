@@ -1,3 +1,4 @@
+<!-- Created on Mon Nov 14 2011 22:03:38 GMT+0000 (GMT Standard Time) by doc_builder.js -->
 <snippet>
    <content><![CDATA[process.watchFile();]]></content>
    <tabTrigger>process.watchFile</tabTrigger>

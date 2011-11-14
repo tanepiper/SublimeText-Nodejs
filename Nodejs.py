@@ -194,6 +194,16 @@ class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
 
 # Commands to run
 
+class NodeBuilddocsCommand(NodeTextCommand):
+  def run(self, edit):
+    doc_builder = plugin_file('tools/default_build.js')
+
+    command = ['node', os.path.realpath(doc_builder)]
+    self.run_command(command, self.command_done)
+
+  def command_done(self, result):
+    self.scratch(result, title="Doc Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+
 class NodeRunCommand(NodeTextCommand):
   def run(self, edit):
     command = ['node', self.view.file_name()]

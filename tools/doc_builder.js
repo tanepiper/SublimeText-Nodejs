@@ -11,8 +11,7 @@ var commander = require('commander');
  * @param  {Array} snippets An array of snippet objects
  * @return {void}
  */
-var createSnippets = function(commander, snippets) {
-
+var createSnippets = function(options, snippets, callback) {
   // Loop over each snippet and save to file
   var i = 0, j = snippets.length;
   for(;i<j;i++) {
@@ -20,6 +19,7 @@ var createSnippets = function(commander, snippets) {
 
     // TODO: Template this so supports other output formats
     var output = [];
+    output.push('<!-- Created on ' + new Date() + ' by doc_builder.js -->');
     output.push('<snippet>');
       output.push('   <content><![CDATA[' + item.function_string + ']]></content>');
       output.push('   <tabTrigger>'+ [item.type, item.name].join('.') + '</tabTrigger>');
@@ -28,7 +28,7 @@ var createSnippets = function(commander, snippets) {
     output.push('</snippet>');
 
     // Call save
-    saveFile(commander, item, output.join("\n"));
+    saveFile(options, item, output.join("\n"), callback);
   }
 }
 
@@ -41,16 +41,26 @@ var createSnippets = function(commander, snippets) {
  * @param  {[type]} output    [description]
  * @return {[type]}
  */
-var saveFile = function(commander, item, output) {
-  if (commander.output) {
-    var dest_path = path.resolve(commander.output, item.type);
+var saveFile = function(options, item, output, callback) {
+  if (options.output) {
+    var dest_path = path.resolve(options.output, item.type);
 
-    fs.mkdir(dest_path, 0755, function() {
+    fs.mkdir(dest_path, 0755, function(err) {
+      if (err && err.errno !== 47) {
+        return callback(err);
+      }
       var file_path = path.resolve(dest_path, 'node-' + item.type + '-' + item.name + '.sublime-snippet');
+      console.log('Making file ' + file_path);
       fs.writeFile(file_path, output);
+      callback(null, output, file_path);
     });
   } else {
-    console.log(output);
+    var output = [
+      'Output for ' + item,
+      '-----------------------------------------',
+      output
+    ].join('');
+    callback(null, output)
   }
 }
 
@@ -243,7 +253,7 @@ if (commander.global) {
 }
 
 if (commander.ns) {
-  createNamespaces(commander.ns, output);
+  createNamespaces(options, output);
 }
 
 if (commander.full) {
@@ -254,22 +264,22 @@ if(commander.input && commander.output) {
   loadDirectory(commander, output);
 }
 
-createSnippets(commander, output);
+createSnippets(commander, output, function() {} );
 
 
-exports.run = function(options) {
+exports.doc_builder = (function(options, callback) {
   var output = [];
   if (options.global) {
     createGlobals(output);
   }
   if (options.ns) {
-    createNamespaces(commander, output);
+    createNamespaces(options, output);
   }
   if (options.full) {
-    createNodeLibs(commander, output);
+    createNodeLibs(options, output);
   }
-  if(options.input && commander.output) {
-    loadDirectory(commander, output);
+  if(options.input && options.output) {
+    loadDirectory(options, output);
   }
-  createSnippets(commander, output);
-}
+  createSnippets(options, output, callback);
+});

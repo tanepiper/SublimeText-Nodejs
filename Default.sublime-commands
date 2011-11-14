@@ -10,5 +10,9 @@
     {
       "caption": "Node: NPM Command",
       "command": "node_npm"
+    },
+    {
+      "caption": "Nodejs: Build Snippets",
+      "command": "node_builddocs"
     }
 ]
