@@ -19,7 +19,7 @@ var createSnippets = function(options, snippets, callback) {
 
     // TODO: Template this so supports other output formats
     var output = [];
-    output.push('<!-- Created on ' + new Date() + ' by doc_builder.js -->');
+    //output.push('<!-- Created on ' + new Date() + ' by doc_builder.js -->');
     output.push('<snippet>');
       output.push('   <content><![CDATA[' + item.function_string + ']]></content>');
       output.push('   <tabTrigger>'+ [item.type, item.name].join('.') + '</tabTrigger>');
