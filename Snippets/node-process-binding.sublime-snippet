@@ -1,6 +1,0 @@
-<snippet>
-   <content>binding()</content>
-   <tabTrigger>binding</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.binding</description>
-</snippet>

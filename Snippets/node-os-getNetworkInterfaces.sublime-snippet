@@ -1,6 +1,0 @@
-<snippet>
-   <content>os.getNetworkInterfaces()</content>
-   <tabTrigger>os.getNetworkInterfaces</tabTrigger>
-   <scope>source.js</scope>
-   <description>os.getNetworkInterfaces</description>
-</snippet>

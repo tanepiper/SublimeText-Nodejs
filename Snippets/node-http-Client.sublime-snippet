@@ -1,6 +1,0 @@
-<snippet>
-   <content>http.Client(port, host)</content>
-   <tabTrigger>http.Client</tabTrigger>
-   <scope>source.js</scope>
-   <description>http.Client</description>
-</snippet>

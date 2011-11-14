@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.readFileSync(path, encoding)</content>
-   <tabTrigger>fs.readFileSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.readFileSync</description>
-</snippet>

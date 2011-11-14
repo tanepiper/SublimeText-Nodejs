@@ -1,6 +1,0 @@
-<snippet>
-   <content>sys.inherits(ctor, superCtor)</content>
-   <tabTrigger>sys.inherits</tabTrigger>
-   <scope>source.js</scope>
-   <description>sys.inherits</description>
-</snippet>

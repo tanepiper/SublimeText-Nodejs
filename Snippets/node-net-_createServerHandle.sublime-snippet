@@ -1,6 +1,0 @@
-<snippet>
-   <content>net._createServerHandle(address, port, addressType)</content>
-   <tabTrigger>net._createServerHandle</tabTrigger>
-   <scope>source.js</scope>
-   <description>net._createServerHandle</description>
-</snippet>

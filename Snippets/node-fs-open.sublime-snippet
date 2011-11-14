@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.open(path, flags, mode, callback)</content>
-   <tabTrigger>fs.open</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.open</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>tty.setWindowSize()</content>
-   <tabTrigger>tty.setWindowSize</tabTrigger>
-   <scope>source.js</scope>
-   <description>tty.setWindowSize</description>
-</snippet>

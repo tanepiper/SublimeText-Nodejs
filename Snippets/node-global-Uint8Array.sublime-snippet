@@ -1,6 +1,0 @@
-<snippet>
-   <content>Uint8Array()</content>
-   <tabTrigger>Uint8Array</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.Uint8Array</description>
-</snippet>

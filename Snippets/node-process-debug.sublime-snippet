@@ -1,6 +1,0 @@
-<snippet>
-   <content>debug()</content>
-   <tabTrigger>debug</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.debug</description>
-</snippet>

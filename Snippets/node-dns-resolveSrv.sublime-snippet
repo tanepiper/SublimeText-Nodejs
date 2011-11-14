@@ -1,6 +1,0 @@
-<snippet>
-   <content>dns.resolveSrv(name, callback)</content>
-   <tabTrigger>dns.resolveSrv</tabTrigger>
-   <scope>source.js</scope>
-   <description>dns.resolveSrv</description>
-</snippet>

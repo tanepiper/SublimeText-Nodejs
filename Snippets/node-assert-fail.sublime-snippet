@@ -1,6 +1,0 @@
-<snippet>
-   <content>assert.fail(actual, expected, message, operator, stackStartFunction)</content>
-   <tabTrigger>assert.fail</tabTrigger>
-   <scope>source.js</scope>
-   <description>assert.fail</description>
-</snippet>

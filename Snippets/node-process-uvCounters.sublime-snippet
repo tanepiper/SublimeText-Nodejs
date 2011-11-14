@@ -1,6 +1,0 @@
-<snippet>
-   <content>uvCounters()</content>
-   <tabTrigger>uvCounters</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.uvCounters</description>
-</snippet>

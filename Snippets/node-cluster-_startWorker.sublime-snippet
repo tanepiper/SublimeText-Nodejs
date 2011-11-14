@@ -1,6 +1,0 @@
-<snippet>
-   <content>cluster._startWorker()</content>
-   <tabTrigger>cluster._startWorker</tabTrigger>
-   <scope>source.js</scope>
-   <description>cluster._startWorker</description>
-</snippet>

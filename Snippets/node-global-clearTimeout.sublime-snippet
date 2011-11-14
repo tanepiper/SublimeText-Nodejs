@@ -1,6 +1,0 @@
-<snippet>
-   <content>clearTimeout()</content>
-   <tabTrigger>clearTimeout</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.clearTimeout</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>cwd()</content>
-   <tabTrigger>cwd</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.cwd</description>
-</snippet>

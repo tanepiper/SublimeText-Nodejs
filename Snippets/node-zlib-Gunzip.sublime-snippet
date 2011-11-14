@@ -1,6 +1,0 @@
-<snippet>
-   <content>zlib.gunzip(buffer, callback)</content>
-   <tabTrigger>zlib.gunzip</tabTrigger>
-   <scope>source.js</scope>
-   <description>zlib.gunzip</description>
-</snippet>

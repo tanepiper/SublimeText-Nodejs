@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.Stats()</content>
-   <tabTrigger>fs.Stats</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.Stats</description>
-</snippet>

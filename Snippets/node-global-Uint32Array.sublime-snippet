@@ -1,6 +1,0 @@
-<snippet>
-   <content>Uint32Array()</content>
-   <tabTrigger>Uint32Array</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.Uint32Array</description>
-</snippet>

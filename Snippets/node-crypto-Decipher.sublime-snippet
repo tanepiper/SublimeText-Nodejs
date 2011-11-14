@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.Decipher()</content>
-   <tabTrigger>crypto.Decipher</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.Decipher</description>
-</snippet>

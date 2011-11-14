@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.readSync(fd, buffer, offset, length, position)</content>
-   <tabTrigger>fs.readSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.readSync</description>
-</snippet>

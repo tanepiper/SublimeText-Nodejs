@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.pseudoRandomBytes()</content>
-   <tabTrigger>crypto.pseudoRandomBytes</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.pseudoRandomBytes</description>
-</snippet>

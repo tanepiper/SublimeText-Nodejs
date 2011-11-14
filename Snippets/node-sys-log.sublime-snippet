@@ -1,6 +1,0 @@
-<snippet>
-   <content>sys.log(msg)</content>
-   <tabTrigger>sys.log</tabTrigger>
-   <scope>source.js</scope>
-   <description>sys.log</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>sys.puts()</content>
-   <tabTrigger>sys.puts</tabTrigger>
-   <scope>source.js</scope>
-   <description>sys.puts</description>
-</snippet>

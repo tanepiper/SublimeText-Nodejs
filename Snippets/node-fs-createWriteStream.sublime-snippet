@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.createWriteStream(path, options)</content>
-   <tabTrigger>fs.createWriteStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.createWriteStream</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.FileReadStream(path, options)</content>
-   <tabTrigger>fs.FileReadStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.FileReadStream</description>
-</snippet>

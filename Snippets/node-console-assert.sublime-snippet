@@ -1,6 +1,0 @@
-<snippet>
-   <content>console.assert(expression)</content>
-   <tabTrigger>console.assert</tabTrigger>
-   <scope>source.js</scope>
-   <description>console.assert</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>chdir()</content>
-   <tabTrigger>chdir</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.chdir</description>
-</snippet>

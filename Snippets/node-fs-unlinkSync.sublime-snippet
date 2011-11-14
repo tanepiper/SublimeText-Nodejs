@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.unlinkSync(path)</content>
-   <tabTrigger>fs.unlinkSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.unlinkSync</description>
-</snippet>

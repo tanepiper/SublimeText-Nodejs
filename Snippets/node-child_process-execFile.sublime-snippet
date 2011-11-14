@@ -1,6 +1,0 @@
-<snippet>
-   <content>child_process.execFile(file /* args, options, callback */)</content>
-   <tabTrigger>child_process.execFile</tabTrigger>
-   <scope>source.js</scope>
-   <description>child_process.execFile</description>
-</snippet>

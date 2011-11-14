@@ -1,6 +1,0 @@
-<snippet>
-   <content>module._findPath(request, paths)</content>
-   <tabTrigger>module._findPath</tabTrigger>
-   <scope>source.js</scope>
-   <description>module._findPath</description>
-</snippet>

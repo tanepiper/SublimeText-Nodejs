@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.writeSync(fd, buffer, offset, length, position)</content>
-   <tabTrigger>fs.writeSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.writeSync</description>
-</snippet>

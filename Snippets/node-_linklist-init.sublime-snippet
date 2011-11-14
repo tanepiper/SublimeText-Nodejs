@@ -1,6 +1,0 @@
-<snippet>
-   <content>_linklist.init(list)</content>
-   <tabTrigger>_linklist.init</tabTrigger>
-   <scope>source.js</scope>
-   <description>_linklist.init</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>http.ServerResponse(req)</content>
-   <tabTrigger>http.ServerResponse</tabTrigger>
-   <scope>source.js</scope>
-   <description>http.ServerResponse</description>
-</snippet>

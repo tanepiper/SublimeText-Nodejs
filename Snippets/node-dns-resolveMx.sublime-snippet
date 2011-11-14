@@ -1,6 +1,0 @@
-<snippet>
-   <content>dns.resolveMx(name, callback)</content>
-   <tabTrigger>dns.resolveMx</tabTrigger>
-   <scope>source.js</scope>
-   <description>dns.resolveMx</description>
-</snippet>

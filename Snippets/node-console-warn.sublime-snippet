@@ -1,6 +1,0 @@
-<snippet>
-   <content>console.warn()</content>
-   <tabTrigger>console.warn</tabTrigger>
-   <scope>source.js</scope>
-   <description>console.warn</description>
-</snippet>

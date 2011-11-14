@@ -1,6 +1,0 @@
-<snippet>
-   <content>vm.Script()</content>
-   <tabTrigger>vm.Script</tabTrigger>
-   <scope>source.js</scope>
-   <description>vm.Script</description>
-</snippet>

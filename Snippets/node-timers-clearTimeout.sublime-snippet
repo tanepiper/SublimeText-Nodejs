@@ -1,6 +1,0 @@
-<snippet>
-   <content>timers.clearTimeout(timer)</content>
-   <tabTrigger>timers.clearTimeout</tabTrigger>
-   <scope>source.js</scope>
-   <description>timers.clearTimeout</description>
-</snippet>

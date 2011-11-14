@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.exec()</content>
-   <tabTrigger>util.exec</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.exec</description>
-</snippet>

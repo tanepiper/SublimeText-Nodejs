@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.read(fd, buffer, offset, length, position, callback)</content>
-   <tabTrigger>fs.read</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.read</description>
-</snippet>

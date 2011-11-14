@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.isArray(ar)</content>
-   <tabTrigger>util.isArray</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.isArray</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>sys.p()</content>
-   <tabTrigger>sys.p</tabTrigger>
-   <scope>source.js</scope>
-   <description>sys.p</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>os.loadavg()</content>
-   <tabTrigger>os.loadavg</tabTrigger>
-   <scope>source.js</scope>
-   <description>os.loadavg</description>
-</snippet>

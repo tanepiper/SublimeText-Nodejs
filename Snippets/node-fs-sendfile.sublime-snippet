@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.sendfile(outFd, inFd, inOffset, length, callback)</content>
-   <tabTrigger>fs.sendfile</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.sendfile</description>
-</snippet>

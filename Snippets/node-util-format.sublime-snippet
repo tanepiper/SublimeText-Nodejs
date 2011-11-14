@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.format(f)</content>
-   <tabTrigger>util.format</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.format</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.pump(readStream, writeStream, callback)</content>
-   <tabTrigger>util.pump</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.pump</description>
-</snippet>

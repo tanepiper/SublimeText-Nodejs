@@ -1,6 +1,0 @@
-<snippet>
-   <content>assert.deepEqual(actual, expected, message)</content>
-   <tabTrigger>assert.deepEqual</tabTrigger>
-   <scope>source.js</scope>
-   <description>assert.deepEqual</description>
-</snippet>

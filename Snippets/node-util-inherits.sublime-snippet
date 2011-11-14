@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.inherits(ctor, superCtor)</content>
-   <tabTrigger>util.inherits</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.inherits</description>
-</snippet>

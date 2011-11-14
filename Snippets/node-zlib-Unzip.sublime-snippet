@@ -1,6 +1,0 @@
-<snippet>
-   <content>zlib.unzip(buffer, callback)</content>
-   <tabTrigger>zlib.unzip</tabTrigger>
-   <scope>source.js</scope>
-   <description>zlib.unzip</description>
-</snippet>

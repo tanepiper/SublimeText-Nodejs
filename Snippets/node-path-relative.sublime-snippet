@@ -1,6 +1,0 @@
-<snippet>
-   <content>path.relative(from, to)</content>
-   <tabTrigger>path.relative</tabTrigger>
-   <scope>source.js</scope>
-   <description>path.relative</description>
-</snippet>

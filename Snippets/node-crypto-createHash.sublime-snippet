@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.createHash(hash)</content>
-   <tabTrigger>crypto.createHash</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.createHash</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>assert.AssertionError</content>
-   <tabTrigger>assert.AssertionError</tabTrigger>
-   <scope>source.js</scope>
-   <description>assert.AssertionError</description>
-</snippet>

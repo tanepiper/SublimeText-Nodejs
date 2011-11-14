@@ -1,6 +1,0 @@
-<snippet>
-   <content>http.Agent(options)</content>
-   <tabTrigger>http.Agent</tabTrigger>
-   <scope>source.js</scope>
-   <description>http.Agent</description>
-</snippet>

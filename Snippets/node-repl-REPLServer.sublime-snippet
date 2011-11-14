@@ -1,6 +1,0 @@
-<snippet>
-   <content>repl.REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined)</content>
-   <tabTrigger>repl.REPLServer</tabTrigger>
-   <scope>source.js</scope>
-   <description>repl.REPLServer</description>
-</snippet>

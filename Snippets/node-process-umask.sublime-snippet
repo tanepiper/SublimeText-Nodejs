@@ -1,6 +1,0 @@
-<snippet>
-   <content>umask()</content>
-   <tabTrigger>umask</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.umask</description>
-</snippet>

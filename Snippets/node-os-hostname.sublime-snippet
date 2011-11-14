@@ -1,6 +1,0 @@
-<snippet>
-   <content>os.hostname()</content>
-   <tabTrigger>os.hostname</tabTrigger>
-   <scope>source.js</scope>
-   <description>os.hostname</description>
-</snippet>

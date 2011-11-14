@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.Verify()</content>
-   <tabTrigger>crypto.Verify</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.Verify</description>
-</snippet>

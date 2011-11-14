@@ -1,6 +1,0 @@
-<snippet>
-   <content>module._initPaths()</content>
-   <tabTrigger>module._initPaths</tabTrigger>
-   <scope>source.js</scope>
-   <description>module._initPaths</description>
-</snippet>

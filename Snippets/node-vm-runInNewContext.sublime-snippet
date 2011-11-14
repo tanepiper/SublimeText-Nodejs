@@ -1,6 +1,0 @@
-<snippet>
-   <content>vm.runInNewContext()</content>
-   <tabTrigger>vm.runInNewContext</tabTrigger>
-   <scope>source.js</scope>
-   <description>vm.runInNewContext</description>
-</snippet>

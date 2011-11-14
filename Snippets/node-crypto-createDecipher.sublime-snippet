@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.createDecipher(cipher, password)</content>
-   <tabTrigger>crypto.createDecipher</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.createDecipher</description>
-</snippet>

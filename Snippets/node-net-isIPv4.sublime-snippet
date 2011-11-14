@@ -1,6 +1,0 @@
-<snippet>
-   <content>net.isIPv4(input)</content>
-   <tabTrigger>net.isIPv4</tabTrigger>
-   <scope>source.js</scope>
-   <description>net.isIPv4</description>
-</snippet>

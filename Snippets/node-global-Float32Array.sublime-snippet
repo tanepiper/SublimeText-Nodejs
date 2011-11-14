@@ -1,6 +1,0 @@
-<snippet>
-   <content>Float32Array()</content>
-   <tabTrigger>Float32Array</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.Float32Array</description>
-</snippet>

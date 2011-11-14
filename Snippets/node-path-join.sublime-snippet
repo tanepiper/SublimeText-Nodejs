@@ -1,6 +1,0 @@
-<snippet>
-   <content>path.join()</content>
-   <tabTrigger>path.join</tabTrigger>
-   <scope>source.js</scope>
-   <description>path.join</description>
-</snippet>

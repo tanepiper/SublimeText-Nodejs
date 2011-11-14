@@ -1,6 +1,0 @@
-<snippet>
-   <content>os.arch()</content>
-   <tabTrigger>os.arch</tabTrigger>
-   <scope>source.js</scope>
-   <description>os.arch</description>
-</snippet>

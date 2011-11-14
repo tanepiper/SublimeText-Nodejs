@@ -1,6 +1,0 @@
-<snippet>
-   <content>on(type, listener)</content>
-   <tabTrigger>on</tabTrigger>
-   <scope>source.js</scope>
-   <description>process.on</description>
-</snippet>

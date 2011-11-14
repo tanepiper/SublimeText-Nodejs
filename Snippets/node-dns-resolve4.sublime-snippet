@@ -1,6 +1,0 @@
-<snippet>
-   <content>dns.resolve4(name, callback)</content>
-   <tabTrigger>dns.resolve4</tabTrigger>
-   <scope>source.js</scope>
-   <description>dns.resolve4</description>
-</snippet>

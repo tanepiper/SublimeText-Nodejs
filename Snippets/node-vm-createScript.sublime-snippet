@@ -1,6 +1,0 @@
-<snippet>
-   <content>vm.createScript(code, ctx, name)</content>
-   <tabTrigger>vm.createScript</tabTrigger>
-   <scope>source.js</scope>
-   <description>vm.createScript</description>
-</snippet>

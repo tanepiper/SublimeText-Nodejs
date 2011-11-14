@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.realpath(p, cache, cb)</content>
-   <tabTrigger>fs.realpath</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.realpath</description>
-</snippet>

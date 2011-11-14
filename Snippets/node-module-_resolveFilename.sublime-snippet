@@ -1,6 +1,0 @@
-<snippet>
-   <content>module._resolveFilename(request, parent)</content>
-   <tabTrigger>module._resolveFilename</tabTrigger>
-   <scope>source.js</scope>
-   <description>module._resolveFilename</description>
-</snippet>

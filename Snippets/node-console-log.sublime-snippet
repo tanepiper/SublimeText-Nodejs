@@ -1,6 +1,0 @@
-<snippet>
-   <content>console.log()</content>
-   <tabTrigger>console.log</tabTrigger>
-   <scope>source.js</scope>
-   <description>console.log</description>
-</snippet>

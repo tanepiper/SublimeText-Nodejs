@@ -1,6 +1,0 @@
-<snippet>
-   <content>module._nodeModulePaths(from)</content>
-   <tabTrigger>module._nodeModulePaths</tabTrigger>
-   <scope>source.js</scope>
-   <description>module._nodeModulePaths</description>
-</snippet>

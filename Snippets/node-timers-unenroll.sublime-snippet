@@ -1,6 +1,0 @@
-<snippet>
-   <content>timers.unenroll(item)</content>
-   <tabTrigger>timers.unenroll</tabTrigger>
-   <scope>source.js</scope>
-   <description>timers.unenroll</description>
-</snippet>

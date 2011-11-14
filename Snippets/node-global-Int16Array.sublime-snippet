@@ -1,6 +1,0 @@
-<snippet>
-   <content>Int16Array()</content>
-   <tabTrigger>Int16Array</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.Int16Array</description>
-</snippet>

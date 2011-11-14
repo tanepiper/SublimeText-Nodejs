@@ -1,6 +1,0 @@
-<snippet>
-   <content>assert.throws(block, /*optional*/error, /*optional*/message)</content>
-   <tabTrigger>assert.throws</tabTrigger>
-   <scope>source.js</scope>
-   <description>assert.throws</description>
-</snippet>

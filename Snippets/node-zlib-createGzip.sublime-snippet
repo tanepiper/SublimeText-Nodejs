@@ -1,6 +1,0 @@
-<snippet>
-   <content>zlib.createGzip(o)</content>
-   <tabTrigger>zlib.createGzip</tabTrigger>
-   <scope>source.js</scope>
-   <description>zlib.createGzip</description>
-</snippet>

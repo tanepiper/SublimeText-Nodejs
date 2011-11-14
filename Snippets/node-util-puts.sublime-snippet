@@ -1,6 +1,0 @@
-<snippet>
-   <content>util.puts()</content>
-   <tabTrigger>util.puts</tabTrigger>
-   <scope>source.js</scope>
-   <description>util.puts</description>
-</snippet>

@@ -1,6 +1,0 @@
-<snippet>
-   <content>zlib.createDeflate(o)</content>
-   <tabTrigger>zlib.createDeflate</tabTrigger>
-   <scope>source.js</scope>
-   <description>zlib.createDeflate</description>
-</snippet>

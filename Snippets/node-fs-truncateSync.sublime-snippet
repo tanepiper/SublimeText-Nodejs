@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.truncateSync(fd, len)</content>
-   <tabTrigger>fs.truncateSync</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.truncateSync</description>
-</snippet>

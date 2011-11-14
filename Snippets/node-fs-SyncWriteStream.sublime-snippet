@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.SyncWriteStream(fd)</content>
-   <tabTrigger>fs.SyncWriteStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.SyncWriteStream</description>
-</snippet>

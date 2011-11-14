@@ -1,6 +1,0 @@
-<snippet>
-   <content>dgram.Socket(type, listener)</content>
-   <tabTrigger>dgram.Socket</tabTrigger>
-   <scope>source.js</scope>
-   <description>dgram.Socket</description>
-</snippet>

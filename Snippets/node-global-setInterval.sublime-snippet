@@ -1,6 +1,0 @@
-<snippet>
-   <content>setInterval()</content>
-   <tabTrigger>setInterval</tabTrigger>
-   <scope>source.js</scope>
-   <description>global.setInterval</description>
-</snippet>

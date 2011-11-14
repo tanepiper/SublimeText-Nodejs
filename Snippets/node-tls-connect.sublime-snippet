@@ -1,6 +1,0 @@
-<snippet>
-   <content>tls.connect(port /* host, options, cb */)</content>
-   <tabTrigger>tls.connect</tabTrigger>
-   <scope>source.js</scope>
-   <description>tls.connect</description>
-</snippet>

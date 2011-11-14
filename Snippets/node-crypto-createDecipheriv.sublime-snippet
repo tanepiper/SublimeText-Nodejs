@@ -1,6 +1,0 @@
-<snippet>
-   <content>crypto.createDecipheriv(cipher, key, iv)</content>
-   <tabTrigger>crypto.createDecipheriv</tabTrigger>
-   <scope>source.js</scope>
-   <description>crypto.createDecipheriv</description>
-</snippet>

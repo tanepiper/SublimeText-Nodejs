@@ -1,6 +1,0 @@
-<snippet>
-   <content>fs.createReadStream(path, options)</content>
-   <tabTrigger>fs.createReadStream</tabTrigger>
-   <scope>source.js</scope>
-   <description>fs.createReadStream</description>
-</snippet>
