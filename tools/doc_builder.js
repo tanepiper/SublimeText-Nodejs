@@ -21,7 +21,7 @@ var createSnippets = function(commander, snippets) {
     // TODO: Template this so supports other output formats
     var output = [];
     output.push('<snippet>');
-      output.push('   <content>' + item.function_string + '</content>');
+      output.push('   <content><![CDATA[' + item.function_string + ']]></content>');
       output.push('   <tabTrigger>'+ [item.type, item.name].join('.') + '</tabTrigger>');
       output.push('   <scope>source.js</scope>');
       output.push('   <description>' + item.args + '</description>');
@@ -30,7 +30,6 @@ var createSnippets = function(commander, snippets) {
     // Call save
     saveFile(commander, item, output.join("\n"));
   }
-
 }
 
 /**
@@ -130,7 +129,6 @@ var createGlobals = function(output) {
       output.push(snippet);
     }
   }
-
   return output;
 }
 
