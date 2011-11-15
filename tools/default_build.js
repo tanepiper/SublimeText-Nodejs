@@ -8,7 +8,7 @@ doc_builder({
   full: true,
   output: p,
   type: 'completions',
-  expert: true
+  expert: false
 }, function() {
   console.log('Done');
 });

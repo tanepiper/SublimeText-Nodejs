@@ -7,5 +7,7 @@
   // Same for NPM command
   "npm_command": false,
 
-  "expert_mode": true
+  "expert_mode": false,
+
+  "ouput_to_new_tab": false
 }
