@@ -1,4 +1,6 @@
 [{
+  "caption": "Tools",
+  "mnemonic": "t",
   "id": "tools",
   "children": [{
     "id": "nodejsmenu",
@@ -19,5 +21,35 @@
         { "id": "nodejsdrunarguments", "caption": "Debug + arguments", "command": "node_drun_arguments" }
       ]
     }] 
+  }]
+},
+{
+  "caption": "Preferences",
+  "mnemonic": "n",
+  "id": "preferences",
+  "children":[{
+    "caption": "Package Settings",
+    "mnemonic": "P",
+    "id": "package-settings",
+    "children":[{
+      "caption": "Nodejs",
+      "children": [{
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/Nodejs/Nodejs.sublime-settings"
+        },
+        "caption": "Settings – Default"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/User/Nodejs.sublime-settings"
+        },
+        "caption": "Settings – User"
+      },
+      {
+        "caption": "-"
+      }]
+    }]
   }]
 }]

@@ -8,9 +8,8 @@ var global_options = {};
 
 
 var saveCompletion = function(options, completions, callback) {
-  var file_path = path.resolve(options.output, 'Nodejs.sublime-completions');
   var txt = JSON.stringify(completions, null, 4);
-  fs.writeFile(file_path, txt);
+  fs.writeFile(options.output, txt);
   callback(null, txt)
 }
 

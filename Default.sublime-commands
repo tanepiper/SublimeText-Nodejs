@@ -1,18 +1,30 @@
-[
-    {
-      "caption": "Node: Run current file",
-      "command": "node_run"
-    },
-    {
-      "caption": "Node: Run current file with arguments",
-      "command": "node_run_arguments"
-    },
-    {
-      "caption": "Node: NPM Command",
-      "command": "node_npm"
-    },
-    {
-      "caption": "Nodejs: Build Snippets",
-      "command": "node_builddocs"
-    }
-]
+[{
+  "caption": "Node: Run current file",
+  "command": "node_run"
+},
+{
+  "caption": "Node: Run current file with arguments",
+  "command": "node_run_arguments"
+},
+{
+  "caption": "Node: NPM Command",
+  "command": "node_npm"
+},
+{
+  "caption": "Nodejs: Build Snippets",
+  "command": "node_builddocs"
+},
+{ 
+  "caption": "Nodejs: Default File Settings",
+  "command": "open_file",
+  "args": {
+    "file": "${packages}/Nodejs/Nodejs.sublime-settings"
+  }
+},
+{ 
+  "caption": "Nodejs: User File Settings",
+  "command": "open_file",
+  "args": {
+    "file": "${packages}/User/Nodejs.sublime-settings"
+  }
+}]
