@@ -41,8 +41,8 @@ If you have any boilerplate code you would like to see in here, get in touch.
 
 Install
 -------
-You may install `Nodejs` via the Sublime Text 2 package manager, or using git
-with the below commands:
+You may install `Nodejs` via the [Sublime Text 2 package manager](http://wbond.net/sublime_packages/package_control),
+or using git with the below commands:
 
 *MacOSX*
 
