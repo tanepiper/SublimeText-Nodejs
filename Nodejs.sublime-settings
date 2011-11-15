@@ -5,5 +5,7 @@
   // e.g. "/usr/bin/node" or "C:\bin\node.exe"
   "node_command": false,
   // Same for NPM command
-  "npm_command": false
+  "npm_command": false,
+
+  "expert_mode": true
 }

@@ -2,1794 +2,1436 @@
     "scope": "source.js - variable.other.js",
     "completions": [
         {
-            "trigger": "global.ArrayBuffer",
-            "contents": "ArrayBuffer();",
-            "description": "()"
+            "trigger": "ArrayBuffer();",
+            "contents": "ArrayBuffer();"
         },
         {
-            "trigger": "global.Int8Array",
-            "contents": "Int8Array();",
-            "description": "()"
+            "trigger": "Int8Array();",
+            "contents": "Int8Array();"
         },
         {
-            "trigger": "global.Uint8Array",
-            "contents": "Uint8Array();",
-            "description": "()"
+            "trigger": "Uint8Array();",
+            "contents": "Uint8Array();"
         },
         {
-            "trigger": "global.Int16Array",
-            "contents": "Int16Array();",
-            "description": "()"
+            "trigger": "Int16Array();",
+            "contents": "Int16Array();"
         },
         {
-            "trigger": "global.Uint16Array",
-            "contents": "Uint16Array();",
-            "description": "()"
+            "trigger": "Uint16Array();",
+            "contents": "Uint16Array();"
         },
         {
-            "trigger": "global.Int32Array",
-            "contents": "Int32Array();",
-            "description": "()"
+            "trigger": "Int32Array();",
+            "contents": "Int32Array();"
         },
         {
-            "trigger": "global.Uint32Array",
-            "contents": "Uint32Array();",
-            "description": "()"
+            "trigger": "Uint32Array();",
+            "contents": "Uint32Array();"
         },
         {
-            "trigger": "global.Float32Array",
-            "contents": "Float32Array();",
-            "description": "()"
+            "trigger": "Float32Array();",
+            "contents": "Float32Array();"
         },
         {
-            "trigger": "global.Float64Array",
-            "contents": "Float64Array();",
-            "description": "()"
+            "trigger": "Float64Array();",
+            "contents": "Float64Array();"
         },
         {
-            "trigger": "global.DataView",
-            "contents": "DataView();",
-            "description": "()"
+            "trigger": "DataView();",
+            "contents": "DataView();"
         },
         {
-            "trigger": "global.Buffer",
-            "contents": "Buffer(subject, encoding, offset);",
-            "description": "(subject, encoding, offset)"
+            "trigger": "Buffer(subject, encoding, offset);",
+            "contents": "Buffer(subject, encoding, offset);"
         },
         {
-            "trigger": "global.setTimeout",
-            "contents": "setTimeout();",
-            "description": "()"
+            "trigger": "setTimeout();",
+            "contents": "setTimeout();"
         },
         {
-            "trigger": "global.setInterval",
-            "contents": "setInterval();",
-            "description": "()"
+            "trigger": "setInterval();",
+            "contents": "setInterval();"
         },
         {
-            "trigger": "global.clearTimeout",
-            "contents": "clearTimeout();",
-            "description": "()"
+            "trigger": "clearTimeout();",
+            "contents": "clearTimeout();"
         },
         {
-            "trigger": "global.clearInterval",
-            "contents": "clearInterval();",
-            "description": "()"
+            "trigger": "clearInterval();",
+            "contents": "clearInterval();"
         },
         {
-            "trigger": "process.EventEmitter",
-            "contents": "process.EventEmitter();",
-            "description": "()"
+            "trigger": "process.EventEmitter();",
+            "contents": "process.EventEmitter();"
         },
         {
-            "trigger": "process.assert",
-            "contents": "process.assert();",
-            "description": "()"
+            "trigger": "process.assert();",
+            "contents": "process.assert();"
         },
         {
-            "trigger": "process._tickCallback",
-            "contents": "process._tickCallback();",
-            "description": "()"
+            "trigger": "process._tickCallback();",
+            "contents": "process._tickCallback();"
         },
         {
-            "trigger": "process.nextTick",
-            "contents": "process.nextTick(callback);",
-            "description": "(callback)"
+            "trigger": "process.nextTick(callback);",
+            "contents": "process.nextTick(callback);"
         },
         {
-            "trigger": "process.openStdin",
-            "contents": "process.openStdin();",
-            "description": "()"
+            "trigger": "process.openStdin();",
+            "contents": "process.openStdin();"
         },
         {
-            "trigger": "process.exit",
-            "contents": "process.exit(code);",
-            "description": "(code)"
+            "trigger": "process.exit(code);",
+            "contents": "process.exit(code);"
         },
         {
-            "trigger": "process.kill",
-            "contents": "process.kill(pid, sig);",
-            "description": "(pid, sig)"
+            "trigger": "process.kill(pid, sig);",
+            "contents": "process.kill(pid, sig);"
         },
         {
-            "trigger": "process.addListener",
-            "contents": "process.addListener(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "process.addListener(type, listener);",
+            "contents": "process.addListener(type, listener);"
         },
         {
-            "trigger": "process._needTickCallback",
-            "contents": "process._needTickCallback();",
-            "description": "()"
+            "trigger": "process._needTickCallback();",
+            "contents": "process._needTickCallback();"
         },
         {
-            "trigger": "process.on",
-            "contents": "process.on(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "process.on(type, listener);",
+            "contents": "process.on(type, listener);"
         },
         {
-            "trigger": "process.reallyExit",
-            "contents": "process.reallyExit();",
-            "description": "()"
+            "trigger": "process.reallyExit();",
+            "contents": "process.reallyExit();"
         },
         {
-            "trigger": "process.removeListener",
-            "contents": "process.removeListener(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "process.removeListener(type, listener);",
+            "contents": "process.removeListener(type, listener);"
         },
         {
-            "trigger": "process.chdir",
-            "contents": "process.chdir();",
-            "description": "()"
+            "trigger": "process.chdir();",
+            "contents": "process.chdir();"
         },
         {
-            "trigger": "process.debug",
-            "contents": "process.debug();",
-            "description": "()"
+            "trigger": "process.debug();",
+            "contents": "process.debug();"
         },
         {
-            "trigger": "process.cwd",
-            "contents": "process.cwd();",
-            "description": "()"
+            "trigger": "process.cwd();",
+            "contents": "process.cwd();"
         },
         {
-            "trigger": "process.error",
-            "contents": "process.error();",
-            "description": "()"
+            "trigger": "process.error();",
+            "contents": "process.error();"
         },
         {
-            "trigger": "process.watchFile",
-            "contents": "process.watchFile();",
-            "description": "()"
+            "trigger": "process.watchFile();",
+            "contents": "process.watchFile();"
         },
         {
-            "trigger": "process.umask",
-            "contents": "process.umask();",
-            "description": "()"
+            "trigger": "process.umask();",
+            "contents": "process.umask();"
         },
         {
-            "trigger": "process._kill",
-            "contents": "process._kill();",
-            "description": "()"
+            "trigger": "process._kill();",
+            "contents": "process._kill();"
         },
         {
-            "trigger": "process.unwatchFile",
-            "contents": "process.unwatchFile();",
-            "description": "()"
+            "trigger": "process.unwatchFile();",
+            "contents": "process.unwatchFile();"
         },
         {
-            "trigger": "process._debugProcess",
-            "contents": "process._debugProcess();",
-            "description": "()"
+            "trigger": "process._debugProcess();",
+            "contents": "process._debugProcess();"
         },
         {
-            "trigger": "process.mixin",
-            "contents": "process.mixin();",
-            "description": "()"
+            "trigger": "process.mixin();",
+            "contents": "process.mixin();"
         },
         {
-            "trigger": "process.dlopen",
-            "contents": "process.dlopen();",
-            "description": "()"
+            "trigger": "process.dlopen();",
+            "contents": "process.dlopen();"
         },
         {
-            "trigger": "process.createChildProcess",
-            "contents": "process.createChildProcess();",
-            "description": "()"
+            "trigger": "process.createChildProcess();",
+            "contents": "process.createChildProcess();"
         },
         {
-            "trigger": "process.inherits",
-            "contents": "process.inherits();",
-            "description": "()"
+            "trigger": "process.inherits();",
+            "contents": "process.inherits();"
         },
         {
-            "trigger": "process.uptime",
-            "contents": "process.uptime();",
-            "description": "()"
+            "trigger": "process.uptime();",
+            "contents": "process.uptime();"
         },
         {
-            "trigger": "process._byteLength",
-            "contents": "process._byteLength();",
-            "description": "()"
+            "trigger": "process._byteLength();",
+            "contents": "process._byteLength();"
         },
         {
-            "trigger": "process.memoryUsage",
-            "contents": "process.memoryUsage();",
-            "description": "()"
+            "trigger": "process.memoryUsage();",
+            "contents": "process.memoryUsage();"
         },
         {
-            "trigger": "process.uvCounters",
-            "contents": "process.uvCounters();",
-            "description": "()"
+            "trigger": "process.uvCounters();",
+            "contents": "process.uvCounters();"
         },
         {
-            "trigger": "process.binding",
-            "contents": "process.binding();",
-            "description": "()"
+            "trigger": "process.binding();",
+            "contents": "process.binding();"
         },
         {
-            "trigger": "process.setMaxListeners",
-            "contents": "process.setMaxListeners(n);",
-            "description": "(n)"
+            "trigger": "process.setMaxListeners(n);",
+            "contents": "process.setMaxListeners(n);"
         },
         {
-            "trigger": "process.emit",
-            "contents": "process.emit();",
-            "description": "()"
+            "trigger": "process.emit();",
+            "contents": "process.emit();"
         },
         {
-            "trigger": "process.once",
-            "contents": "process.once(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "process.once(type, listener);",
+            "contents": "process.once(type, listener);"
         },
         {
-            "trigger": "process.removeAllListeners",
-            "contents": "process.removeAllListeners(type);",
-            "description": "(type)"
+            "trigger": "process.removeAllListeners(type);",
+            "contents": "process.removeAllListeners(type);"
         },
         {
-            "trigger": "process.listeners",
-            "contents": "process.listeners(type);",
-            "description": "(type)"
+            "trigger": "process.listeners(type);",
+            "contents": "process.listeners(type);"
         },
         {
-            "trigger": "require.resolve",
-            "contents": "require.resolve(request);",
-            "description": "(request)"
+            "trigger": "require.resolve(request);",
+            "contents": "require.resolve(request);"
         },
         {
-            "trigger": "require.registerExtension",
-            "contents": "require.registerExtension();",
-            "description": "()"
+            "trigger": "require.registerExtension();",
+            "contents": "require.registerExtension();"
         },
         {
-            "trigger": "_debugger.start",
-            "contents": "_debugger.start(argv, stdin, stdout);",
-            "description": "(argv, stdin, stdout)"
+            "trigger": "start(argv, stdin, stdout);",
+            "contents": "start(argv, stdin, stdout);"
         },
         {
-            "trigger": "_debugger.Protocol",
-            "contents": "_debugger.Protocol();",
-            "description": "()"
+            "trigger": "Protocol();",
+            "contents": "Protocol();"
         },
         {
-            "trigger": "_debugger.Client",
-            "contents": "_debugger.Client();",
-            "description": "()"
+            "trigger": "Client();",
+            "contents": "Client();"
         },
         {
-            "trigger": "_linklist.init",
-            "contents": "_linklist.init(list);",
-            "description": "(list)"
+            "trigger": "init(list);",
+            "contents": "init(list);"
         },
         {
-            "trigger": "_linklist.peek",
-            "contents": "_linklist.peek(list);",
-            "description": "(list)"
+            "trigger": "peek(list);",
+            "contents": "peek(list);"
         },
         {
-            "trigger": "_linklist.shift",
-            "contents": "_linklist.shift(list);",
-            "description": "(list)"
+            "trigger": "shift(list);",
+            "contents": "shift(list);"
         },
         {
-            "trigger": "_linklist.remove",
-            "contents": "_linklist.remove(item);",
-            "description": "(item)"
+            "trigger": "remove(item);",
+            "contents": "remove(item);"
         },
         {
-            "trigger": "_linklist.append",
-            "contents": "_linklist.append(list, item);",
-            "description": "(list, item)"
+            "trigger": "append(list, item);",
+            "contents": "append(list, item);"
         },
         {
-            "trigger": "_linklist.isEmpty",
-            "contents": "_linklist.isEmpty(list);",
-            "description": "(list)"
+            "trigger": "isEmpty(list);",
+            "contents": "isEmpty(list);"
         },
         {
-            "trigger": "assert.AssertionError",
-            "contents": "assert.AssertionError;",
-            "description": ""
+            "trigger": "AssertionError;",
+            "contents": "AssertionError;"
         },
         {
-            "trigger": "assert.fail",
-            "contents": "assert.fail(actual, expected, message, operator, stackStartFunction);",
-            "description": "(actual, expected, message, operator, stackStartFunction)"
+            "trigger": "fail(actual, expected, message, operator, stackStartFunction);",
+            "contents": "fail(actual, expected, message, operator, stackStartFunction);"
         },
         {
-            "trigger": "assert.ok",
-            "contents": "assert.ok(value, message);",
-            "description": "(value, message)"
+            "trigger": "ok(value, message);",
+            "contents": "ok(value, message);"
         },
         {
-            "trigger": "assert.equal",
-            "contents": "assert.equal(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "equal(actual, expected, message);",
+            "contents": "equal(actual, expected, message);"
         },
         {
-            "trigger": "assert.notEqual",
-            "contents": "assert.notEqual(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "notEqual(actual, expected, message);",
+            "contents": "notEqual(actual, expected, message);"
         },
         {
-            "trigger": "assert.deepEqual",
-            "contents": "assert.deepEqual(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "deepEqual(actual, expected, message);",
+            "contents": "deepEqual(actual, expected, message);"
         },
         {
-            "trigger": "assert.notDeepEqual",
-            "contents": "assert.notDeepEqual(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "notDeepEqual(actual, expected, message);",
+            "contents": "notDeepEqual(actual, expected, message);"
         },
         {
-            "trigger": "assert.strictEqual",
-            "contents": "assert.strictEqual(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "strictEqual(actual, expected, message);",
+            "contents": "strictEqual(actual, expected, message);"
         },
         {
-            "trigger": "assert.notStrictEqual",
-            "contents": "assert.notStrictEqual(actual, expected, message);",
-            "description": "(actual, expected, message)"
+            "trigger": "notStrictEqual(actual, expected, message);",
+            "contents": "notStrictEqual(actual, expected, message);"
         },
         {
-            "trigger": "assert.throws",
-            "contents": "assert.throws(block, /*optional*/error, /*optional*/message);",
-            "description": "(block, /*optional*/error, /*optional*/message)"
+            "trigger": "throws(block, /*optional*/error, /*optional*/message);",
+            "contents": "throws(block, /*optional*/error, /*optional*/message);"
         },
         {
-            "trigger": "assert.doesNotThrow",
-            "contents": "assert.doesNotThrow(block, /*optional*/error, /*optional*/message);",
-            "description": "(block, /*optional*/error, /*optional*/message)"
+            "trigger": "doesNotThrow(block, /*optional*/error, /*optional*/message);",
+            "contents": "doesNotThrow(block, /*optional*/error, /*optional*/message);"
         },
         {
-            "trigger": "assert.ifError",
-            "contents": "assert.ifError(err);",
-            "description": "(err)"
+            "trigger": "ifError(err);",
+            "contents": "ifError(err);"
         },
         {
-            "trigger": "buffer.SlowBuffer",
-            "contents": "buffer.SlowBuffer();",
-            "description": "()"
+            "trigger": "SlowBuffer();",
+            "contents": "SlowBuffer();"
         },
         {
-            "trigger": "buffer.Buffer",
-            "contents": "buffer.Buffer(subject, encoding, offset);",
-            "description": "(subject, encoding, offset)"
+            "trigger": "Buffer(subject, encoding, offset);",
+            "contents": "Buffer(subject, encoding, offset);"
         },
         {
-            "trigger": "buffer_ieee754.readIEEE754",
-            "contents": "buffer_ieee754.readIEEE754(buffer, offset, isBE, mLen, nBytes);",
-            "description": "(buffer, offset, isBE, mLen, nBytes)"
+            "trigger": "readIEEE754(buffer, offset, isBE, mLen, nBytes);",
+            "contents": "readIEEE754(buffer, offset, isBE, mLen, nBytes);"
         },
         {
-            "trigger": "buffer_ieee754.writeIEEE754",
-            "contents": "buffer_ieee754.writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);",
-            "description": "(buffer, value, offset, isBE, mLen, nBytes)"
+            "trigger": "writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);",
+            "contents": "writeIEEE754(buffer, value, offset, isBE, mLen, nBytes);"
         },
         {
-            "trigger": "child_process.fork",
-            "contents": "child_process.fork(modulePath, args, options);",
-            "description": "(modulePath, args, options)"
+            "trigger": "fork(modulePath, args, options);",
+            "contents": "fork(modulePath, args, options);"
         },
         {
-            "trigger": "child_process._forkChild",
-            "contents": "child_process._forkChild();",
-            "description": "()"
+            "trigger": "_forkChild();",
+            "contents": "_forkChild();"
         },
         {
-            "trigger": "child_process.exec",
-            "contents": "child_process.exec(command /*, options, callback */);",
-            "description": "(command /*, options, callback */)"
+            "trigger": "exec(command /*, options, callback */);",
+            "contents": "exec(command /*, options, callback */);"
         },
         {
-            "trigger": "child_process.execFile",
-            "contents": "child_process.execFile(file /* args, options, callback */);",
-            "description": "(file /* args, options, callback */)"
+            "trigger": "execFile(file /* args, options, callback */);",
+            "contents": "execFile(file /* args, options, callback */);"
         },
         {
-            "trigger": "child_process.spawn",
-            "contents": "child_process.spawn(file, args, options);",
-            "description": "(file, args, options)"
+            "trigger": "spawn(file, args, options);",
+            "contents": "spawn(file, args, options);"
         },
         {
-            "trigger": "cluster.fork",
-            "contents": "cluster.fork();",
-            "description": "()"
+            "trigger": "fork();",
+            "contents": "fork();"
         },
         {
-            "trigger": "cluster._startWorker",
-            "contents": "cluster._startWorker();",
-            "description": "()"
+            "trigger": "_startWorker();",
+            "contents": "_startWorker();"
         },
         {
-            "trigger": "cluster._getServer",
-            "contents": "cluster._getServer(address, port, addressType, cb);",
-            "description": "(address, port, addressType, cb)"
+            "trigger": "_getServer(address, port, addressType, cb);",
+            "contents": "_getServer(address, port, addressType, cb);"
         },
         {
-            "trigger": "cluster.setMaxListeners",
-            "contents": "cluster.setMaxListeners(n);",
-            "description": "(n)"
+            "trigger": "setMaxListeners(n);",
+            "contents": "setMaxListeners(n);"
         },
         {
-            "trigger": "cluster.emit",
-            "contents": "cluster.emit();",
-            "description": "()"
+            "trigger": "emit();",
+            "contents": "emit();"
         },
         {
-            "trigger": "cluster.addListener",
-            "contents": "cluster.addListener(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "addListener(type, listener);",
+            "contents": "addListener(type, listener);"
         },
         {
-            "trigger": "cluster.on",
-            "contents": "cluster.on(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "on(type, listener);",
+            "contents": "on(type, listener);"
         },
         {
-            "trigger": "cluster.once",
-            "contents": "cluster.once(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "once(type, listener);",
+            "contents": "once(type, listener);"
         },
         {
-            "trigger": "cluster.removeListener",
-            "contents": "cluster.removeListener(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "removeListener(type, listener);",
+            "contents": "removeListener(type, listener);"
         },
         {
-            "trigger": "cluster.removeAllListeners",
-            "contents": "cluster.removeAllListeners(type);",
-            "description": "(type)"
+            "trigger": "removeAllListeners(type);",
+            "contents": "removeAllListeners(type);"
         },
         {
-            "trigger": "cluster.listeners",
-            "contents": "cluster.listeners(type);",
-            "description": "(type)"
+            "trigger": "listeners(type);",
+            "contents": "listeners(type);"
         },
         {
-            "trigger": "console.log",
-            "contents": "console.log();",
-            "description": "()"
+            "trigger": "log();",
+            "contents": "log();"
         },
         {
-            "trigger": "console.info",
-            "contents": "console.info();",
-            "description": "()"
+            "trigger": "info();",
+            "contents": "info();"
         },
         {
-            "trigger": "console.warn",
-            "contents": "console.warn();",
-            "description": "()"
+            "trigger": "warn();",
+            "contents": "warn();"
         },
         {
-            "trigger": "console.error",
-            "contents": "console.error();",
-            "description": "()"
+            "trigger": "error();",
+            "contents": "error();"
         },
         {
-            "trigger": "console.dir",
-            "contents": "console.dir(object);",
-            "description": "(object)"
+            "trigger": "dir(object);",
+            "contents": "dir(object);"
         },
         {
-            "trigger": "console.time",
-            "contents": "console.time(label);",
-            "description": "(label)"
+            "trigger": "time(label);",
+            "contents": "time(label);"
         },
         {
-            "trigger": "console.timeEnd",
-            "contents": "console.timeEnd(label);",
-            "description": "(label)"
+            "trigger": "timeEnd(label);",
+            "contents": "timeEnd(label);"
         },
         {
-            "trigger": "console.trace",
-            "contents": "console.trace(label);",
-            "description": "(label)"
+            "trigger": "trace(label);",
+            "contents": "trace(label);"
         },
         {
-            "trigger": "console.assert",
-            "contents": "console.assert(expression);",
-            "description": "(expression)"
+            "trigger": "assert(expression);",
+            "contents": "assert(expression);"
         },
         {
-            "trigger": "crypto.Credentials",
-            "contents": "crypto.Credentials(secureProtocol, flags, context);",
-            "description": "(secureProtocol, flags, context)"
+            "trigger": "Credentials(secureProtocol, flags, context);",
+            "contents": "Credentials(secureProtocol, flags, context);"
         },
         {
-            "trigger": "crypto.createCredentials",
-            "contents": "crypto.createCredentials(options, context);",
-            "description": "(options, context)"
+            "trigger": "createCredentials(options, context);",
+            "contents": "createCredentials(options, context);"
         },
         {
-            "trigger": "crypto.Hash",
-            "contents": "crypto.Hash();",
-            "description": "()"
+            "trigger": "Hash();",
+            "contents": "Hash();"
         },
         {
-            "trigger": "crypto.createHash",
-            "contents": "crypto.createHash(hash);",
-            "description": "(hash)"
+            "trigger": "createHash(hash);",
+            "contents": "createHash(hash);"
         },
         {
-            "trigger": "crypto.Hmac",
-            "contents": "crypto.Hmac();",
-            "description": "()"
+            "trigger": "Hmac();",
+            "contents": "Hmac();"
         },
         {
-            "trigger": "crypto.createHmac",
-            "contents": "crypto.createHmac(hmac, key);",
-            "description": "(hmac, key)"
+            "trigger": "createHmac(hmac, key);",
+            "contents": "createHmac(hmac, key);"
         },
         {
-            "trigger": "crypto.Cipher",
-            "contents": "crypto.Cipher();",
-            "description": "()"
+            "trigger": "Cipher();",
+            "contents": "Cipher();"
         },
         {
-            "trigger": "crypto.createCipher",
-            "contents": "crypto.createCipher(cipher, password);",
-            "description": "(cipher, password)"
+            "trigger": "createCipher(cipher, password);",
+            "contents": "createCipher(cipher, password);"
         },
         {
-            "trigger": "crypto.createCipheriv",
-            "contents": "crypto.createCipheriv(cipher, key, iv);",
-            "description": "(cipher, key, iv)"
+            "trigger": "createCipheriv(cipher, key, iv);",
+            "contents": "createCipheriv(cipher, key, iv);"
         },
         {
-            "trigger": "crypto.Decipher",
-            "contents": "crypto.Decipher();",
-            "description": "()"
+            "trigger": "Decipher();",
+            "contents": "Decipher();"
         },
         {
-            "trigger": "crypto.createDecipher",
-            "contents": "crypto.createDecipher(cipher, password);",
-            "description": "(cipher, password)"
+            "trigger": "createDecipher(cipher, password);",
+            "contents": "createDecipher(cipher, password);"
         },
         {
-            "trigger": "crypto.createDecipheriv",
-            "contents": "crypto.createDecipheriv(cipher, key, iv);",
-            "description": "(cipher, key, iv)"
+            "trigger": "createDecipheriv(cipher, key, iv);",
+            "contents": "createDecipheriv(cipher, key, iv);"
         },
         {
-            "trigger": "crypto.Sign",
-            "contents": "crypto.Sign();",
-            "description": "()"
+            "trigger": "Sign();",
+            "contents": "Sign();"
         },
         {
-            "trigger": "crypto.createSign",
-            "contents": "crypto.createSign(algorithm);",
-            "description": "(algorithm)"
+            "trigger": "createSign(algorithm);",
+            "contents": "createSign(algorithm);"
         },
         {
-            "trigger": "crypto.Verify",
-            "contents": "crypto.Verify();",
-            "description": "()"
+            "trigger": "Verify();",
+            "contents": "Verify();"
         },
         {
-            "trigger": "crypto.createVerify",
-            "contents": "crypto.createVerify(algorithm);",
-            "description": "(algorithm)"
+            "trigger": "createVerify(algorithm);",
+            "contents": "createVerify(algorithm);"
         },
         {
-            "trigger": "crypto.DiffieHellman",
-            "contents": "crypto.DiffieHellman();",
-            "description": "()"
+            "trigger": "DiffieHellman();",
+            "contents": "DiffieHellman();"
         },
         {
-            "trigger": "crypto.createDiffieHellman",
-            "contents": "crypto.createDiffieHellman(size_or_key, enc);",
-            "description": "(size_or_key, enc)"
+            "trigger": "createDiffieHellman(size_or_key, enc);",
+            "contents": "createDiffieHellman(size_or_key, enc);"
         },
         {
-            "trigger": "crypto.pbkdf2",
-            "contents": "crypto.pbkdf2();",
-            "description": "()"
+            "trigger": "pbkdf2();",
+            "contents": "pbkdf2();"
         },
         {
-            "trigger": "crypto.randomBytes",
-            "contents": "crypto.randomBytes();",
-            "description": "()"
+            "trigger": "randomBytes();",
+            "contents": "randomBytes();"
         },
         {
-            "trigger": "crypto.pseudoRandomBytes",
-            "contents": "crypto.pseudoRandomBytes();",
-            "description": "()"
+            "trigger": "pseudoRandomBytes();",
+            "contents": "pseudoRandomBytes();"
         },
         {
-            "trigger": "crypto.rng",
-            "contents": "crypto.rng();",
-            "description": "()"
+            "trigger": "rng();",
+            "contents": "rng();"
         },
         {
-            "trigger": "crypto.prng",
-            "contents": "crypto.prng();",
-            "description": "()"
+            "trigger": "prng();",
+            "contents": "prng();"
         },
         {
-            "trigger": "dgram.Socket",
-            "contents": "dgram.Socket(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "Socket(type, listener);",
+            "contents": "Socket(type, listener);"
         },
         {
-            "trigger": "dgram.createSocket",
-            "contents": "dgram.createSocket(type, listener);",
-            "description": "(type, listener)"
+            "trigger": "createSocket(type, listener);",
+            "contents": "createSocket(type, listener);"
         },
         {
-            "trigger": "dns.lookup",
-            "contents": "dns.lookup(domain, family, callback);",
-            "description": "(domain, family, callback)"
+            "trigger": "lookup(domain, family, callback);",
+            "contents": "lookup(domain, family, callback);"
         },
         {
-            "trigger": "dns.resolve4",
-            "contents": "dns.resolve4(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolve4(name, callback);",
+            "contents": "resolve4(name, callback);"
         },
         {
-            "trigger": "dns.resolve6",
-            "contents": "dns.resolve6(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolve6(name, callback);",
+            "contents": "resolve6(name, callback);"
         },
         {
-            "trigger": "dns.resolveCname",
-            "contents": "dns.resolveCname(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolveCname(name, callback);",
+            "contents": "resolveCname(name, callback);"
         },
         {
-            "trigger": "dns.resolveMx",
-            "contents": "dns.resolveMx(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolveMx(name, callback);",
+            "contents": "resolveMx(name, callback);"
         },
         {
-            "trigger": "dns.resolveNs",
-            "contents": "dns.resolveNs(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolveNs(name, callback);",
+            "contents": "resolveNs(name, callback);"
         },
         {
-            "trigger": "dns.resolveTxt",
-            "contents": "dns.resolveTxt(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolveTxt(name, callback);",
+            "contents": "resolveTxt(name, callback);"
         },
         {
-            "trigger": "dns.resolveSrv",
-            "contents": "dns.resolveSrv(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "resolveSrv(name, callback);",
+            "contents": "resolveSrv(name, callback);"
         },
         {
-            "trigger": "dns.reverse",
-            "contents": "dns.reverse(name, callback);",
-            "description": "(name, callback)"
+            "trigger": "reverse(name, callback);",
+            "contents": "reverse(name, callback);"
         },
         {
-            "trigger": "dns.resolve",
-            "contents": "dns.resolve(domain, type_, callback_);",
-            "description": "(domain, type_, callback_)"
+            "trigger": "resolve(domain, type_, callback_);",
+            "contents": "resolve(domain, type_, callback_);"
         },
         {
-            "trigger": "events.EventEmitter",
-            "contents": "events.EventEmitter();",
-            "description": "()"
+            "trigger": "EventEmitter();",
+            "contents": "EventEmitter();"
         },
         {
-            "trigger": "freelist.FreeList",
-            "contents": "freelist.FreeList(name, max, constructor);",
-            "description": "(name, max, constructor)"
+            "trigger": "FreeList(name, max, constructor);",
+            "contents": "FreeList(name, max, constructor);"
         },
         {
-            "trigger": "fs.Stats",
-            "contents": "fs.Stats();",
-            "description": "()"
+            "trigger": "Stats();",
+            "contents": "Stats();"
         },
         {
-            "trigger": "fs.readFile",
-            "contents": "fs.readFile(path, encoding_);",
-            "description": "(path, encoding_)"
+            "trigger": "readFile(path, encoding_);",
+            "contents": "readFile(path, encoding_);"
         },
         {
-            "trigger": "fs.readFileSync",
-            "contents": "fs.readFileSync(path, encoding);",
-            "description": "(path, encoding)"
+            "trigger": "readFileSync(path, encoding);",
+            "contents": "readFileSync(path, encoding);"
         },
         {
-            "trigger": "fs.close",
-            "contents": "fs.close(fd, callback);",
-            "description": "(fd, callback)"
+            "trigger": "close(fd, callback);",
+            "contents": "close(fd, callback);"
         },
         {
-            "trigger": "fs.closeSync",
-            "contents": "fs.closeSync(fd);",
-            "description": "(fd)"
+            "trigger": "closeSync(fd);",
+            "contents": "closeSync(fd);"
         },
         {
-            "trigger": "fs.open",
-            "contents": "fs.open(path, flags, mode, callback);",
-            "description": "(path, flags, mode, callback)"
+            "trigger": "open(path, flags, mode, callback);",
+            "contents": "open(path, flags, mode, callback);"
         },
         {
-            "trigger": "fs.openSync",
-            "contents": "fs.openSync(path, flags, mode);",
-            "description": "(path, flags, mode)"
+            "trigger": "openSync(path, flags, mode);",
+            "contents": "openSync(path, flags, mode);"
         },
         {
-            "trigger": "fs.read",
-            "contents": "fs.read(fd, buffer, offset, length, position, callback);",
-            "description": "(fd, buffer, offset, length, position, callback)"
+            "trigger": "read(fd, buffer, offset, length, position, callback);",
+            "contents": "read(fd, buffer, offset, length, position, callback);"
         },
         {
-            "trigger": "fs.readSync",
-            "contents": "fs.readSync(fd, buffer, offset, length, position);",
-            "description": "(fd, buffer, offset, length, position)"
+            "trigger": "readSync(fd, buffer, offset, length, position);",
+            "contents": "readSync(fd, buffer, offset, length, position);"
         },
         {
-            "trigger": "fs.write",
-            "contents": "fs.write(fd, buffer, offset, length, position, callback);",
-            "description": "(fd, buffer, offset, length, position, callback)"
+            "trigger": "write(fd, buffer, offset, length, position, callback);",
+            "contents": "write(fd, buffer, offset, length, position, callback);"
         },
         {
-            "trigger": "fs.writeSync",
-            "contents": "fs.writeSync(fd, buffer, offset, length, position);",
-            "description": "(fd, buffer, offset, length, position)"
+            "trigger": "writeSync(fd, buffer, offset, length, position);",
+            "contents": "writeSync(fd, buffer, offset, length, position);"
         },
         {
-            "trigger": "fs.rename",
-            "contents": "fs.rename(oldPath, newPath, callback);",
-            "description": "(oldPath, newPath, callback)"
+            "trigger": "rename(oldPath, newPath, callback);",
+            "contents": "rename(oldPath, newPath, callback);"
         },
         {
-            "trigger": "fs.renameSync",
-            "contents": "fs.renameSync(oldPath, newPath);",
-            "description": "(oldPath, newPath)"
+            "trigger": "renameSync(oldPath, newPath);",
+            "contents": "renameSync(oldPath, newPath);"
         },
         {
-            "trigger": "fs.truncate",
-            "contents": "fs.truncate(fd, len, callback);",
-            "description": "(fd, len, callback)"
+            "trigger": "truncate(fd, len, callback);",
+            "contents": "truncate(fd, len, callback);"
         },
         {
-            "trigger": "fs.truncateSync",
-            "contents": "fs.truncateSync(fd, len);",
-            "description": "(fd, len)"
+            "trigger": "truncateSync(fd, len);",
+            "contents": "truncateSync(fd, len);"
         },
         {
-            "trigger": "fs.rmdir",
-            "contents": "fs.rmdir(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "rmdir(path, callback);",
+            "contents": "rmdir(path, callback);"
         },
         {
-            "trigger": "fs.rmdirSync",
-            "contents": "fs.rmdirSync(path);",
-            "description": "(path)"
+            "trigger": "rmdirSync(path);",
+            "contents": "rmdirSync(path);"
         },
         {
-            "trigger": "fs.fdatasync",
-            "contents": "fs.fdatasync(fd, callback);",
-            "description": "(fd, callback)"
+            "trigger": "fdatasync(fd, callback);",
+            "contents": "fdatasync(fd, callback);"
         },
         {
-            "trigger": "fs.fdatasyncSync",
-            "contents": "fs.fdatasyncSync(fd);",
-            "description": "(fd)"
+            "trigger": "fdatasyncSync(fd);",
+            "contents": "fdatasyncSync(fd);"
         },
         {
-            "trigger": "fs.fsync",
-            "contents": "fs.fsync(fd, callback);",
-            "description": "(fd, callback)"
+            "trigger": "fsync(fd, callback);",
+            "contents": "fsync(fd, callback);"
         },
         {
-            "trigger": "fs.fsyncSync",
-            "contents": "fs.fsyncSync(fd);",
-            "description": "(fd)"
+            "trigger": "fsyncSync(fd);",
+            "contents": "fsyncSync(fd);"
         },
         {
-            "trigger": "fs.mkdir",
-            "contents": "fs.mkdir(path, mode, callback);",
-            "description": "(path, mode, callback)"
+            "trigger": "mkdir(path, mode, callback);",
+            "contents": "mkdir(path, mode, callback);"
         },
         {
-            "trigger": "fs.mkdirSync",
-            "contents": "fs.mkdirSync(path, mode);",
-            "description": "(path, mode)"
+            "trigger": "mkdirSync(path, mode);",
+            "contents": "mkdirSync(path, mode);"
         },
         {
-            "trigger": "fs.sendfile",
-            "contents": "fs.sendfile(outFd, inFd, inOffset, length, callback);",
-            "description": "(outFd, inFd, inOffset, length, callback)"
+            "trigger": "sendfile(outFd, inFd, inOffset, length, callback);",
+            "contents": "sendfile(outFd, inFd, inOffset, length, callback);"
         },
         {
-            "trigger": "fs.sendfileSync",
-            "contents": "fs.sendfileSync(outFd, inFd, inOffset, length);",
-            "description": "(outFd, inFd, inOffset, length)"
+            "trigger": "sendfileSync(outFd, inFd, inOffset, length);",
+            "contents": "sendfileSync(outFd, inFd, inOffset, length);"
         },
         {
-            "trigger": "fs.readdir",
-            "contents": "fs.readdir(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "readdir(path, callback);",
+            "contents": "readdir(path, callback);"
         },
         {
-            "trigger": "fs.readdirSync",
-            "contents": "fs.readdirSync(path);",
-            "description": "(path)"
+            "trigger": "readdirSync(path);",
+            "contents": "readdirSync(path);"
         },
         {
-            "trigger": "fs.fstat",
-            "contents": "fs.fstat(fd, callback);",
-            "description": "(fd, callback)"
+            "trigger": "fstat(fd, callback);",
+            "contents": "fstat(fd, callback);"
         },
         {
-            "trigger": "fs.lstat",
-            "contents": "fs.lstat(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "lstat(path, callback);",
+            "contents": "lstat(path, callback);"
         },
         {
-            "trigger": "fs.stat",
-            "contents": "fs.stat(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "stat(path, callback);",
+            "contents": "stat(path, callback);"
         },
         {
-            "trigger": "fs.fstatSync",
-            "contents": "fs.fstatSync(fd);",
-            "description": "(fd)"
+            "trigger": "fstatSync(fd);",
+            "contents": "fstatSync(fd);"
         },
         {
-            "trigger": "fs.lstatSync",
-            "contents": "fs.lstatSync(path);",
-            "description": "(path)"
+            "trigger": "lstatSync(path);",
+            "contents": "lstatSync(path);"
         },
         {
-            "trigger": "fs.statSync",
-            "contents": "fs.statSync(path);",
-            "description": "(path)"
+            "trigger": "statSync(path);",
+            "contents": "statSync(path);"
         },
         {
-            "trigger": "fs.readlink",
-            "contents": "fs.readlink(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "readlink(path, callback);",
+            "contents": "readlink(path, callback);"
         },
         {
-            "trigger": "fs.readlinkSync",
-            "contents": "fs.readlinkSync(path);",
-            "description": "(path)"
+            "trigger": "readlinkSync(path);",
+            "contents": "readlinkSync(path);"
         },
         {
-            "trigger": "fs.symlink",
-            "contents": "fs.symlink(destination, path, mode_, callback);",
-            "description": "(destination, path, mode_, callback)"
+            "trigger": "symlink(destination, path, mode_, callback);",
+            "contents": "symlink(destination, path, mode_, callback);"
         },
         {
-            "trigger": "fs.symlinkSync",
-            "contents": "fs.symlinkSync(destination, path, mode);",
-            "description": "(destination, path, mode)"
+            "trigger": "symlinkSync(destination, path, mode);",
+            "contents": "symlinkSync(destination, path, mode);"
         },
         {
-            "trigger": "fs.link",
-            "contents": "fs.link(srcpath, dstpath, callback);",
-            "description": "(srcpath, dstpath, callback)"
+            "trigger": "link(srcpath, dstpath, callback);",
+            "contents": "link(srcpath, dstpath, callback);"
         },
         {
-            "trigger": "fs.linkSync",
-            "contents": "fs.linkSync(srcpath, dstpath);",
-            "description": "(srcpath, dstpath)"
+            "trigger": "linkSync(srcpath, dstpath);",
+            "contents": "linkSync(srcpath, dstpath);"
         },
         {
-            "trigger": "fs.unlink",
-            "contents": "fs.unlink(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "unlink(path, callback);",
+            "contents": "unlink(path, callback);"
         },
         {
-            "trigger": "fs.unlinkSync",
-            "contents": "fs.unlinkSync(path);",
-            "description": "(path)"
+            "trigger": "unlinkSync(path);",
+            "contents": "unlinkSync(path);"
         },
         {
-            "trigger": "fs.fchmod",
-            "contents": "fs.fchmod(fd, mode, callback);",
-            "description": "(fd, mode, callback)"
+            "trigger": "fchmod(fd, mode, callback);",
+            "contents": "fchmod(fd, mode, callback);"
         },
         {
-            "trigger": "fs.fchmodSync",
-            "contents": "fs.fchmodSync(fd, mode);",
-            "description": "(fd, mode)"
+            "trigger": "fchmodSync(fd, mode);",
+            "contents": "fchmodSync(fd, mode);"
         },
         {
-            "trigger": "fs.chmod",
-            "contents": "fs.chmod(path, mode, callback);",
-            "description": "(path, mode, callback)"
+            "trigger": "chmod(path, mode, callback);",
+            "contents": "chmod(path, mode, callback);"
         },
         {
-            "trigger": "fs.chmodSync",
-            "contents": "fs.chmodSync(path, mode);",
-            "description": "(path, mode)"
+            "trigger": "chmodSync(path, mode);",
+            "contents": "chmodSync(path, mode);"
         },
         {
-            "trigger": "fs.fchown",
-            "contents": "fs.fchown(fd, uid, gid, callback);",
-            "description": "(fd, uid, gid, callback)"
+            "trigger": "fchown(fd, uid, gid, callback);",
+            "contents": "fchown(fd, uid, gid, callback);"
         },
         {
-            "trigger": "fs.fchownSync",
-            "contents": "fs.fchownSync(fd, uid, gid);",
-            "description": "(fd, uid, gid)"
+            "trigger": "fchownSync(fd, uid, gid);",
+            "contents": "fchownSync(fd, uid, gid);"
         },
         {
-            "trigger": "fs.chown",
-            "contents": "fs.chown(path, uid, gid, callback);",
-            "description": "(path, uid, gid, callback)"
+            "trigger": "chown(path, uid, gid, callback);",
+            "contents": "chown(path, uid, gid, callback);"
         },
         {
-            "trigger": "fs.chownSync",
-            "contents": "fs.chownSync(path, uid, gid);",
-            "description": "(path, uid, gid)"
+            "trigger": "chownSync(path, uid, gid);",
+            "contents": "chownSync(path, uid, gid);"
         },
         {
-            "trigger": "fs._toUnixTimestamp",
-            "contents": "fs._toUnixTimestamp(time);",
-            "description": "(time)"
+            "trigger": "_toUnixTimestamp(time);",
+            "contents": "_toUnixTimestamp(time);"
         },
         {
-            "trigger": "fs.utimes",
-            "contents": "fs.utimes(path, atime, mtime, callback);",
-            "description": "(path, atime, mtime, callback)"
+            "trigger": "utimes(path, atime, mtime, callback);",
+            "contents": "utimes(path, atime, mtime, callback);"
         },
         {
-            "trigger": "fs.utimesSync",
-            "contents": "fs.utimesSync(path, atime, mtime);",
-            "description": "(path, atime, mtime)"
+            "trigger": "utimesSync(path, atime, mtime);",
+            "contents": "utimesSync(path, atime, mtime);"
         },
         {
-            "trigger": "fs.futimes",
-            "contents": "fs.futimes(fd, atime, mtime, callback);",
-            "description": "(fd, atime, mtime, callback)"
+            "trigger": "futimes(fd, atime, mtime, callback);",
+            "contents": "futimes(fd, atime, mtime, callback);"
         },
         {
-            "trigger": "fs.futimesSync",
-            "contents": "fs.futimesSync(fd, atime, mtime);",
-            "description": "(fd, atime, mtime)"
+            "trigger": "futimesSync(fd, atime, mtime);",
+            "contents": "futimesSync(fd, atime, mtime);"
         },
         {
-            "trigger": "fs.writeFile",
-            "contents": "fs.writeFile(path, data, encoding_, callback);",
-            "description": "(path, data, encoding_, callback)"
+            "trigger": "writeFile(path, data, encoding_, callback);",
+            "contents": "writeFile(path, data, encoding_, callback);"
         },
         {
-            "trigger": "fs.writeFileSync",
-            "contents": "fs.writeFileSync(path, data, encoding);",
-            "description": "(path, data, encoding)"
+            "trigger": "writeFileSync(path, data, encoding);",
+            "contents": "writeFileSync(path, data, encoding);"
         },
         {
-            "trigger": "fs.watch",
-            "contents": "fs.watch(filename);",
-            "description": "(filename)"
+            "trigger": "watch(filename);",
+            "contents": "watch(filename);"
         },
         {
-            "trigger": "fs.watchFile",
-            "contents": "fs.watchFile(filename);",
-            "description": "(filename)"
+            "trigger": "watchFile(filename);",
+            "contents": "watchFile(filename);"
         },
         {
-            "trigger": "fs.unwatchFile",
-            "contents": "fs.unwatchFile(filename);",
-            "description": "(filename)"
+            "trigger": "unwatchFile(filename);",
+            "contents": "unwatchFile(filename);"
         },
         {
-            "trigger": "fs.realpathSync",
-            "contents": "fs.realpathSync(p, cache);",
-            "description": "(p, cache)"
+            "trigger": "realpathSync(p, cache);",
+            "contents": "realpathSync(p, cache);"
         },
         {
-            "trigger": "fs.realpath",
-            "contents": "fs.realpath(p, cache, cb);",
-            "description": "(p, cache, cb)"
+            "trigger": "realpath(p, cache, cb);",
+            "contents": "realpath(p, cache, cb);"
         },
         {
-            "trigger": "fs.createReadStream",
-            "contents": "fs.createReadStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "createReadStream(path, options);",
+            "contents": "createReadStream(path, options);"
         },
         {
-            "trigger": "fs.ReadStream",
-            "contents": "fs.ReadStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "ReadStream(path, options);",
+            "contents": "ReadStream(path, options);"
         },
         {
-            "trigger": "fs.FileReadStream",
-            "contents": "fs.FileReadStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "FileReadStream(path, options);",
+            "contents": "FileReadStream(path, options);"
         },
         {
-            "trigger": "fs.createWriteStream",
-            "contents": "fs.createWriteStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "createWriteStream(path, options);",
+            "contents": "createWriteStream(path, options);"
         },
         {
-            "trigger": "fs.WriteStream",
-            "contents": "fs.WriteStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "WriteStream(path, options);",
+            "contents": "WriteStream(path, options);"
         },
         {
-            "trigger": "fs.FileWriteStream",
-            "contents": "fs.FileWriteStream(path, options);",
-            "description": "(path, options)"
+            "trigger": "FileWriteStream(path, options);",
+            "contents": "FileWriteStream(path, options);"
         },
         {
-            "trigger": "fs.SyncWriteStream",
-            "contents": "fs.SyncWriteStream(fd);",
-            "description": "(fd)"
+            "trigger": "SyncWriteStream(fd);",
+            "contents": "SyncWriteStream(fd);"
         },
         {
-            "trigger": "http.IncomingMessage",
-            "contents": "http.IncomingMessage(socket);",
-            "description": "(socket)"
+            "trigger": "IncomingMessage(socket);",
+            "contents": "IncomingMessage(socket);"
         },
         {
-            "trigger": "http.OutgoingMessage",
-            "contents": "http.OutgoingMessage();",
-            "description": "()"
+            "trigger": "OutgoingMessage();",
+            "contents": "OutgoingMessage();"
         },
         {
-            "trigger": "http.ServerResponse",
-            "contents": "http.ServerResponse(req);",
-            "description": "(req)"
+            "trigger": "ServerResponse(req);",
+            "contents": "ServerResponse(req);"
         },
         {
-            "trigger": "http.Agent",
-            "contents": "http.Agent(options);",
-            "description": "(options)"
+            "trigger": "Agent(options);",
+            "contents": "Agent(options);"
         },
         {
-            "trigger": "http.ClientRequest",
-            "contents": "http.ClientRequest(options, cb);",
-            "description": "(options, cb)"
+            "trigger": "ClientRequest(options, cb);",
+            "contents": "ClientRequest(options, cb);"
         },
         {
-            "trigger": "http.request",
-            "contents": "http.request(options, cb);",
-            "description": "(options, cb)"
+            "trigger": "request(options, cb);",
+            "contents": "request(options, cb);"
         },
         {
-            "trigger": "http.get",
-            "contents": "http.get(options, cb);",
-            "description": "(options, cb)"
+            "trigger": "get(options, cb);",
+            "contents": "get(options, cb);"
         },
         {
-            "trigger": "http.Server",
-            "contents": "http.Server(requestListener);",
-            "description": "(requestListener)"
+            "trigger": "Server(requestListener);",
+            "contents": "Server(requestListener);"
         },
         {
-            "trigger": "http.createServer",
-            "contents": "http.createServer(requestListener);",
-            "description": "(requestListener)"
+            "trigger": "createServer(requestListener);",
+            "contents": "createServer(requestListener);"
         },
         {
-            "trigger": "http._connectionListener",
-            "contents": "http._connectionListener(socket);",
-            "description": "(socket)"
+            "trigger": "_connectionListener(socket);",
+            "contents": "_connectionListener(socket);"
         },
         {
-            "trigger": "http.Client",
-            "contents": "http.Client(port, host);",
-            "description": "(port, host)"
+            "trigger": "Client(port, host);",
+            "contents": "Client(port, host);"
         },
         {
-            "trigger": "http.createClient",
-            "contents": "http.createClient(port, host);",
-            "description": "(port, host)"
+            "trigger": "createClient(port, host);",
+            "contents": "createClient(port, host);"
         },
         {
-            "trigger": "https.Server",
-            "contents": "https.Server(opts, requestListener);",
-            "description": "(opts, requestListener)"
+            "trigger": "Server(opts, requestListener);",
+            "contents": "Server(opts, requestListener);"
         },
         {
-            "trigger": "https.createServer",
-            "contents": "https.createServer(opts, requestListener);",
-            "description": "(opts, requestListener)"
+            "trigger": "createServer(opts, requestListener);",
+            "contents": "createServer(opts, requestListener);"
         },
         {
-            "trigger": "https.Agent",
-            "contents": "https.Agent(options);",
-            "description": "(options)"
+            "trigger": "Agent(options);",
+            "contents": "Agent(options);"
         },
         {
-            "trigger": "https.request",
-            "contents": "https.request(options, cb);",
-            "description": "(options, cb)"
+            "trigger": "request(options, cb);",
+            "contents": "request(options, cb);"
         },
         {
-            "trigger": "https.get",
-            "contents": "https.get(options, cb);",
-            "description": "(options, cb)"
+            "trigger": "get(options, cb);",
+            "contents": "get(options, cb);"
         },
         {
-            "trigger": "module.wrap",
-            "contents": "module.wrap(script);",
-            "description": "(script)"
+            "trigger": "wrap(script);",
+            "contents": "wrap(script);"
         },
         {
-            "trigger": "module._debug",
-            "contents": "module._debug();",
-            "description": "()"
+            "trigger": "_debug();",
+            "contents": "_debug();"
         },
         {
-            "trigger": "module._findPath",
-            "contents": "module._findPath(request, paths);",
-            "description": "(request, paths)"
+            "trigger": "_findPath(request, paths);",
+            "contents": "_findPath(request, paths);"
         },
         {
-            "trigger": "module._nodeModulePaths",
-            "contents": "module._nodeModulePaths(from);",
-            "description": "(from)"
+            "trigger": "_nodeModulePaths(from);",
+            "contents": "_nodeModulePaths(from);"
         },
         {
-            "trigger": "module._resolveLookupPaths",
-            "contents": "module._resolveLookupPaths(request, parent);",
-            "description": "(request, parent)"
+            "trigger": "_resolveLookupPaths(request, parent);",
+            "contents": "_resolveLookupPaths(request, parent);"
         },
         {
-            "trigger": "module._load",
-            "contents": "module._load(request, parent, isMain);",
-            "description": "(request, parent, isMain)"
+            "trigger": "_load(request, parent, isMain);",
+            "contents": "_load(request, parent, isMain);"
         },
         {
-            "trigger": "module._resolveFilename",
-            "contents": "module._resolveFilename(request, parent);",
-            "description": "(request, parent)"
+            "trigger": "_resolveFilename(request, parent);",
+            "contents": "_resolveFilename(request, parent);"
         },
         {
-            "trigger": "module.runMain",
-            "contents": "module.runMain();",
-            "description": "()"
+            "trigger": "runMain();",
+            "contents": "runMain();"
         },
         {
-            "trigger": "module._initPaths",
-            "contents": "module._initPaths();",
-            "description": "()"
+            "trigger": "_initPaths();",
+            "contents": "_initPaths();"
         },
         {
-            "trigger": "module.requireRepl",
-            "contents": "module.requireRepl();",
-            "description": "()"
+            "trigger": "requireRepl();",
+            "contents": "requireRepl();"
         },
         {
-            "trigger": "module.Module",
-            "contents": "module.Module(id, parent);",
-            "description": "(id, parent)"
+            "trigger": "Module(id, parent);",
+            "contents": "Module(id, parent);"
         },
         {
-            "trigger": "net.createServer",
-            "contents": "net.createServer();",
-            "description": "()"
+            "trigger": "createServer();",
+            "contents": "createServer();"
         },
         {
-            "trigger": "net.createConnection",
-            "contents": "net.createConnection(port /* [host], [cb] */);",
-            "description": "(port /* [host], [cb] */)"
+            "trigger": "createConnection(port /* [host], [cb] */);",
+            "contents": "createConnection(port /* [host], [cb] */);"
         },
         {
-            "trigger": "net.connect",
-            "contents": "net.connect(port /* [host], [cb] */);",
-            "description": "(port /* [host], [cb] */)"
+            "trigger": "connect(port /* [host], [cb] */);",
+            "contents": "connect(port /* [host], [cb] */);"
         },
         {
-            "trigger": "net.Socket",
-            "contents": "net.Socket(options);",
-            "description": "(options)"
+            "trigger": "Socket(options);",
+            "contents": "Socket(options);"
         },
         {
-            "trigger": "net.Stream",
-            "contents": "net.Stream(options);",
-            "description": "(options)"
+            "trigger": "Stream(options);",
+            "contents": "Stream(options);"
         },
         {
-            "trigger": "net.Server",
-            "contents": "net.Server(/* [ options, ] listener */);",
-            "description": "(/* [ options, ] listener */)"
+            "trigger": "Server(/* [ options, ] listener */);",
+            "contents": "Server(/* [ options, ] listener */);"
         },
         {
-            "trigger": "net._createServerHandle",
-            "contents": "net._createServerHandle(address, port, addressType);",
-            "description": "(address, port, addressType)"
+            "trigger": "_createServerHandle(address, port, addressType);",
+            "contents": "_createServerHandle(address, port, addressType);"
         },
         {
-            "trigger": "net.isIP",
-            "contents": "net.isIP(input);",
-            "description": "(input)"
+            "trigger": "isIP(input);",
+            "contents": "isIP(input);"
         },
         {
-            "trigger": "net.isIPv4",
-            "contents": "net.isIPv4(input);",
-            "description": "(input)"
+            "trigger": "isIPv4(input);",
+            "contents": "isIPv4(input);"
         },
         {
-            "trigger": "net.isIPv6",
-            "contents": "net.isIPv6(input);",
-            "description": "(input)"
+            "trigger": "isIPv6(input);",
+            "contents": "isIPv6(input);"
         },
         {
-            "trigger": "os.hostname",
-            "contents": "os.hostname();",
-            "description": "()"
+            "trigger": "hostname();",
+            "contents": "hostname();"
         },
         {
-            "trigger": "os.loadavg",
-            "contents": "os.loadavg();",
-            "description": "()"
+            "trigger": "loadavg();",
+            "contents": "loadavg();"
         },
         {
-            "trigger": "os.uptime",
-            "contents": "os.uptime();",
-            "description": "()"
+            "trigger": "uptime();",
+            "contents": "uptime();"
         },
         {
-            "trigger": "os.freemem",
-            "contents": "os.freemem();",
-            "description": "()"
+            "trigger": "freemem();",
+            "contents": "freemem();"
         },
         {
-            "trigger": "os.totalmem",
-            "contents": "os.totalmem();",
-            "description": "()"
+            "trigger": "totalmem();",
+            "contents": "totalmem();"
         },
         {
-            "trigger": "os.cpus",
-            "contents": "os.cpus();",
-            "description": "()"
+            "trigger": "cpus();",
+            "contents": "cpus();"
         },
         {
-            "trigger": "os.type",
-            "contents": "os.type();",
-            "description": "()"
+            "trigger": "type();",
+            "contents": "type();"
         },
         {
-            "trigger": "os.release",
-            "contents": "os.release();",
-            "description": "()"
+            "trigger": "release();",
+            "contents": "release();"
         },
         {
-            "trigger": "os.networkInterfaces",
-            "contents": "os.networkInterfaces();",
-            "description": "()"
+            "trigger": "networkInterfaces();",
+            "contents": "networkInterfaces();"
         },
         {
-            "trigger": "os.arch",
-            "contents": "os.arch();",
-            "description": "()"
+            "trigger": "arch();",
+            "contents": "arch();"
         },
         {
-            "trigger": "os.platform",
-            "contents": "os.platform();",
-            "description": "()"
+            "trigger": "platform();",
+            "contents": "platform();"
         },
         {
-            "trigger": "os.getNetworkInterfaces",
-            "contents": "os.getNetworkInterfaces();",
-            "description": "()"
+            "trigger": "getNetworkInterfaces();",
+            "contents": "getNetworkInterfaces();"
         },
         {
-            "trigger": "path.resolve",
-            "contents": "path.resolve();",
-            "description": "()"
+            "trigger": "resolve();",
+            "contents": "resolve();"
         },
         {
-            "trigger": "path.normalize",
-            "contents": "path.normalize(path);",
-            "description": "(path)"
+            "trigger": "normalize(path);",
+            "contents": "normalize(path);"
         },
         {
-            "trigger": "path.join",
-            "contents": "path.join();",
-            "description": "()"
+            "trigger": "join();",
+            "contents": "join();"
         },
         {
-            "trigger": "path.relative",
-            "contents": "path.relative(from, to);",
-            "description": "(from, to)"
+            "trigger": "relative(from, to);",
+            "contents": "relative(from, to);"
         },
         {
-            "trigger": "path.dirname",
-            "contents": "path.dirname(path);",
-            "description": "(path)"
+            "trigger": "dirname(path);",
+            "contents": "dirname(path);"
         },
         {
-            "trigger": "path.basename",
-            "contents": "path.basename(path, ext);",
-            "description": "(path, ext)"
+            "trigger": "basename(path, ext);",
+            "contents": "basename(path, ext);"
         },
         {
-            "trigger": "path.extname",
-            "contents": "path.extname(path);",
-            "description": "(path)"
+            "trigger": "extname(path);",
+            "contents": "extname(path);"
         },
         {
-            "trigger": "path.exists",
-            "contents": "path.exists(path, callback);",
-            "description": "(path, callback)"
+            "trigger": "exists(path, callback);",
+            "contents": "exists(path, callback);"
         },
         {
-            "trigger": "path.existsSync",
-            "contents": "path.existsSync(path);",
-            "description": "(path)"
+            "trigger": "existsSync(path);",
+            "contents": "existsSync(path);"
         },
         {
-            "trigger": "punycode.decode",
-            "contents": "punycode.decode(input, preserveCase);",
-            "description": "(input, preserveCase)"
+            "trigger": "decode(input, preserveCase);",
+            "contents": "decode(input, preserveCase);"
         },
         {
-            "trigger": "punycode.encode",
-            "contents": "punycode.encode(input, preserveCase);",
-            "description": "(input, preserveCase)"
+            "trigger": "encode(input, preserveCase);",
+            "contents": "encode(input, preserveCase);"
         },
         {
-            "trigger": "punycode.toASCII",
-            "contents": "punycode.toASCII(domain);",
-            "description": "(domain)"
+            "trigger": "toASCII(domain);",
+            "contents": "toASCII(domain);"
         },
         {
-            "trigger": "punycode.toUnicode",
-            "contents": "punycode.toUnicode(domain);",
-            "description": "(domain)"
+            "trigger": "toUnicode(domain);",
+            "contents": "toUnicode(domain);"
         },
         {
-            "trigger": "querystring.unescapeBuffer",
-            "contents": "querystring.unescapeBuffer(s, decodeSpaces);",
-            "description": "(s, decodeSpaces)"
+            "trigger": "unescapeBuffer(s, decodeSpaces);",
+            "contents": "unescapeBuffer(s, decodeSpaces);"
         },
         {
-            "trigger": "querystring.unescape",
-            "contents": "querystring.unescape(s, decodeSpaces);",
-            "description": "(s, decodeSpaces)"
+            "trigger": "unescape(s, decodeSpaces);",
+            "contents": "unescape(s, decodeSpaces);"
         },
         {
-            "trigger": "querystring.escape",
-            "contents": "querystring.escape(str);",
-            "description": "(str)"
+            "trigger": "escape(str);",
+            "contents": "escape(str);"
         },
         {
-            "trigger": "querystring.encode",
-            "contents": "querystring.encode(obj, sep, eq, name);",
-            "description": "(obj, sep, eq, name)"
+            "trigger": "encode(obj, sep, eq, name);",
+            "contents": "encode(obj, sep, eq, name);"
         },
         {
-            "trigger": "querystring.stringify",
-            "contents": "querystring.stringify(obj, sep, eq, name);",
-            "description": "(obj, sep, eq, name)"
+            "trigger": "stringify(obj, sep, eq, name);",
+            "contents": "stringify(obj, sep, eq, name);"
         },
         {
-            "trigger": "querystring.decode",
-            "contents": "querystring.decode(qs, sep, eq);",
-            "description": "(qs, sep, eq)"
+            "trigger": "decode(qs, sep, eq);",
+            "contents": "decode(qs, sep, eq);"
         },
         {
-            "trigger": "querystring.parse",
-            "contents": "querystring.parse(qs, sep, eq);",
-            "description": "(qs, sep, eq)"
+            "trigger": "parse(qs, sep, eq);",
+            "contents": "parse(qs, sep, eq);"
         },
         {
-            "trigger": "readline.createInterface",
-            "contents": "readline.createInterface(input, output, completer);",
-            "description": "(input, output, completer)"
+            "trigger": "createInterface(input, output, completer);",
+            "contents": "createInterface(input, output, completer);"
         },
         {
-            "trigger": "readline.Interface",
-            "contents": "readline.Interface(input, output, completer);",
-            "description": "(input, output, completer)"
+            "trigger": "Interface(input, output, completer);",
+            "contents": "Interface(input, output, completer);"
         },
         {
-            "trigger": "repl.writer",
-            "contents": "repl.writer(obj, showHidden, depth, colors);",
-            "description": "(obj, showHidden, depth, colors)"
+            "trigger": "writer(obj, showHidden, depth, colors);",
+            "contents": "writer(obj, showHidden, depth, colors);"
         },
         {
-            "trigger": "repl.REPLServer",
-            "contents": "repl.REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined);",
-            "description": "(prompt, stream, eval, useGlobal, ignoreUndefined)"
+            "trigger": "REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined);",
+            "contents": "REPLServer(prompt, stream, eval, useGlobal, ignoreUndefined);"
         },
         {
-            "trigger": "repl.start",
-            "contents": "repl.start(prompt, source, eval, useGlobal);",
-            "description": "(prompt, source, eval, useGlobal)"
+            "trigger": "start(prompt, source, eval, useGlobal);",
+            "contents": "start(prompt, source, eval, useGlobal);"
         },
         {
-            "trigger": "stream.super_",
-            "contents": "stream.super_();",
-            "description": "()"
+            "trigger": "super_();",
+            "contents": "super_();"
         },
         {
-            "trigger": "stream.Stream",
-            "contents": "stream.Stream();",
-            "description": "()"
+            "trigger": "Stream();",
+            "contents": "Stream();"
         },
         {
-            "trigger": "string_decoder.StringDecoder",
-            "contents": "string_decoder.StringDecoder(encoding);",
-            "description": "(encoding)"
+            "trigger": "StringDecoder(encoding);",
+            "contents": "StringDecoder(encoding);"
         },
         {
-            "trigger": "sys.print",
-            "contents": "sys.print();",
-            "description": "()"
+            "trigger": "print();",
+            "contents": "print();"
         },
         {
-            "trigger": "sys.puts",
-            "contents": "sys.puts();",
-            "description": "()"
+            "trigger": "puts();",
+            "contents": "puts();"
         },
         {
-            "trigger": "sys.debug",
-            "contents": "sys.debug(x);",
-            "description": "(x)"
+            "trigger": "debug(x);",
+            "contents": "debug(x);"
         },
         {
-            "trigger": "sys.error",
-            "contents": "sys.error(x);",
-            "description": "(x)"
+            "trigger": "error(x);",
+            "contents": "error(x);"
         },
         {
-            "trigger": "sys.inspect",
-            "contents": "sys.inspect(obj, showHidden, depth, colors);",
-            "description": "(obj, showHidden, depth, colors)"
+            "trigger": "inspect(obj, showHidden, depth, colors);",
+            "contents": "inspect(obj, showHidden, depth, colors);"
         },
         {
-            "trigger": "sys.p",
-            "contents": "sys.p();",
-            "description": "()"
+            "trigger": "p();",
+            "contents": "p();"
         },
         {
-            "trigger": "sys.log",
-            "contents": "sys.log(msg);",
-            "description": "(msg)"
+            "trigger": "log(msg);",
+            "contents": "log(msg);"
         },
         {
-            "trigger": "sys.exec",
-            "contents": "sys.exec();",
-            "description": "()"
+            "trigger": "exec();",
+            "contents": "exec();"
         },
         {
-            "trigger": "sys.pump",
-            "contents": "sys.pump(readStream, writeStream, callback);",
-            "description": "(readStream, writeStream, callback)"
+            "trigger": "pump(readStream, writeStream, callback);",
+            "contents": "pump(readStream, writeStream, callback);"
         },
         {
-            "trigger": "sys.inherits",
-            "contents": "sys.inherits(ctor, superCtor);",
-            "description": "(ctor, superCtor)"
+            "trigger": "inherits(ctor, superCtor);",
+            "contents": "inherits(ctor, superCtor);"
         },
         {
-            "trigger": "timers.unenroll",
-            "contents": "timers.unenroll(item);",
-            "description": "(item)"
+            "trigger": "unenroll(item);",
+            "contents": "unenroll(item);"
         },
         {
-            "trigger": "timers.enroll",
-            "contents": "timers.enroll(item, msecs);",
-            "description": "(item, msecs)"
+            "trigger": "enroll(item, msecs);",
+            "contents": "enroll(item, msecs);"
         },
         {
-            "trigger": "timers.active",
-            "contents": "timers.active(item);",
-            "description": "(item)"
+            "trigger": "active(item);",
+            "contents": "active(item);"
         },
         {
-            "trigger": "timers.setTimeout",
-            "contents": "timers.setTimeout(callback, after);",
-            "description": "(callback, after)"
+            "trigger": "setTimeout(callback, after);",
+            "contents": "setTimeout(callback, after);"
         },
         {
-            "trigger": "timers.clearTimeout",
-            "contents": "timers.clearTimeout(timer);",
-            "description": "(timer)"
+            "trigger": "clearTimeout(timer);",
+            "contents": "clearTimeout(timer);"
         },
         {
-            "trigger": "timers.setInterval",
-            "contents": "timers.setInterval(callback, repeat);",
-            "description": "(callback, repeat)"
+            "trigger": "setInterval(callback, repeat);",
+            "contents": "setInterval(callback, repeat);"
         },
         {
-            "trigger": "timers.clearInterval",
-            "contents": "timers.clearInterval(timer);",
-            "description": "(timer)"
+            "trigger": "clearInterval(timer);",
+            "contents": "clearInterval(timer);"
         },
         {
-            "trigger": "tls.createSecurePair",
-            "contents": "tls.createSecurePair(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized);",
-            "description": "(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized)"
+            "trigger": "createSecurePair(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized);",
+            "contents": "createSecurePair(credentials,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized);"
         },
         {
-            "trigger": "tls.Server",
-            "contents": "tls.Server(/* [options], listener */);",
-            "description": "(/* [options], listener */)"
+            "trigger": "Server(/* [options], listener */);",
+            "contents": "Server(/* [options], listener */);"
         },
         {
-            "trigger": "tls.createServer",
-            "contents": "tls.createServer(options, listener);",
-            "description": "(options, listener)"
+            "trigger": "createServer(options, listener);",
+            "contents": "createServer(options, listener);"
         },
         {
-            "trigger": "tls.connect",
-            "contents": "tls.connect(port /* host, options, cb */);",
-            "description": "(port /* host, options, cb */)"
+            "trigger": "connect(port /* host, options, cb */);",
+            "contents": "connect(port /* host, options, cb */);"
         },
         {
-            "trigger": "tty.isatty",
-            "contents": "tty.isatty(fd);",
-            "description": "(fd)"
+            "trigger": "isatty(fd);",
+            "contents": "isatty(fd);"
         },
         {
-            "trigger": "tty.setRawMode",
-            "contents": "tty.setRawMode(flag);",
-            "description": "(flag)"
+            "trigger": "setRawMode(flag);",
+            "contents": "setRawMode(flag);"
         },
         {
-            "trigger": "tty.getWindowSize",
-            "contents": "tty.getWindowSize();",
-            "description": "()"
+            "trigger": "getWindowSize();",
+            "contents": "getWindowSize();"
         },
         {
-            "trigger": "tty.setWindowSize",
-            "contents": "tty.setWindowSize();",
-            "description": "()"
+            "trigger": "setWindowSize();",
+            "contents": "setWindowSize();"
         },
         {
-            "trigger": "tty.ReadStream",
-            "contents": "tty.ReadStream(fd);",
-            "description": "(fd)"
+            "trigger": "ReadStream(fd);",
+            "contents": "ReadStream(fd);"
         },
         {
-            "trigger": "tty.WriteStream",
-            "contents": "tty.WriteStream(fd);",
-            "description": "(fd)"
+            "trigger": "WriteStream(fd);",
+            "contents": "WriteStream(fd);"
         },
         {
-            "trigger": "url.parse",
-            "contents": "url.parse(url, parseQueryString, slashesDenoteHost);",
-            "description": "(url, parseQueryString, slashesDenoteHost)"
+            "trigger": "parse(url, parseQueryString, slashesDenoteHost);",
+            "contents": "parse(url, parseQueryString, slashesDenoteHost);"
         },
         {
-            "trigger": "url.resolve",
-            "contents": "url.resolve(source, relative);",
-            "description": "(source, relative)"
+            "trigger": "resolve(source, relative);",
+            "contents": "resolve(source, relative);"
         },
         {
-            "trigger": "url.resolveObject",
-            "contents": "url.resolveObject(source, relative);",
-            "description": "(source, relative)"
+            "trigger": "resolveObject(source, relative);",
+            "contents": "resolveObject(source, relative);"
         },
         {
-            "trigger": "url.format",
-            "contents": "url.format(obj);",
-            "description": "(obj)"
+            "trigger": "format(obj);",
+            "contents": "format(obj);"
         },
         {
-            "trigger": "util.format",
-            "contents": "util.format(f);",
-            "description": "(f)"
+            "trigger": "format(f);",
+            "contents": "format(f);"
         },
         {
-            "trigger": "util.print",
-            "contents": "util.print();",
-            "description": "()"
+            "trigger": "print();",
+            "contents": "print();"
         },
         {
-            "trigger": "util.puts",
-            "contents": "util.puts();",
-            "description": "()"
+            "trigger": "puts();",
+            "contents": "puts();"
         },
         {
-            "trigger": "util.debug",
-            "contents": "util.debug(x);",
-            "description": "(x)"
+            "trigger": "debug(x);",
+            "contents": "debug(x);"
         },
         {
-            "trigger": "util.error",
-            "contents": "util.error(x);",
-            "description": "(x)"
+            "trigger": "error(x);",
+            "contents": "error(x);"
         },
         {
-            "trigger": "util.inspect",
-            "contents": "util.inspect(obj, showHidden, depth, colors);",
-            "description": "(obj, showHidden, depth, colors)"
+            "trigger": "inspect(obj, showHidden, depth, colors);",
+            "contents": "inspect(obj, showHidden, depth, colors);"
         },
         {
-            "trigger": "util.isArray",
-            "contents": "util.isArray(ar);",
-            "description": "(ar)"
+            "trigger": "isArray(ar);",
+            "contents": "isArray(ar);"
         },
         {
-            "trigger": "util.isRegExp",
-            "contents": "util.isRegExp(re);",
-            "description": "(re)"
+            "trigger": "isRegExp(re);",
+            "contents": "isRegExp(re);"
         },
         {
-            "trigger": "util.isDate",
-            "contents": "util.isDate(d);",
-            "description": "(d)"
+            "trigger": "isDate(d);",
+            "contents": "isDate(d);"
         },
         {
-            "trigger": "util.isError",
-            "contents": "util.isError(e);",
-            "description": "(e)"
+            "trigger": "isError(e);",
+            "contents": "isError(e);"
         },
         {
-            "trigger": "util.p",
-            "contents": "util.p();",
-            "description": "()"
+            "trigger": "p();",
+            "contents": "p();"
         },
         {
-            "trigger": "util.log",
-            "contents": "util.log(msg);",
-            "description": "(msg)"
+            "trigger": "log(msg);",
+            "contents": "log(msg);"
         },
         {
-            "trigger": "util.exec",
-            "contents": "util.exec();",
-            "description": "()"
+            "trigger": "exec();",
+            "contents": "exec();"
         },
         {
-            "trigger": "util.pump",
-            "contents": "util.pump(readStream, writeStream, callback);",
-            "description": "(readStream, writeStream, callback)"
+            "trigger": "pump(readStream, writeStream, callback);",
+            "contents": "pump(readStream, writeStream, callback);"
         },
         {
-            "trigger": "util.inherits",
-            "contents": "util.inherits(ctor, superCtor);",
-            "description": "(ctor, superCtor)"
+            "trigger": "inherits(ctor, superCtor);",
+            "contents": "inherits(ctor, superCtor);"
         },
         {
-            "trigger": "vm.Script",
-            "contents": "vm.Script();",
-            "description": "()"
+            "trigger": "Script();",
+            "contents": "Script();"
         },
         {
-            "trigger": "vm.createScript",
-            "contents": "vm.createScript(code, ctx, name);",
-            "description": "(code, ctx, name)"
+            "trigger": "createScript(code, ctx, name);",
+            "contents": "createScript(code, ctx, name);"
         },
         {
-            "trigger": "vm.createContext",
-            "contents": "vm.createContext();",
-            "description": "()"
+            "trigger": "createContext();",
+            "contents": "createContext();"
         },
         {
-            "trigger": "vm.runInContext",
-            "contents": "vm.runInContext();",
-            "description": "()"
+            "trigger": "runInContext();",
+            "contents": "runInContext();"
         },
         {
-            "trigger": "vm.runInThisContext",
-            "contents": "vm.runInThisContext();",
-            "description": "()"
+            "trigger": "runInThisContext();",
+            "contents": "runInThisContext();"
         },
         {
-            "trigger": "vm.runInNewContext",
-            "contents": "vm.runInNewContext();",
-            "description": "()"
+            "trigger": "runInNewContext();",
+            "contents": "runInNewContext();"
         },
         {
-            "trigger": "zlib.Deflate",
-            "contents": "zlib.Deflate(opts);",
-            "description": "(opts)"
+            "trigger": "Deflate(opts);",
+            "contents": "Deflate(opts);"
         },
         {
-            "trigger": "zlib.Inflate",
-            "contents": "zlib.Inflate(opts);",
-            "description": "(opts)"
+            "trigger": "Inflate(opts);",
+            "contents": "Inflate(opts);"
         },
         {
-            "trigger": "zlib.Gzip",
-            "contents": "zlib.Gzip(opts);",
-            "description": "(opts)"
+            "trigger": "Gzip(opts);",
+            "contents": "Gzip(opts);"
         },
         {
-            "trigger": "zlib.Gunzip",
-            "contents": "zlib.Gunzip(opts);",
-            "description": "(opts)"
+            "trigger": "Gunzip(opts);",
+            "contents": "Gunzip(opts);"
         },
         {
-            "trigger": "zlib.DeflateRaw",
-            "contents": "zlib.DeflateRaw(opts);",
-            "description": "(opts)"
+            "trigger": "DeflateRaw(opts);",
+            "contents": "DeflateRaw(opts);"
         },
         {
-            "trigger": "zlib.InflateRaw",
-            "contents": "zlib.InflateRaw(opts);",
-            "description": "(opts)"
+            "trigger": "InflateRaw(opts);",
+            "contents": "InflateRaw(opts);"
         },
         {
-            "trigger": "zlib.Unzip",
-            "contents": "zlib.Unzip(opts);",
-            "description": "(opts)"
+            "trigger": "Unzip(opts);",
+            "contents": "Unzip(opts);"
         },
         {
-            "trigger": "zlib.createDeflate",
-            "contents": "zlib.createDeflate(o);",
-            "description": "(o)"
+            "trigger": "createDeflate(o);",
+            "contents": "createDeflate(o);"
         },
         {
-            "trigger": "zlib.createInflate",
-            "contents": "zlib.createInflate(o);",
-            "description": "(o)"
+            "trigger": "createInflate(o);",
+            "contents": "createInflate(o);"
         },
         {
-            "trigger": "zlib.createDeflateRaw",
-            "contents": "zlib.createDeflateRaw(o);",
-            "description": "(o)"
+            "trigger": "createDeflateRaw(o);",
+            "contents": "createDeflateRaw(o);"
         },
         {
-            "trigger": "zlib.createInflateRaw",
-            "contents": "zlib.createInflateRaw(o);",
-            "description": "(o)"
+            "trigger": "createInflateRaw(o);",
+            "contents": "createInflateRaw(o);"
         },
         {
-            "trigger": "zlib.createGzip",
-            "contents": "zlib.createGzip(o);",
-            "description": "(o)"
+            "trigger": "createGzip(o);",
+            "contents": "createGzip(o);"
         },
         {
-            "trigger": "zlib.createGunzip",
-            "contents": "zlib.createGunzip(o);",
-            "description": "(o)"
+            "trigger": "createGunzip(o);",
+            "contents": "createGunzip(o);"
         },
         {
-            "trigger": "zlib.createUnzip",
-            "contents": "zlib.createUnzip(o);",
-            "description": "(o)"
+            "trigger": "createUnzip(o);",
+            "contents": "createUnzip(o);"
         },
         {
-            "trigger": "zlib.deflate",
-            "contents": "zlib.deflate(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "deflate(buffer, callback);",
+            "contents": "deflate(buffer, callback);"
         },
         {
-            "trigger": "zlib.gzip",
-            "contents": "zlib.gzip(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "gzip(buffer, callback);",
+            "contents": "gzip(buffer, callback);"
         },
         {
-            "trigger": "zlib.deflateRaw",
-            "contents": "zlib.deflateRaw(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "deflateRaw(buffer, callback);",
+            "contents": "deflateRaw(buffer, callback);"
         },
         {
-            "trigger": "zlib.unzip",
-            "contents": "zlib.unzip(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "unzip(buffer, callback);",
+            "contents": "unzip(buffer, callback);"
         },
         {
-            "trigger": "zlib.inflate",
-            "contents": "zlib.inflate(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "inflate(buffer, callback);",
+            "contents": "inflate(buffer, callback);"
         },
         {
-            "trigger": "zlib.gunzip",
-            "contents": "zlib.gunzip(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "gunzip(buffer, callback);",
+            "contents": "gunzip(buffer, callback);"
         },
         {
-            "trigger": "zlib.inflateRaw",
-            "contents": "zlib.inflateRaw(buffer, callback);",
-            "description": "(buffer, callback)"
+            "trigger": "inflateRaw(buffer, callback);",
+            "contents": "inflateRaw(buffer, callback);"
         }
     ]
 }

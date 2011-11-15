@@ -4,53 +4,8 @@ var fs = require('fs');
 var path = require('path');
 var commander = require('commander');
 
-/**
- * This function is called to render the snippet from the passed object
- * and to save it to it's sublime-snippet file
- * @param  {Commander} commander The command line interface
- * @param  {Array} snippets An array of snippet objects
- * @return {void}
- */
-var createSnippets = function(options, snippets, callback) {
-  // Loop over each snippet and save to file
-  var i = 0, j = snippets.length;
-  for(;i<j;i++) {
-    var item = snippets[i];
+var global_options = {};
 
-    // TODO: Template this so supports other output formats
-    var output = [];
-    //output.push('<!-- Created on ' + new Date() + ' by doc_builder.js -->');
-    output.push('<snippet>');
-      output.push('   <content><![CDATA[' + item.function_string + ']]></content>');
-      output.push('   <tabTrigger>'+ [item.type, item.name].join('.') + '</tabTrigger>');
-      output.push('   <scope>source.js</scope>');
-      output.push('   <description>' + item.args + '</description>');
-    output.push('</snippet>');
-
-    // Call save
-    saveFile(options, item, output.join("\n"), callback);
-  }
-}
-
-var createCompletions = function(options, snippets, callback) {
-  // Loop over each snippet and save to file
-  var i = 0, j = snippets.length;
-  var output = {
-    "scope": "source.js - variable.other.js",
-    "completions": []
-  };
-  for(;i<j;i++) {
-    var item = snippets[i];
-
-    output.completions.push({
-      "trigger": [item.type, item.name].join('.'),
-      "contents": item.function_string,
-      "description": item.args
-    });
-  }
-  // Call save
-  saveCompletion(options, output, callback);
-}
 
 var saveCompletion = function(options, completions, callback) {
   var file_path = path.resolve(options.output, 'Nodejs.sublime-completions');
@@ -119,6 +74,144 @@ var FunctionReflect = function(fn) {
    return this;
 }
 
+
+
+
+
+
+/**
+ * Experimental command to create docs from specific files from a directory
+ * @param  {[type]} commander [description]
+ * @param  {[type]} output    [description]
+ * @return {[type]}
+ */
+ /*
+var loadDirectory = function(commander, output) {
+  var source_path = path.resolve(commander.input);
+
+  fs.readdir(source_path, function(error, items) {
+    if (error) throw error;
+    var i = 0, j = items.length;
+    for(;i<j;i++) {
+      var item = items[i];
+      if (item.indexOf('.js') > -1) {
+        var p = path.basename(item, '.js');
+        var r = require(path.resolve(source_path, p));
+        var rkey;
+        for(rkey in r) {
+          if (r.hasOwnProperty(rkey)) {
+            if (typeof r[rkey] === 'function') {
+              var doc_output = {}
+              doc_output.type = p;
+              doc_output.key = rkey;
+              doc_output.reflection = FunctionReflect(r[rkey]);
+              doc_output.args = doc_output.reflection.params.trim();
+              doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim();
+              doc_output.name = '' + doc_output.key;
+              output.push(doc_output);
+            }
+          }
+        }
+      }
+    }
+  });
+}
+*/
+
+
+
+/**
+ * Small helper function for the command line to split out namespace options
+ * @param  {String} val The values to be split
+ * @return {Array} An array of values to iterate over
+ */
+function list(val) {
+  return val.split(',');
+}
+
+/**
+ * Main commander program for our input.  Checks incoming args and based on this
+ * parses the required files
+ */
+/*
+commander
+  .version('1.0.1')
+  .option('-i --input <value>', 'The input path where the source code is located')
+  .option('-o --output <value>', 'The location of the output file')
+  .option('-n --ns [namespaces]', 'The namespaces you wish to include as a comma separated list', list)
+  .option('-g --global', 'Add the global namespaces (global, process, console)')
+  .option('-f --full', 'Include the whole nodejs standard library')
+  .option('-t --type', 'Option to create "snippets" or "completion"')
+  .parse(process.argv);
+
+var output = [];
+
+if (commander.global) {
+  createGlobals(output);
+}
+
+if (commander.ns) {
+  createNamespaces(commander, output);
+}
+
+if (commander.full) {
+  createNodeLibs(commander, output);
+}
+
+if(commander.input && commander.output) {
+  loadDirectory(commander, output);
+}
+
+if (commander.type === 'completions') {
+  
+} else {
+  createSnippets(commander, output, function() {} );
+}
+*/
+
+
+/** 
+ * This function is used to take an incoming set of options and parse
+ * them to see if how the file should be output
+ */
+exports.doc_builder = (function(options, callback) {
+  var output = [];
+
+  // Set the global options in this context
+  global_options = options;
+
+  // Pass thought the array and attach all global functions
+  if (options.global) {
+    createGlobals(output);
+  }
+
+  // Add the functions from the namespace of all items in node/lib
+  if (options.full) {
+    createNodeLibs(options, output);
+  }
+
+  // Create additional namespaces
+  if (options.ns && options.ns.length > 0) {
+    createNamespaces(options, output);
+  }
+  
+  /**
+   * Depricated for now
+  if(options.input && options.output) {
+    loadDirectory(options, output);
+  }
+  */
+
+  // Once these operations are done, we can then pass
+  // them to our output function, based on the type flag
+  if (options.type === 'completions') {
+    createCompletions(options, output, callback);
+  } else {
+    createSnippets(options, output, callback);
+  }
+});
+
+
 /**
  * Function to extract global functions not included in source files or requires
  * @param  {Array} output The output array to put the data in to
@@ -175,7 +268,7 @@ var createGlobals = function(output) {
  * @param  {[type]} output    [description]
  * @return {[type]}
  */
-var createNodeLibs = function(commander, output) {
+var createNodeLibs = function(options, output) {
   var files = [
     '_debugger', '_linklist', 'assert', 'buffer', 'buffer_ieee754',
     'child_process', 'cluster', 'console', 'constants', 'crypto',
@@ -184,45 +277,7 @@ var createNodeLibs = function(commander, output) {
     'readline', 'repl', 'stream', 'string_decoder', 'sys',
     'timers', 'tls', 'tty',  'url','util', 'vm', 'zlib'
   ];
-  createNamespaces(files, output);
-}
-
-
-/**
- * Experimental command to create docs from specific files from a directory
- * @param  {[type]} commander [description]
- * @param  {[type]} output    [description]
- * @return {[type]}
- */
-var loadDirectory = function(commander, output) {
-  var source_path = path.resolve(commander.input);
-
-  fs.readdir(source_path, function(error, items) {
-    if (error) throw error;
-    var i = 0, j = items.length;
-    for(;i<j;i++) {
-      var item = items[i];
-      if (item.indexOf('.js') > -1) {
-        var p = path.basename(item, '.js');
-        var r = require(path.resolve(source_path, p));
-        var rkey;
-        for(rkey in r) {
-          if (r.hasOwnProperty(rkey)) {
-            if (typeof r[rkey] === 'function') {
-              var doc_output = {}
-              doc_output.type = p;
-              doc_output.key = rkey;
-              doc_output.reflection = FunctionReflect(r[rkey]);
-              doc_output.args = doc_output.reflection.params.trim();
-              doc_output.f_string = '' + doc_output.key + doc_output.reflection.params.trim();
-              doc_output.name = '' + doc_output.key;
-              output.push(doc_output);
-            }
-          }
-        }
-      }
-    }
-  });
+  createNamespaces(options, files, output);
 }
 
 /**
@@ -231,20 +286,20 @@ var loadDirectory = function(commander, output) {
  * @param  {[type]} output    [description]
  * @return {[type]}
  */
-var createNamespaces = function(ns, output) {
-  var i = 0, j = ns.length;
+var createNamespaces = function(options, files, output) {
+  var i = 0, j = files.length;
   for(;i<j;i++) {
-    var item = require(ns[i]);
+    var item = require(files[i]);
     var rKey
     for (rKey in item) {
       if (typeof item[rKey] === 'function') {
         var snippet = {
-          type: ns[i],
+          type: files[i],
           name: rKey,
           reflection: FunctionReflect(item[rKey])
         }
         snippet['args'] = snippet.reflection.params.trim();
-        snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+        snippet['function_string'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + snippet.reflection.params.trim() + ';'
         output.push(snippet);
       }
     }
@@ -252,73 +307,48 @@ var createNamespaces = function(ns, output) {
 }
 
 /**
- * Small helper function for the command line to split out namespace options
- * @param  {String} val The values to be split
- * @return {Array} An array of values to iterate over
+ * This function is called to render the snippet from the passed object
+ * and to save it to it's sublime-snippet file
+ * @param  {Commander} commander The command line interface
+ * @param  {Array} snippets An array of snippet objects
+ * @return {void}
  */
-function list(val) {
-  return val.split(',');
-}
+var createSnippets = function(options, snippets, callback) {
+  // Loop over each snippet and save to file
+  var i = 0, j = snippets.length;
+  for(;i<j;i++) {
+    var item = snippets[i];
 
-/**
- * Main commander program for our input.  Checks incoming args and based on this
- * parses the required files
- */
-commander
-  .version('1.0.1')
-  .option('-i --input <value>', 'The input path where the source code is located')
-  .option('-o --output <value>', 'The location of the output file')
-  .option('-n --ns [namespaces]', 'The namespaces you wish to include as a comma separated list', list)
-  .option('-g --global', 'Add the global namespaces (global, process, console)')
-  .option('-f --full', 'Include the whole nodejs standard library')
-  .option('-t --type', 'Option to create "snippets" or "completion"')
-  .parse(process.argv);
+    // TODO: Template this so supports other output formats
+    var output = [];
+    //output.push('<!-- Created on ' + new Date() + ' by doc_builder.js -->');
+    output.push('<snippet>');
+      output.push('   <content><![CDATA[' + item.function_string + ']]></content>');
+      output.push('   <tabTrigger>'+ [item.type, item.name].join('.') + '</tabTrigger>');
+      output.push('   <scope>source.js</scope>');
+      output.push('   <description>' + item.args + '</description>');
+    output.push('</snippet>');
 
-var output = [];
-
-if (commander.global) {
-  createGlobals(output);
-}
-
-if (commander.ns) {
-  createNamespaces(options, output);
-}
-
-if (commander.full) {
-  createNodeLibs(commander, output);
-}
-
-if(commander.input && commander.output) {
-  loadDirectory(commander, output);
-}
-
-if (commander.type === 'completions') {
-  
-} else {
-  createSnippets(commander, output, function() {} );
-}
-
-
-
-exports.doc_builder = (function(options, callback) {
-  var output = [];
-  if (options.global) {
-    createGlobals(output);
+    // Call save
+    saveFile(options, item, output.join("\n"), callback);
   }
-  if (options.ns) {
-    createNamespaces(options, output);
-  }
-  if (options.full) {
-    createNodeLibs(options, output);
-  }
-  if(options.input && options.output) {
-    loadDirectory(options, output);
-  }
+}
 
-  if (options.type === 'completions') {
-    createCompletions(options, output, callback);
-  } else {
-    createSnippets(options, output, callback);
+var createCompletions = function(options, output, callback) {
+  // Loop over each snippet and save to file
+  var i = 0, j = output.length;
+  var completion = {
+    "scope": "source.js - variable.other.js",
+    "completions": []
+  };
+  for(;i<j;i++) {
+    var item = output[i];
+
+    completion.completions.push({
+      "trigger": item.function_string,
+      "contents": item.function_string
+    });
   }
-  
-});
+  // Call save
+  saveCompletion(options, completion, callback);
+}
