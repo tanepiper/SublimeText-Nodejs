@@ -18,6 +18,10 @@
   "caption": "Nodejs: Version",
   "command": "node_version"
 },
+{
+  "caption": "Nodejs: UglifyJS",
+  "command": "node_uglify"
+},
 { 
   "caption": "Nodejs: Default File Settings",
   "command": "open_file",

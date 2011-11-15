@@ -1,8 +1,8 @@
 import os
-import sublime
-import sublime_plugin
 import threading
 import subprocess
+import sublime
+import sublime_plugin
 import functools
 import tempfile
 
@@ -11,6 +11,7 @@ import tempfile
 # allowing for the possibility that someone has renamed the file.
 # Fun discovery: Sublime on windows still requires posix path separators.
 PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '').replace(os.path.sep, '/')
+PLUGIN_PATH = os.getcwd().replace(os.path.join(os.getcwd(), '..', '..') + os.path.sep, '').replace(os.path.sep, '/')
 
 def main_thread(callback, *args, **kwargs):
   # sublime.set_timeout gets used to send things onto the main thread
@@ -74,7 +75,6 @@ class NodeCommand(sublime_plugin.TextCommand):
       command = [arg for arg in command if arg]
     if 'working_dir' not in kwargs:
       kwargs['working_dir'] = self.get_working_dir()
-
     s = sublime.load_settings("Nodejs.sublime-settings")
     if s.get('save_first') and self.active_view() and self.active_view().is_dirty():
       self.active_view().run_command('save')
@@ -192,9 +192,8 @@ class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
 
 class NodeBuilddocsCommand(NodeTextCommand):
   def run(self, edit):
-    doc_builder = plugin_file('tools/default_build.js')
-
-    command = ['node', os.path.realpath(doc_builder)]
+    doc_builder = os.path.join(PLUGIN_PATH, 'tools/default_build.js')
+    command = ['node', doc_builder]
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
@@ -258,3 +257,13 @@ class NodeNpmCommand(NodeTextCommand):
 
   def command_done(self, result):
     self.scratch(result, title="NPM Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+
+
+class NodeUglifyCommand(NodeTextCommand):
+  def run(self, edit):
+    uglify = os.path.join(PLUGIN_PATH, 'tools/uglify_js.js')
+    command = ['node', uglify, '-i', self.view.file_name()]
+    self.run_command(command, self.command_done)
+
+  def command_done(self, result):
+    self.scratch(result, title="Uglify Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
