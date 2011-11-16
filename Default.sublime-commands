@@ -1,36 +1,40 @@
 [{
-  "caption": "Node: Run current file",
+  "caption": "Nodejs::Run::Current File",
   "command": "node_run"
 },
 {
-  "caption": "Node: Run current file with arguments",
+  "caption": "Nodejs::Run::Current File + Arguments",
   "command": "node_run_arguments"
 },
 {
-  "caption": "Node: NPM Command",
+  "caption": "Nodejs::Debug::Run::Current File",
+  "command": "node_drun"
+},
+{
+  "caption": "Nodejs::Debug::Run::Current File + Arguments",
+  "command": "node_drun_arguments"
+},
+{
+  "caption": "Nodejs::NPM::Command",
   "command": "node_npm"
 },
 {
-  "caption": "Nodejs: Build Snippets",
+  "caption": "Nodejs::Build Completions",
   "command": "node_builddocs"
 },
 {
-  "caption": "Nodejs: Version",
-  "command": "node_version"
-},
-{
-  "caption": "Nodejs: UglifyJS",
+  "caption": "Nodejs::UglifyJS",
   "command": "node_uglify"
 },
 { 
-  "caption": "Nodejs: Default File Settings",
+  "caption": "Nodejs::Default File Settings",
   "command": "open_file",
   "args": {
     "file": "${packages}/Nodejs/Nodejs.sublime-settings"
   }
 },
 { 
-  "caption": "Nodejs: User File Settings",
+  "caption": "Nodejs::User File Settings",
   "command": "open_file",
   "args": {
     "file": "${packages}/User/Nodejs.sublime-settings"

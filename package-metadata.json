@@ -1,1 +1,5 @@
-{"url": "https://github.com/tanepiper/SublimeText-Nodejs", "version": "2011.11.15.19.45.00", "description": "Plugin for nodejs integration into sublime text 2"}
+{
+  "version": "1.0.1",
+  "url": "https://github.com/tanepiper/SublimeText-Nodejs",
+  "description": "Plugin for nodejs integration into sublime text 2"
+}

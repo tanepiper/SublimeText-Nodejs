@@ -1,0 +1,13 @@
+Version 1.0.1
+-------------
+
+This is the second release version, and first version to be correctly documented.
+If you have updated to this version it is recommended you uninstall the package
+and re-install
+
+Changes
+-------
+
+* Nodejs code completion
+* Run node + node debug mode from Sublime, with optional arguments
+* Boilerplate snippets (HTTP Server, fs.readdir)
