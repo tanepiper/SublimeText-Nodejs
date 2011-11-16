@@ -1,10 +1,7 @@
 import os
-import threading
 import subprocess
 import sublime
 import sublime_plugin
-import functools
-import tempfile
 
 from lib.command_thread import CommandThread
 
@@ -155,7 +152,11 @@ class NodeBuilddocsCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Doc Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 # Command to Run node
 class NodeRunCommand(NodeTextCommand):
@@ -177,12 +178,15 @@ class NodeDrunCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 # Command to run node with arguments
 class NodeRunArgumentsCommand(NodeTextCommand):
   def run(self, edit):
-    #self.window.show_input_panel("Arguments:", "", self.on_done, None, None)
     self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
@@ -195,9 +199,8 @@ class NodeRunArgumentsCommand(NodeTextCommand):
     self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
 
 # Command to run node with debug and arguments
-class NodeDrunArgumentsCommand(NodeWindowCommand):
+class NodeDrunArgumentsCommand(NodeTextCommand):
   def run(self, edit):
-    #self.window.show_input_panel("Arguments:", "", self.on_done, None, None)
     self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
@@ -208,7 +211,11 @@ class NodeDrunArgumentsCommand(NodeWindowCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 class NodeNpmCommand(NodeTextCommand):
   def run(self, edit):
@@ -220,7 +227,11 @@ class NodeNpmCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="NPM Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 
 class NodeUglifyCommand(NodeTextCommand):
@@ -230,4 +241,8 @@ class NodeUglifyCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Uglify Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
