@@ -233,6 +233,55 @@ class NodeNpmCommand(NodeTextCommand):
     else:
       self.panel(result)
 
+class NodeNpmInstallCommand(NodeTextCommand):
+  def run(self, edit):
+    self.run_command(['npm', 'install'], self.command_done)
+
+  def command_done(self, result):
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
+
+class NodeNpmUninstallCommand(NodeTextCommand):
+  def run(self, edit):
+    self.get_window().show_input_panel("Package", "", self.on_input, None, None)
+
+  def on_input(self, message):
+    command = message.split()
+    command.insert(0, "npm");
+    command.insert(1, "uninstall")
+    self.run_command(command, self.command_done)
+
+  def command_done(self, result):
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
+
+class NodeNpmUpdateCommand(NodeTextCommand):
+  def run(self, edit):
+    self.run_command(['npm', 'update'], self.command_done)
+
+  def command_done(self, result):
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
+
+class NodeNpmListCommand(NodeTextCommand):
+  def run(self, edit):
+    self.run_command(['npm', 'ls'], self.command_done)
+
+  def command_done(self, result):
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('ouput_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 class NodeUglifyCommand(NodeTextCommand):
   def run(self, edit):

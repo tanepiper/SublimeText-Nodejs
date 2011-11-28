@@ -19,6 +19,22 @@
   "command": "node_npm"
 },
 {
+  "caption": "Nodejs::NPM::Install",
+  "command": "node_npm_install"
+},
+{
+  "caption": "Nodejs::NPM::Uninstall",
+  "command": "node_npm_uninstall"
+},
+{
+  "caption": "Nodejs::NPM::Update",
+  "command": "node_npm_update"
+},
+{
+  "caption": "Nodejs::NPM::List",
+  "command": "node_npm_list"
+},
+{
   "caption": "Nodejs::Build Completions",
   "command": "node_builddocs"
 },
