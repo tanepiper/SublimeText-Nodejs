@@ -50,7 +50,7 @@ class NodeCommand(sublime_plugin.TextCommand):
       return
     self.panel(result)
 
-  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/Diff/Diff.tmLanguage"):
+  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage"):
     output_file.set_syntax_file(syntax)
     edit = output_file.begin_edit()
     if clear:
