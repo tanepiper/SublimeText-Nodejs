@@ -50,7 +50,7 @@ or using git with the below commands:
 
 *Windows*
 
-    `git clone git://github.com/tanepiper/SublimeText-Nodejs.git %APPDATA%\Sublime Text 2\Packages\Nodejs`
+    `git clone git://github.com/tanepiper/SublimeText-Nodejs.git "%APPDATA%\Sublime Text 2\Packages\Nodejs"`
 
 Build Systems
 -------------
