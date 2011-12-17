@@ -35,6 +35,14 @@
   "command": "node_npm_list"
 },
 {
+  "caption": "Nodejs::NPM::Publish",
+  "command": "node_npm_publish"
+},
+{
+  "caption": "Nodejs::NPM::Search",
+  "command": "node_npm_search"
+},
+{
   "caption": "Nodejs::Build Completions",
   "command": "node_builddocs"
 },
@@ -42,14 +50,14 @@
   "caption": "Nodejs::UglifyJS",
   "command": "node_uglify"
 },
-{ 
+{
   "caption": "Nodejs::Default File Settings",
   "command": "open_file",
   "args": {
     "file": "${packages}/Nodejs/Nodejs.sublime-settings"
   }
 },
-{ 
+{
   "caption": "Nodejs::User File Settings",
   "command": "open_file",
   "args": {
