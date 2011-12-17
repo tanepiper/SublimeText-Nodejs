@@ -20,7 +20,22 @@
         { "id": "nodejsdrun", "caption": "Debug", "command": "node_drun" },
         { "id": "nodejsdrunarguments", "caption": "Debug + arguments", "command": "node_drun_arguments" }
       ]
-    }] 
+    },
+    {
+      "id": "nodejsnpmmenu",
+      "caption": "npm",
+      "children": [
+        { "id": "nodejsnpmcommand", "caption": "Command", "command": "node_npm" },
+        { "id": "nodejsnpmsearch", "caption": "Search", "command": "node_npm_search" },
+        { "id": "nodejsnpminstall", "caption": "Install", "command": "node_npm_install" },
+        { "id": "nodejsnpmuninstall", "caption": "Uninstall", "command": "node_npm_uninstall" },
+        { "id": "nodejsnpmupdate", "caption": "Update", "command": "node_npm_update" },
+        { "id": "nodejsnpmlist", "caption": "List", "command": "node_npm_list" },
+        { "id": "nodejsnpmpublish", "caption": "Publish", "command": "node_npm_publish" }
+      ]
+    },
+    { "id": "nodejsuglify", "caption": "Uglify", "command": "node_uglify" }
+    ]
   }]
 },
 {
