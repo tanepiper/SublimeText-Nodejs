@@ -47,11 +47,11 @@
         },
         {
             "trigger": "setTimeout();",
-            "contents": "setTimeout();"
+            "contents": "setTimeout(${1});"
         },
         {
             "trigger": "setInterval();",
-            "contents": "setInterval();"
+            "contents": "setInterval(${1});"
         },
         {
             "trigger": "clearTimeout();",
@@ -63,11 +63,11 @@
         },
         {
             "trigger": "process.EventEmitter();",
-            "contents": "process.EventEmitter();"
+            "contents": "process.EventEmitter(${1});"
         },
         {
             "trigger": "process.assert();",
-            "contents": "process.assert();"
+            "contents": "process.assert(${1});"
         },
         {
             "trigger": "process._tickCallback();",
@@ -75,7 +75,7 @@
         },
         {
             "trigger": "process.nextTick(callback);",
-            "contents": "process.nextTick(callback);"
+            "contents": "process.nextTick(${1:callback});"
         },
         {
             "trigger": "process.openStdin();",
@@ -83,7 +83,7 @@
         },
         {
             "trigger": "process.exit(code);",
-            "contents": "process.exit(code);"
+            "contents": "process.exit(${1:code});"
         },
         {
             "trigger": "process.kill(pid, sig);",
@@ -374,24 +374,24 @@
             "contents": "cluster.listeners(type);"
         },
         {
-            "trigger": "console.log();",
-            "contents": "console.log();"
+            "trigger": "console.log(message);",
+            "contents": "console.log(\"${1:message}\");"
         },
         {
-            "trigger": "console.info();",
-            "contents": "console.info();"
+            "trigger": "console.info(message);",
+            "contents": "console.info(\"${1:message}\");"
         },
         {
-            "trigger": "console.warn();",
-            "contents": "console.warn();"
+            "trigger": "console.warn(message);",
+            "contents": "console.warn(\"${1:message}\");"
         },
         {
-            "trigger": "console.error();",
-            "contents": "console.error();"
+            "trigger": "console.error(message);",
+            "contents": "console.error(\"${1:message}\");"
         },
         {
             "trigger": "console.dir(object);",
-            "contents": "console.dir(object);"
+            "contents": "console.dir(\"${1:object}\");"
         },
         {
             "trigger": "console.time(label);",
