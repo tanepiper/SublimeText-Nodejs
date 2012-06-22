@@ -46,8 +46,8 @@
             "contents": "Buffer(subject, encoding, offset);"
         },
         {
-            "trigger": "setTimeout();",
-            "contents": "setTimeout(${1});"
+            "trigger": "setTimeout(function, milliseconds);",
+            "contents": "setTimeout(${1:function}, ${2:milliseconds});"
         },
         {
             "trigger": "setInterval();",
@@ -375,23 +375,23 @@
         },
         {
             "trigger": "console.log(message);",
-            "contents": "console.log(\"${1:message}\");"
+            "contents": "console.log(${1:message});"
         },
         {
             "trigger": "console.info(message);",
-            "contents": "console.info(\"${1:message}\");"
+            "contents": "console.info(${1:message});"
         },
         {
             "trigger": "console.warn(message);",
-            "contents": "console.warn(\"${1:message}\");"
+            "contents": "console.warn(${1:message});"
         },
         {
             "trigger": "console.error(message);",
-            "contents": "console.error(\"${1:message}\");"
+            "contents": "console.error(${1:message});"
         },
         {
             "trigger": "console.dir(object);",
-            "contents": "console.dir(\"${1:object}\");"
+            "contents": "console.dir(${1:object});"
         },
         {
             "trigger": "console.time(label);",
@@ -1267,7 +1267,7 @@
         },
         {
             "trigger": "util.format(f);",
-            "contents": "util.format(f);"
+            "contents": "util.format(${1:f});"
         },
         {
             "trigger": "util.print();",
@@ -1291,19 +1291,19 @@
         },
         {
             "trigger": "util.isArray(ar);",
-            "contents": "util.isArray(ar);"
+            "contents": "util.isArray(${1:ar});"
         },
         {
             "trigger": "util.isRegExp(re);",
-            "contents": "util.isRegExp(re);"
+            "contents": "util.isRegExp(${1:re});"
         },
         {
             "trigger": "util.isDate(d);",
-            "contents": "util.isDate(d);"
+            "contents": "util.isDate(${1:d});"
         },
         {
             "trigger": "util.isError(e);",
-            "contents": "util.isError(e);"
+            "contents": "util.isError(${1:e});"
         },
         {
             "trigger": "util.p();",
@@ -1311,7 +1311,7 @@
         },
         {
             "trigger": "util.log(msg);",
-            "contents": "util.log(msg);"
+            "contents": "util.log(${1:msg});"
         },
         {
             "trigger": "util.exec();",
@@ -1319,11 +1319,11 @@
         },
         {
             "trigger": "util.pump(readStream, writeStream, callback);",
-            "contents": "util.pump(readStream, writeStream, callback);"
+            "contents": "util.pump(${1:readStream}, ${2:writeStream}, ${3:callback});"
         },
         {
             "trigger": "util.inherits(ctor, superCtor);",
-            "contents": "util.inherits(ctor, superCtor);"
+            "contents": "util.inherits(${1:ctor}, ${2:superCtor});"
         },
         {
             "trigger": "vm.Script();",
