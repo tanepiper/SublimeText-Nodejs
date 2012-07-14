@@ -1,7 +1,7 @@
 var doc_builder = require('./doc_builder').doc_builder
 var path = require('path');
 
-var p = path.resolve(__dirname + '\\..\\Nodejs.sublime-completions');
+var p = path.resolve(__dirname + '/../Nodejs.sublime-completions');
 
 doc_builder({
   global: true,
