@@ -153,7 +153,7 @@ class NodeBuilddocsCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
     else:
       self.panel(result)
@@ -161,12 +161,14 @@ class NodeBuilddocsCommand(NodeTextCommand):
 # Command to Run node
 class NodeRunCommand(NodeTextCommand):
   def run(self, edit):
+    command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+    os.system(command)    
     command = ['node', self.view.file_name()]
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
     else:
       self.panel(result)
@@ -174,12 +176,14 @@ class NodeRunCommand(NodeTextCommand):
 # Command to run node with debug
 class NodeDrunCommand(NodeTextCommand):
   def run(self, edit):
+    command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+    os.system(command)
     command = ['node', 'debug', self.view.file_name()]
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
     else:
       self.panel(result)
@@ -212,7 +216,7 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
     else:
       self.panel(result)
@@ -228,7 +232,7 @@ class NodeNpmCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -239,7 +243,7 @@ class NodeNpmInstallCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -256,7 +260,7 @@ class NodeNpmUninstallCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -273,7 +277,7 @@ class NodeNpmSearchCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -284,7 +288,7 @@ class NodeNpmPublishCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -295,7 +299,7 @@ class NodeNpmUpdateCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -306,7 +310,7 @@ class NodeNpmListCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/Text/Plain text.tmLanguage")
     else:
       self.panel(result)
@@ -319,7 +323,7 @@ class NodeUglifyCommand(NodeTextCommand):
 
   def command_done(self, result):
     s = sublime.load_settings("Nodejs.sublime-settings")
-    if s.get('ouput_to_new_tab'):
+    if s.get('output_to_new_tab'):
       self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
     else:
       self.panel(result)
