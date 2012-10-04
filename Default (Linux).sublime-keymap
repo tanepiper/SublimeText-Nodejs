@@ -1,5 +1,9 @@
 [
-  {"keys": ["alt+r"], "command": "node_run"},
+  {"keys": ["alt+r"], "command": "node_run", "context":
+    [
+      { "key": "setting.is_widget", "operator": "equal", "operand": false }
+    ]
+  },
   {"keys": ["alt+d"], "command": "node_drun"},
   {"keys": ["ctrl+alt+r"], "command": "node_run_arguments"},
   {"keys": ["ctrl+alt+d"], "command": "node_drun_arguments"}
