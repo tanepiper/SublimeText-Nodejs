@@ -237,6 +237,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + snippet.name + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + snippet.name + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -251,6 +252,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -265,6 +267,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
