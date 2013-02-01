@@ -1,1 +1,1 @@
-from Nodejs import *
+from . import *

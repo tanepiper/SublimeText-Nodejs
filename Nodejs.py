@@ -3,7 +3,7 @@ import subprocess
 import sublime
 import sublime_plugin
 
-from lib.command_thread import CommandThread
+from .lib.command_thread import CommandThread
 
 # when sublime loads a plugin it's cd'd into the plugin directory. Thus
 # __file__ is useless for my purposes. What I want is "Packages/Git", but
