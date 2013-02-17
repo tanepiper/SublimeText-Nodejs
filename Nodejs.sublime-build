@@ -1,5 +1,15 @@
 {
   "cmd": ["node", "$file"],
   "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-  "selector": "source.js"
+  "selector": "source.js",
+  "shell":true,
+  "encoding": "cp1252",
+  "windows":
+    {
+    	"cmd": ["taskkill /F /IM node.exe & node", "$file"]
+    },
+  "linux":
+    {
+        "cmd": ["killall node; node", "$file"]
+    }
 }
