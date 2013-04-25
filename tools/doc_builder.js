@@ -60,6 +60,16 @@ var FunctionReflect = function(fn) {
 
    this.params = s.slice(iOpenParams, closeParams + 1);
 
+   // parse the arguments from the function into a list
+   var args = s.slice(iOpenParams + 1, closeParams)
+               .replace(/,/g, ' ')
+               .split(' ')
+               .filter(function(arg) { return arg !== ''; });
+
+   // generate completion templates for arguments
+   var count = 0;
+   this.param_templates = args.map(function(arg) { return '${' + ++count + ':' + arg + '}'; });
+
    this.className = null;
    this.methodName = null;
    var iUnderscore = this.name.indexOf('_');
@@ -227,6 +237,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + snippet.name + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + snippet.name + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -241,6 +252,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -255,6 +267,7 @@ var createGlobals = function(output) {
       }
       snippet['args'] = snippet.reflection.params.trim();
       snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -299,6 +312,7 @@ var createNamespaces = function(options, files, output) {
         }
         snippet['args'] = snippet.reflection.params.trim();
         snippet['function_string'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + snippet.reflection.params.trim() + ';'
+        snippet['function_template'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
         output.push(snippet);
       }
     }
@@ -345,7 +359,7 @@ var createCompletions = function(options, output, callback) {
 
     completion.completions.push({
       "trigger": item.function_string,
-      "contents": item.function_string
+      "contents": item.function_template
     });
   }
   // Call save
