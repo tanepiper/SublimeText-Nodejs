@@ -35,10 +35,12 @@
             "trigger": "Buffer(subject, encoding, offset);"
         },
         {
-            "trigger": "setTimeout();"
+            "trigger": "setTimeout(function, milliseconds);",
+            "contents": "setTimeout(${1:function}, ${2:milliseconds});"
         },
         {
-            "trigger": "setInterval();"
+            "trigger": "setInterval();",
+            "contents": "setInterval(${1});"
         },
         {
             "trigger": "clearTimeout();"
@@ -47,22 +49,26 @@
             "trigger": "clearInterval();"
         },
         {
-            "trigger": "process.EventEmitter();"
+            "trigger": "process.EventEmitter();",
+            "contents": "process.EventEmitter(${1});"
         },
         {
-            "trigger": "process.assert();"
+            "trigger": "process.assert();",
+            "contents": "process.assert(${1});"
         },
         {
             "trigger": "process._tickCallback();"
         },
         {
-            "trigger": "process.nextTick(callback);"
+            "trigger": "process.nextTick(callback);",
+            "contents": "process.nextTick(${1:callback});"
         },
         {
             "trigger": "process.openStdin();"
         },
         {
-            "trigger": "process.exit(code);"
+            "trigger": "process.exit(code);",
+            "contents": "process.exit(${1:code});"
         },
         {
             "trigger": "process.kill(pid, sig);"
@@ -334,20 +340,20 @@
             "contents": "cluster.listeners(${1:type});$0"
         },
         {
-            "trigger": "console.log();",
-            "contents": "console.log();$0"
+            "trigger": "console.log(message);",
+            "contents": "console.log(${1:message});$0"
         },
         {
-            "trigger": "console.info();",
-            "contents": "console.info();$0"
+            "trigger": "console.info(message);",
+            "contents": "console.info(${1:message});$0"
         },
         {
-            "trigger": "console.warn();",
-            "contents": "console.warn();$0"
+            "trigger": "console.warn(message);",
+            "contents": "console.warn(${1:message});$0"
         },
         {
-            "trigger": "console.error();",
-            "contents": "console.error();$0"
+            "trigger": "console.error(message);",
+            "contents": "console.error(${1:message});$0"
         },
         {
             "trigger": "console.dir(object);",
