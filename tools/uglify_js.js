@@ -1,16 +1,12 @@
 var commander = require('commander');
-var jsp = require("uglify-js").parser;
-var pro = require("uglify-js").uglify;
+var minify = require("uglify-js").minify;
 var path = require('path');
 var fs = require('fs');
 
 
 var uglify_data = function(data, cb) {
   var orig_code = data.join("\n");
-  var ast = jsp.parse(orig_code); // parse code and get the initial AST
-  ast = pro.ast_mangle(ast); // get a new AST with mangled names
-  ast = pro.ast_squeeze(ast); // get an AST with compression optimizations
-  var final_code = pro.gen_code(ast); // compressed code here
+  var final_code = minify(orig_code, { fromString: true }).code;
 
   cb(null, final_code);
 }
