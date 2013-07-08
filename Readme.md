@@ -64,7 +64,7 @@ Build Systems
 -------------
 PLEASE NOTE: The build system will be refactored to provide different nodejs build systems (such as jake)
 
-If you have a JavaScript file open, by selecting selecting `Tools -> Build Systems -> Nodejs` and
+If you have a JavaScript file open, by selecting `Tools -> Build Systems -> Nodejs` and
 then hitting Ctrl + B, you will activate the node build system on your file and node will try to run it.
 You may need to add a `path` variable to the settings object for this if your node executable is not found
 
