@@ -544,6 +544,14 @@
             "contents": "fs.closeSync(${1:fd});$0"
         },
         {
+            "trigger": "fs.exists(path, callback);",
+            "contents": "fs.exists(${1:path}, ${2:callback});$0"
+        },
+        {
+            "trigger": "fs.existsSync(path);",
+            "contents": "fs.existsSync(${1:path});$0"
+        },
+        {
             "trigger": "fs.open(path, flags, mode, callback);",
             "contents": "fs.open(${1:path}, ${2:flags}, ${3:mode}, ${4:callback});$0"
         },
@@ -1022,14 +1030,6 @@
         {
             "trigger": "path.extname(path);",
             "contents": "path.extname(${1:path});$0"
-        },
-        {
-            "trigger": "path.exists(path, callback);",
-            "contents": "path.exists(${1:path}, ${2:callback});$0"
-        },
-        {
-            "trigger": "path.existsSync(path);",
-            "contents": "path.existsSync(${1:path});$0"
         },
         {
             "trigger": "path._makeLong(path);",
