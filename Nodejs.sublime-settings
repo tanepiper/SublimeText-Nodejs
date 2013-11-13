@@ -6,6 +6,8 @@
   "node_command": false,
   // Same for NPM command
   "npm_command": false,
+  // as 'NODE_PATH' environment variable for node runtime
+  "node_path": false,
 
   "expert_mode": false,
 

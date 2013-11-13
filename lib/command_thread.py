@@ -21,12 +21,13 @@ def _make_text_safeish(text, fallback_encoding):
   return unitext
 
 class CommandThread(threading.Thread):
-  def __init__(self, command, on_done, working_dir="", fallback_encoding=""):
+  def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
     threading.Thread.__init__(self)
     self.command = command
     self.on_done = on_done
     self.working_dir = working_dir
     self.fallback_encoding = fallback_encoding
+    self.env = env
 
   def run(self):
     try:
@@ -37,7 +38,7 @@ class CommandThread(threading.Thread):
         os.chdir(self.working_dir)
       proc = subprocess.Popen(self.command,
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-        shell=shell, universal_newlines=True)
+        shell=shell, universal_newlines=True, env=self.env)
       output = proc.communicate()[0]
       # if sublime's python gets bumped to 2.7 we can just do:
       # output = subprocess.check_output(self.command)
