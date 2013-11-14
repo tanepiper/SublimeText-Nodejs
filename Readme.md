@@ -1,6 +1,14 @@
 Nodejs Sublime Text 2 Package
 =============================
 
+# PROJECT LOOKING FOR NEW MAINTAINER
+
+Since I started this project, I've not really know where to take it past the initial few versions I released. As such
+I am no longer maintaining this project - nor do I have the time to look into some of the existing issues.
+
+If anyone would be interested in taking over this project to maintain - and hopefully take it somewhere, then please get
+in touch.
+
 Overview
 --------
 The Nodejs Sublime Text 2 Package provides a set of code completion, scripts and tools to work with
@@ -50,7 +58,7 @@ or using git with the below commands:
 
 *Windows*
 
-    `git clone git://github.com/tanepiper/SublimeText-Nodejs.git "%APPDATA%\Sublime Text 2\Packages\Nodejs"`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs "%APPDATA%\Sublime Text 2\Packages\Nodejs"`
 
 Build Systems
 -------------
