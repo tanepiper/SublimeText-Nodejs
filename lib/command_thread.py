@@ -27,7 +27,8 @@ class CommandThread(threading.Thread):
     self.on_done = on_done
     self.working_dir = working_dir
     self.fallback_encoding = fallback_encoding
-    self.env = env
+    self.env = os.environ.copy()
+    self.env.update(env)
 
   def run(self):
     try:
