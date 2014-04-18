@@ -86,36 +86,40 @@ class NodeCommand(sublime_plugin.TextCommand):
       return
     self.panel(result)
 
-  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage"):
-    output_file.set_syntax_file(syntax)
-    edit = output_file.begin_edit()
-    if clear:
-      region = sublime.Region(0, self.output_view.size())
-      output_file.erase(edit, region)
-    output_file.insert(edit, 0, output)
-    output_file.end_edit(edit)
 
-  def scratch(self, output, title=False, **kwargs):
-    scratch_file = self.get_window().new_file()
-    if title:
-      scratch_file.set_name(title)
-    scratch_file.set_scratch(True)
-    self._output_to_view(scratch_file, output, **kwargs)
-    scratch_file.set_read_only(True)
-    return scratch_file
+  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage", **kwargs):
+      output_file.set_syntax_file(syntax)
+      if(clear)
+
+      args = {
+          'output': output,
+          'clear': clear
+      }
+      output_file.run_command('nodejs_scratch_output', args)
+
+  def scratch(self, output, title=False, position=None, **kwargs):
+      scratch_file = self.get_window().new_file()
+      if title:
+          scratch_file.set_name(title)
+      scratch_file.set_scratch(True)
+      self._output_to_view(scratch_file, output, **kwargs)
+      scratch_file.set_read_only(True)
+      if position:
+          sublime.set_timeout(lambda: scratch_file.set_viewport_position(position), 0)
+      return scratch_file
 
   def panel(self, output, **kwargs):
     if not hasattr(self, 'output_view'):
-      self.output_view = self.get_window().get_output_panel("git")
+      self.output_view = self.get_window().get_output_panel("nodejs")
     self.output_view.set_read_only(False)
     self._output_to_view(self.output_view, output, clear=True, **kwargs)
     self.output_view.set_read_only(True)
-    self.get_window().run_command("show_panel", {"panel": "output.git"})
+    self.get_window().run_command("show_panel", {"panel": "output.nodejs"})
 
   def quick_panel(self, *args, **kwargs):
     self.get_window().show_quick_panel(*args, **kwargs)
 
-# A base for all git commands that work with the entire repository
+# A base for all node commands that work with the entire repository
 class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   def active_view(self):
     return self.window.active_view()
