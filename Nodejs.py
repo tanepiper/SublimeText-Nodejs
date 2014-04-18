@@ -2,8 +2,36 @@ import os
 import subprocess
 import sublime
 import sublime_plugin
+import functools
+import threading
 
-from lib.command_thread import CommandThread
+def main_thread(callback, *args, **kwargs):
+  # sublime.set_timeout gets used to send things onto the main thread
+  # most sublime.[something] calls need to be on the main thread
+  sublime.set_timeout(functools.partial(callback, *args, **kwargs), 0)
+
+class CommandThread(threading.Thread):
+  def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
+    threading.Thread.__init__(self)
+    self.command = command
+    self.on_done = on_done
+    self.working_dir = working_dir
+    self.fallback_encoding = fallback_encoding
+    self.env = os.environ.copy()
+    self.env.update(env)
+
+  def run(self):
+    try:
+      output = subprocess.check_output(self.command)
+      main_thread(self.on_done, output)
+    except (subprocess.CalledProcessError, e):
+      main_thread(self.on_done, e.returncode)
+    except (OSError, e):
+      if e.errno == 2:
+        main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
+      else:
+        raise e
+
 
 # when sublime loads a plugin it's cd'd into the plugin directory. Thus
 # __file__ is useless for my purposes. What I want is "Packages/Git", but
