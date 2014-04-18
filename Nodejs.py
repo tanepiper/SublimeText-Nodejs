@@ -54,17 +54,23 @@ class NodeCommand(sublime_plugin.TextCommand):
   def run_command(self, command, callback=None, show_status=True, filter_empty_args=True, **kwargs):
     if filter_empty_args:
       command = [arg for arg in command if arg]
+
     if 'working_dir' not in kwargs:
       kwargs['working_dir'] = self.get_working_dir()
     s = sublime.load_settings("Nodejs.sublime-settings")
+
     if s.get('save_first') and self.active_view() and self.active_view().is_dirty():
       self.active_view().run_command('save')
+
     if command[0] == 'node' and s.get('node_command'):
       command[0] = s.get('node_command')
+
     if command[0] == 'node' and s.get('node_path'):
       kwargs['env'] = { "NODE_PATH" : str(s.get('node_path')) }
+
     if command[0] == 'npm' and s.get('npm_command'):
       command[0] = s.get('npm_command')
+
     if not callback:
       callback = self.generic_done
 
@@ -119,13 +125,9 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
     if view and view.file_name() and len(view.file_name()) > 0:
       return view.file_name()
 
-  # If there's no active view or the active view is not a file on the
-  # filesystem (e.g. a search results view), we can infer the folder
-  # that the user intends Git commands to run against when there's only
-  # only one.
   def is_enabled(self):
-    if self._active_file_name() or len(self.window.folders()) == 1:
-      return os.path.realpath(self.get_working_dir())
+    return True; # A better test should be made. Fx. is this a js file?
+
 
   def get_file_name(self):
     return ''
@@ -143,15 +145,13 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   def get_window(self):
     return self.window
 
-# A base for all git commands that work with the file in the active view
+# A base for all node commands that work with the file in the active view
 class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
   def active_view(self):
     return self.view
 
   def is_enabled(self):
-    # First, is this actually a file on the file system?
-    if self.view.file_name() and len(self.view.file_name()) > 0:
-      return os.path.realpath(self.get_working_dir())
+    return True; # A better test should be made. Fx. is this a js file?
 
   def get_file_name(self):
     return os.path.basename(self.view.file_name())
