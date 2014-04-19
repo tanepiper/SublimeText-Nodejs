@@ -2,8 +2,36 @@ import os
 import subprocess
 import sublime
 import sublime_plugin
+import functools
+import threading
 
-from lib.command_thread import CommandThread
+def main_thread(callback, *args, **kwargs):
+  # sublime.set_timeout gets used to send things onto the main thread
+  # most sublime.[something] calls need to be on the main thread
+  sublime.set_timeout(functools.partial(callback, *args, **kwargs), 0)
+
+class CommandThread(threading.Thread):
+  def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
+    threading.Thread.__init__(self)
+    self.command = command
+    self.on_done = on_done
+    self.working_dir = working_dir
+    self.fallback_encoding = fallback_encoding
+    self.env = os.environ.copy()
+    self.env.update(env)
+
+  def run(self):
+    try:
+      output = subprocess.check_output(self.command)
+      main_thread(self.on_done, output)
+    except (subprocess.CalledProcessError, e):
+      main_thread(self.on_done, e.returncode)
+    except (OSError, e):
+      if e.errno == 2:
+        main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
+      else:
+        raise e
+
 
 # when sublime loads a plugin it's cd'd into the plugin directory. Thus
 # __file__ is useless for my purposes. What I want is "Packages/Git", but
@@ -26,17 +54,23 @@ class NodeCommand(sublime_plugin.TextCommand):
   def run_command(self, command, callback=None, show_status=True, filter_empty_args=True, **kwargs):
     if filter_empty_args:
       command = [arg for arg in command if arg]
+
     if 'working_dir' not in kwargs:
       kwargs['working_dir'] = self.get_working_dir()
     s = sublime.load_settings("Nodejs.sublime-settings")
+
     if s.get('save_first') and self.active_view() and self.active_view().is_dirty():
       self.active_view().run_command('save')
+
     if command[0] == 'node' and s.get('node_command'):
       command[0] = s.get('node_command')
+
     if command[0] == 'node' and s.get('node_path'):
       kwargs['env'] = { "NODE_PATH" : str(s.get('node_path')) }
+
     if command[0] == 'npm' and s.get('npm_command'):
       command[0] = s.get('npm_command')
+
     if not callback:
       callback = self.generic_done
 
@@ -52,36 +86,40 @@ class NodeCommand(sublime_plugin.TextCommand):
       return
     self.panel(result)
 
-  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage"):
-    output_file.set_syntax_file(syntax)
-    edit = output_file.begin_edit()
-    if clear:
-      region = sublime.Region(0, self.output_view.size())
-      output_file.erase(edit, region)
-    output_file.insert(edit, 0, output)
-    output_file.end_edit(edit)
 
-  def scratch(self, output, title=False, **kwargs):
-    scratch_file = self.get_window().new_file()
-    if title:
-      scratch_file.set_name(title)
-    scratch_file.set_scratch(True)
-    self._output_to_view(scratch_file, output, **kwargs)
-    scratch_file.set_read_only(True)
-    return scratch_file
+  def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage", **kwargs):
+      output_file.set_syntax_file(syntax)
+      if(clear)
+
+      args = {
+          'output': output,
+          'clear': clear
+      }
+      output_file.run_command('nodejs_scratch_output', args)
+
+  def scratch(self, output, title=False, position=None, **kwargs):
+      scratch_file = self.get_window().new_file()
+      if title:
+          scratch_file.set_name(title)
+      scratch_file.set_scratch(True)
+      self._output_to_view(scratch_file, output, **kwargs)
+      scratch_file.set_read_only(True)
+      if position:
+          sublime.set_timeout(lambda: scratch_file.set_viewport_position(position), 0)
+      return scratch_file
 
   def panel(self, output, **kwargs):
     if not hasattr(self, 'output_view'):
-      self.output_view = self.get_window().get_output_panel("git")
+      self.output_view = self.get_window().get_output_panel("nodejs")
     self.output_view.set_read_only(False)
     self._output_to_view(self.output_view, output, clear=True, **kwargs)
     self.output_view.set_read_only(True)
-    self.get_window().run_command("show_panel", {"panel": "output.git"})
+    self.get_window().run_command("show_panel", {"panel": "output.nodejs"})
 
   def quick_panel(self, *args, **kwargs):
     self.get_window().show_quick_panel(*args, **kwargs)
 
-# A base for all git commands that work with the entire repository
+# A base for all node commands that work with the entire repository
 class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   def active_view(self):
     return self.window.active_view()
@@ -91,13 +129,9 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
     if view and view.file_name() and len(view.file_name()) > 0:
       return view.file_name()
 
-  # If there's no active view or the active view is not a file on the
-  # filesystem (e.g. a search results view), we can infer the folder
-  # that the user intends Git commands to run against when there's only
-  # only one.
   def is_enabled(self):
-    if self._active_file_name() or len(self.window.folders()) == 1:
-      return os.path.realpath(self.get_working_dir())
+    return True; # A better test should be made. Fx. is this a js file?
+
 
   def get_file_name(self):
     return ''
@@ -115,15 +149,13 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   def get_window(self):
     return self.window
 
-# A base for all git commands that work with the file in the active view
+# A base for all node commands that work with the file in the active view
 class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
   def active_view(self):
     return self.view
 
   def is_enabled(self):
-    # First, is this actually a file on the file system?
-    if self.view.file_name() and len(self.view.file_name()) > 0:
-      return os.path.realpath(self.get_working_dir())
+    return True; # A better test should be made. Fx. is this a js file?
 
   def get_file_name(self):
     return os.path.basename(self.view.file_name())
