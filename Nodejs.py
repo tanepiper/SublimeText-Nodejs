@@ -89,7 +89,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
   def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage", **kwargs):
       output_file.set_syntax_file(syntax)
-      if(clear)
+      #if(clear)
 
       args = {
           'output': output,
