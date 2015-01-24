@@ -97,7 +97,8 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   # only one.
   def is_enabled(self):
     if self._active_file_name() or len(self.window.folders()) == 1:
-      return os.path.realpath(self.get_working_dir())
+        return True if os.path.realpath(self.get_working_dir()) else False
+    return False
 
   def get_file_name(self):
     return ''
@@ -122,8 +123,9 @@ class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
 
   def is_enabled(self):
     # First, is this actually a file on the file system?
-    if self.view.file_name() and len(self.view.file_name()) > 0:
-      return os.path.realpath(self.get_working_dir())
+    if self._active_file_name() or len(self.window.folders()) == 1:
+        return True if os.path.realpath(self.get_working_dir()) else False
+    return False
 
   def get_file_name(self):
     return os.path.basename(self.view.file_name())
