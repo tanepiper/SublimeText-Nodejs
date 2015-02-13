@@ -12,8 +12,8 @@
     {
         "cmd": ["killall node; node", "$file"]
     },
-	"osx":
-	{
-		"cmd": ["killall node; node $file"],
-	}
+    "osx":
+    {
+	"cmd": ["killall node; node $file"]
+    }
 }
