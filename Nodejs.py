@@ -117,7 +117,7 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
     return self.window
 
 # A base for all git commands that work with the file in the active view
-class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
+class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
   def active_view(self):
     return self.view
 
