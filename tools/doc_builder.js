@@ -282,12 +282,11 @@ var createGlobals = function(output) {
  */
 var createNodeLibs = function(options, output) {
   var files = [
-    '_debugger', '_linklist', 'assert', 'buffer', 'buffer_ieee754',
-    'child_process', 'cluster', 'console', 'constants', 'crypto',
-    'dgram', 'dns', 'events', 'freelist', 'fs', 'http', 'https',
-    'module', 'net','os', 'path', 'punycode', 'querystring',
-    'readline', 'repl', 'stream', 'string_decoder', 'sys',
-    'timers', 'tls', 'tty',  'url','util', 'vm', 'zlib'
+    'assert', 'buffer', 'child_process', 'cluster', 'console', 'crypto',
+    '_debugger', '_linklist' 'dns', 'events', 'fs', 'http', 'https', 'module',
+    'net', 'os', 'path', 'process', 'punycode', 'querystring', 'readline', 'repl',
+    'stream', 'string_decoder', 'timers', 'tls', 'dgram', 'url', 'util', 'v8',
+    'vm', 'zlib'
   ];
   createNamespaces(options, files, output);
 }
