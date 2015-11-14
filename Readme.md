@@ -1,10 +1,6 @@
 Nodejs Sublime Text 3 Package
 =============================
 
-# PROJECT LOOKING FOR NEW MAINTAINER
-
-## Please note this project is no longer activley maintained. The occasional pull request is accepted but it looking for someone to officially take over 
-
 Since I started this project, I've not really know where to take it past the initial few versions I released. As such
 I am no longer maintaining this project - nor do I have the time to look into some of the existing issues.
 
