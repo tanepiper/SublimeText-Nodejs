@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
-  "url": "https://github.com/tanepiper/SublimeText-Nodejs",
+  "version": "1.5.0",
+  "url": "https://github.com/varp/SublimeText-Nodejs",
   "description": "Plugin for nodejs integration into Sublime Text 3"
 }

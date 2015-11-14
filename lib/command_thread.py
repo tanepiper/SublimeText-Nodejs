@@ -44,9 +44,9 @@ class CommandThread(threading.Thread):
       # if sublime's python gets bumped to 2.7 we can just do:
       # output = subprocess.check_output(self.command)
       main_thread(self.on_done, _make_text_safeish(output, self.fallback_encoding))
-    except subprocess.CalledProcessError, e:
+    except subprocess.CalledProcessError as e:
       main_thread(self.on_done, e.returncode)
-    except OSError, e:
+    except OSError as e:
       if e.errno == 2:
         main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
       else:
