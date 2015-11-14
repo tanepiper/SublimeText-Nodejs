@@ -24,9 +24,9 @@ class CommandThread(threading.Thread):
     try:
       output = subprocess.check_output(self.command)
       main_thread(self.on_done, output)
-    except (subprocess.CalledProcessError, e):
+    except subprocess.CalledProcessError as e:
       main_thread(self.on_done, e.returncode)
-    except (OSError, e):
+    except OSError as e:
       if e.errno == 2:
         main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
       else:
