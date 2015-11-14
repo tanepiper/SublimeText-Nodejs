@@ -1,9 +1,9 @@
 {
   "name": "sublime-nodejs",
-  "version": "1.0.3",
+  "version": "1.5.0",
   "description": "NPM Support file for the Sublime Text 2 Nodejs Plugin",
   "dependencies": {
-    "commander": "1.0.4",
-    "uglify-js": "1.1.1"
+    "commander": "~2.9.0",
+    "uglify-js": "~2.6.0"
   }
 }
