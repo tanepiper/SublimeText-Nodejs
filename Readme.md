@@ -1,12 +1,6 @@
 Nodejs Sublime Text 3 Package
 =============================
 
-Since I started this project, I've not really know where to take it past the initial few versions I released. As such
-I am no longer maintaining this project - nor do I have the time to look into some of the existing issues.
-
-If anyone would be interested in taking over this project to maintain - and hopefully take it somewhere, then please get
-in touch.
-
 Overview
 --------
 The Nodejs Sublime Text 3 Package provides a set of code completion, scripts and tools to work with
@@ -52,15 +46,15 @@ or using git with the below commands:
 
 *MacOSX*
 
-    `git clone https://github.com/tanepipervar/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Nodejs`
+    `git clone https://github.com/varp/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Nodejs`
 
 *Windows*
 
-    `git clone https://github.com/tanepipervar/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
+    `git clone https://github.com/varp/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
 
 *Linux*
     
-    `git clone https://github.com/tanepipervar/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
+    `git clone https://github.com/varp/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
 
 Build Systems
 -------------
@@ -80,6 +74,4 @@ Todo
 
 Author & Contributors
 ----------------------
-[Tane Piper](http://twitter.com/tanepiper) - if you find this plugin useful then please ping me if you would like to
-donate to my Sublime Text 3 licence fund
-
+This is a fork of [Tane Piper's](http://twitter.com/tanepiper) [SublimeText-Nodejs](https://github.com/tanepiper/SublimeText-Nodejs) package for SublimeText 2.
