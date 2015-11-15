@@ -172,14 +172,14 @@ if(commander.input && commander.output) {
 }
 
 if (commander.type === 'completions') {
-  
+
 } else {
   createSnippets(commander, output, function() {} );
 }
 */
 
 
-/** 
+/**
  * This function is used to take an incoming set of options and parse
  * them to see if how the file should be output
  */
@@ -203,7 +203,7 @@ exports.doc_builder = (function(options, callback) {
   if (options.ns && options.ns.length > 0) {
     createNamespaces(options, output);
   }
-  
+
   /**
    * Depricated for now
   if(options.input && options.output) {

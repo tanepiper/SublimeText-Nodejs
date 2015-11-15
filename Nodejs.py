@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 import sublime
 import sublime_plugin
@@ -22,10 +23,13 @@ class CommandThread(threading.Thread):
 
   def run(self):
     try:
-      output = subprocess.check_output(self.command)
+      if sys.platform == "win32":
+        shell = True
+      output = subprocess.check_output(self.command, shell=shell)
       main_thread(self.on_done, bytearray(output).decode())
     except subprocess.CalledProcessError as e:
-      main_thread(self.on_done, e.returncode)
+      sublime.error_message(str(e))
+      # main_thread(self.on_done, e.returncode)
     except OSError as e:
       if e.errno == 2:
         main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
@@ -36,9 +40,11 @@ class CommandThread(threading.Thread):
 # when sublime loads a plugin it's cd'd into the plugin directory. Thus
 # __file__ is useless for my purposes. What I want is "Packages/Git", but
 # allowing for the possibility that someone has renamed the file.
-# Fun discovery: Sublime on windows still requires posix path separators.
-PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '').replace(os.path.sep, '/')
-PLUGIN_PATH = os.getcwd().replace(os.path.join(os.getcwd(), '..', '..') + os.path.sep, '').replace(os.path.sep, '/')
+PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '')
+PLUGIN_PATH = os.getcwd().replace(os.path.join(os.getcwd(), '..', '..') + os.path.sep, '')
+UGLIFY_PATH = os.path.join(os.getcwd(), "tools", "uglify_js.js")
+BUILDER_PATH = os.path.join(os.getcwd(), "tools", "default_build.js")
+
 
 def open_url(url):
   sublime.active_window().run_command('open_url', {"url": url})
@@ -186,7 +192,7 @@ class NodeScratchOutput(NodeTextCommand):
 # Command to build docs
 class NodeBuilddocsCommand(NodeTextCommand):
   def run(self, edit):
-    doc_builder = os.path.join(PLUGIN_PATH, 'tools/default_build.js')
+    doc_builder = os.path.join(PLUGIN_PATH, BUILDER_PATH)
     command = ['node', doc_builder]
     self.run_command(command, self.command_done)
 
@@ -201,7 +207,7 @@ class NodeBuilddocsCommand(NodeTextCommand):
 class NodeRunCommand(NodeTextCommand):
   def run(self, edit):
     command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-    os.system(command)    
+    os.system(command)
     command = ['node', self.view.file_name()]
     self.run_command(command, self.command_done)
 
@@ -356,7 +362,7 @@ class NodeNpmListCommand(NodeTextCommand):
 
 class NodeUglifyCommand(NodeTextCommand):
   def run(self, edit):
-    uglify = os.path.join(PLUGIN_PATH, 'tools/uglify_js.js')
+    uglify = os.path.join(PLUGIN_PATH, UGLIFY_PATH)
     command = ['node', uglify, '-i', self.view.file_name()]
     self.run_command(command, self.command_done)
 

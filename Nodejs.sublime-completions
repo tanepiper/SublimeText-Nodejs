@@ -2,6 +2,54 @@
     "scope": "source.js - variable.other.js",
     "completions": [
         {
+            "trigger": "DTRACE_NET_SERVER_CONNECTION();",
+            "contents": "DTRACE_NET_SERVER_CONNECTION();$0"
+        },
+        {
+            "trigger": "DTRACE_NET_STREAM_END();",
+            "contents": "DTRACE_NET_STREAM_END();$0"
+        },
+        {
+            "trigger": "DTRACE_HTTP_SERVER_REQUEST();",
+            "contents": "DTRACE_HTTP_SERVER_REQUEST();$0"
+        },
+        {
+            "trigger": "DTRACE_HTTP_SERVER_RESPONSE();",
+            "contents": "DTRACE_HTTP_SERVER_RESPONSE();$0"
+        },
+        {
+            "trigger": "DTRACE_HTTP_CLIENT_REQUEST();",
+            "contents": "DTRACE_HTTP_CLIENT_REQUEST();$0"
+        },
+        {
+            "trigger": "DTRACE_HTTP_CLIENT_RESPONSE();",
+            "contents": "DTRACE_HTTP_CLIENT_RESPONSE();$0"
+        },
+        {
+            "trigger": "COUNTER_NET_SERVER_CONNECTION();",
+            "contents": "COUNTER_NET_SERVER_CONNECTION();$0"
+        },
+        {
+            "trigger": "COUNTER_NET_SERVER_CONNECTION_CLOSE();",
+            "contents": "COUNTER_NET_SERVER_CONNECTION_CLOSE();$0"
+        },
+        {
+            "trigger": "COUNTER_HTTP_SERVER_REQUEST();",
+            "contents": "COUNTER_HTTP_SERVER_REQUEST();$0"
+        },
+        {
+            "trigger": "COUNTER_HTTP_SERVER_RESPONSE();",
+            "contents": "COUNTER_HTTP_SERVER_RESPONSE();$0"
+        },
+        {
+            "trigger": "COUNTER_HTTP_CLIENT_REQUEST();",
+            "contents": "COUNTER_HTTP_CLIENT_REQUEST();$0"
+        },
+        {
+            "trigger": "COUNTER_HTTP_CLIENT_RESPONSE();",
+            "contents": "COUNTER_HTTP_CLIENT_RESPONSE();$0"
+        },
+        {
             "trigger": "Buffer(arg);",
             "contents": "Buffer(${1:arg});$0"
         },
@@ -64,50 +112,6 @@
         {
             "trigger": "process.umask();",
             "contents": "process.umask();$0"
-        },
-        {
-            "trigger": "process.getuid();",
-            "contents": "process.getuid();$0"
-        },
-        {
-            "trigger": "process.geteuid();",
-            "contents": "process.geteuid();$0"
-        },
-        {
-            "trigger": "process.setuid();",
-            "contents": "process.setuid();$0"
-        },
-        {
-            "trigger": "process.seteuid();",
-            "contents": "process.seteuid();$0"
-        },
-        {
-            "trigger": "process.setgid();",
-            "contents": "process.setgid();$0"
-        },
-        {
-            "trigger": "process.setegid();",
-            "contents": "process.setegid();$0"
-        },
-        {
-            "trigger": "process.getgid();",
-            "contents": "process.getgid();$0"
-        },
-        {
-            "trigger": "process.getegid();",
-            "contents": "process.getegid();$0"
-        },
-        {
-            "trigger": "process.getgroups();",
-            "contents": "process.getgroups();$0"
-        },
-        {
-            "trigger": "process.setgroups();",
-            "contents": "process.setgroups();$0"
-        },
-        {
-            "trigger": "process.initgroups();",
-            "contents": "process.initgroups();$0"
         },
         {
             "trigger": "process._kill();",
@@ -1304,50 +1308,6 @@
         {
             "trigger": "process.umask();",
             "contents": "process.umask();$0"
-        },
-        {
-            "trigger": "process.getuid();",
-            "contents": "process.getuid();$0"
-        },
-        {
-            "trigger": "process.geteuid();",
-            "contents": "process.geteuid();$0"
-        },
-        {
-            "trigger": "process.setuid();",
-            "contents": "process.setuid();$0"
-        },
-        {
-            "trigger": "process.seteuid();",
-            "contents": "process.seteuid();$0"
-        },
-        {
-            "trigger": "process.setgid();",
-            "contents": "process.setgid();$0"
-        },
-        {
-            "trigger": "process.setegid();",
-            "contents": "process.setegid();$0"
-        },
-        {
-            "trigger": "process.getgid();",
-            "contents": "process.getgid();$0"
-        },
-        {
-            "trigger": "process.getegid();",
-            "contents": "process.getegid();$0"
-        },
-        {
-            "trigger": "process.getgroups();",
-            "contents": "process.getgroups();$0"
-        },
-        {
-            "trigger": "process.setgroups();",
-            "contents": "process.setgroups();$0"
-        },
-        {
-            "trigger": "process.initgroups();",
-            "contents": "process.initgroups();$0"
         },
         {
             "trigger": "process._kill();",
