@@ -1,9 +1,9 @@
-Nodejs Sublime Text 2 Package
+Nodejs Sublime Text 3 Package
 =============================
 
 Overview
 --------
-The Nodejs Sublime Text 2 Package provides a set of code completion, scripts and tools to work with
+The Nodejs Sublime Text 3 Package provides a set of code completion, scripts and tools to work with
 [nodejs](http://nodejs.org).
 
 Code Completion

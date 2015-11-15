@@ -1,19 +1,9 @@
-Nodejs Sublime Text 2 Package
+Nodejs Sublime Text 3 Package
 =============================
-
-# PROJECT LOOKING FOR NEW MAINTAINER
-
-## Please note this project is no longer activley maintained. The occasional pull request is accepted but it looking for someone to officially take over 
-
-Since I started this project, I've not really know where to take it past the initial few versions I released. As such
-I am no longer maintaining this project - nor do I have the time to look into some of the existing issues.
-
-If anyone would be interested in taking over this project to maintain - and hopefully take it somewhere, then please get
-in touch.
 
 Overview
 --------
-The Nodejs Sublime Text 2 Package provides a set of code completion, scripts and tools to work with
+The Nodejs Sublime Text 3 Package provides a set of code completion, scripts and tools to work with
 [nodejs](http://nodejs.org).
 
 Code Completion
@@ -51,16 +41,19 @@ If you have any boilerplate code you would like to see in here, get in touch.
 
 Install
 -------
-You may install `Nodejs` via the [Sublime Text 2 package manager](http://wbond.net/sublime_packages/package_control),
-or using git with the below commands:
+At the time you can't install this package from [Sublime Text 3 package manager](https://packagecontrol.io). With package manager you can only install old ABANDONED version of this package for Sublime Text 2.
 
 *MacOSX*
 
-    `git clone git://github.com/tanepiper/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Nodejs`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Nodejs`
 
 *Windows*
 
-    `git clone https://github.com/tanepiper/SublimeText-Nodejs "%APPDATA%\Sublime Text 2\Packages\Nodejs"`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
+
+*Linux*
+    
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
 
 Build Systems
 -------------
@@ -72,6 +65,8 @@ You may need to add a `path` variable to the settings object for this if your no
 
 Todo
 ----
+* Generate Sublime Text completions during installation phase depending on the version of installed Node
+* Check for nvm installation
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
 * Reorganise menu structure
 * Improve code completion snippets where possible
@@ -79,6 +74,4 @@ Todo
 
 Author & Contributors
 ----------------------
-[Tane Piper](http://twitter.com/tanepiper) - if you find this plugin useful then please ping me if you would like to
-donate to my Sublime Text 2 licence fund
-
+This is a fork of [Tane Piper's](http://twitter.com/tanepiper) [SublimeText-Nodejs](https://github.com/tanepiper/SublimeText-Nodejs) package for SublimeText 2.
