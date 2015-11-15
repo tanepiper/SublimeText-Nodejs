@@ -45,15 +45,15 @@ At the time you can't install this package from [Sublime Text 3 package manager]
 
 *MacOSX*
 
-    `git clone https://github.com/varp/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Nodejs`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs.git ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Nodejs`
 
 *Windows*
 
-    `git clone https://github.com/varp/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
 
 *Linux*
     
-    `git clone https://github.com/varp/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
+    `git clone https://github.com/tanepiper/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
 
 Build Systems
 -------------
@@ -66,6 +66,7 @@ You may need to add a `path` variable to the settings object for this if your no
 Todo
 ----
 * Generate Sublime Text completions during installation phase depending on the version of installed Node
+* Check for nvm installation
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
 * Reorganise menu structure
 * Improve code completion snippets where possible
