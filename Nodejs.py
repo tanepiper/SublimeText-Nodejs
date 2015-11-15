@@ -23,7 +23,7 @@ class CommandThread(threading.Thread):
   def run(self):
     try:
       output = subprocess.check_output(self.command)
-      main_thread(self.on_done, output)
+      main_thread(self.on_done, bytearray(output).decode())
     except subprocess.CalledProcessError as e:
       main_thread(self.on_done, e.returncode)
     except OSError as e:
@@ -89,13 +89,12 @@ class NodeCommand(sublime_plugin.TextCommand):
 
   def _output_to_view(self, output_file, output, clear=False, syntax="Packages/JavaScript/JavaScript.tmLanguage", **kwargs):
       output_file.set_syntax_file(syntax)
-      #if(clear)
 
       args = {
           'output': output,
           'clear': clear
       }
-      output_file.run_command('nodejs_scratch_output', args)
+      output_file.run_command('node_scratch_output', args)
 
   def scratch(self, output, title=False, position=None, **kwargs):
       scratch_file = self.get_window().new_file()
@@ -150,7 +149,7 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
     return self.window
 
 # A base for all node commands that work with the file in the active view
-class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
+class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
   def active_view(self):
     return self.view
 
@@ -177,6 +176,12 @@ class NodeTextCommand(NodeCommand, sublime_plugin.TextCommand):
 
 # Commands to run
 
+class NodeScratchOutput(NodeTextCommand):
+  def run(self, edit, **kwargs):
+    if kwargs['clear']:
+      region = sublime.Region(0, self.active_view().size())
+      self.active_view().erase(edit, region)
+    self.active_view().insert(edit, 0, kwargs['output'])
 
 # Command to build docs
 class NodeBuilddocsCommand(NodeTextCommand):
