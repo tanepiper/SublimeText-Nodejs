@@ -12,21 +12,24 @@ def main_thread(callback, *args, **kwargs):
   sublime.set_timeout(functools.partial(callback, *args, **kwargs), 0)
 
 class CommandThread(threading.Thread):
-  def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
+  def __init__(self, command, on_done, working_dir="", shell="", env={}):
     threading.Thread.__init__(self)
     self.command = command
     self.on_done = on_done
     self.working_dir = working_dir
-    self.fallback_encoding = fallback_encoding
+    self.shell = shell
     self.env = os.environ.copy()
     self.env.update(env)
 
   def run(self):
     try:
-      if sys.platform == "win32":
-        shell = True
-      output = subprocess.check_output(self.command, shell=shell)
-      main_thread(self.on_done, bytearray(output).decode())
+
+      p = subprocess.Popen(self.command, stdout=subprocess.PIPE, cwd=self.working_dir,
+          stderr=subprocess.STDOUT, universal_newlines=True, env=self.env)
+      output = p.communicate()[0]
+
+      main_thread(self.on_done, output)
+
     except subprocess.CalledProcessError as e:
       sublime.error_message(str(e))
       # main_thread(self.on_done, e.returncode)
