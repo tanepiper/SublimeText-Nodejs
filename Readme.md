@@ -74,4 +74,5 @@ Todo
 
 Author & Contributors
 ----------------------
-This is a fork of [Tane Piper's](http://twitter.com/tanepiper) [SublimeText-Nodejs](https://github.com/tanepiper/SublimeText-Nodejs) package for SublimeText 2.
+The original author of this package (Tane Piper)[https://github.com/tanepiper].
+At the time the project maintainer is (Vardan Pogosyan)[https://github.com/varp].
