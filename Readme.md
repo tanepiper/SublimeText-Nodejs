@@ -74,5 +74,5 @@ Todo
 
 Author & Contributors
 ----------------------
-The original author of this package (Tane Piper)[https://github.com/tanepiper].
-At the time the project maintainer is (Vardan Pogosyan)[https://github.com/varp].
+The original author of this package [Tane Piper](https://github.com/tanepiper).
+At the time the project maintainer is [Vardan Pogosyan](https://github.com/varp).
