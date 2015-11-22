@@ -19,7 +19,7 @@ You can access node commands in two ways.
 
 * Via the menu in `Tools -> Node`
 * By accessing the Command Palette and typing `node`
- 
+
 The current commands available are (with Windows binding, other bindings are provided):
 
 * Run current script in node (Alt + R)
@@ -41,7 +41,7 @@ If you have any boilerplate code you would like to see in here, get in touch.
 
 Install
 -------
-At the time you can't install this package from [Sublime Text 3 package manager](https://packagecontrol.io). With package manager you can only install old ABANDONED version of this package for Sublime Text 2.
+You can install this package from SublimeText package manager at [Sublime Text 3 package manager](https://packagecontrol.io). Also you can install this package manually:
 
 *MacOSX*
 
@@ -52,7 +52,7 @@ At the time you can't install this package from [Sublime Text 3 package manager]
     `git clone https://github.com/tanepiper/SublimeText-Nodejs "%APPDATA%\Sublime Text 3\Packages\Nodejs"`
 
 *Linux*
-    
+
     `git clone https://github.com/tanepiper/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
 
 Build Systems
