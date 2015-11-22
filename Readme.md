@@ -65,7 +65,7 @@ You may need to add a `path` variable to the settings object for this if your no
 
 TODO
 ----
-* uglify_js.js and other ./tools/*.js don't work when the package is installed by SublimeText package manager
+* uglify_js.js and other ./tools/*.js scripts don't work when the package is installed by SublimeText package manager
 * Refactor plugin's classes inheritance in Nodejs.py
 * Generate Sublime Text completions during installation phase depending on the version of installed Node
 * Check for nvm installation
