@@ -41,7 +41,7 @@ If you have any boilerplate code you would like to see in here, get in touch.
 
 Install
 -------
-You can install this package from SublimeText package manager at [Sublime Text 3 package manager](https://packagecontrol.io). Also you can install this package manually:
+You can install this package from [Sublime Text 3 package manager](https://packagecontrol.io). Also you can install this package manually:
 
 *MacOSX*
 
