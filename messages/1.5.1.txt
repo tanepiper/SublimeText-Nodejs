@@ -1,0 +1,5 @@
+Version 1.5.1
+-------------
+This is a bugfix release version
+
+* Fix Nodejs build system on Windows and Linux platforms
