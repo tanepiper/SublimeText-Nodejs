@@ -1002,6 +1002,162 @@
             "contents": "fs.FileWriteStream(${1:path}, ${2:options});$0"
         },
         {
+            "trigger": "fs.constants.F_OK",
+            "contents": "fs.constants.F_OK$0"
+        },
+        {
+            "trigger": "fs.constants.R_OK",
+            "contents": "fs.constants.R_OK$0"
+        },
+        {
+            "trigger": "fs.constants.W_OK",
+            "contents": "fs.constants.W_OK$0"
+        },
+        {
+            "trigger": "fs.constants.X_OK",
+            "contents": "fs.constants.X_OK$0"
+        },
+        {
+            "trigger": "fs.constants.O_RDONLY",
+            "contents": "fs.constants.O_RDONLY$0"
+        },
+        {
+            "trigger": "fs.constants.O_WRONLY",
+            "contents": "fs.constants.O_WRONLY$0"
+        },
+        {
+            "trigger": "fs.constants.O_RDWR",
+            "contents": "fs.constants.O_RDWR$0"
+        },
+        {
+            "trigger": "fs.constants.O_CREAT",
+            "contents": "fs.constants.O_CREAT$0"
+        },
+        {
+            "trigger": "fs.constants.O_EXCL",
+            "contents": "fs.constants.O_EXCL$0"
+        },
+        {
+            "trigger": "fs.constants.O_NOCTTY",
+            "contents": "fs.constants.O_NOCTTY$0"
+        },
+        {
+            "trigger": "fs.constants.O_TRUNC",
+            "contents": "fs.constants.O_TRUNC$0"
+        },
+        {
+            "trigger": "fs.constants.O_APPEND",
+            "contents": "fs.constants.O_APPEND$0"
+        },
+        {
+            "trigger": "fs.constants.O_DIRECTORY",
+            "contents": "fs.constants.O_DIRECTORY$0"
+        },
+        {
+            "trigger": "fs.constants.O_NOATIME",
+            "contents": "fs.constants.O_NOATIME$0"
+        },
+        {
+            "trigger": "fs.constants.O_NOFOLLOW",
+            "contents": "fs.constants.O_NOFOLLOW$0"
+        },
+        {
+            "trigger": "fs.constants.O_SYNC",
+            "contents": "fs.constants.O_SYNC$0"
+        },
+        {
+            "trigger": "fs.constants.O_SYMLINK",
+            "contents": "fs.constants.O_SYMLINK$0"
+        },
+        {
+            "trigger": "fs.constants.O_DIRECT",
+            "contents": "fs.constants.O_DIRECT$0"
+        },
+        {
+            "trigger": "fs.constants.O_NONBLOCK",
+            "contents": "fs.constants.O_NONBLOCK$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFMT",
+            "contents": "fs.constants.S_IFMT$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFREG",
+            "contents": "fs.constants.S_IFREG$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFDIR",
+            "contents": "fs.constants.S_IFDIR$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFCHR",
+            "contents": "fs.constants.S_IFCHR$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFBLK",
+            "contents": "fs.constants.S_IFBLK$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFIFO",
+            "contents": "fs.constants.S_IFIFO$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFLNK",
+            "contents": "fs.constants.S_IFLNK$0"
+        },
+        {
+            "trigger": "fs.constants.S_IFSOCK",
+            "contents": "fs.constants.S_IFSOCK$0"
+        },
+        {
+            "trigger": "fs.constants.S_IXOTH",
+            "contents": "fs.constants.S_IXOTH$0"
+        },
+        {
+            "trigger": "fs.constants.S_IWOTH",
+            "contents": "fs.constants.S_IWOTH$0"
+        },
+        {
+            "trigger": "fs.constants.S_IROTH",
+            "contents": "fs.constants.S_IROTH$0"
+        },
+        {
+            "trigger": "fs.constants.S_IRWXO",
+            "contents": "fs.constants.S_IRWXO$0"
+        },
+        {
+            "trigger": "fs.constants.S_IXGRP",
+            "contents": "fs.constants.S_IXGRP$0"
+        },
+        {
+            "trigger": "fs.constants.S_IWGRP",
+            "contents": "fs.constants.S_IWGRP$0"
+        },
+        {
+            "trigger": "fs.constants.S_IRGRP",
+            "contents": "fs.constants.S_IRGRP$0"
+        },
+        {
+            "trigger": "fs.constants.S_IRWXG",
+            "contents": "fs.constants.S_IRWXG$0"
+        },
+        {
+            "trigger": "fs.constants.S_IXUSR",
+            "contents": "fs.constants.S_IXUSR$0"
+        },
+        {
+            "trigger": "fs.constants.S_IWUSR",
+            "contents": "fs.constants.S_IWUSR$0"
+        },
+        {
+            "trigger": "fs.constants.S_IRUSR",
+            "contents": "fs.constants.S_IRUSR$0"
+        },
+        {
+            "trigger": "fs.constants.S_IRWXU",
+            "contents": "fs.constants.S_IRWXU$0"
+        },
+        {
             "trigger": "http.IncomingMessage(socket);",
             "contents": "http.IncomingMessage(${1:socket});$0"
         },
