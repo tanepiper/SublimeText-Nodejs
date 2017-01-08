@@ -73,9 +73,8 @@ class NodeCommand(sublime_plugin.TextCommand):
 
     if command[0] == 'node' and s.get('node_command'):
       command[0] = s.get('node_command')
-
-    if command[0] == 'node' and s.get('node_path'):
-      kwargs['env'] = { "NODE_PATH" : str(s.get('node_path')) }
+      if s.get('node_path'):
+         kwargs['env'] = { "NODE_PATH" : str(s.get('node_path')) }
 
     if command[0] == 'npm' and s.get('npm_command'):
       command[0] = s.get('npm_command')
