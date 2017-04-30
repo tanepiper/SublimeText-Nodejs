@@ -184,7 +184,6 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
     return self.view.window() or sublime.active_window()
 
 # Commands to run
-
 class NodeScratchOutput(NodeTextCommand):
   def run(self, edit, **kwargs):
     if kwargs['clear']:

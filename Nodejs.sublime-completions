@@ -26,32 +26,8 @@
             "contents": "DTRACE_HTTP_CLIENT_RESPONSE();$0"
         },
         {
-            "trigger": "COUNTER_NET_SERVER_CONNECTION();",
-            "contents": "COUNTER_NET_SERVER_CONNECTION();$0"
-        },
-        {
-            "trigger": "COUNTER_NET_SERVER_CONNECTION_CLOSE();",
-            "contents": "COUNTER_NET_SERVER_CONNECTION_CLOSE();$0"
-        },
-        {
-            "trigger": "COUNTER_HTTP_SERVER_REQUEST();",
-            "contents": "COUNTER_HTTP_SERVER_REQUEST();$0"
-        },
-        {
-            "trigger": "COUNTER_HTTP_SERVER_RESPONSE();",
-            "contents": "COUNTER_HTTP_SERVER_RESPONSE();$0"
-        },
-        {
-            "trigger": "COUNTER_HTTP_CLIENT_REQUEST();",
-            "contents": "COUNTER_HTTP_CLIENT_REQUEST();$0"
-        },
-        {
-            "trigger": "COUNTER_HTTP_CLIENT_RESPONSE();",
-            "contents": "COUNTER_HTTP_CLIENT_RESPONSE();$0"
-        },
-        {
-            "trigger": "Buffer(arg);",
-            "contents": "Buffer(${1:arg});$0"
+            "trigger": "Buffer(arg, encodingOrOffset, length);",
+            "contents": "Buffer(${1:arg}, ${2:encodingOrOffset}, ${3:length});$0"
         },
         {
             "trigger": "clearImmediate(immediate);",
@@ -70,12 +46,12 @@
             "contents": "setImmediate(${1:callback}, ${2:arg1}, ${3:arg2}, ${4:arg3});$0"
         },
         {
-            "trigger": "setInterval(callback, repeat);",
-            "contents": "setInterval(${1:callback}, ${2:repeat});$0"
+            "trigger": "setInterval(callback, repeat, arg1, arg2, arg3);",
+            "contents": "setInterval(${1:callback}, ${2:repeat}, ${3:arg1}, ${4:arg2}, ${5:arg3});$0"
         },
         {
-            "trigger": "setTimeout(callback, after);",
-            "contents": "setTimeout(${1:callback}, ${2:after});$0"
+            "trigger": "setTimeout(callback, after, arg1, arg2, arg3);",
+            "contents": "setTimeout(${1:callback}, ${2:after}, ${3:arg1}, ${4:arg2}, ${5:arg3});$0"
         },
         {
             "trigger": "process._startProfilerIdleNotifier();",
@@ -114,6 +90,50 @@
             "contents": "process.umask();$0"
         },
         {
+            "trigger": "process.getuid();",
+            "contents": "process.getuid();$0"
+        },
+        {
+            "trigger": "process.geteuid();",
+            "contents": "process.geteuid();$0"
+        },
+        {
+            "trigger": "process.setuid();",
+            "contents": "process.setuid();$0"
+        },
+        {
+            "trigger": "process.seteuid();",
+            "contents": "process.seteuid();$0"
+        },
+        {
+            "trigger": "process.setgid();",
+            "contents": "process.setgid();$0"
+        },
+        {
+            "trigger": "process.setegid();",
+            "contents": "process.setegid();$0"
+        },
+        {
+            "trigger": "process.getgid();",
+            "contents": "process.getgid();$0"
+        },
+        {
+            "trigger": "process.getegid();",
+            "contents": "process.getegid();$0"
+        },
+        {
+            "trigger": "process.getgroups();",
+            "contents": "process.getgroups();$0"
+        },
+        {
+            "trigger": "process.setgroups();",
+            "contents": "process.setgroups();$0"
+        },
+        {
+            "trigger": "process.initgroups();",
+            "contents": "process.initgroups();$0"
+        },
+        {
             "trigger": "process._kill();",
             "contents": "process._kill();$0"
         },
@@ -130,8 +150,12 @@
             "contents": "process._debugEnd();$0"
         },
         {
-            "trigger": "process.hrtime();",
-            "contents": "process.hrtime();$0"
+            "trigger": "process.hrtime(ar);",
+            "contents": "process.hrtime(${1:ar});$0"
+        },
+        {
+            "trigger": "process.cpuUsage(prevValue);",
+            "contents": "process.cpuUsage(${1:prevValue});$0"
         },
         {
             "trigger": "process.dlopen();",
@@ -162,16 +186,16 @@
             "contents": "process._rawDebug();$0"
         },
         {
-            "trigger": "process.EventEmitter();",
-            "contents": "process.EventEmitter();$0"
-        },
-        {
             "trigger": "process._fatalException(er);",
             "contents": "process._fatalException(${1:er});$0"
         },
         {
             "trigger": "process.assert(x, msg);",
             "contents": "process.assert(${1:x}, ${2:msg});$0"
+        },
+        {
+            "trigger": "process.emitWarning(warning, name, ctor);",
+            "contents": "process.emitWarning(${1:warning}, ${2:name}, ${3:ctor});$0"
         },
         {
             "trigger": "process.nextTick(callback);",
@@ -218,8 +242,16 @@
             "contents": "process.on(${1:type}, ${2:listener});$0"
         },
         {
+            "trigger": "process.prependListener(type, listener);",
+            "contents": "process.prependListener(${1:type}, ${2:listener});$0"
+        },
+        {
             "trigger": "process.once(type, listener);",
             "contents": "process.once(${1:type}, ${2:listener});$0"
+        },
+        {
+            "trigger": "process.prependOnceListener(type, listener);",
+            "contents": "process.prependOnceListener(${1:type}, ${2:listener});$0"
         },
         {
             "trigger": "process.removeListener(type, listener);",
@@ -238,12 +270,12 @@
             "contents": "process.listenerCount(${1:type});$0"
         },
         {
-            "trigger": "require.resolve(request);",
-            "contents": "require.resolve(${1:request});$0"
+            "trigger": "process.eventNames();",
+            "contents": "process.eventNames();$0"
         },
         {
-            "trigger": "require.registerExtension();",
-            "contents": "require.registerExtension();$0"
+            "trigger": "require.resolve(request);",
+            "contents": "require.resolve(${1:request});$0"
         },
         {
             "trigger": "assert.AssertionError(options);",
@@ -294,20 +326,24 @@
             "contents": "assert.throws(${1:block}, ${2:/*optional*/error}, ${3:/*optional*/message});$0"
         },
         {
-            "trigger": "assert.doesNotThrow(block, /*optional*/message);",
-            "contents": "assert.doesNotThrow(${1:block}, ${2:/*optional*/message});$0"
+            "trigger": "assert.doesNotThrow(block, /*optional*/error, /*optional*/message);",
+            "contents": "assert.doesNotThrow(${1:block}, ${2:/*optional*/error}, ${3:/*optional*/message});$0"
         },
         {
             "trigger": "assert.ifError(err);",
             "contents": "assert.ifError(${1:err});$0"
         },
         {
-            "trigger": "buffer.Buffer(arg);",
-            "contents": "buffer.Buffer(${1:arg});$0"
+            "trigger": "buffer.Buffer(arg, encodingOrOffset, length);",
+            "contents": "buffer.Buffer(${1:arg}, ${2:encodingOrOffset}, ${3:length});$0"
         },
         {
             "trigger": "buffer.SlowBuffer(length);",
             "contents": "buffer.SlowBuffer(${1:length});$0"
+        },
+        {
+            "trigger": "buffer.transcode(source, fromEncoding, toEncoding);",
+            "contents": "buffer.transcode(${1:source}, ${2:fromEncoding}, ${3:toEncoding});$0"
         },
         {
             "trigger": "child_process.ChildProcess();",
@@ -342,8 +378,8 @@
             "contents": "child_process.execFileSync(${1:/*command}, ${2:args}, ${3:options*/});$0"
         },
         {
-            "trigger": "child_process.execSync(/*command, options*/);",
-            "contents": "child_process.execSync(${1:/*command}, ${2:options*/});$0"
+            "trigger": "child_process.execSync(command /*, options*/);",
+            "contents": "child_process.execSync(${1:command}, ${2:/*}, ${3:options*/});$0"
         },
         {
             "trigger": "cluster.Worker(options);",
@@ -382,8 +418,16 @@
             "contents": "cluster.on(${1:type}, ${2:listener});$0"
         },
         {
+            "trigger": "cluster.prependListener(type, listener);",
+            "contents": "cluster.prependListener(${1:type}, ${2:listener});$0"
+        },
+        {
             "trigger": "cluster.once(type, listener);",
             "contents": "cluster.once(${1:type}, ${2:listener});$0"
+        },
+        {
+            "trigger": "cluster.prependOnceListener(type, listener);",
+            "contents": "cluster.prependOnceListener(${1:type}, ${2:listener});$0"
         },
         {
             "trigger": "cluster.removeListener(type, listener);",
@@ -400,6 +444,10 @@
         {
             "trigger": "cluster.listenerCount(type);",
             "contents": "cluster.listenerCount(${1:type});$0"
+        },
+        {
+            "trigger": "cluster.eventNames();",
+            "contents": "cluster.eventNames();$0"
         },
         {
             "trigger": "console.log();",
@@ -594,12 +642,16 @@
             "contents": "crypto.getCurves();$0"
         },
         {
+            "trigger": "crypto.timingSafeEqual();",
+            "contents": "crypto.timingSafeEqual();$0"
+        },
+        {
             "trigger": "crypto.createCredentials(options, context);",
             "contents": "crypto.createCredentials(${1:options}, ${2:context});$0"
         },
         {
-            "trigger": "crypto.Credentials(secureProtocol, flags, context);",
-            "contents": "crypto.Credentials(${1:secureProtocol}, ${2:flags}, ${3:context});$0"
+            "trigger": "crypto.Credentials(secureProtocol, secureOptions, context);",
+            "contents": "crypto.Credentials(${1:secureProtocol}, ${2:secureOptions}, ${3:context});$0"
         },
         {
             "trigger": "_debugger.start(argv, stdin, stdout);",
@@ -616,6 +668,10 @@
         {
             "trigger": "_linklist.init(list);",
             "contents": "_linklist.init(${1:list});$0"
+        },
+        {
+            "trigger": "_linklist.create();",
+            "contents": "_linklist.create();$0"
         },
         {
             "trigger": "_linklist.peek(list);",
@@ -646,56 +702,60 @@
             "contents": "dns.lookupService(${1:host}, ${2:port}, ${3:callback});$0"
         },
         {
-            "trigger": "dns.resolve4(name, callback);",
-            "contents": "dns.resolve4(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolve6(name, callback);",
-            "contents": "dns.resolve6(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveCname(name, callback);",
-            "contents": "dns.resolveCname(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveMx(name, callback);",
-            "contents": "dns.resolveMx(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveNs(name, callback);",
-            "contents": "dns.resolveNs(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveTxt(name, callback);",
-            "contents": "dns.resolveTxt(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveSrv(name, callback);",
-            "contents": "dns.resolveSrv(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveNaptr(name, callback);",
-            "contents": "dns.resolveNaptr(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolveSoa(name, callback);",
-            "contents": "dns.resolveSoa(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.reverse(name, callback);",
-            "contents": "dns.reverse(${1:name}, ${2:callback});$0"
-        },
-        {
-            "trigger": "dns.resolve(hostname, type_, callback_);",
-            "contents": "dns.resolve(${1:hostname}, ${2:type_}, ${3:callback_});$0"
-        },
-        {
             "trigger": "dns.getServers();",
             "contents": "dns.getServers();$0"
         },
         {
             "trigger": "dns.setServers(servers);",
             "contents": "dns.setServers(${1:servers});$0"
+        },
+        {
+            "trigger": "dns.resolve(hostname, type_, callback_);",
+            "contents": "dns.resolve(${1:hostname}, ${2:type_}, ${3:callback_});$0"
+        },
+        {
+            "trigger": "dns.resolve4(name, /* options, */ callback);",
+            "contents": "dns.resolve4(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolve6(name, /* options, */ callback);",
+            "contents": "dns.resolve6(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveCname(name, /* options, */ callback);",
+            "contents": "dns.resolveCname(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveMx(name, /* options, */ callback);",
+            "contents": "dns.resolveMx(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveNs(name, /* options, */ callback);",
+            "contents": "dns.resolveNs(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveTxt(name, /* options, */ callback);",
+            "contents": "dns.resolveTxt(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveSrv(name, /* options, */ callback);",
+            "contents": "dns.resolveSrv(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolvePtr(name, /* options, */ callback);",
+            "contents": "dns.resolvePtr(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveNaptr(name, /* options, */ callback);",
+            "contents": "dns.resolveNaptr(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.resolveSoa(name, /* options, */ callback);",
+            "contents": "dns.resolveSoa(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
+        },
+        {
+            "trigger": "dns.reverse(name, /* options, */ callback);",
+            "contents": "dns.reverse(${1:name}, ${2:/*}, ${3:options}, ${4:*/}, ${5:callback});$0"
         },
         {
             "trigger": "events.EventEmitter();",
@@ -730,8 +790,8 @@
             "contents": "fs.existsSync(${1:path});$0"
         },
         {
-            "trigger": "fs.readFile(path, options, callback_);",
-            "contents": "fs.readFile(${1:path}, ${2:options}, ${3:callback_});$0"
+            "trigger": "fs.readFile(path, options, callback);",
+            "contents": "fs.readFile(${1:path}, ${2:options}, ${3:callback});$0"
         },
         {
             "trigger": "fs.readFileSync(path, options);",
@@ -826,12 +886,12 @@
             "contents": "fs.mkdirSync(${1:path}, ${2:mode});$0"
         },
         {
-            "trigger": "fs.readdir(path, callback);",
-            "contents": "fs.readdir(${1:path}, ${2:callback});$0"
+            "trigger": "fs.readdir(path, options, callback);",
+            "contents": "fs.readdir(${1:path}, ${2:options}, ${3:callback});$0"
         },
         {
-            "trigger": "fs.readdirSync(path);",
-            "contents": "fs.readdirSync(${1:path});$0"
+            "trigger": "fs.readdirSync(path, options);",
+            "contents": "fs.readdirSync(${1:path}, ${2:options});$0"
         },
         {
             "trigger": "fs.fstat(fd, callback);",
@@ -858,28 +918,28 @@
             "contents": "fs.statSync(${1:path});$0"
         },
         {
-            "trigger": "fs.readlink(path, callback);",
-            "contents": "fs.readlink(${1:path}, ${2:callback});$0"
+            "trigger": "fs.readlink(path, options, callback);",
+            "contents": "fs.readlink(${1:path}, ${2:options}, ${3:callback});$0"
         },
         {
-            "trigger": "fs.readlinkSync(path);",
-            "contents": "fs.readlinkSync(${1:path});$0"
+            "trigger": "fs.readlinkSync(path, options);",
+            "contents": "fs.readlinkSync(${1:path}, ${2:options});$0"
         },
         {
-            "trigger": "fs.symlink(destination, path, type_, callback_);",
-            "contents": "fs.symlink(${1:destination}, ${2:path}, ${3:type_}, ${4:callback_});$0"
+            "trigger": "fs.symlink(target, path, type_, callback_);",
+            "contents": "fs.symlink(${1:target}, ${2:path}, ${3:type_}, ${4:callback_});$0"
         },
         {
-            "trigger": "fs.symlinkSync(destination, path, type);",
-            "contents": "fs.symlinkSync(${1:destination}, ${2:path}, ${3:type});$0"
+            "trigger": "fs.symlinkSync(target, path, type);",
+            "contents": "fs.symlinkSync(${1:target}, ${2:path}, ${3:type});$0"
         },
         {
-            "trigger": "fs.link(srcpath, dstpath, callback);",
-            "contents": "fs.link(${1:srcpath}, ${2:dstpath}, ${3:callback});$0"
+            "trigger": "fs.link(existingPath, newPath, callback);",
+            "contents": "fs.link(${1:existingPath}, ${2:newPath}, ${3:callback});$0"
         },
         {
-            "trigger": "fs.linkSync(srcpath, dstpath);",
-            "contents": "fs.linkSync(${1:srcpath}, ${2:dstpath});$0"
+            "trigger": "fs.linkSync(existingPath, newPath);",
+            "contents": "fs.linkSync(${1:existingPath}, ${2:newPath});$0"
         },
         {
             "trigger": "fs.unlink(path, callback);",
@@ -898,12 +958,28 @@
             "contents": "fs.fchmodSync(${1:fd}, ${2:mode});$0"
         },
         {
+            "trigger": "fs.lchmod(path, mode, callback);",
+            "contents": "fs.lchmod(${1:path}, ${2:mode}, ${3:callback});$0"
+        },
+        {
+            "trigger": "fs.lchmodSync(path, mode);",
+            "contents": "fs.lchmodSync(${1:path}, ${2:mode});$0"
+        },
+        {
             "trigger": "fs.chmod(path, mode, callback);",
             "contents": "fs.chmod(${1:path}, ${2:mode}, ${3:callback});$0"
         },
         {
             "trigger": "fs.chmodSync(path, mode);",
             "contents": "fs.chmodSync(${1:path}, ${2:mode});$0"
+        },
+        {
+            "trigger": "fs.lchown(path, uid, gid, callback);",
+            "contents": "fs.lchown(${1:path}, ${2:uid}, ${3:gid}, ${4:callback});$0"
+        },
+        {
+            "trigger": "fs.lchownSync(path, uid, gid);",
+            "contents": "fs.lchownSync(${1:path}, ${2:uid}, ${3:gid});$0"
         },
         {
             "trigger": "fs.fchown(fd, uid, gid, callback);",
@@ -942,24 +1018,24 @@
             "contents": "fs.futimesSync(${1:fd}, ${2:atime}, ${3:mtime});$0"
         },
         {
-            "trigger": "fs.writeFile(path, data, options, callback_);",
-            "contents": "fs.writeFile(${1:path}, ${2:data}, ${3:options}, ${4:callback_});$0"
+            "trigger": "fs.writeFile(path, data, options, callback);",
+            "contents": "fs.writeFile(${1:path}, ${2:data}, ${3:options}, ${4:callback});$0"
         },
         {
             "trigger": "fs.writeFileSync(path, data, options);",
             "contents": "fs.writeFileSync(${1:path}, ${2:data}, ${3:options});$0"
         },
         {
-            "trigger": "fs.appendFile(path, data, options, callback_);",
-            "contents": "fs.appendFile(${1:path}, ${2:data}, ${3:options}, ${4:callback_});$0"
+            "trigger": "fs.appendFile(path, data, options, callback);",
+            "contents": "fs.appendFile(${1:path}, ${2:data}, ${3:options}, ${4:callback});$0"
         },
         {
             "trigger": "fs.appendFileSync(path, data, options);",
             "contents": "fs.appendFileSync(${1:path}, ${2:data}, ${3:options});$0"
         },
         {
-            "trigger": "fs.watch(filename);",
-            "contents": "fs.watch(${1:filename});$0"
+            "trigger": "fs.watch(filename, options, listener);",
+            "contents": "fs.watch(${1:filename}, ${2:options}, ${3:listener});$0"
         },
         {
             "trigger": "fs.watchFile(filename, options, listener);",
@@ -970,12 +1046,20 @@
             "contents": "fs.unwatchFile(${1:filename}, ${2:listener});$0"
         },
         {
-            "trigger": "fs.realpathSync(p, cache);",
-            "contents": "fs.realpathSync(${1:p}, ${2:cache});$0"
+            "trigger": "fs.realpathSync(p, options);",
+            "contents": "fs.realpathSync(${1:p}, ${2:options});$0"
         },
         {
-            "trigger": "fs.realpath(p, cache, cb);",
-            "contents": "fs.realpath(${1:p}, ${2:cache}, ${3:cb});$0"
+            "trigger": "fs.realpath(p, options, callback);",
+            "contents": "fs.realpath(${1:p}, ${2:options}, ${3:callback});$0"
+        },
+        {
+            "trigger": "fs.mkdtemp(prefix, options, callback);",
+            "contents": "fs.mkdtemp(${1:prefix}, ${2:options}, ${3:callback});$0"
+        },
+        {
+            "trigger": "fs.mkdtempSync(prefix, options);",
+            "contents": "fs.mkdtempSync(${1:prefix}, ${2:options});$0"
         },
         {
             "trigger": "fs.createReadStream(path, options);",
@@ -1002,162 +1086,6 @@
             "contents": "fs.FileWriteStream(${1:path}, ${2:options});$0"
         },
         {
-            "trigger": "fs.constants.F_OK",
-            "contents": "fs.constants.F_OK$0"
-        },
-        {
-            "trigger": "fs.constants.R_OK",
-            "contents": "fs.constants.R_OK$0"
-        },
-        {
-            "trigger": "fs.constants.W_OK",
-            "contents": "fs.constants.W_OK$0"
-        },
-        {
-            "trigger": "fs.constants.X_OK",
-            "contents": "fs.constants.X_OK$0"
-        },
-        {
-            "trigger": "fs.constants.O_RDONLY",
-            "contents": "fs.constants.O_RDONLY$0"
-        },
-        {
-            "trigger": "fs.constants.O_WRONLY",
-            "contents": "fs.constants.O_WRONLY$0"
-        },
-        {
-            "trigger": "fs.constants.O_RDWR",
-            "contents": "fs.constants.O_RDWR$0"
-        },
-        {
-            "trigger": "fs.constants.O_CREAT",
-            "contents": "fs.constants.O_CREAT$0"
-        },
-        {
-            "trigger": "fs.constants.O_EXCL",
-            "contents": "fs.constants.O_EXCL$0"
-        },
-        {
-            "trigger": "fs.constants.O_NOCTTY",
-            "contents": "fs.constants.O_NOCTTY$0"
-        },
-        {
-            "trigger": "fs.constants.O_TRUNC",
-            "contents": "fs.constants.O_TRUNC$0"
-        },
-        {
-            "trigger": "fs.constants.O_APPEND",
-            "contents": "fs.constants.O_APPEND$0"
-        },
-        {
-            "trigger": "fs.constants.O_DIRECTORY",
-            "contents": "fs.constants.O_DIRECTORY$0"
-        },
-        {
-            "trigger": "fs.constants.O_NOATIME",
-            "contents": "fs.constants.O_NOATIME$0"
-        },
-        {
-            "trigger": "fs.constants.O_NOFOLLOW",
-            "contents": "fs.constants.O_NOFOLLOW$0"
-        },
-        {
-            "trigger": "fs.constants.O_SYNC",
-            "contents": "fs.constants.O_SYNC$0"
-        },
-        {
-            "trigger": "fs.constants.O_SYMLINK",
-            "contents": "fs.constants.O_SYMLINK$0"
-        },
-        {
-            "trigger": "fs.constants.O_DIRECT",
-            "contents": "fs.constants.O_DIRECT$0"
-        },
-        {
-            "trigger": "fs.constants.O_NONBLOCK",
-            "contents": "fs.constants.O_NONBLOCK$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFMT",
-            "contents": "fs.constants.S_IFMT$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFREG",
-            "contents": "fs.constants.S_IFREG$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFDIR",
-            "contents": "fs.constants.S_IFDIR$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFCHR",
-            "contents": "fs.constants.S_IFCHR$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFBLK",
-            "contents": "fs.constants.S_IFBLK$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFIFO",
-            "contents": "fs.constants.S_IFIFO$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFLNK",
-            "contents": "fs.constants.S_IFLNK$0"
-        },
-        {
-            "trigger": "fs.constants.S_IFSOCK",
-            "contents": "fs.constants.S_IFSOCK$0"
-        },
-        {
-            "trigger": "fs.constants.S_IXOTH",
-            "contents": "fs.constants.S_IXOTH$0"
-        },
-        {
-            "trigger": "fs.constants.S_IWOTH",
-            "contents": "fs.constants.S_IWOTH$0"
-        },
-        {
-            "trigger": "fs.constants.S_IROTH",
-            "contents": "fs.constants.S_IROTH$0"
-        },
-        {
-            "trigger": "fs.constants.S_IRWXO",
-            "contents": "fs.constants.S_IRWXO$0"
-        },
-        {
-            "trigger": "fs.constants.S_IXGRP",
-            "contents": "fs.constants.S_IXGRP$0"
-        },
-        {
-            "trigger": "fs.constants.S_IWGRP",
-            "contents": "fs.constants.S_IWGRP$0"
-        },
-        {
-            "trigger": "fs.constants.S_IRGRP",
-            "contents": "fs.constants.S_IRGRP$0"
-        },
-        {
-            "trigger": "fs.constants.S_IRWXG",
-            "contents": "fs.constants.S_IRWXG$0"
-        },
-        {
-            "trigger": "fs.constants.S_IXUSR",
-            "contents": "fs.constants.S_IXUSR$0"
-        },
-        {
-            "trigger": "fs.constants.S_IWUSR",
-            "contents": "fs.constants.S_IWUSR$0"
-        },
-        {
-            "trigger": "fs.constants.S_IRUSR",
-            "contents": "fs.constants.S_IRUSR$0"
-        },
-        {
-            "trigger": "fs.constants.S_IRWXU",
-            "contents": "fs.constants.S_IRWXU$0"
-        },
-        {
             "trigger": "http.IncomingMessage(socket);",
             "contents": "http.IncomingMessage(${1:socket});$0"
         },
@@ -1166,24 +1094,12 @@
             "contents": "http.OutgoingMessage();$0"
         },
         {
-            "trigger": "http.ServerResponse(req);",
-            "contents": "http.ServerResponse(${1:req});$0"
-        },
-        {
             "trigger": "http.Agent(options);",
             "contents": "http.Agent(${1:options});$0"
         },
         {
-            "trigger": "http.ClientRequest(options, cb);",
-            "contents": "http.ClientRequest(${1:options}, ${2:cb});$0"
-        },
-        {
-            "trigger": "http.request(options, cb);",
-            "contents": "http.request(${1:options}, ${2:cb});$0"
-        },
-        {
-            "trigger": "http.get(options, cb);",
-            "contents": "http.get(${1:options}, ${2:cb});$0"
+            "trigger": "http.ServerResponse(req);",
+            "contents": "http.ServerResponse(${1:req});$0"
         },
         {
             "trigger": "http._connectionListener(socket);",
@@ -1198,12 +1114,16 @@
             "contents": "http.createServer(${1:requestListener});$0"
         },
         {
-            "trigger": "http.Client();",
-            "contents": "http.Client();$0"
+            "trigger": "http.ClientRequest(options, cb);",
+            "contents": "http.ClientRequest(${1:options}, ${2:cb});$0"
         },
         {
-            "trigger": "http.createClient();",
-            "contents": "http.createClient();$0"
+            "trigger": "http.request(options, cb);",
+            "contents": "http.request(${1:options}, ${2:cb});$0"
+        },
+        {
+            "trigger": "http.get(options, cb);",
+            "contents": "http.get(${1:options}, ${2:cb});$0"
         },
         {
             "trigger": "https.Server(opts, requestListener);",
@@ -1234,8 +1154,8 @@
             "contents": "module._debug();$0"
         },
         {
-            "trigger": "module._findPath(request, paths);",
-            "contents": "module._findPath(${1:request}, ${2:paths});$0"
+            "trigger": "module._findPath(request, paths, isMain);",
+            "contents": "module._findPath(${1:request}, ${2:paths}, ${3:isMain});$0"
         },
         {
             "trigger": "module._nodeModulePaths(from);",
@@ -1250,8 +1170,8 @@
             "contents": "module._load(${1:request}, ${2:parent}, ${3:isMain});$0"
         },
         {
-            "trigger": "module._resolveFilename(request, parent);",
-            "contents": "module._resolveFilename(${1:request}, ${2:parent});$0"
+            "trigger": "module._resolveFilename(request, parent, isMain);",
+            "contents": "module._resolveFilename(${1:request}, ${2:parent}, ${3:isMain});$0"
         },
         {
             "trigger": "module.runMain();",
@@ -1262,10 +1182,6 @@
             "contents": "module._initPaths();$0"
         },
         {
-            "trigger": "module.requireRepl();",
-            "contents": "module.requireRepl();$0"
-        },
-        {
             "trigger": "module._preloadModules(requests);",
             "contents": "module._preloadModules(${1:requests});$0"
         },
@@ -1274,20 +1190,44 @@
             "contents": "module.Module(${1:id}, ${2:parent});$0"
         },
         {
-            "trigger": "net.createServer(options, connectionListener);",
-            "contents": "net.createServer(${1:options}, ${2:connectionListener});$0"
+            "trigger": "net._createServerHandle(address, port, addressType, fd);",
+            "contents": "net._createServerHandle(${1:address}, ${2:port}, ${3:addressType}, ${4:fd});$0"
         },
         {
-            "trigger": "net.createConnection();",
-            "contents": "net.createConnection();$0"
+            "trigger": "net._normalizeArgs(args);",
+            "contents": "net._normalizeArgs(${1:args});$0"
+        },
+        {
+            "trigger": "net._setSimultaneousAccepts(handle);",
+            "contents": "net._setSimultaneousAccepts(${1:handle});$0"
         },
         {
             "trigger": "net.connect();",
             "contents": "net.connect();$0"
         },
         {
-            "trigger": "net._normalizeConnectArgs(args);",
-            "contents": "net._normalizeConnectArgs(${1:args});$0"
+            "trigger": "net.createConnection();",
+            "contents": "net.createConnection();$0"
+        },
+        {
+            "trigger": "net.createServer(options, connectionListener);",
+            "contents": "net.createServer(${1:options}, ${2:connectionListener});$0"
+        },
+        {
+            "trigger": "net.isIP();",
+            "contents": "net.isIP();$0"
+        },
+        {
+            "trigger": "net.isIPv4();",
+            "contents": "net.isIPv4();$0"
+        },
+        {
+            "trigger": "net.isIPv6();",
+            "contents": "net.isIPv6();$0"
+        },
+        {
+            "trigger": "net.Server(options, connectionListener);",
+            "contents": "net.Server(${1:options}, ${2:connectionListener});$0"
         },
         {
             "trigger": "net.Socket(options);",
@@ -1298,36 +1238,8 @@
             "contents": "net.Stream(${1:options});$0"
         },
         {
-            "trigger": "net.Server(options, connectionListener);",
-            "contents": "net.Server(${1:options}, ${2:connectionListener});$0"
-        },
-        {
-            "trigger": "net._createServerHandle(address, port, addressType, fd);",
-            "contents": "net._createServerHandle(${1:address}, ${2:port}, ${3:addressType}, ${4:fd});$0"
-        },
-        {
-            "trigger": "net.isIP();",
-            "contents": "net.isIP();$0"
-        },
-        {
-            "trigger": "net.isIPv4(input);",
-            "contents": "net.isIPv4(${1:input});$0"
-        },
-        {
-            "trigger": "net.isIPv6(input);",
-            "contents": "net.isIPv6(${1:input});$0"
-        },
-        {
-            "trigger": "net._setSimultaneousAccepts(handle);",
-            "contents": "net._setSimultaneousAccepts(${1:handle});$0"
-        },
-        {
             "trigger": "os.hostname();",
             "contents": "os.hostname();$0"
-        },
-        {
-            "trigger": "os.loadavg();",
-            "contents": "os.loadavg();$0"
         },
         {
             "trigger": "os.uptime();",
@@ -1340,10 +1252,6 @@
         {
             "trigger": "os.totalmem();",
             "contents": "os.totalmem();$0"
-        },
-        {
-            "trigger": "os.cpus();",
-            "contents": "os.cpus();$0"
         },
         {
             "trigger": "os.type();",
@@ -1360,6 +1268,18 @@
         {
             "trigger": "os.homedir();",
             "contents": "os.homedir();$0"
+        },
+        {
+            "trigger": "os.userInfo();",
+            "contents": "os.userInfo();$0"
+        },
+        {
+            "trigger": "os.loadavg();",
+            "contents": "os.loadavg();$0"
+        },
+        {
+            "trigger": "os.cpus();",
+            "contents": "os.cpus();$0"
         },
         {
             "trigger": "os.arch();",
@@ -1426,8 +1346,8 @@
             "contents": "path.format(${1:pathObject});$0"
         },
         {
-            "trigger": "path.parse(pathString);",
-            "contents": "path.parse(${1:pathString});$0"
+            "trigger": "path.parse(path);",
+            "contents": "path.parse(${1:path});$0"
         },
         {
             "trigger": "process._startProfilerIdleNotifier();",
@@ -1466,6 +1386,50 @@
             "contents": "process.umask();$0"
         },
         {
+            "trigger": "process.getuid();",
+            "contents": "process.getuid();$0"
+        },
+        {
+            "trigger": "process.geteuid();",
+            "contents": "process.geteuid();$0"
+        },
+        {
+            "trigger": "process.setuid();",
+            "contents": "process.setuid();$0"
+        },
+        {
+            "trigger": "process.seteuid();",
+            "contents": "process.seteuid();$0"
+        },
+        {
+            "trigger": "process.setgid();",
+            "contents": "process.setgid();$0"
+        },
+        {
+            "trigger": "process.setegid();",
+            "contents": "process.setegid();$0"
+        },
+        {
+            "trigger": "process.getgid();",
+            "contents": "process.getgid();$0"
+        },
+        {
+            "trigger": "process.getegid();",
+            "contents": "process.getegid();$0"
+        },
+        {
+            "trigger": "process.getgroups();",
+            "contents": "process.getgroups();$0"
+        },
+        {
+            "trigger": "process.setgroups();",
+            "contents": "process.setgroups();$0"
+        },
+        {
+            "trigger": "process.initgroups();",
+            "contents": "process.initgroups();$0"
+        },
+        {
             "trigger": "process._kill();",
             "contents": "process._kill();$0"
         },
@@ -1482,8 +1446,12 @@
             "contents": "process._debugEnd();$0"
         },
         {
-            "trigger": "process.hrtime();",
-            "contents": "process.hrtime();$0"
+            "trigger": "process.hrtime(ar);",
+            "contents": "process.hrtime(${1:ar});$0"
+        },
+        {
+            "trigger": "process.cpuUsage(prevValue);",
+            "contents": "process.cpuUsage(${1:prevValue});$0"
         },
         {
             "trigger": "process.dlopen();",
@@ -1510,16 +1478,16 @@
             "contents": "process._rawDebug();$0"
         },
         {
-            "trigger": "process.EventEmitter();",
-            "contents": "process.EventEmitter();$0"
-        },
-        {
             "trigger": "process._fatalException(er);",
             "contents": "process._fatalException(${1:er});$0"
         },
         {
             "trigger": "process.assert(x, msg);",
             "contents": "process.assert(${1:x}, ${2:msg});$0"
+        },
+        {
+            "trigger": "process.emitWarning(warning, name, ctor);",
+            "contents": "process.emitWarning(${1:warning}, ${2:name}, ${3:ctor});$0"
         },
         {
             "trigger": "process.nextTick(callback);",
@@ -1566,8 +1534,16 @@
             "contents": "process.on(${1:type}, ${2:listener});$0"
         },
         {
+            "trigger": "process.prependListener(type, listener);",
+            "contents": "process.prependListener(${1:type}, ${2:listener});$0"
+        },
+        {
             "trigger": "process.once(type, listener);",
             "contents": "process.once(${1:type}, ${2:listener});$0"
+        },
+        {
+            "trigger": "process.prependOnceListener(type, listener);",
+            "contents": "process.prependOnceListener(${1:type}, ${2:listener});$0"
         },
         {
             "trigger": "process.removeListener(type, listener);",
@@ -1584,6 +1560,10 @@
         {
             "trigger": "process.listenerCount(type);",
             "contents": "process.listenerCount(${1:type});$0"
+        },
+        {
+            "trigger": "process.eventNames();",
+            "contents": "process.eventNames();$0"
         },
         {
             "trigger": "punycode.decode(input);",
@@ -1614,20 +1594,20 @@
             "contents": "querystring.escape(${1:str});$0"
         },
         {
-            "trigger": "querystring.encode(obj, sep, eq, options);",
-            "contents": "querystring.encode(${1:obj}, ${2:sep}, ${3:eq}, ${4:options});$0"
-        },
-        {
             "trigger": "querystring.stringify(obj, sep, eq, options);",
             "contents": "querystring.stringify(${1:obj}, ${2:sep}, ${3:eq}, ${4:options});$0"
         },
         {
-            "trigger": "querystring.decode(qs, sep, eq, options);",
-            "contents": "querystring.decode(${1:qs}, ${2:sep}, ${3:eq}, ${4:options});$0"
+            "trigger": "querystring.encode(obj, sep, eq, options);",
+            "contents": "querystring.encode(${1:obj}, ${2:sep}, ${3:eq}, ${4:options});$0"
         },
         {
             "trigger": "querystring.parse(qs, sep, eq, options);",
             "contents": "querystring.parse(${1:qs}, ${2:sep}, ${3:eq}, ${4:options});$0"
+        },
+        {
+            "trigger": "querystring.decode(qs, sep, eq, options);",
+            "contents": "querystring.decode(${1:qs}, ${2:sep}, ${3:eq}, ${4:options});$0"
         },
         {
             "trigger": "readline.createInterface(input, output, completer, terminal);",
@@ -1638,8 +1618,8 @@
             "contents": "readline.Interface(${1:input}, ${2:output}, ${3:completer}, ${4:terminal});$0"
         },
         {
-            "trigger": "readline.emitKeypressEvents(stream);",
-            "contents": "readline.emitKeypressEvents(${1:stream});$0"
+            "trigger": "readline.emitKeypressEvents(stream, iface);",
+            "contents": "readline.emitKeypressEvents(${1:stream}, ${2:iface});$0"
         },
         {
             "trigger": "readline.cursorTo(stream, x, y);",
@@ -1658,22 +1638,6 @@
             "contents": "readline.clearScreenDown(${1:stream});$0"
         },
         {
-            "trigger": "readline.getStringWidth(str);",
-            "contents": "readline.getStringWidth(${1:str});$0"
-        },
-        {
-            "trigger": "readline.isFullWidthCodePoint(code);",
-            "contents": "readline.isFullWidthCodePoint(${1:code});$0"
-        },
-        {
-            "trigger": "readline.codePointAt();",
-            "contents": "readline.codePointAt();$0"
-        },
-        {
-            "trigger": "readline.stripVTControlCharacters(str);",
-            "contents": "readline.stripVTControlCharacters(${1:str});$0"
-        },
-        {
             "trigger": "repl.writer(obj, opts);",
             "contents": "repl.writer(${1:obj}, ${2:opts});$0"
         },
@@ -1684,6 +1648,10 @@
         {
             "trigger": "repl.start(prompt,\n                         source,\n                         eval_,\n                         useGlobal,\n                         ignoreUndefined,\n                         replMode);",
             "contents": "repl.start(${1:prompt}, ${2:\n}, ${3:source}, ${4:\n}, ${5:eval_}, ${6:\n}, ${7:useGlobal}, ${8:\n}, ${9:ignoreUndefined}, ${10:\n}, ${11:replMode});$0"
+        },
+        {
+            "trigger": "repl.Recoverable(err);",
+            "contents": "repl.Recoverable(${1:err});$0"
         },
         {
             "trigger": "stream.super_();",
@@ -1722,6 +1690,10 @@
             "contents": "timers.active(${1:item});$0"
         },
         {
+            "trigger": "timers._unrefActive(item);",
+            "contents": "timers._unrefActive(${1:item});$0"
+        },
+        {
             "trigger": "timers.unenroll(item);",
             "contents": "timers.unenroll(${1:item});$0"
         },
@@ -1730,16 +1702,16 @@
             "contents": "timers.enroll(${1:item}, ${2:msecs});$0"
         },
         {
-            "trigger": "timers.setTimeout(callback, after);",
-            "contents": "timers.setTimeout(${1:callback}, ${2:after});$0"
+            "trigger": "timers.setTimeout(callback, after, arg1, arg2, arg3);",
+            "contents": "timers.setTimeout(${1:callback}, ${2:after}, ${3:arg1}, ${4:arg2}, ${5:arg3});$0"
         },
         {
             "trigger": "timers.clearTimeout(timer);",
             "contents": "timers.clearTimeout(${1:timer});$0"
         },
         {
-            "trigger": "timers.setInterval(callback, repeat);",
-            "contents": "timers.setInterval(${1:callback}, ${2:repeat});$0"
+            "trigger": "timers.setInterval(callback, repeat, arg1, arg2, arg3);",
+            "contents": "timers.setInterval(${1:callback}, ${2:repeat}, ${3:arg1}, ${4:arg2}, ${5:arg3});$0"
         },
         {
             "trigger": "timers.clearInterval(timer);",
@@ -1754,16 +1726,16 @@
             "contents": "timers.clearImmediate(${1:immediate});$0"
         },
         {
-            "trigger": "timers._unrefActive(item);",
-            "contents": "timers._unrefActive(${1:item});$0"
-        },
-        {
             "trigger": "tls.getCiphers();",
             "contents": "tls.getCiphers();$0"
         },
         {
-            "trigger": "tls.convertNPNProtocols(NPNProtocols, out);",
-            "contents": "tls.convertNPNProtocols(${1:NPNProtocols}, ${2:out});$0"
+            "trigger": "tls.convertNPNProtocols(protocols, out);",
+            "contents": "tls.convertNPNProtocols(${1:protocols}, ${2:out});$0"
+        },
+        {
+            "trigger": "tls.convertALPNProtocols(protocols, out);",
+            "contents": "tls.convertALPNProtocols(${1:protocols}, ${2:out});$0"
         },
         {
             "trigger": "tls.checkServerIdentity(host, cert);",
@@ -1778,40 +1750,40 @@
             "contents": "tls.createSecureContext(${1:options}, ${2:context});$0"
         },
         {
-            "trigger": "tls.SecureContext(secureProtocol, flags, context);",
-            "contents": "tls.SecureContext(${1:secureProtocol}, ${2:flags}, ${3:context});$0"
+            "trigger": "tls.SecureContext(secureProtocol, secureOptions, context);",
+            "contents": "tls.SecureContext(${1:secureProtocol}, ${2:secureOptions}, ${3:context});$0"
         },
         {
             "trigger": "tls.TLSSocket(socket, options);",
             "contents": "tls.TLSSocket(${1:socket}, ${2:options});$0"
         },
         {
-            "trigger": "tls.Server(/* [options], listener */);",
-            "contents": "tls.Server(${1:/*}, ${2:[options]}, ${3:listener}, ${4:*/});$0"
+            "trigger": "tls.Server(options, listener);",
+            "contents": "tls.Server(${1:options}, ${2:listener});$0"
         },
         {
             "trigger": "tls.createServer(options, listener);",
             "contents": "tls.createServer(${1:options}, ${2:listener});$0"
         },
         {
-            "trigger": "tls.connect(/* [port, host], options, cb */);",
-            "contents": "tls.connect(${1:/*}, ${2:[port}, ${3:host]}, ${4:options}, ${5:cb}, ${6:*/});$0"
+            "trigger": "tls.connect(...args /* [port,] [host,] [options,] [cb] */);",
+            "contents": "tls.connect(${1:...args}, ${2:/*}, ${3:[port}, ${4:]}, ${5:[host}, ${6:]}, ${7:[options}, ${8:]}, ${9:[cb]}, ${10:*/});$0"
         },
         {
-            "trigger": "tls.createSecurePair(context,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized);",
-            "contents": "tls.createSecurePair(${1:context}, ${2:\n}, ${3:isServer}, ${4:\n}, ${5:requestCert}, ${6:\n}, ${7:rejectUnauthorized});$0"
+            "trigger": "tls.createSecurePair(context,\n                                    isServer,\n                                    requestCert,\n                                    rejectUnauthorized,\n                                    options);",
+            "contents": "tls.createSecurePair(${1:context}, ${2:\n}, ${3:isServer}, ${4:\n}, ${5:requestCert}, ${6:\n}, ${7:rejectUnauthorized}, ${8:\n}, ${9:options});$0"
         },
         {
             "trigger": "dgram._createSocketHandle(address, port, addressType, fd, flags);",
             "contents": "dgram._createSocketHandle(${1:address}, ${2:port}, ${3:addressType}, ${4:fd}, ${5:flags});$0"
         },
         {
-            "trigger": "dgram.Socket(type, listener);",
-            "contents": "dgram.Socket(${1:type}, ${2:listener});$0"
-        },
-        {
             "trigger": "dgram.createSocket(type, listener);",
             "contents": "dgram.createSocket(${1:type}, ${2:listener});$0"
+        },
+        {
+            "trigger": "dgram.Socket(type, listener);",
+            "contents": "dgram.Socket(${1:type}, ${2:listener});$0"
         },
         {
             "trigger": "url.parse(url, parseQueryString, slashesDenoteHost);",
@@ -1826,8 +1798,24 @@
             "contents": "url.resolveObject(${1:source}, ${2:relative});$0"
         },
         {
-            "trigger": "url.format(obj);",
-            "contents": "url.format(${1:obj});$0"
+            "trigger": "url.format(obj, options);",
+            "contents": "url.format(${1:obj}, ${2:options});$0"
+        },
+        {
+            "trigger": "url.URL(input, base);",
+            "contents": "url.URL(${1:input}, ${2:base});$0"
+        },
+        {
+            "trigger": "url.URLSearchParams(init = '');",
+            "contents": "url.URLSearchParams(${1:init}, ${2:=}, ${3:''});$0"
+        },
+        {
+            "trigger": "url.domainToASCII(domain);",
+            "contents": "url.domainToASCII(${1:domain});$0"
+        },
+        {
+            "trigger": "url.domainToUnicode(domain);",
+            "contents": "url.domainToUnicode(${1:domain});$0"
         },
         {
             "trigger": "url.Url();",
@@ -1838,8 +1826,8 @@
             "contents": "util.format(${1:f});$0"
         },
         {
-            "trigger": "util.deprecate(fn, msg);",
-            "contents": "util.deprecate(${1:fn}, ${2:msg});$0"
+            "trigger": "util.deprecate(fn, msg, code);",
+            "contents": "util.deprecate(${1:fn}, ${2:msg}, ${3:code});$0"
         },
         {
             "trigger": "util.debuglog(set);",
@@ -1918,16 +1906,8 @@
             "contents": "util.inherits(${1:ctor}, ${2:superCtor});$0"
         },
         {
-            "trigger": "util._extend(origin, add);",
-            "contents": "util._extend(${1:origin}, ${2:add});$0"
-        },
-        {
-            "trigger": "util.p();",
-            "contents": "util.p();$0"
-        },
-        {
-            "trigger": "util.exec();",
-            "contents": "util.exec();$0"
+            "trigger": "util._extend(target, source);",
+            "contents": "util._extend(${1:target}, ${2:source});$0"
         },
         {
             "trigger": "util.print();",
@@ -1946,10 +1926,6 @@
             "contents": "util.error();$0"
         },
         {
-            "trigger": "util.pump();",
-            "contents": "util.pump();$0"
-        },
-        {
             "trigger": "util._errnoException(err, syscall, original);",
             "contents": "util._errnoException(${1:err}, ${2:syscall}, ${3:original});$0"
         },
@@ -1966,16 +1942,20 @@
             "contents": "v8.setFlagsFromString();$0"
         },
         {
+            "trigger": "v8.getHeapSpaceStatistics();",
+            "contents": "v8.getHeapSpaceStatistics();$0"
+        },
+        {
             "trigger": "vm.Script();",
             "contents": "vm.Script();$0"
         },
         {
-            "trigger": "vm.createScript(code, options);",
-            "contents": "vm.createScript(${1:code}, ${2:options});$0"
-        },
-        {
             "trigger": "vm.createContext(sandbox);",
             "contents": "vm.createContext(${1:sandbox});$0"
+        },
+        {
+            "trigger": "vm.createScript(code, options);",
+            "contents": "vm.createScript(${1:code}, ${2:options});$0"
         },
         {
             "trigger": "vm.runInDebugContext(code);",
@@ -1996,10 +1976,6 @@
         {
             "trigger": "vm.isContext();",
             "contents": "vm.isContext();$0"
-        },
-        {
-            "trigger": "zlib.Zlib();",
-            "contents": "zlib.Zlib();$0"
         },
         {
             "trigger": "zlib.Deflate(opts);",
