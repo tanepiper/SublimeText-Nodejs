@@ -614,6 +614,14 @@
             "contents": "setEngine(${1:id}, ${2:flags});$0"
         },
         {
+            "trigger": "crypto.randomFillSync(buf, offset = 0, size);",
+            "contents": "randomFillSync(${1:buf}, ${2:offset}, ${3:=}, ${4:0}, ${5:size});$0"
+        },
+        {
+            "trigger": "crypto.randomFill(buf, offset, size, cb);",
+            "contents": "randomFill(${1:buf}, ${2:offset}, ${3:size}, ${4:cb});$0"
+        },
+        {
             "trigger": "crypto.pseudoRandomBytes();",
             "contents": "pseudoRandomBytes();$0"
         },
@@ -1806,8 +1814,8 @@
             "contents": "URL(${1:input}, ${2:base});$0"
         },
         {
-            "trigger": "url.URLSearchParams(init = '');",
-            "contents": "URLSearchParams(${1:init}, ${2:=}, ${3:''});$0"
+            "trigger": "url.URLSearchParams(init = undefined);",
+            "contents": "URLSearchParams(${1:init}, ${2:=}, ${3:undefined});$0"
         },
         {
             "trigger": "url.domainToASCII(domain);",
