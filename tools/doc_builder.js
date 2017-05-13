@@ -211,6 +211,7 @@ exports.doc_builder = (function(options, callback) {
   }
   */
 
+
   // Once these operations are done, we can then pass
   // them to our output function, based on the type flag
   if (options.type === 'completions') {
@@ -309,9 +310,12 @@ var createNamespaces = function(options, files, output) {
           name: rKey,
           reflection: FunctionReflect(item[rKey])
         }
+
+
         snippet['args'] = snippet.reflection.params.trim();
         snippet['function_string'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + snippet.reflection.params.trim() + ';'
-        snippet['function_template'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
+        // NOTICE: turn off expert mode in completions body, to resolce issue #61
+        snippet['function_template'] = '' + snippet.name + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
         output.push(snippet);
       }
     }

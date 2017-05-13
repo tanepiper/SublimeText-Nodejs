@@ -3,6 +3,8 @@ var path = require('path');
 
 var p = path.resolve(__dirname + '/../Nodejs.sublime-completions');
 
+console.log("Building ...");
+
 doc_builder({
   global: true,
   full: true,
@@ -10,7 +12,7 @@ doc_builder({
   type: 'completions',
   expert: false
 }, function() {
-  console.log('Done');
+  console.log('Done!');
 });
 
 
