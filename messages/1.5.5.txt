@@ -1,0 +1,8 @@
+Version 1.5.5
+-------------
+This is a bugfix release version
+
+* Fix issue-60. Now the plugin respects system env var $PATH [See more at GitHub](https://github.com/tanepiper/SublimeText-Nodejs/issues/60)
+* Fix issue-61. Autocompletion duplicates root object. [See more at GitHub](https://github.com/tanepiper/SublimeText-Nodejs/issues/61)
+* Fix issue-62. Turning off shortcuts. [See more at GitHub](https://github.com/tanepiper/SublimeText-Nodejs/issues/62)
+* Generated completions for NodeJS v7.10
