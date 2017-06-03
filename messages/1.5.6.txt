@@ -3,3 +3,4 @@ Version 1.5.6
 This is a bugfix release version
 
 * Fix issue-63. Now can run built-in tools, when the package is installed by Package Control [See more at GitHub](https://github.com/tanepiper/SublimeText-Nodejs/issues/63)
+* Fix issue-65. Now the package resolves correct path for built-in tools. [See more at GitHub](https://github.com/tanepiper/SublimeText-Nodejs/issues/65)

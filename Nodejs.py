@@ -43,10 +43,12 @@ class CommandThread(threading.Thread):
 # when sublime loads a plugin it's cd'd into the plugin directory. Thus
 # __file__ is useless for my purposes. What I want is "Packages/Git", but
 # allowing for the possibility that someone has renamed the file.
-PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '')
-PLUGIN_PATH = os.getcwd().replace(os.path.join(os.getcwd(), '..', '..') + os.path.sep, '')
-UGLIFY_PATH = os.path.join(os.getcwd(), "tools", "uglify_js.js")
-BUILDER_PATH = os.path.join(os.getcwd(), "tools", "default_build.js")
+#
+# The above assumption is incorrect for SublimeText 3
+PLUGIN_DIRECTORY = os.path.basename(os.path.dirname(__file__))
+PLUGIN_PATH = os.path.join(os.getcwd(), PLUGIN_DIRECTORY)
+UGLIFY_PATH = os.path.join(PLUGIN_PATH, "tools", "uglify_js.js")
+BUILDER_PATH = os.path.join(PLUGIN_PATH, "tools", "default_build.js")
 
 
 def open_url(url):

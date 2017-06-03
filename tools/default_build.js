@@ -14,5 +14,3 @@ doc_builder({
 }, function() {
   console.log('Done!');
 });
-
-
