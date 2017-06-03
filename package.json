@@ -1,6 +1,6 @@
 {
   "name": "sublime-nodejs",
-  "version": "1.5.3",
+  "version": "1.5.6",
   "description": "NPM Support file for the Sublime Text 2/3 Nodejs Plugin",
   "dependencies": {
     "commander": "~2.9.0",
