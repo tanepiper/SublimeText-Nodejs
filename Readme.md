@@ -66,8 +66,9 @@ You may need to add a `path` variable to the settings object for this if your no
 TODO
 ----
 * ~~uglify_js.js and other ./tools/*.js scripts don't work when the package is installed by SublimeText package manager~~
+* Use events API to install NodeJs dependicies for tools provided by the package
 * Refactor plugin's classes inheritance in Nodejs.py
-* Generate Sublime Text completions during installation phase depending on the version of installed Node
+* Use events API to generate Sublime Text completions during installation phase depending on a version of installed NodeJs
 * Check for nvm installation
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
 * Reorganise menu structure
