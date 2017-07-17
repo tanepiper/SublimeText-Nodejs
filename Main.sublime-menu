@@ -1,6 +1,6 @@
 [{
   "caption": "Tools",
-  "mnemonic": "t",
+  "mnemonic": "T",
   "id": "tools",
   "children": [{
     "id": "nodejsmenu",
