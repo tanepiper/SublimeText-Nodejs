@@ -227,7 +227,7 @@ class NodeDrunCommand(NodeTextCommand):
   def run(self, edit):
     command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
     os.system(command)
-    command = ['node', 'debug', self.view.file_name()]
+    command = ['node', 'inspect', self.view.file_name()]
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
