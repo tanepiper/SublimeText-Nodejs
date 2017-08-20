@@ -50,17 +50,20 @@
   "caption": "Nodejs::UglifyJS",
   "command": "node_uglify"
 },
+
 {
-  "caption": "Nodejs::Default File Settings",
-  "command": "open_file",
+  "caption": "Nodejs::User File Settings",
+  "command": "edit_settings", 
   "args": {
-    "file": "${packages}/Nodejs/Nodejs.sublime-settings"
+    "base_file": "${packages}/Nodejs/Nodejs.sublime-settings",
+    "default": "// Settings in here override those in \"Nodejs/Nodejs.sublime-settings\",\n// and are overridden in turn by syntax-specific settings.\n{\n\t$0\n}\n"
   }
 },
 {
-  "caption": "Nodejs::User File Settings",
-  "command": "open_file",
+  "caption": "Nodejs::User Key Bindings",
+  "command": "edit_settings", 
   "args": {
-    "file": "${packages}/User/Nodejs.sublime-settings"
+    "base_file": "${packages}/Nodejs/Default ($platform).sublime-keymap",
+    "default": "// Settings in here override those in \"Nodejs/Default.sublime-keymap\"\n{\n\t$0\n}\n"
   }
 }]
