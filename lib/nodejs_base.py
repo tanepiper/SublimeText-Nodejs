@@ -1,6 +1,10 @@
+import os
 import sublime
 import sublime_plugin
 
+
+from .nodejs_debug import debug
+from .nodejs_command_thread import CommandThread
 
 class NodeCommand(sublime_plugin.TextCommand):
   def run_command(self, command, callback=None, show_status=True, filter_empty_args=True, **kwargs):
@@ -105,8 +109,11 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
   def active_view(self):
     return self.view
 
+  def is_relevant_file(self):
+    return self.active_view().scope_name(self.active_view().sel()[0].begin()).find('source.js') != -1
+
   def is_enabled(self):
-    return True; # A better test should be made. Fx. is this a js file?
+    return self.is_relevant_file()
 
   def get_file_name(self):
     return os.path.basename(self.view.file_name())
