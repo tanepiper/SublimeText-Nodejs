@@ -55,6 +55,11 @@ You can install this package from [Sublime Text 3 package manager](https://packa
 
     `git clone https://github.com/tanepiper/SublimeText-Nodejs $HOME/.config/sublime-text-3/Packages/Nodejs`
 
+After the package is installed, install Node.js packages needed for working the package built-in tools. You can to install either globaly by: `npm install -g commander@"~2.9.0" uglify-js@"~2.6.0"` or localy by adding previously mentioned Node.js packages to your current project, either: `npm install commander@"~2.9.0" uglify-js@"~2.6.0"` or manully editing your project `package.json` file.
+
+PLEASE NOTE: When your installed Node.js packages (previously mentioned) globaly, you also need to set the package `node_path` setting. For that, go to the `Preferences -> Package Settings -> Nodejs -> Settings User`.
+
+
 Build Systems
 -------------
 PLEASE NOTE: The build system will be refactored to provide different nodejs build systems (such as jake)
@@ -65,9 +70,10 @@ You may need to add a `path` variable to the settings object for this if your no
 
 TODO
 ----
-* ~~uglify_js.js and other ./tools/*.js scripts don't work when the package is installed by SublimeText package manager~~
+* ~~uglify_js.js and other ./tools/*.js scripts dosen't work when the package is installed by SublimeText package manager~~
+* Use events API to install NodeJs dependicies for tools provided by the package
 * Refactor plugin's classes inheritance in Nodejs.py
-* Generate Sublime Text completions during installation phase depending on the version of installed Node
+* Use events API to generate Sublime Text completions during installation phase depending on a version of installed NodeJs
 * Check for nvm installation
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
 * Reorganise menu structure
