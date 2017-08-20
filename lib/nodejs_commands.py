@@ -1,6 +1,6 @@
 import os
 
-from nodejs_base import *
+from .nodejs_base import *
 
 # Commands to run
 class NodeScratchOutput(NodeTextCommand):

@@ -1,21 +1,24 @@
 import os
 import sys
+import logging
+
 import sublime
 import sublime_plugin
 
-# when sublime loads a plugin it's cd'd into the plugin directory. Thus
-# __file__ is useless for my purposes. What I want is "Packages/Git", but
-# allowing for the possibility that someone has renamed the file.
-PLUGIN_DIRECTORY = os.getcwd().replace(os.path.normpath(os.path.join(os.getcwd(), '..', '..')) + os.path.sep, '')
-PLUGIN_LIB_DIR = os.path.join(PLUGIN_DIRECTORY, "lib")
-PLUGIN_PATH = os.getcwd().replace(os.path.join(os.getcwd(), '..', '..') + os.path.sep, '')
-UGLIFY_PATH = os.path.join(os.getcwd(), "tools", "uglify_js.js")
-BUILDER_PATH = os.path.join(os.getcwd(), "tools", "default_build.js")
+# debugging
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# add lib dir to the python's path
-sys.path.append(PLUGIN_LIB_DIR)
+
+
 
 # import lib's modules
-from nodejs_command_thread import *
-from nodejs_paths import *
-from nodejs_commands import *
+from .lib.nodejs_debug import debug
+from .lib.nodejs_constants import *
+from .lib.nodejs_paths import *
+from .lib.nodejs_commands import *
+
+debug('PLUGIN_PATH', PLUGIN_PATH)
+debug('PLUGIN_LIB_DIR', PLUGIN_LIB_DIR)
+debug('PLUGIN_DEBUG_FILE', PLUGIN_DEBUG_FILE)
+debug('UGLIFY_PATH', UGLIFY_PATH)
+debug('BUILDER_PATH', BUILDER_PATH)
