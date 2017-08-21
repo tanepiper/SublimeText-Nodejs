@@ -7,7 +7,8 @@ from .nodejs_debug import debug
 from .nodejs_command_thread import CommandThread
 
 class NodeCommand(sublime_plugin.TextCommand):
-  def run_command(self, command, callback=None, show_status=True, filter_empty_args=True, **kwargs):
+  def run_command(self, command, callback=None, show_status=True, 
+                    filter_empty_args=True, **kwargs):
     if filter_empty_args:
       command = [arg for arg in command if arg]
 

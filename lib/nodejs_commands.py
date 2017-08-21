@@ -56,8 +56,11 @@ class NodeDrunCommand(NodeTextCommand):
 
 # Command to run node with arguments
 class NodeRunArgumentsCommand(NodeTextCommand):
-  def run(self, edit):
-    self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
+  def run(self, edit, user_input=None):
+    if user_input:
+      self.on_input(user_input)
+    else:
+      self._input_panel = self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
     command = message.split()
@@ -66,12 +69,19 @@ class NodeRunArgumentsCommand(NodeTextCommand):
     self.run_command(command, self.command_done)
 
   def command_done(self, result):
-    self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    s = sublime.load_settings("Nodejs.sublime-settings")
+    if s.get('output_to_new_tab'):
+      self.scratch(result, title="Node Output", syntax="Packages/JavaScript/JavaScript.tmLanguage")
+    else:
+      self.panel(result)
 
 # Command to run node with debug and arguments
 class NodeDrunArgumentsCommand(NodeTextCommand):
-  def run(self, edit):
-    self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
+  def run(self, edit, user_input=None):
+    if user_input:
+      self.on_input(user_input)
+    else:
+      self._input_panel = self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
     command = message.split()

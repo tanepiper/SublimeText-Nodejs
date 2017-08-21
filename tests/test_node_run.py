@@ -7,7 +7,7 @@ from unittesting import DeferrableTestCase
 version = sublime.version()
 
 
-class TestPluginLoad(DeferrableTestCase):
+class TestNodeRunCommand(DeferrableTestCase):
     def setUp(self):
         test_js_logging_file = os.path.join(os.path.dirname(__file__), 'data', 'test_logging.js')
         self.view = sublime.active_window().open_file(test_js_logging_file)
@@ -27,4 +27,4 @@ class TestPluginLoad(DeferrableTestCase):
         self.view.run_command('node_run')
         yield 1000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertIsNotNone(out_panel)
+        self.assertNotEqual(out_panel.find('Hello, World!', 0, sublime.IGNORECASE).size(), 0)
