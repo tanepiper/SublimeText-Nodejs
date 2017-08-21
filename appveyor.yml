@@ -14,5 +14,5 @@ build: off
 test_script:
   - ps: .\appveyor.ps1 "run_tests" -verbose
 
-on_finish:
+on_failure:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

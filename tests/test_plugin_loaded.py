@@ -20,9 +20,9 @@ class TestPluginLoad(DeferrableTestCase):
         pass
 
     def testPluginIsLoaded(self):
-        yield 1000
+        yield 500
         self.view.window().focus_view(self.view)
         self.view.run_command('node_run')
-        yield 1000
+        yield 500
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertIsNotNone(out_panel)
