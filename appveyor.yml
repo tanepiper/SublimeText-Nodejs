@@ -2,6 +2,8 @@ init:
   - ps: Invoke-WebRequest -Uri "https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64.zip" -OutFile c:\subl.zip
   - ps: Expand-Archive c:\subl.zip -DestinationPath c:\st3
 
+build_script: off
+
 on_finish:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
