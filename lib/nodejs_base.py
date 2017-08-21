@@ -74,8 +74,11 @@ class NodeCommand(sublime_plugin.TextCommand):
   def quick_panel(self, *args, **kwargs):
     self.get_window().show_quick_panel(*args, **kwargs)
 
-# A base for all node commands that work with the entire repository
+
 class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
+  """
+  A base for all node commands that work with the entire repository
+  """
   def active_view(self):
     return self.window.active_view()
 
@@ -104,8 +107,11 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
   def get_window(self):
     return self.window
 
-# A base for all node commands that work with the file in the active view
+
 class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
+  """
+  A base for all node commands that work with the file in the active view
+  """
   def active_view(self):
     return self.view
 
