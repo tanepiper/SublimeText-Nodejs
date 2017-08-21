@@ -1,16 +1,14 @@
 environment:
-    global:
-        PACKAGE: "Nodejs"
-    matrix:
-        - SUBLIME_TEXT_VERSION : "3"
+  PACKAGE: "Nodejs"
+  SUBLIME_TEXT_VERSION : "3"
 
 install:
-    - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
-    - ps: .\appveyor.ps1 "bootstrap" -verbose
-    - ps: .\appveyor.ps1 "install_package_control" -verbose
+  - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
+  - ps: .\appveyor.ps1 "bootstrap" -verbose
+  - ps: .\appveyor.ps1 "install_package_control" -verbose
 
 test_script:
-    - ps: .\appveyor.ps1 "run_tests" -verbose
+  - ps: .\appveyor.ps1 "run_tests" -verbose
 
 build: off
 deploy: off
