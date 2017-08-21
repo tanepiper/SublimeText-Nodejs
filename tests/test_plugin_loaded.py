@@ -22,5 +22,6 @@ class TestPluginLoad(DeferrableTestCase):
     def testPluginIsLoaded(self):
         self.view.window().focus_view(self.view)
         self.view.run_command('node_run')
+        time.sleep(1)
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertIsNotNone(out_panel)
