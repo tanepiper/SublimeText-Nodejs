@@ -9,3 +9,5 @@ console.log(var2);
 
 simpleVariable4 = "Info message from Node";
 console.info(simpleVariable4, "\n");
+
+console.info(new Date());
