@@ -21,7 +21,7 @@ class TestNodeRunArgumentsCommand(DeferrableTestCase):
             self.view.set_scratch(True)
             self.view.window().run_command("close_file")
 
-    def testPluginIsLoaded(self):
+    def testNodeRunArguments(self):
         yield 1000
         self.view.window().focus_view(self.view)
         self.view.run_command('node_run_arguments', {'user_input': '1 2 3'})

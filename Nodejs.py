@@ -8,9 +8,6 @@ import sublime_plugin
 # debugging
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
-
-
 # import lib's modules
 from .lib.nodejs_debug import debug
 from .lib.nodejs_constants import *

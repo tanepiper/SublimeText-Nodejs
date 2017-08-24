@@ -7,7 +7,7 @@ from unittesting import DeferrableTestCase
 version = sublime.version()
 
 
-class TestNodeRunCommand(DeferrableTestCase):
+class TestNodeDRunCommand(DeferrableTestCase):
     def setUp(self):
         test_js_logging_file = os.path.join(os.path.dirname(__file__), 'data', 'test_logging.js')
         self.view = sublime.active_window().open_file(test_js_logging_file)
@@ -21,10 +21,10 @@ class TestNodeRunCommand(DeferrableTestCase):
             self.view.set_scratch(True)
             self.view.window().run_command("close_file")
 
-    def testNodeRun(self):
+    def testNodeDRun(self):
         yield 1000
         self.view.window().focus_view(self.view)
-        self.view.run_command('node_run')
+        self.view.run_command('node_drun')
         yield 1000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertNotEqual(out_panel.find('Hello, World!', 0, sublime.IGNORECASE).size(), 0)
+        self.assertNotEqual(out_panel.find('Debugger attached.', 0, sublime.IGNORECASE).size(), 0)

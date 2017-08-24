@@ -7,9 +7,9 @@ from unittesting import DeferrableTestCase
 version = sublime.version()
 
 
-class TestNodeRunCommand(DeferrableTestCase):
+class TestNodeDRunArgumentsCommand(DeferrableTestCase):
     def setUp(self):
-        test_js_logging_file = os.path.join(os.path.dirname(__file__), 'data', 'test_logging.js')
+        test_js_logging_file = os.path.join(os.path.dirname(__file__), 'data', 'test_process.js')
         self.view = sublime.active_window().open_file(test_js_logging_file)
         # make sure we have a window to work with
         s = sublime.load_settings("Preferences.sublime-settings")
@@ -21,10 +21,10 @@ class TestNodeRunCommand(DeferrableTestCase):
             self.view.set_scratch(True)
             self.view.window().run_command("close_file")
 
-    def testNodeRun(self):
+    def testNodeDRunArguments(self):
         yield 1000
         self.view.window().focus_view(self.view)
-        self.view.run_command('node_run')
+        self.view.run_command('node_drun_arguments', {'user_input': '1 2 3'})
         yield 1000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertNotEqual(out_panel.find('Hello, World!', 0, sublime.IGNORECASE).size(), 0)
+        self.assertNotEqual(out_panel.find('The args count is - 5', 0, sublime.IGNORECASE).size(), 0)
