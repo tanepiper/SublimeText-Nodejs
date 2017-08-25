@@ -22,6 +22,9 @@ class TestNodeDRunCommand(DeferrableTestCase):
             self.view.window().run_command("close_file")
 
     def testNodeDRun(self):
+        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+        os.system(command)
+        
         yield 1000
         self.view.window().focus_view(self.view)
         self.view.run_command('node_drun')
