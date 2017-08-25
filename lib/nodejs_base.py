@@ -114,10 +114,11 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
   A base for all node commands that work with the file in the active view
   """
   def active_view(self):
-    return sublime.active_window().active_view()
+    return self.view
 
   def is_relevant_file(self):
-    return self.active_view().scope_name(self.active_view().sel()[0].begin()).find('source.js') != -1
+    return sublime.active_window().active_view().scope_name(
+            sublime.active_window().active_view().sel()[0].begin()).find('source.js') != -1
 
   def is_enabled(self):
     return self.is_relevant_file()
