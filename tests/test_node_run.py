@@ -22,9 +22,8 @@ class TestNodeRunCommand(DeferrableTestCase):
             self.view.window().run_command("close_file")
 
     def testNodeRun(self):
-        yield 1000
-        self.view.window().focus_view(self.view)
-        self.view.run_command('node_run')
-        yield 1000
+        sublime.set_timeout(lambda: 
+                self.view.run_command('node_run'), 1000)
+        yield 2000
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertNotEqual(out_panel.find('Hello, World!', 0, sublime.IGNORECASE).size(), 0)

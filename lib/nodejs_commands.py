@@ -56,12 +56,6 @@ class NodeDrunCommand(NodeTextCommand):
 
 # Command to run node with arguments
 class NodeRunArgumentsCommand(NodeTextCommand):
-  def run(self, edit, user_input=None):
-    if user_input:
-      self.on_input(user_input)
-    else:
-      self._input_panel = self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
-
   def on_input(self, message):
     command = message.split()
     command.insert(0, self.view.file_name());
@@ -77,12 +71,6 @@ class NodeRunArgumentsCommand(NodeTextCommand):
 
 # Command to run node with debug and arguments
 class NodeDrunArgumentsCommand(NodeTextCommand):
-  def run(self, edit, user_input=None):
-    if user_input:
-      self.on_input(user_input)
-    else:
-      self._input_panel = self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
-
   def on_input(self, message):
     command = message.split()
     command.insert(0, self.view.file_name());
@@ -123,8 +111,11 @@ class NodeNpmInstallCommand(NodeTextCommand):
       self.panel(result)
 
 class NodeNpmUninstallCommand(NodeTextCommand):
-  def run(self, edit):
-    self.get_window().show_input_panel("Package", "", self.on_input, None, None)
+  def run(self, edit, user_input=None):
+    if user_input:
+      self.on_input(user_input)
+    else:
+      self._input_panel = self.get_window().show_input_panel("Package", "", self.on_input, None, None)
 
   def on_input(self, message):
     command = message.split()
@@ -140,8 +131,12 @@ class NodeNpmUninstallCommand(NodeTextCommand):
       self.panel(result)
 
 class NodeNpmSearchCommand(NodeTextCommand):
-  def run(self, edit):
-    self.get_window().show_input_panel("Term", "", self.on_input, None, None)
+  def run(self, edit, user_input=None):
+    if user_input:
+      self.on_input(user_input)
+    else:
+      self._input_panel = self.get_window().show_input_panel("Term", "", self.on_input, None, None)
+
 
   def on_input(self, message):
     command = message.split()

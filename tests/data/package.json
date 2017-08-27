@@ -1,0 +1,8 @@
+{
+  "name": "test-package",
+  "version": "0.0.1",
+  "description": "Test node package for the Sublime Text 3 Nodejs Plugin",
+  "dependencies": {
+    "lorem-ipsum": "=1.0.2"
+  }
+}

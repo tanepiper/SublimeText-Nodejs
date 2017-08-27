@@ -25,9 +25,7 @@ class TestNodeDRunCommand(DeferrableTestCase):
         command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
         os.system(command)
         
-        yield 1000
-        self.view.window().focus_view(self.view)
-        self.view.run_command('node_drun')
-        yield 1000
+        sublime.set_timeout(lambda: self.view.run_command('node_drun'), 1000)
+        yield 5000
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertNotEqual(out_panel.find('Debugger attached.', 0, sublime.IGNORECASE).size(), 0)
