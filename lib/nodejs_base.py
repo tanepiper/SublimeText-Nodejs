@@ -28,6 +28,10 @@ class NodeCommand(sublime_plugin.TextCommand):
     if command[0] == 'npm' and s.get('npm_command'):
       command[0] = s.get('npm_command')
 
+    # set paths for searching executables
+    old_path = os.environ['PATH']
+    kwargs['env'] = {'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'}
+
     if not callback:
       callback = self.generic_done
 
