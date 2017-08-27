@@ -72,11 +72,11 @@ TODO
 ----
 * ~~uglify_js.js and other ./tools/*.js scripts dosen't work when the package is installed by SublimeText package manager~~
 * Use events API to install NodeJs dependicies for tools provided by the package
-* Refactor plugin's classes inheritance in Nodejs.py
+* ~~Refactor plugin's classes inheritance in Nodejs.py~~
 * Use events API to generate Sublime Text completions during installation phase depending on a version of installed NodeJs
 * Check for nvm installation
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
-* Reorganise menu structure
+* ~~Reorganise menu structure~~
 * Improve code completion snippets where possible
 * Provide an interface for writing JavaScript plugins
 
