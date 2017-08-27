@@ -28,4 +28,4 @@ class TestNodeDRunCommand(DeferrableTestCase):
         sublime.set_timeout(lambda: self.view.run_command('node_drun'), 1000)
         yield 5000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertNotEqual(out_panel.find('Debugger attached.', 0, sublime.IGNORECASE).size(), 0)
+        self.assertNotEqual(out_panel.find('debug>.', 0, sublime.IGNORECASE).size(), 0)
