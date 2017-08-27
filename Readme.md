@@ -1,4 +1,4 @@
-Nodejs Sublime Text 3 Package [![Build Status](https://travis-ci.org/varp/SublimeText-Nodejs.svg?branch=master)](https://travis-ci.org/varp/SublimeText-Nodejs) [![Build status](https://ci.appveyor.com/api/projects/status/ntjerqt5cd0vi65s/branch/refactor?svg=true)](https://ci.appveyor.com/project/varp/sublimetext-nodejs-er8ci/branch/refactor)
+Nodejs Sublime Text 3 Package [![Build Status](https://travis-ci.org/varp/SublimeText-Nodejs.svg?branch=refactor)](https://travis-ci.org/varp/SublimeText-Nodejs) [![Build status](https://ci.appveyor.com/api/projects/status/ntjerqt5cd0vi65s/branch/refactor?svg=true)](https://ci.appveyor.com/project/varp/sublimetext-nodejs-er8ci/branch/refactor)
 =============================
 
 Overview
