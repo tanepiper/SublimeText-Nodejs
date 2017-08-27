@@ -92,7 +92,7 @@ class TestNpmCommand(DeferrableTestCase):
 
     def testNpmUpdateCommandRun(self):
         self._clear_npm_stuff()
-        # self._init_new_package_json_file()
+        self._init_new_package_json_file()
         # # first run is installing package lorem-ipsum 1.0.2
         sublime.set_timeout(lambda: self.view.run_command('node_npm_update'), 1000)
         # # second run will must update lorem-ipsum up to 1.0.4
