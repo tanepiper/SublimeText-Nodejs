@@ -1,4 +1,5 @@
 import os
+import shutil
 import time
 
 import sublime
@@ -26,10 +27,10 @@ class TestNpmCommand(DeferrableTestCase):
 
     def _clear_npm_stuff(self):
         # if files exists remove it before
-        command = "test -d \"{0}\" && rm -rf \"{0}\"".format(self.test_node_modules_dir)
-        os.system(command)
-        command = "test -f \"{0}\" && rm -f \"{0}\"".format(self.test_package_lock_file)
-        os.system(command)
+        if os.path.exists(self.test_node_modules_dir):
+            shutil.rmtree(self.test_node_modules_dir)
+        if os.path.exists(self.test_package_lock_file):
+            os.remove(self.test_package_lock_file)
 
     def _init_new_package_json_file(self):
         package_json = """
@@ -42,8 +43,8 @@ class TestNpmCommand(DeferrableTestCase):
           }
         }
         """
-        command = "test -f \"{0}\" && rm -f \"{0}\"".format(self.test_package_json_file)
-        os.system(command)
+        if os.path.exists(self.test_package_json_file):
+            os.remove(self.test_package_json_file)
         with open(self.test_package_json_file, 'w') as package_file:
             package_file.write(package_json)
 
@@ -61,7 +62,7 @@ class TestNpmCommand(DeferrableTestCase):
         sublime.set_timeout(self.view.run_command('node_npm_install'), 1000)
         yield 5000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertNotEqual(out_panel.find('npm WARN test-package@', 0, 
+        self.assertNotEqual(out_panel.find('test-package@0.0.1', 0, 
                                 sublime.IGNORECASE).size(), 0)    
 
 
