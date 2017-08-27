@@ -98,8 +98,6 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
       self.panel(result)
 
 class NodeNpmCommand(NodeTextCommand):
-  def run(self, edit):
-    self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
 
   def on_input(self, message):
     command = message.split()

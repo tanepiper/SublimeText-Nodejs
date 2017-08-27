@@ -113,6 +113,15 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
   """
   A base for all node commands that work with the file in the active view
   """
+  def run(self, edit, user_input=None):
+    """
+    Base run method
+    """
+    if user_input:
+      self.on_input(user_input)
+    else:
+      self._input_panel = self.get_window().show_input_panel("Arguments", "", self.on_input, None, None)
+
   def active_view(self):
     return self.view
 

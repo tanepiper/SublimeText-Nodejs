@@ -1,4 +1,5 @@
 import os
+import codecs
 import sublime
 import functools
 import threading
@@ -39,8 +40,8 @@ class CommandThread(threading.Thread):
         os.chdir(self.working_dir)
       proc = subprocess.Popen(self.command,
         stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-        shell=shell, universal_newlines=True, env=self.env)
-      output = proc.communicate()[0]
+        shell=shell, universal_newlines=False, env=self.env)
+      output = codecs.decode(proc.communicate()[0])
       # if sublime's python gets bumped to 2.7 we can just do:
       # output = subprocess.check_output(self.command)
       main_thread(self.on_done, output)

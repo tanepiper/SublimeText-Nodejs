@@ -22,4 +22,32 @@ class TestNpmCommand(DeferrableTestCase):
 
     def testNpmCommandRun(self):
         yield 1000 # wait for file is to be opened
-        sublime.run_command('node_npm')
+        sublime.run_command('node_npm', {'user_input': 'version'})
+        yield 1000
+        out_panel = sublime.active_window().find_output_panel('nodejs')
+        self.assertNotEqual(out_panel.find('sublime-nodejs', 0, sublime.IGNORECASE).size(), 0)
+
+    def testNpmInstallCommandRun(self):
+        yield 1000
+        sublime.run_command('node_npm_install')
+        yield 1000
+        out_panel = sublime.active_window().find_output_panel('nodejs')
+        self.assertNotEqual(out_panel.find('npm WARN sublime-nodejs@', 0, 
+                                sublime.IGNORECASE).size(), 0)    
+
+    def testNpmListCommandRun(self):
+        yield 1000
+        sublime.run_command('node_npm_list')
+        yield 1000
+        # sublime-nodejs@1.5.6
+        out_panel = sublime.active_window().find_output_panel('nodejs')
+        self.assertNotEqual(out_panel.find('sublime-nodejs@1.5.6', 0, 
+                                sublime.IGNORECASE).size(), 0)
+
+    def testNpmSearchCommandRun(self):
+        yield 1000
+        sublime.run_command('node_search', {'user_input': 'test'})
+        yield 5000
+        out_panel = sublime.active_window().find_output_panel('nodejs')
+        self.assertNotEqual(out_panel.find('=chaijs', 0, 
+                                sublime.IGNORECASE).size(), 0)         
