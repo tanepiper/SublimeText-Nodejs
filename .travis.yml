@@ -32,7 +32,7 @@ install:
 
 script:
     # run tests with test coverage report
-    - sh travis.sh run_tests
+    - sh travis.sh run_tests --coverage
     # testing syntax_test files
     # - sh travis.sh run_syntax_tests
 
@@ -53,3 +53,4 @@ after_success:
 
 notifications:
     email: false
+        
