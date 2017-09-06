@@ -17,6 +17,10 @@ debug('PLUGIN_DEBUG_FILE', PLUGIN_DEBUG_FILE)
 debug('UGLIFY_PATH', UGLIFY_PATH)
 debug('BUILDER_PATH', BUILDER_PATH)
 
+def check_for_nvm():
+    nvm_file = '.nvmrc'
+    project_folder = sublime.active_window().folders()[0]
+    # TODO: implement rest of the code
 
 def check_and_install_dependencies():
     """
