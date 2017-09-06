@@ -19,9 +19,18 @@ debug('BUILDER_PATH', BUILDER_PATH)
 
 
 def check_and_install_dependencies():
+    # check if already installed
+    if os.path.exists(PLUGIN_PACKAGE_LOCK): return
+
+    # merge /usr/local/{bin,sbin}    
+    new_env_path = os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
+    
     info('Running `npm install` to install plugin dependencies')
-    sublime.active_window().run_command('exec', { 'cmd': ['npm', 'install'],
-                                                    'working_dir': PLUGIN_PATH})
+
+    sublime.active_window().run_command('exec', { 'cmd': ['npm', 'install', '-s'],
+                                                'quiet': True,
+                                                'working_dir': PLUGIN_PATH,
+                                                'env': {'PATH': new_env_path}})
 
 def plugin_loaded():
     info('Loaded ' + PLUGIN_VERSION)
