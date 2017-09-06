@@ -52,3 +52,27 @@ class CommandThread(threading.Thread):
         main_thread(sublime.error_message, "Node binary could not be found in PATH\n\nConsider using the node_command setting for the Node plugin\n\nPATH is: %s" % os.environ['PATH'])
       else:
         raise e
+
+
+class OsThread(CommandThread):
+  def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
+    super().__init__(self, command, on_done, working_dir, fallback_encoding, env)
+
+  def run(self):
+    try:
+      if not self.shell:
+        shell = os.name == 'nt'
+
+      if self.working_dir != "":
+        os.chdir(self.working_dir)
+
+      proc = subprocess.Popen(self.command, stdout=subprocess.PIPE,
+          stderr=subprocess.STDOUT, shell=shell, env=self.env)
+      output = proc.communicate()[0]
+      on_done(output, error=False)
+    except subprocess.CalledProcessError as e:
+      on_done(output, error=True, e)
+    except OSError as e:
+      on_done(output, error=True, e)
+
+
