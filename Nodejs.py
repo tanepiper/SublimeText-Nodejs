@@ -19,6 +19,10 @@ debug('BUILDER_PATH', BUILDER_PATH)
 
 
 def check_and_install_dependencies():
+    """
+    The function is dosen't check whether npm/node is installed or not.
+    TODO: add check for npm/node existence
+    """
     # check if already installed
     if os.path.exists(PLUGIN_PACKAGE_LOCK): return
 
