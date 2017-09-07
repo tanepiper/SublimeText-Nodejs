@@ -65,22 +65,23 @@ class CommandThread(threading.Thread):
 
 class OsThread(CommandThread):
 
-    def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
-        super().__init__(self, command, on_done, working_dir, fallback_encoding, env)
+    def __init__(self, command, on_done, shell=False, working_dir="", fallback_encoding="", env={}):
+        super().__init__(command, on_done, working_dir, fallback_encoding, env)
+        self.shell = shell
 
     def run(self):
         try:
             if not self.shell:
-                shell = os.name == 'nt'
+                self.shell = os.name == 'nt'
 
             if self.working_dir != "":
                 os.chdir(self.working_dir)
 
             proc = subprocess.Popen(self.command, stdout=subprocess.PIPE,
-                                    stderr=subprocess.STDOUT, shell=shell, env=self.env)
-            output = proc.communicate()[0]
-            on_done(output)
+                                    stderr=subprocess.STDOUT, shell=self.shell, env=self.env)
+            output = codecs.decode(proc.communicate()[0])
+            self.on_done(output)
         except subprocess.CalledProcessError as e:
-            on_done(output, error=True, e)
+            self.on_done(e.returncode, error=True)
         except OSError as e:
-            on_done(output, error=True, e)
+            self.on_done(e.message, error=True)
