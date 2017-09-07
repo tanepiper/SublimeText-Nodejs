@@ -10,6 +10,7 @@ from .lib.nodejs_debug import debug, info
 from .lib.nodejs_constants import *
 from .lib.nodejs_paths import *
 from .lib.nodejs_commands import *
+from .lib.nodejs_nvm import *
 
 
 debug('PLUGIN_PATH', PLUGIN_PATH)
@@ -39,9 +40,9 @@ def check_and_install_dependencies():
 
 
 def plugin_loaded():
-    info('Loaded ' + PLUGIN_VERSION)
     check_and_install_dependencies()
-    check_for_nvm()
+    if Nvm.is_installed():
+        info('Node.js version from NVM is ' + Nvm.get_current_node_path())
 
 
 def plugin_unloaded():
