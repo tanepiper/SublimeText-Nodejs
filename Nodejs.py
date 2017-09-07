@@ -17,10 +17,12 @@ debug('PLUGIN_DEBUG_FILE', PLUGIN_DEBUG_FILE)
 debug('UGLIFY_PATH', UGLIFY_PATH)
 debug('BUILDER_PATH', BUILDER_PATH)
 
+
 def check_for_nvm():
     nvm_file = '.nvmrc'
     project_folder = sublime.active_window().folders()[0]
     # TODO: implement rest of the code
+
 
 def check_and_install_dependencies():
     """
@@ -28,21 +30,24 @@ def check_and_install_dependencies():
     TODO: add check for npm/node existence
     """
     # check if already installed
-    if os.path.exists(PLUGIN_PACKAGE_LOCK): return
+    if os.path.exists(PLUGIN_PACKAGE_LOCK):
+        return
 
-    # merge /usr/local/{bin,sbin}    
+    # merge /usr/local/{bin,sbin}
     new_env_path = os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
-    
+
     info('Running `npm install` to install plugin dependencies')
 
-    sublime.active_window().run_command('exec', { 'cmd': ['npm', 'install', '-s'],
-                                                'quiet': True,
-                                                'working_dir': PLUGIN_PATH,
-                                                'env': {'PATH': new_env_path}})
+    sublime.active_window().run_command('exec', {'cmd': ['npm', 'install', '-s'],
+                                                 'quiet': True,
+                                                 'working_dir': PLUGIN_PATH,
+                                                 'env': {'PATH': new_env_path}})
+
 
 def plugin_loaded():
     info('Loaded ' + PLUGIN_VERSION)
     check_and_install_dependencies()
+
 
 def plugin_unloaded():
     info('Unloaded ' + PLUGIN_VERSION)
