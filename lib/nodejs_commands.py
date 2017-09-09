@@ -1,7 +1,7 @@
 import os
 
 from .nodejs_base import *
-
+from .nodejs_constants import PLUGIN_PATH, BUILDER_PATH, UGLIFY_PATH
 # Commands to run
 
 
