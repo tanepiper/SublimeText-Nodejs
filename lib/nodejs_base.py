@@ -31,15 +31,15 @@ class NodeCommand(sublime_plugin.TextCommand):
         if command[0] == 'npm' and s.get('npm_command'):
             command[0] = s.get('npm_command')
 
-        # set paths for searching executables
-        old_path = os.environ['PATH']
-        kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
-
+        # update paths for searching executables
         if Nvm.is_installed():
             nvm_node_path = Nmv.get_current_node_path()
             old_path = kwargs['env']['PATH']
             kwargs['env'].update({'PATH': old_path + ':' + nvm_node_path})
 
+        # set paths for searching executables
+        old_path = os.environ['PATH']
+        kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
 
         if not callback:
             callback = self.generic_done
