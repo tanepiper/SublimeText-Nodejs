@@ -33,7 +33,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         # update paths for searching executables
         if Nvm.is_installed():
-            nvm_node_path = Nmv.get_current_node_path()
+            nvm_node_path = Nvm.get_current_node_path()
             old_path = kwargs['env']['PATH']
             kwargs['env'].update({'PATH': old_path + ':' + nvm_node_path})
 
