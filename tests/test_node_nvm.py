@@ -48,4 +48,7 @@ class TestNodeNvm(TestCase):
             self.assertEqual(Nvm.is_installed(), True)
 
     def testCurrentNodePath(self):
-        self.assertEqual(Nvm.get_current_node_path(), self.nvm_bin_path)
+        if os.name != 'nt':
+            self.assertEqual(Nvm.get_current_node_path(), self.nvm_bin_path)
+        else:
+            self.assertEqual(Nvm.get_current_node_path(), None)

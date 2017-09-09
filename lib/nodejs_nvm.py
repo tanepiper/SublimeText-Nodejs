@@ -25,5 +25,7 @@ class Nvm(object):
             
     @staticmethod
     def get_current_node_path():
+        if os.name == 'nt': return None
+        
         return os.path.join(Nvm.nvm_folder, 'versions', 'node',
             Nvm.current_node_version, 'bin')
