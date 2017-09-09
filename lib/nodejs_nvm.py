@@ -9,6 +9,7 @@ class Nvm(object):
 
     home_folder = os.path.expanduser("~")
     nvm_folder = os.path.join(home_folder, '.nvm')
+    default_alias_path = os.path.join(Nvm.nvm_folder, "alias/", "default")
 
     current_node_version = ''
     current_node_path = ''
@@ -17,15 +18,16 @@ class Nvm(object):
     def is_installed():
         if os.name == 'nt': return None
 
-        if os.path.exists(Nvm.nvm_folder):
-            with open(os.path.join(Nvm.nvm_folder, "alias/", "default")) as f:
-                Nvm.current_node_version = f.read()
-            return True
-        return False
+        if not os.path.exists(Nvm.default_alias_path): return False
+
+        return True
             
     @staticmethod
     def get_current_node_path():
         if os.name == 'nt': return None
-        
+
+        with open(Nvm.default_alias_path) as f:
+            Nvm.current_node_version = f.read()
+
         return os.path.join(Nvm.nvm_folder, 'versions', 'node',
             Nvm.current_node_version, 'bin')
