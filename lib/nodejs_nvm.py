@@ -15,7 +15,7 @@ class Nvm(object):
 
     @staticmethod
     def is_installed():
-        if os.name == 'nt': return
+        if os.name == 'nt': return None
 
         if os.path.exists(Nvm.nvm_folder):
             with open(os.path.join(Nvm.nvm_folder, "alias/", "default")) as f:
