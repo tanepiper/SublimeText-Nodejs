@@ -4,6 +4,7 @@ import sublime_plugin
 
 
 from .nodejs_debug import debug
+from .nodejs_nvm import Nvm
 from .nodejs_command_thread import CommandThread
 
 
@@ -32,7 +33,13 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         # set paths for searching executables
         old_path = os.environ['PATH']
-        kwargs['env'] = {'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'}
+        kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
+
+        if Nvm.is_installed():
+            nvm_node_path = Nmv.get_current_node_path()
+            old_path = kwargs['env']['PATH']
+            kwargs['env'].update({'PATH': old_path + ':' + nvm_node_path})
+
 
         if not callback:
             callback = self.generic_done
