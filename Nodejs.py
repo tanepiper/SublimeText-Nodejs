@@ -20,6 +20,12 @@ debug('UGLIFY_PATH', UGLIFY_PATH)
 debug('BUILDER_PATH', BUILDER_PATH)
 
 
+
+def generate_completions():
+    info('Running `node_builddocs` to generate Node.js completions')
+    sublime.active_window().run_command('node_builddocs')
+
+
 def check_and_install_dependencies():
     """
     The function is dosen't check whether npm/node is installed or not.
@@ -41,6 +47,7 @@ def check_and_install_dependencies():
 
 def plugin_loaded():
     check_and_install_dependencies()
+    generate_completions()
     if Nvm.is_installed():
         info('Node.js version from NVM is ' + Nvm.get_current_node_path())
 
