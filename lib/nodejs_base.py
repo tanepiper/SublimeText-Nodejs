@@ -32,14 +32,16 @@ class NodeCommand(sublime_plugin.TextCommand):
             command[0] = s.get('npm_command')
 
         # update paths for searching executables
+        kwargs['env'] = {}
+        old_path = os.environ['PATH']
         if Nvm.is_installed():
             nvm_node_path = Nvm.get_current_node_path()
-            old_path = kwargs['env']['PATH']
             kwargs['env'].update({'PATH': old_path + ':' + nvm_node_path})
 
         # set paths for searching executables
-        old_path = os.environ['PATH']
-        kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
+        if kwargs.get('env'):
+            old_path = kwargs['env']['PATH']
+            kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
 
         if not callback:
             callback = self.generic_done
