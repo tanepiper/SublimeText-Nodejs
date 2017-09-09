@@ -20,16 +20,19 @@ class TestNodeNvm(TestCase):
             self.home_path = os.path.expanduser('~')
             self.nvm_path = os.path.join(self.home_path, '.nvm')
             self.nvm_bin_path = os.path.join(self.home_path, '.nvm/versions/node/v8.4.0/bin')
-            self.alias_path = os.path.join(self.home_path, '.nvm', 'alias')
+            self.alias_path = os.path.join(self.home_path, '.nvm', 'alias/')
             self.alias_default_path = os.path.join(self.alias_path, 'default')
 
             if not os.path.exists(self.nvm_path):
-                os.makedirs(self.nvm_path); os.makedirs(self.alias_path)
+                os.makedirs(self.nvm_path)
             else:
                 # saving current node version
                 self.user_node = True
                 with open(self.alias_default_path, 'r') as f:
                     self.user_node_version = f.read()
+
+            if not os.path.exists(self.alias_path):
+                os.makedirs(self.alias_path)
 
             with open(self.alias_default_path, 'w') as f:
                 f.write('v8.4.0')
