@@ -9,7 +9,7 @@ class Nvm(object):
 
     home_folder = os.path.expanduser("~")
     nvm_folder = os.path.join(home_folder, '.nvm')
-    default_alias_path = os.path.join(Nvm.nvm_folder, "alias/", "default")
+    default_alias_path = os.path.join(nvm_folder, "alias/", "default")
 
     current_node_version = ''
     current_node_path = ''
