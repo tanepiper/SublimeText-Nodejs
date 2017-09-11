@@ -284,7 +284,7 @@ var createGlobals = function(output) {
 var createNodeLibs = function(options, output) {
   var files = [
     'assert', 'buffer', 'child_process', 'cluster', 'console', 'crypto',
-    '_debugger', '_linklist', 'dns', 'events', 'fs', 'http', 'https', 'module',
+    'dns', 'events', 'fs', 'http', 'https', 'module',
     'net', 'os', 'path', 'process', 'punycode', 'querystring', 'readline', 'repl',
     'stream', 'string_decoder', 'timers', 'tls', 'dgram', 'url', 'util', 'v8',
     'vm', 'zlib'
