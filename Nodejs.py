@@ -11,6 +11,7 @@ from .lib.nodejs_constants import *
 from .lib.nodejs_paths import *
 from .lib.nodejs_commands import *
 from .lib.nodejs_nvm import *
+from .lib.nodejs_completions import *
 
 
 debug('PLUGIN_PATH', PLUGIN_PATH)
