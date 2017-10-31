@@ -1,8 +1,17 @@
 environment:
   global:
     PACKAGE: "Nodejs"
+    SUBLIME_TEXT_VERSION : "3"
+
   matrix:
-    - SUBLIME_TEXT_VERSION : "3"
+    - nodejs_version: "6"
+    - nodejs_version: "8"
+
+
+branches:
+  only:
+    - master
+    - refactor
 
 install:
   - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
