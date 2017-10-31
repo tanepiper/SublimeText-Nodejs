@@ -5,11 +5,6 @@ env:
     # use UNITTESTING_TAG to specific tag of UnitTesting
     # - UNITTESTING_TAG="master"
 
-language: node_js
-node_js:
-  - "6"
-  - "8.6"
-
 branches:
   only:
     - master
@@ -20,9 +15,17 @@ branches:
 matrix:
   include:
     - os: linux
-      language: generic
+      language: node_js
+      node_js: "6"
+    - os: linux
+      language: node_js
+      node_js: "8"
     - os: osx
-      language: generic
+      language: node_js
+      node_js: "6"
+    - os: osx
+      language: node_js
+      node_js: "8"
 
 
 before_install:
