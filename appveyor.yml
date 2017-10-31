@@ -14,6 +14,7 @@ branches:
     - refactor
 
 install:
+  - ps: Install-Product node $env:nodejs_version
   - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
   - ps: .\appveyor.ps1 "bootstrap" -verbose
   - ps: .\appveyor.ps1 "install_package_control" -verbose
