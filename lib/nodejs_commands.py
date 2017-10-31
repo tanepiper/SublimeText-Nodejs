@@ -69,7 +69,7 @@ class NodeDrunCommand(NodeTextCommand):
         if version.startswith("v6") or version.startswith("v4"):
             command = ['node', 'debug', self.view.file_name()]
         else:
-            command = ['node', '--inspect', '--inspect-port=60123', self.view.file_name()]
+            command = ['node', 'inspect', self.view.file_name()]
             
         self.run_command(command, self.command_done)
 
@@ -108,6 +108,9 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
     """
 
     def on_input(self, message):
+        cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+        os.system(cmd)
+        
         command = message.split()
         command.insert(0, self.view.file_name())
 
@@ -117,8 +120,7 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
         if version.startswith("v6") or version.startswith("v4"):
             command.insert(0, 'debug')
         else:
-            command.insert(0, '--inspect-port=60123')
-            command.insert(0, '--inspect')
+            command.insert(0, 'inspect')
             
         command.insert(0, 'node')
         self.run_command(command, self.command_done)
