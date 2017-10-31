@@ -5,6 +5,11 @@ env:
     # use UNITTESTING_TAG to specific tag of UnitTesting
     # - UNITTESTING_TAG="master"
 
+language: node_js
+node_js:
+  - "6"
+  - "8.6"
+
 branches:
   only:
     - master
@@ -15,8 +20,7 @@ branches:
 matrix:
   include:
     - os: linux
-      language: python
-      python: 3.3
+      language: generic
     - os: osx
       language: generic
 
@@ -50,6 +54,8 @@ after_success:
           pip3 install codecov;
     fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+          apt-get update -qq
+          apt-get install -qq python3
           pip install python-coveralls;
           pip install codecov;
     fi
