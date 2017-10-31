@@ -5,7 +5,7 @@ import sublime_plugin
 
 from .nodejs_debug import debug
 from .nodejs_nvm import Nvm
-from .nodejs_command_thread import CommandThread
+from .nodejs_command_thread import CommandThread, run_os_command
 
 
 class NodeCommand(sublime_plugin.TextCommand):
@@ -52,6 +52,9 @@ class NodeCommand(sublime_plugin.TextCommand):
         if show_status:
             message = kwargs.get('status_message', False) or ' '.join(command)
             sublime.status_message(message)
+
+    def run_os_command(self, cmd):
+        return run_os_command(cmd)
 
     def generic_done(self, result):
         if not result.strip():

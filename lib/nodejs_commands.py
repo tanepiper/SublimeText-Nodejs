@@ -2,6 +2,7 @@ import os
 
 from .nodejs_base import *
 from .nodejs_constants import PLUGIN_PATH, BUILDER_PATH, UGLIFY_PATH
+from .nodejs_debug import debug
 # Commands to run
 
 
@@ -59,9 +60,17 @@ class NodeDrunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(command)
-        command = ['node', 'debug', self.view.file_name()]
+        cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+        os.system(cmd)
+
+        cmd = ['node', '--version']
+        version = self.run_os_command(cmd).decode()
+
+        if version.startswith("v6"):
+            command = ['node', 'debug', self.view.file_name()]
+        else:
+            command = ['node', '--inspect', '--inspect-port=60123', self.view.file_name()]
+            
         self.run_command(command, self.command_done)
 
     def command_done(self, result):
@@ -101,7 +110,16 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
     def on_input(self, message):
         command = message.split()
         command.insert(0, self.view.file_name())
-        command.insert(0, 'debug')
+
+        cmd = ['node', '--version']
+        version = self.run_os_command(cmd).decode()
+
+        if version.startswith("v6"):
+            command.insert(0, 'debug')
+        else:
+            command.insert(0, '--inspect-port=60123')
+            command.insert(0, '--inspect')
+            
         command.insert(0, 'node')
         self.run_command(command, self.command_done)
 

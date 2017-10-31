@@ -24,6 +24,11 @@ def _make_text_safeish(text, fallback_encoding):
     return text
 
 
+def run_os_command(cmd):
+    shell = os.name == 'nt'
+    return subprocess.check_output(cmd, shell=shell);
+
+
 class CommandThread(threading.Thread):
 
     def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
