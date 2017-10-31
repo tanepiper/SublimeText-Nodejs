@@ -11,7 +11,6 @@ from .lib.nodejs_constants import *
 from .lib.nodejs_paths import *
 from .lib.nodejs_commands import *
 from .lib.nodejs_nvm import *
-from .lib.nodejs_completions import *
 
 
 debug('PLUGIN_PATH', PLUGIN_PATH)
@@ -36,14 +35,23 @@ def check_and_install_dependencies():
         return
 
     # merge /usr/local/{bin,sbin}
-    new_env_path = os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
+    cmd = ['npm', 'install', '-s']
+    exec_options = {
+        'quiet': True,
+        'working_dir': PLUGIN_PATH
+    }
+
+    if os.name != 'nt':
+        exec_options['cmd'] = cmd
+        exec_options['env'] = {
+            'PATH': os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
+        }
+    else:
+        exec_options['shell_cmd'] = ' '.join(cmd)
 
     info('Running `npm install` to install plugin dependencies')
 
-    sublime.active_window().run_command('exec', {'cmd': ['npm', 'install', '-s'],
-                                                 'quiet': True,
-                                                 'working_dir': PLUGIN_PATH,
-                                                 'env': {'PATH': new_env_path}})
+    sublime.active_window().run_command('exec', exec_options)
 
 
 def plugin_loaded():

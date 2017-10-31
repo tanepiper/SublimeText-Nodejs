@@ -77,7 +77,7 @@ TODO
 * ~~Check for nvm installation~~
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
 * ~~Reorganise menu structure~~
-* Improve code completion snippets where possible
+* ~~Improve code completion snippets where possible~~
 * Provide an interface for writing JavaScript plugins
 
 Author & Contributors
