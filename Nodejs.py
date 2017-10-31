@@ -35,16 +35,21 @@ def check_and_install_dependencies():
         return
 
     # merge /usr/local/{bin,sbin}
-    new_env_path = os.environ['PATH']
+    cmd = ['npm', 'install', '-s']
+    exec_options = {
+        'quiet': True,
+        'working_dir': PLUGIN_PATH
+    }
+
     if os.name != 'nt':
-        new_env_path = new_env_path + ':/usr/local/bin:/usr/local/sbin'
+        exec_options['env'] = new_env_path + ':/usr/local/bin:/usr/local/sbin'
+        exec_options['cmd'] = cmd
+    else:
+        exec_options['shell_cmd'] = ' '.join(cmd)
 
     info('Running `npm install` to install plugin dependencies')
 
-    sublime.active_window().run_command('exec', {'cmd': ['npm', 'install', '-s'],
-                                                 'quiet': True,
-                                                 'working_dir': PLUGIN_PATH,
-                                                 'env': {'PATH': new_env_path}})
+    sublime.active_window().run_command('exec', exec_options)
 
 
 def plugin_loaded():
