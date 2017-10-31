@@ -35,8 +35,9 @@ def check_and_install_dependencies():
         return
 
     # merge /usr/local/{bin,sbin}
+    new_env_path = os.environ['PATH']
     if os.name != 'nt':
-        new_env_path = os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
+        new_env_path = new_env_path + ':/usr/local/bin:/usr/local/sbin'
 
     info('Running `npm install` to install plugin dependencies')
 
