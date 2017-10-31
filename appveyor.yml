@@ -20,10 +20,6 @@ install:
 
 build: off
 
-# Post-install test scripts.
-test_script:
-
-
 test_script:
   - node --version
   - npm --version
