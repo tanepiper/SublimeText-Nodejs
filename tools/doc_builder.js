@@ -7,6 +7,16 @@ var commander = require('commander');
 var global_options = {};
 
 
+
+var stdLibs = [
+  'assert', 'buffer', 'child_process', 'cluster', 'console', 'crypto',
+  'dns', 'events', 'fs', 'http', 'https', 'module',
+  'net', 'os', 'path', 'punycode', 'querystring', 'readline', 'repl',
+  'stream', 'string_decoder', 'timers', 'tls', 'dgram', 'url', 'util', 'v8',
+  'vm', 'zlib'
+];
+
+
 var saveCompletion = function(options, completions, callback) {
   var txt = JSON.stringify(completions, null, 4);
   fs.writeFile(options.output, txt);
@@ -191,7 +201,7 @@ exports.doc_builder = (function(options, callback) {
 
   // Pass thought the array and attach all global functions
   if (options.global) {
-    createGlobals(output);
+    createGlobals(output, options);
   }
 
   // Add the functions from the namespace of all items in node/lib
@@ -227,7 +237,7 @@ exports.doc_builder = (function(options, callback) {
  * @param  {Array} output The output array to put the data in to
  * @return {Array} The output array
  */
-var createGlobals = function(output) {
+var createGlobals = function(output, options) {
   var gKey;
   for (gKey in global) {
     if (typeof global[gKey] === 'function') {
@@ -237,7 +247,7 @@ var createGlobals = function(output) {
         reflection: FunctionReflect(global[gKey])
       }
       snippet['args'] = snippet.reflection.params.trim();
-      snippet['function_string'] = '' + snippet.name + snippet.reflection.params.trim() + ';'
+      snippet['function_string'] = '' + snippet.name
       snippet['function_template'] = '' + snippet.name + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
@@ -252,8 +262,8 @@ var createGlobals = function(output) {
         reflection: FunctionReflect(process[pKey])
       }
       snippet['args'] = snippet.reflection.params.trim();
-      snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
-      snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
+      snippet['function_string'] = '' + [snippet.type, snippet.name].join('.')
+      snippet['function_template'] = '' +  ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
   }
@@ -267,7 +277,7 @@ var createGlobals = function(output) {
         reflection: FunctionReflect(require[rKey])
       }
       snippet['args'] = snippet.reflection.params.trim();
-      snippet['function_string'] = '' + [snippet.type, snippet.name].join('.') + snippet.reflection.params.trim() + ';'
+      snippet['function_string'] = '' + [snippet.type, snippet.name].join('.')
       snippet['function_template'] = '' + [snippet.type, snippet.name].join('.') + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
       output.push(snippet);
     }
@@ -282,14 +292,7 @@ var createGlobals = function(output) {
  * @return {[type]}
  */
 var createNodeLibs = function(options, output) {
-  var files = [
-    'assert', 'buffer', 'child_process', 'cluster', 'console', 'crypto',
-    '_debugger', '_linklist', 'dns', 'events', 'fs', 'http', 'https', 'module',
-    'net', 'os', 'path', 'process', 'punycode', 'querystring', 'readline', 'repl',
-    'stream', 'string_decoder', 'timers', 'tls', 'dgram', 'url', 'util', 'v8',
-    'vm', 'zlib'
-  ];
-  createNamespaces(options, files, output);
+  createNamespaces(options, stdLibs, output);
 }
 
 /**
@@ -313,9 +316,8 @@ var createNamespaces = function(options, files, output) {
 
 
         snippet['args'] = snippet.reflection.params.trim();
-        snippet['function_string'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + snippet.reflection.params.trim() + ';'
-        // NOTICE: turn off expert mode in completions body, to resolce issue #61
-        snippet['function_template'] = '' + snippet.name + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
+        snippet['function_string'] = '' + [snippet.type, snippet.name].join('.')
+        snippet['function_template'] = '' + ((options.expert) ? snippet.name : [snippet.type, snippet.name].join('.')) + '(' + snippet.reflection.param_templates.join(', ') + ');$0'
         output.push(snippet);
       }
     }
@@ -357,7 +359,17 @@ var createCompletions = function(options, output, callback) {
     "scope": "source.js - variable.other.js",
     "completions": []
   };
-  for(;i<j;i++) {
+    
+  // Add completions for standard libs for resolving issue #61 and #69
+  stdLibs.forEach(function (v, i, a) {
+    completion.completions.push({
+      "trigger": v,
+      "contents": v
+    });
+  });
+
+
+  for(; i<j; i++) {
     var item = output[i];
 
     completion.completions.push({

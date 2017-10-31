@@ -1,0 +1,10 @@
+Version 2.0.0
+-------------
+This is a new release version
+
+* Feat. the plugin now only supports SublimeText 3 (according to the Python code specific for version 3)
+* Feat. using edit_settings command for user settings and user key bindings
+* Fix. refactored the code of the plugin; the plugin is spreaded in separate files under the lib directory
+* Feat. added features for debbuging the plugin; .debug_plugin file under plugin's directory
+* Feat. show context menu only if the current file's scope is `source.js`
+*
