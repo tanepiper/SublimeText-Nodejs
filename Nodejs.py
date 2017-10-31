@@ -39,8 +39,8 @@ def check_and_install_dependencies():
 
     info('Running `npm install` to install plugin dependencies')
 
-    sublime.active_window().run_command('exec', {'cmd': ['npm', 'install', '-s'],
-                                                 'quiet': True,
+    sublime.active_window().run_command('exec', {'cmd': ['npm', 'install'],
+                                                 'quiet': False,
                                                  'working_dir': PLUGIN_PATH,
                                                  'env': {'PATH': new_env_path}})
 
