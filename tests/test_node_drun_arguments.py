@@ -22,9 +22,6 @@ class TestNodeDRunArgumentsCommand(DeferrableTestCase):
             self.view.window().run_command("close_file")
 
     def testNodeDRunArguments(self):
-        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(command)
-
         sublime.set_timeout(lambda: 
             self.view.run_command('node_drun_arguments', {'user_input': '1 2 3'}))
         yield 5000

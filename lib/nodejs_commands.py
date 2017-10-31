@@ -66,7 +66,7 @@ class NodeDrunCommand(NodeTextCommand):
         cmd = ['node', '--version']
         version = self.run_os_command(cmd).decode()
 
-        if version.startswith("v6"):
+        if version.startswith("v6") or version.startswith("v4"):
             command = ['node', 'debug', self.view.file_name()]
         else:
             command = ['node', '--inspect', '--inspect-port=60123', self.view.file_name()]
@@ -114,7 +114,7 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
         cmd = ['node', '--version']
         version = self.run_os_command(cmd).decode()
 
-        if version.startswith("v6"):
+        if version.startswith("v6") or version.startswith("v4"):
             command.insert(0, 'debug')
         else:
             command.insert(0, '--inspect-port=60123')
