@@ -1355,11 +1355,11 @@
         },
         {
             "trigger": "net.connect",
-            "contents": "net.connect();$0"
+            "contents": "net.connect(${1:...args});$0"
         },
         {
             "trigger": "net.createConnection",
-            "contents": "net.createConnection();$0"
+            "contents": "net.createConnection(${1:...args});$0"
         },
         {
             "trigger": "net.createServer",

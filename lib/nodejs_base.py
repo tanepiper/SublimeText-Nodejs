@@ -2,8 +2,9 @@ import os
 import sublime
 import sublime_plugin
 
+import shellenv
 
-from .nodejs_debug import debug
+from .nodejs_debug import debug, info
 from .nodejs_nvm import Nvm
 from .nodejs_command_thread import CommandThread, run_os_command
 
@@ -33,15 +34,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         # update paths for searching executables
         kwargs['env'] = {}
-        old_path = os.environ['PATH']
-        if Nvm.is_installed():
-            nvm_node_path = Nvm.get_current_node_path()
-            kwargs['env'].update({'PATH': old_path + ':' + nvm_node_path})
-
-        # set paths for searching executables
-        if kwargs.get('env'):
-            old_path = kwargs['env']['PATH']
-            kwargs['env'].update({'PATH': old_path + ':/usr/local/bin:/usr/local/sbin'})
+        kwargs['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
 
         if not callback:
             callback = self.generic_done
@@ -55,6 +48,11 @@ class NodeCommand(sublime_plugin.TextCommand):
 
     def run_os_command(self, cmd):
         return run_os_command(cmd)
+
+    def node_version(self):
+        cmd = ['node', '--version']
+        version = self.run_os_command(cmd).decode()
+        return version
 
     def generic_done(self, result):
         if not result.strip():
@@ -70,6 +68,9 @@ class NodeCommand(sublime_plugin.TextCommand):
         }
         output_file.run_command('node_scratch_output', args)
 
+    def _is_output_panel_exist(self):
+        return 'output.nodejs' in self.get_window().panels()
+
     def scratch(self, output, title=False, position=None, **kwargs):
         scratch_file = self.get_window().new_file()
         if title:
@@ -83,8 +84,7 @@ class NodeCommand(sublime_plugin.TextCommand):
         return scratch_file
 
     def panel(self, output, **kwargs):
-        if not hasattr(self, 'output_view'):
-            self.output_view = self.get_window().get_output_panel("nodejs")
+        self.output_view = self.get_window().create_output_panel("nodejs")
         self.output_view.set_read_only(False)
         self._output_to_view(self.output_view, output, clear=True, **kwargs)
         self.output_view.set_read_only(True)

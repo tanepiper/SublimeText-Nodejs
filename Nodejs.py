@@ -1,6 +1,8 @@
 import os
 import sys
 
+import shellenv
+
 import sublime
 import sublime_plugin
 
@@ -18,7 +20,7 @@ debug('PLUGIN_LIB_DIR', PLUGIN_LIB_DIR)
 debug('PLUGIN_DEBUG_FILE', PLUGIN_DEBUG_FILE)
 debug('UGLIFY_PATH', UGLIFY_PATH)
 debug('BUILDER_PATH', BUILDER_PATH)
-
+debug('SHELLENV', shellenv.get_env())
 
 
 def generate_completions():
@@ -52,6 +54,10 @@ def check_and_install_dependencies():
     info('Running `npm install` to install plugin dependencies')
 
     sublime.active_window().run_command('exec', exec_options)
+
+def create_output_panel():
+    view = sublime.active_window().create_output_panel("nodejs")
+    view.set_read_only(True)
 
 
 def plugin_loaded():

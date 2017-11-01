@@ -1,11 +1,14 @@
 import os
 import codecs
-import sublime
 import functools
 import threading
 import subprocess
+import signal
+
+import sublime
 
 from .nodejs_debug import debug
+from .nodejs_constants import PLUGIN_PATH
 
 
 def main_thread(callback, *args, **kwargs):
@@ -40,19 +43,45 @@ class CommandThread(threading.Thread):
         self.env = os.environ.copy()
         self.env.update(env)
 
+        self.pid_file_name = '.debugger.pid'
+
+    def _write_pid(self):
+        with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'w') as f:
+            f.write(str(self.proc.pid))
+
+    def _read_pid(self):
+        with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'r') as f:
+            return f.read()
+
     def run(self):
         try:
+            # Firstly check is there already a process is running NEED psutil
+            # os.kill(int(self._read_pid()), 0)
+
             # Per http://bugs.python.org/issue8557 shell=True is required to
             # get $PATH on Windows. Yay portable code.
             shell = os.name == 'nt'
             if self.working_dir != "":
                 os.chdir(self.working_dir)
-            proc = subprocess.Popen(self.command,
-                                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                                    shell=shell, universal_newlines=False, env=self.env)
-            output = codecs.decode(proc.communicate()[0])
-            # if sublime's python gets bumped to 2.7 we can just do:
-            # output = subprocess.check_output(self.command)
+          
+            self.proc = subprocess.Popen(self.command, 
+                                                stdout=subprocess.PIPE,
+                                                stderr=subprocess.STDOUT, 
+                                                shell=shell, 
+                                                universal_newlines=False,
+                                                env=self.env)
+
+
+            try:
+                output = self.proc.communicate(timeout=5)[0].decode()
+            except subprocess.TimeoutExpired:
+                message = """Debugger is succesfully started at localhost:60123.
+1. Now you can open Google Chrome and navigate to chrome://inspect.
+2. Then click Open dedicated DevTools for Node. 
+3. After click Add connection and add connection to localhost:61023"""
+                #self._write_pid()
+                return main_thread(self.on_done, message)
+
             main_thread(self.on_done, output)
         except subprocess.CalledProcessError as e:
             main_thread(self.on_done, e.returncode)

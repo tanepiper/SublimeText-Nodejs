@@ -63,13 +63,13 @@ class NodeDrunCommand(NodeTextCommand):
         cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
         os.system(cmd)
 
-        cmd = ['node', '--version']
-        version = self.run_os_command(cmd).decode()
+        version = self.node_version()
 
-        if version.startswith("v6") or version.startswith("v4"):
-            command = ['node', 'debug', self.view.file_name()]
-        else:
-            command = ['node', 'inspect', self.view.file_name()]
+        if version.startswith("v6"):
+            command = ['node', '--inspect=localhost:60123',
+                                        '--debug-brk', self.view.file_name()]
+        if version.startswith("v8"):
+            command = ['node', '--inspect-brk=localhost:60123', self.view.file_name()]
             
         self.run_command(command, self.command_done)
 
@@ -104,7 +104,7 @@ class NodeRunArgumentsCommand(NodeTextCommand):
 
 class NodeDrunArgumentsCommand(NodeTextCommand):
     """
-    RCommand to run node with debug and arguments
+    Command to run node with debug and arguments
     """
 
     def on_input(self, message):
@@ -114,13 +114,13 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
         command = message.split()
         command.insert(0, self.view.file_name())
 
-        cmd = ['node', '--version']
-        version = self.run_os_command(cmd).decode()
+        version = self.node_version()
 
-        if version.startswith("v6") or version.startswith("v4"):
-            command.insert(0, 'debug')
-        else:
-            command.insert(0, 'inspect')
+        if version.startswith("v6"):
+            command.insert(0, '--debug-brk')
+            command.insert(0, '--inspect=localhost:60123')
+        if version.startswith("v8"):
+            command.insert(0, '--inspect-brk=localhost:60123')
             
         command.insert(0, 'node')
         self.run_command(command, self.command_done)
