@@ -40,8 +40,7 @@ class NodeRunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(command)
+        self._kill_node_processes()
         command = ['node', self.view.file_name()]
         self.run_command(command, self.command_done)
 
@@ -60,8 +59,7 @@ class NodeDrunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(cmd)
+        self._kill_node_processes()
 
         version = self.node_version()
 
@@ -108,8 +106,7 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
     """
 
     def on_input(self, message):
-        cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(cmd)
+        self._kill_node_processes()
         
         command = message.split()
         command.insert(0, self.view.file_name())

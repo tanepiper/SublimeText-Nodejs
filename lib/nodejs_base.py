@@ -71,6 +71,13 @@ class NodeCommand(sublime_plugin.TextCommand):
     def _is_output_panel_exist(self):
         return 'output.nodejs' in self.get_window().panels()
 
+    def _kill_node_processes(self):
+        if os.name == 'nt':
+            cmd = "taskkill /F /im node*"
+        else:
+            cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
+        os.system(cmd)
+
     def scratch(self, output, title=False, position=None, **kwargs):
         scratch_file = self.get_window().new_file()
         if title:
