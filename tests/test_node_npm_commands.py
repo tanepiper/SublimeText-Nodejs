@@ -87,7 +87,7 @@ class TestNpmCommand(DeferrableTestCase):
         sublime.set_timeout(lambda: self.view.run_command('node_npm_publish'), 1000)
         yield 5000
         out_panel = sublime.active_window().find_output_panel('nodejs')
-        self.assertNotEqual(out_panel.find('npm ERR! code ENEEDAUTH', 0, 
+        self.assertNotEqual(out_panel.find('npm ERR!', 0, 
                                 sublime.IGNORECASE).size(), 0)
 
     def testNpmUpdateCommandRun(self):
