@@ -20,14 +20,14 @@ class TestNodeTools(DeferrableTestCase):
 
     def testNodeBuildDocsCommand(self):
         sublime.set_timeout(lambda: self.view.run_command('node_builddocs'), 1000)
-        yield 5000
+        yield 8000
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertNotEqual(out_panel.find('Building ...', 0, sublime.IGNORECASE).size(), 0)
         self.assertNotEqual(out_panel.find('Done!', 0, sublime.IGNORECASE).size(), 0)
 
     def testNodeUglifyCommand(self):
         sublime.set_timeout(lambda: self.view.run_command('node_uglify'), 1000)
-        yield 5000
+        yield 8000
         out_panel = sublime.active_window().find_output_panel('nodejs')
         self.assertNotEqual(out_panel.find(
             'var logMsg="Hello, World!",var1,var2,', 0, sublime.IGNORECASE).size(), 0)
