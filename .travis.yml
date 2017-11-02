@@ -40,7 +40,7 @@ install:
   # bootstrap the testing environment
   - sh travis.sh bootstrap
   # install Package Control and package denepdencies
-  # - sh travis.sh install_package_control
+  - sh travis.sh install_package_control
 
 script:
   # run tests with test coverage report
