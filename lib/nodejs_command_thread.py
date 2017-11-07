@@ -48,10 +48,8 @@ def run_os_command(cmd):
         proc = subprocess.Popen(cmd, **options)
 
         output = proc.communicate()[0].decode()
-        print(output)
         return output
     except Exception as e:
-        print(str(e))
         return "ERROR: run_os_command: {0}".format(e)
 
 

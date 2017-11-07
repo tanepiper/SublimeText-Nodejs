@@ -64,10 +64,10 @@ class NodeDrunCommand(NodeTextCommand):
         version = self.node_version()
         debug('node_version', version)
 
-        if version.startswith("v6"):
+        if version == 6:
             command = ['node', '--inspect=localhost:60123',
                                         '--debug-brk', self.view.file_name()]
-        if version.startswith("v8"):
+        if version > 6:
             command = ['node', '--inspect-brk=localhost:60123', self.view.file_name()]
             
         self.run_command(command, self.command_done)
@@ -115,10 +115,10 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
         version = self.node_version()
         debug('node_version', version)
 
-        if version.startswith("v6"):
+        if version == 6:
             command.insert(0, '--debug-brk')
             command.insert(0, '--inspect=localhost:60123')
-        if version.startswith("v8"):
+        if version > 6:
             command.insert(0, '--inspect-brk=localhost:60123')
             
         command.insert(0, 'node')

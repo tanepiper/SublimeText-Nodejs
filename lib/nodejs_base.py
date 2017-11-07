@@ -1,4 +1,5 @@
 import os
+import re
 import sublime
 import sublime_plugin
 
@@ -52,6 +53,7 @@ class NodeCommand(sublime_plugin.TextCommand):
     def node_version(self):
         cmd = ['node', '--version']
         version = self.run_os_command(cmd)
+        version = int(re.findall('v(\d+)', version)[0])
         return version
 
     def generic_done(self, result):
