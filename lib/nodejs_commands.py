@@ -62,6 +62,7 @@ class NodeDrunCommand(NodeTextCommand):
         self._kill_node_processes()
 
         version = self.node_version()
+        debug('node_version', version)
 
         if version.startswith("v6"):
             command = ['node', '--inspect=localhost:60123',
@@ -112,6 +113,7 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
         command.insert(0, self.view.file_name())
 
         version = self.node_version()
+        debug('node_version', version)
 
         if version.startswith("v6"):
             command.insert(0, '--debug-brk')

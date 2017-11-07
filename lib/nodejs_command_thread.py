@@ -33,15 +33,26 @@ def run_os_command(cmd):
     shell = os.name == 'nt'
 
     try:
-        proc = subprocess.Popen(cmd, shell=shell, 
-                    stdout=subprocess.PIPE,
-                    stderr=subprocess.STDOUT,
-                    env={'PATH': shellenv.get_env()[1]['PATH']})
+    
+        options = {
+            'shell': shell, 
+            'stdout': subprocess.PIPE,
+            'stderr': subprocess.STDOUT,
+            'universal_newlines': False,
+        }
+        
+        if not shell:
+            options['env'] = {}
+            options['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
+    
+        proc = subprocess.Popen(cmd, **options)
 
         output = proc.communicate()[0].decode()
+        print(output)
         return output
     except Exception as e:
-        return "ERROR: run_os_command: {0}" % str(e)
+        print(str(e))
+        return "ERROR: run_os_command: {0}".format(e)
 
 
 class CommandThread(threading.Thread):
