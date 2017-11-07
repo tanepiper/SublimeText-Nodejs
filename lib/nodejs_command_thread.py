@@ -29,7 +29,19 @@ def _make_text_safeish(text, fallback_encoding):
 
 def run_os_command(cmd):
     shell = os.name == 'nt'
-    return subprocess.check_output(cmd, shell=shell);
+
+    if shell:
+        cmd = ' '.join(cmd)
+
+    try:
+        proc = subprocess.Popen(cmd, shell=shell, 
+                    stdout=subprocess.PIPE,
+                    env={'PATH': shellenv.get_env()[1]['PATH']})
+
+        output = proc.communicate()[0].decode()
+        return output
+    except Error as e:
+        return "ERROR: run_os_command: {0}" % str(e)
 
 
 class CommandThread(threading.Thread):
