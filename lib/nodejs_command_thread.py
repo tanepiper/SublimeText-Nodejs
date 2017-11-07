@@ -32,9 +32,6 @@ def _make_text_safeish(text, fallback_encoding):
 def run_os_command(cmd):
     shell = os.name == 'nt'
 
-    if shell:
-        cmd = ' '.join(cmd)
-
     try:
         proc = subprocess.Popen(cmd, shell=shell, 
                     stdout=subprocess.PIPE,
