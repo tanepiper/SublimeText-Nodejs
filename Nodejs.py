@@ -45,6 +45,7 @@ def check_and_install_dependencies():
 
     if os.name != 'nt':
         # update paths for searching executables
+        exec_options['cmd'] = cmd
         exec_options['env'] = {}
         exec_options['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
     else:
