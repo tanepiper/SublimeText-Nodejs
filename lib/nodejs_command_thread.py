@@ -40,7 +40,7 @@ def run_os_command(cmd):
 
         output = proc.communicate()[0].decode()
         return output
-    except Error as e:
+    except Exception as e:
         return "ERROR: run_os_command: {0}" % str(e)
 
 
