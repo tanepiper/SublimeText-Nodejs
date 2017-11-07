@@ -51,7 +51,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
     def node_version(self):
         cmd = ['node', '--version']
-        version = self.run_os_command(cmd).decode()
+        version = self.run_os_command(cmd)
         return version
 
     def generic_done(self, result):
