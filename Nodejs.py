@@ -44,10 +44,9 @@ def check_and_install_dependencies():
     }
 
     if os.name != 'nt':
-        exec_options['cmd'] = cmd
-        exec_options['env'] = {
-            'PATH': os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
-        }
+        # update paths for searching executables
+        exec_options['env'] = {}
+        exec_options['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
     else:
         exec_options['shell_cmd'] = ' '.join(cmd)
 
