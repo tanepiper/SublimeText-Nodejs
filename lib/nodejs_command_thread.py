@@ -38,6 +38,7 @@ def run_os_command(cmd):
     try:
         proc = subprocess.Popen(cmd, shell=shell, 
                     stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
                     env={'PATH': shellenv.get_env()[1]['PATH']})
 
         output = proc.communicate()[0].decode()
@@ -92,7 +93,7 @@ class CommandThread(threading.Thread):
                 message = """Debugger is succesfully started at localhost:60123.
 1. Now you can open Google Chrome and navigate to chrome://inspect.
 2. Then click Open dedicated DevTools for Node. 
-3. After click Add connection and add connection to localhost:61023"""
+3. After click Add connection and add connection to localhost:60123"""
                 #self._write_pid()
                 return main_thread(self.on_done, message)
 

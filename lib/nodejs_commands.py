@@ -63,6 +63,8 @@ class NodeDrunCommand(NodeTextCommand):
 
         version = self.node_version()
 
+        command = []
+
         if version.startswith("v6"):
             command = ['node', '--inspect=localhost:60123',
                                         '--debug-brk', self.view.file_name()]
