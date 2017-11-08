@@ -2,7 +2,7 @@
 *.pyc
 *.cache
 node_modules
-.debug_plugin
+# .debug_plugin
 .debugger.pid
 package-lock.json
 
