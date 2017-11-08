@@ -47,11 +47,11 @@ before_install:
   - export NVM_SYMLINK_CURRENT=true
 
 install:
-  - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
-      touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin;
-    fi
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-      touch "$HOME/Library/Application Support/Sublime Text 3/Packages/Nodejs/.debug_plugin";
+          touch "$HOME/Library/Application Support/Sublime Text 3/Packages/Nodejs/.debug_plugin";
+    fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+          touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin;
     fi
   - nvm alias default $NODEJS_VERSION; nvm use $NODEJS_VERSION
   # bootstrap the testing environment
