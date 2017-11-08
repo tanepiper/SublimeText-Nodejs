@@ -41,13 +41,13 @@ install:
   - sh travis.sh bootstrap
   # install Package Control and package denepdencies
   - sh travis.sh install_package_control
+  - sh >$HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
 
 script:
   # run tests with test coverage report
   - sh travis.sh run_tests --coverage
   # testing syntax_test files
   # - sh travis.sh run_syntax_tests
-  - sh touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
 
 after_success:
   # remove the following if `coveralls` is not needed
