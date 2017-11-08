@@ -1,5 +1,6 @@
 env:
   global:
+    - NVM_SYMLINK_CURRENT=true
     - PACKAGE="Nodejs" # Package name
     - SUBLIME_TEXT_VERSION="3"
     # use UNITTESTING_TAG to specific tag of UnitTesting
@@ -17,15 +18,23 @@ matrix:
     - os: linux
       language: node_js
       node_js: "6"
+      env: 
+        - NODEJS_VERSION="v6.12.0"
     - os: linux
       language: node_js
       node_js: "8"
+      env:
+        - NODEJS_VERSION="v8.9.1"
     - os: osx
       language: node_js
       node_js: "6"
+      env:
+        - NODEJS_VERSION="v6.12.0"
     - os: osx
       language: node_js
       node_js: "8"
+      env:
+        - NODEJS_VERSION="v8.9.1"
 
 
 before_install:
@@ -35,6 +44,7 @@ before_install:
           export DISPLAY=:99.0;
           sh -e /etc/init.d/xvfb start;
     fi
+  - export NVM_SYMLINK_CURRENT=true
 
 install:
   # bootstrap the testing environment
@@ -42,6 +52,7 @@ install:
   # install Package Control and package denepdencies
   - sh travis.sh install_package_control
   - touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
+  - nvm alias default $NODEJS_VERSION; nvm use $NODEJS_VERSION
 
 script:
   # run tests with test coverage report

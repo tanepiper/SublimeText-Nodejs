@@ -2,6 +2,8 @@ import os
 import re
 import shellenv
 
+from .nodejs_debug import debug
+from .nodejs_command_thread import run_os_command
 
 class Nvm(object):
     """
@@ -24,8 +26,19 @@ class Nvm(object):
 
     @staticmethod
     def node_version():
-        if not is_installed(): return False
-        Nvm.current_node_version = re.findall(r'v\d+\.\d+\.\d+')[0]
+        rx = r'v\d+\.\d+\.\d+'
+
+        if not Nvm.is_installed(): return False
+        
+        if not Nvm.user_env.get('NVM_SYMLINK_CURRENT', False):
+            debug('NVM_SYMLINK_CURRENT', False)
+            Nvm.current_node_version = re.findall(rx, 
+                    Nvm.user_env.get('NVM_BIN', False))[0]
+        else:
+            debug('NVM_SYMLINK_CURRENT', True)
+            home_dir = os.path.expanduser("~/.nvm/current")
+            realpath = os.path.realpath(home_dir)
+            Nvm.current_node_version = re.findall(rx, realpath)[0]
         return Nvm.current_node_version
             
     @staticmethod

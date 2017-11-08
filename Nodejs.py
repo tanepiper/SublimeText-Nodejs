@@ -64,7 +64,7 @@ def plugin_loaded():
     check_and_install_dependencies()
     generate_completions()
     if Nvm.is_installed():
-        info('Node.js version from NVM is ' + Nvm.get_current_node_path())
+        info('Node.js version from NVM is ' + Nvm.node_version())
 
 
 def plugin_unloaded():
