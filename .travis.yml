@@ -47,6 +47,7 @@ script:
   - sh travis.sh run_tests --coverage
   # testing syntax_test files
   # - sh travis.sh run_syntax_tests
+  - sh touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
 
 after_success:
   # remove the following if `coveralls` is not needed
