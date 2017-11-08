@@ -46,10 +46,14 @@ def run_os_command(cmd):
             options['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
     
         proc = subprocess.Popen(cmd, **options)
-
         output = proc.communicate()[0].decode()
+        
+        debug('run_os_command: output', output)
+
         return output
+
     except Exception as e:
+        debug('run_os_command: exception', str(e))
         return "ERROR: run_os_command: {0}".format(e)
 
 

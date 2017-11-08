@@ -53,7 +53,12 @@ class NodeCommand(sublime_plugin.TextCommand):
     def node_version(self):
         cmd = ['node', '--version']
         version = self.run_os_command(cmd)
+
+        debug('node_version: raw', version)
+
         version = int(re.findall('v(\d+)', version)[0])
+        debug('node_version: int', version)
+
         return version
 
     def generic_done(self, result):
@@ -79,6 +84,7 @@ class NodeCommand(sublime_plugin.TextCommand):
         else:
             cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
         os.system(cmd)
+        debug('_kill_node_processes', 'after call')
 
     def scratch(self, output, title=False, position=None, **kwargs):
         scratch_file = self.get_window().new_file()
