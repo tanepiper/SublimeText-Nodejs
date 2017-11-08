@@ -41,7 +41,7 @@ install:
   - sh travis.sh bootstrap
   # install Package Control and package denepdencies
   - sh travis.sh install_package_control
-  - sh >$HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
+  - touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin
 
 script:
   # run tests with test coverage report
