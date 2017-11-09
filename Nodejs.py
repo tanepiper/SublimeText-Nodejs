@@ -1,6 +1,8 @@
 import os
 import sys
 
+import shellenv
+
 import sublime
 import sublime_plugin
 
@@ -18,7 +20,7 @@ debug('PLUGIN_LIB_DIR', PLUGIN_LIB_DIR)
 debug('PLUGIN_DEBUG_FILE', PLUGIN_DEBUG_FILE)
 debug('UGLIFY_PATH', UGLIFY_PATH)
 debug('BUILDER_PATH', BUILDER_PATH)
-
+debug('SHELLENV', shellenv.get_env())
 
 
 def generate_completions():
@@ -42,10 +44,10 @@ def check_and_install_dependencies():
     }
 
     if os.name != 'nt':
+        # update paths for searching executables
         exec_options['cmd'] = cmd
-        exec_options['env'] = {
-            'PATH': os.environ['PATH'] + ':/usr/local/bin:/usr/local/sbin'
-        }
+        exec_options['env'] = {}
+        exec_options['env'].update({'PATH': shellenv.get_env()[1]['PATH']})
     else:
         exec_options['shell_cmd'] = ' '.join(cmd)
 
@@ -53,12 +55,16 @@ def check_and_install_dependencies():
 
     sublime.active_window().run_command('exec', exec_options)
 
+def create_output_panel():
+    view = sublime.active_window().create_output_panel("nodejs")
+    view.set_read_only(True)
+
 
 def plugin_loaded():
     check_and_install_dependencies()
     generate_completions()
     if Nvm.is_installed():
-        info('Node.js version from NVM is ' + Nvm.get_current_node_path())
+        info('Node.js version from NVM is ' + Nvm.node_version())
 
 
 def plugin_unloaded():

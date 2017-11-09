@@ -1,5 +1,9 @@
 import os
+import re
+import shellenv
 
+from .nodejs_debug import debug
+from .nodejs_command_thread import run_os_command
 
 class Nvm(object):
     """
@@ -7,9 +11,7 @@ class Nvm(object):
     """
     nvm_file = '.nvmrc'
 
-    home_folder = os.path.expanduser("~")
-    nvm_folder = os.path.join(home_folder, '.nvm')
-    default_alias_path = os.path.join(nvm_folder, "alias/", "default")
+    user_env = shellenv.get_env()[1]
 
     current_node_version = ''
     current_node_path = ''
@@ -18,16 +20,30 @@ class Nvm(object):
     def is_installed():
         if os.name == 'nt': return None
 
-        if not os.path.exists(Nvm.default_alias_path): return False
+        if not Nvm.user_env.get('NVM_BIN', False): return False
 
         return True
+
+    @staticmethod
+    def node_version():
+        rx = r'v\d+\.\d+\.\d+'
+
+        if not Nvm.is_installed(): return False
+        
+        if not Nvm.user_env.get('NVM_SYMLINK_CURRENT', False):
+            debug('NVM_SYMLINK_CURRENT', False)
+            Nvm.current_node_version = re.findall(rx, 
+                    Nvm.user_env.get('NVM_BIN', False))[0]
+        else:
+            debug('NVM_SYMLINK_CURRENT', True)
+            home_dir = os.path.expanduser("~/.nvm/current")
+            realpath = os.path.realpath(home_dir)
+            Nvm.current_node_version = re.findall(rx, realpath)[0]
+        return Nvm.current_node_version
             
     @staticmethod
     def get_current_node_path():
         if os.name == 'nt': return None
 
-        with open(Nvm.default_alias_path) as f:
-            Nvm.current_node_version = f.read()
-
-        return os.path.join(Nvm.nvm_folder, 'versions', 'node',
-            Nvm.current_node_version, 'bin')
+        Nvm.current_node_path = Nvm.user_env.get('NVM_BIN', False)
+        return Nvm.current_node_path

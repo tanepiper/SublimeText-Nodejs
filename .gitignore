@@ -3,6 +3,7 @@
 *.cache
 node_modules
 .debug_plugin
+.debugger.pid
 package-lock.json
 
 tests/data/node_modules

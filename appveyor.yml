@@ -1,10 +1,20 @@
 environment:
   global:
     PACKAGE: "Nodejs"
+    SUBLIME_TEXT_VERSION : "3"
+
   matrix:
-    - SUBLIME_TEXT_VERSION : "3"
+    - nodejs_version: "6"
+    - nodejs_version: "8"
+
+
+branches:
+  only:
+    - master
+    - refactor
 
 install:
+  - ps: Install-Product node $env:nodejs_version
   - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
   - ps: .\appveyor.ps1 "bootstrap" -verbose
   - ps: .\appveyor.ps1 "install_package_control" -verbose
@@ -12,6 +22,8 @@ install:
 build: off
 
 test_script:
+  - node --version
+  - npm --version
   - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
 
 on_failure:

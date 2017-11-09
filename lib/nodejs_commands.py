@@ -2,6 +2,7 @@ import os
 
 from .nodejs_base import *
 from .nodejs_constants import PLUGIN_PATH, BUILDER_PATH, UGLIFY_PATH
+from .nodejs_debug import debug
 # Commands to run
 
 
@@ -39,8 +40,7 @@ class NodeRunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(command)
+        self._kill_node_processes()
         command = ['node', self.view.file_name()]
         self.run_command(command, self.command_done)
 
@@ -59,9 +59,17 @@ class NodeDrunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        command = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(command)
-        command = ['node', 'debug', self.view.file_name()]
+        self._kill_node_processes()
+
+        version = self.node_version()
+        debug('node_version', version)
+
+        if version == 6:
+            command = ['node', '--inspect=localhost:60123',
+                                        '--debug-brk', self.view.file_name()]
+        if version > 6:
+            command = ['node', '--inspect-brk=localhost:60123', self.view.file_name()]
+            
         self.run_command(command, self.command_done)
 
     def command_done(self, result):
@@ -95,13 +103,24 @@ class NodeRunArgumentsCommand(NodeTextCommand):
 
 class NodeDrunArgumentsCommand(NodeTextCommand):
     """
-    RCommand to run node with debug and arguments
+    Command to run node with debug and arguments
     """
 
     def on_input(self, message):
+        self._kill_node_processes()
+        
         command = message.split()
         command.insert(0, self.view.file_name())
-        command.insert(0, 'debug')
+
+        version = self.node_version()
+        debug('node_version', version)
+
+        if version == 6:
+            command.insert(0, '--debug-brk')
+            command.insert(0, '--inspect=localhost:60123')
+        if version > 6:
+            command.insert(0, '--inspect-brk=localhost:60123')
+            
         command.insert(0, 'node')
         self.run_command(command, self.command_done)
 
