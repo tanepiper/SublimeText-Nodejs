@@ -391,7 +391,7 @@
         },
         {
             "trigger": "require.resolve",
-            "contents": "require.resolve(${1:request});$0"
+            "contents": "require.resolve(${1:request}, ${2:options});$0"
         },
         {
             "trigger": "assert.fail",
@@ -614,6 +614,18 @@
             "contents": "console.countReset();$0"
         },
         {
+            "trigger": "console.group",
+            "contents": "console.group();$0"
+        },
+        {
+            "trigger": "console.groupCollapsed",
+            "contents": "console.groupCollapsed();$0"
+        },
+        {
+            "trigger": "console.groupEnd",
+            "contents": "console.groupEnd();$0"
+        },
+        {
             "trigger": "console.Console",
             "contents": "console.Console(${1:stdout}, ${2:stderr}, ${3:ignoreErrors}, ${4:=}, ${5:true});$0"
         },
@@ -628,18 +640,6 @@
         {
             "trigger": "console.table",
             "contents": "console.table();$0"
-        },
-        {
-            "trigger": "console.group",
-            "contents": "console.group();$0"
-        },
-        {
-            "trigger": "console.groupCollapsed",
-            "contents": "console.groupCollapsed();$0"
-        },
-        {
-            "trigger": "console.groupEnd",
-            "contents": "console.groupEnd();$0"
         },
         {
             "trigger": "console.markTimeline",
@@ -664,6 +664,10 @@
         {
             "trigger": "console.timeStamp",
             "contents": "console.timeStamp();$0"
+        },
+        {
+            "trigger": "console.context",
+            "contents": "console.context();$0"
         },
         {
             "trigger": "crypto._toBuf",
@@ -768,6 +772,10 @@
         {
             "trigger": "crypto.DiffieHellmanGroup",
             "contents": "crypto.DiffieHellmanGroup(${1:name});$0"
+        },
+        {
+            "trigger": "crypto.ECDH",
+            "contents": "crypto.ECDH(${1:curve});$0"
         },
         {
             "trigger": "crypto.createECDH",
@@ -1214,6 +1222,14 @@
             "contents": "fs.mkdtempSync(${1:prefix}, ${2:options});$0"
         },
         {
+            "trigger": "fs.copyFile",
+            "contents": "fs.copyFile(${1:src}, ${2:dest}, ${3:flags}, ${4:callback});$0"
+        },
+        {
+            "trigger": "fs.copyFileSync",
+            "contents": "fs.copyFileSync(${1:src}, ${2:dest}, ${3:flags});$0"
+        },
+        {
             "trigger": "fs.createReadStream",
             "contents": "fs.createReadStream(${1:path}, ${2:options});$0"
         },
@@ -1278,6 +1294,10 @@
             "contents": "http.request(${1:options}, ${2:cb});$0"
         },
         {
+            "trigger": "https.Agent",
+            "contents": "https.Agent(${1:options});$0"
+        },
+        {
             "trigger": "https.Server",
             "contents": "https.Server(${1:opts}, ${2:requestListener});$0"
         },
@@ -1286,16 +1306,12 @@
             "contents": "https.createServer(${1:opts}, ${2:requestListener});$0"
         },
         {
-            "trigger": "https.Agent",
-            "contents": "https.Agent(${1:options});$0"
+            "trigger": "https.get",
+            "contents": "https.get(${1:options}, ${2:cb});$0"
         },
         {
             "trigger": "https.request",
             "contents": "https.request(${1:options}, ${2:cb});$0"
-        },
-        {
-            "trigger": "https.get",
-            "contents": "https.get(${1:options}, ${2:cb});$0"
         },
         {
             "trigger": "module.wrap",
@@ -1323,7 +1339,7 @@
         },
         {
             "trigger": "module._resolveFilename",
-            "contents": "module._resolveFilename(${1:request}, ${2:parent}, ${3:isMain});$0"
+            "contents": "module._resolveFilename(${1:request}, ${2:parent}, ${3:isMain}, ${4:options});$0"
         },
         {
             "trigger": "module.runMain",
@@ -1619,7 +1635,7 @@
         },
         {
             "trigger": "stream._isUint8Array",
-            "contents": "stream._isUint8Array();$0"
+            "contents": "stream._isUint8Array(${1:value});$0"
         },
         {
             "trigger": "stream._uint8ArrayToBuffer",
@@ -1810,6 +1826,10 @@
             "contents": "util.isBoolean(${1:arg});$0"
         },
         {
+            "trigger": "util.isBuffer",
+            "contents": "util.isBuffer(${1:b});$0"
+        },
+        {
             "trigger": "util.isNull",
             "contents": "util.isNull(${1:arg});$0"
         },
@@ -1835,7 +1855,7 @@
         },
         {
             "trigger": "util.isRegExp",
-            "contents": "util.isRegExp(${1:re});$0"
+            "contents": "util.isRegExp();$0"
         },
         {
             "trigger": "util.isObject",
@@ -1843,7 +1863,7 @@
         },
         {
             "trigger": "util.isDate",
-            "contents": "util.isDate(${1:d});$0"
+            "contents": "util.isDate();$0"
         },
         {
             "trigger": "util.isError",
@@ -1888,10 +1908,6 @@
         {
             "trigger": "util.puts",
             "contents": "util.puts(${1:...args});$0"
-        },
-        {
-            "trigger": "util.isBuffer",
-            "contents": "util.isBuffer(${1:b});$0"
         },
         {
             "trigger": "v8.cachedDataVersionTag",
@@ -1947,7 +1963,7 @@
         },
         {
             "trigger": "vm.runInDebugContext",
-            "contents": "vm.runInDebugContext(${1:code});$0"
+            "contents": "vm.runInDebugContext();$0"
         },
         {
             "trigger": "vm.runInContext",
