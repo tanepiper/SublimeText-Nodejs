@@ -100,7 +100,7 @@ class CommandThread(threading.Thread):
             try:
                 output = self.proc.communicate(timeout=5)[0].decode()
             except subprocess.TimeoutExpired:
-                message = """Debugger is succesfully started at localhost:60123.
+                message = """Debugger is successfully started at localhost:60123.
 1. Now you can open Google Chrome and navigate to chrome://inspect.
 2. Then click Open dedicated DevTools for Node. 
 3. After click Add connection and add connection to localhost:60123"""
