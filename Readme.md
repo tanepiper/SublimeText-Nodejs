@@ -1,4 +1,4 @@
-Nodejs Sublime Text 3 Package
+Nodejs Sublime Text 3 Package [![Build Status](https://travis-ci.org/varp/SublimeText-Nodejs.svg?branch=refactor)](https://travis-ci.org/varp/SublimeText-Nodejs) [![Build status](https://ci.appveyor.com/api/projects/status/ntjerqt5cd0vi65s/branch/refactor?svg=true)](https://ci.appveyor.com/project/varp/sublimetext-nodejs-er8ci/branch/refactor)
 =============================
 
 Overview
@@ -71,13 +71,13 @@ You may need to add a `path` variable to the settings object for this if your no
 TODO
 ----
 * ~~uglify_js.js and other ./tools/*.js scripts dosen't work when the package is installed by SublimeText package manager~~
-* Use events API to install NodeJs dependicies for tools provided by the package
-* Refactor plugin's classes inheritance in Nodejs.py
-* Use events API to generate Sublime Text completions during installation phase depending on a version of installed NodeJs
-* Check for nvm installation
+* ~~Use events API to install NodeJs dependicies for tools provided by the package~~
+* ~~Refactor plugin's classes inheritance in Nodejs.py~~
+* ~~Use events API to generate Sublime Text completions during installation phase depending on a version of installed NodeJs~~
+* ~~Check for nvm installation~~
 * Replace the Nodejs.sublime-build to work with [jake](https://github.com/mde/jake)
-* Reorganise menu structure
-* Improve code completion snippets where possible
+* ~~Reorganise menu structure~~
+* ~~Improve code completion snippets where possible~~
 * Provide an interface for writing JavaScript plugins
 
 Author & Contributors
