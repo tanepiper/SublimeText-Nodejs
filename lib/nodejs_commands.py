@@ -105,7 +105,6 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
     """
 
     def on_input(self, message):
-        self._kill_node_processes()
         
         command = message.split()
         command.insert(0, self.view.file_name())
