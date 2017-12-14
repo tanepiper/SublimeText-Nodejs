@@ -9,7 +9,7 @@ env:
 branches:
   only:
     - master
-    - refactor
+    - kill-only-node-started-by-plugin
 
 # mutliple os matrix
 # https://docs.travis-ci.com/user/multi-os/#Python-example-(unsupported-languages)

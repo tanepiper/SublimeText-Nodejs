@@ -1,0 +1,6 @@
+Version 2.0.1
+-------------
+This is a new release version
+
+* Feat. Kill only Nodejs process started by the plugin not all Nodejs processes 
+on OS. Resolve issue #36.

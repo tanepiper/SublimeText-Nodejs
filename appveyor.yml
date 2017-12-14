@@ -11,7 +11,7 @@ environment:
 branches:
   only:
     - master
-    - refactor
+    - kill-only-node-started-by-plugin
 
 install:
   - ps: Install-Product node $env:nodejs_version
