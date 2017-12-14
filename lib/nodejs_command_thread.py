@@ -8,6 +8,7 @@ import signal
 import sublime
 
 import shellenv
+import psutil
 
 from .nodejs_debug import debug
 from .nodejs_constants import PLUGIN_PATH
