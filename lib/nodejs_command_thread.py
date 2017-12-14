@@ -82,7 +82,7 @@ class CommandThread(threading.Thread):
             return f.read()
 
     def _kill_debugger(self):
-        debugger_pid = _read_pid()
+        debugger_pid = self._read_pid()
         if debugger_pid is not None and debugger_pid != "":
             return
 
