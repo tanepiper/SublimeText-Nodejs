@@ -81,7 +81,7 @@ class CommandThread(threading.Thread):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'r') as f:
             return f.read()
 
-    def _kill_debugger():
+    def _kill_debugger(self):
         debugger_pid = _read_pid()
         if debugger_pid is not None and debugger_pid != "":
             return
