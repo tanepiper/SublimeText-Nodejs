@@ -42,8 +42,8 @@ class NodeCommand(sublime_plugin.TextCommand):
         if not callback:
             callback = self.generic_done
 
-        self.thread = CommandThread(command, callback, **kwargs)
-        self.thread.start()
+        thread = CommandThread(command, callback, **kwargs)
+        thread.start()
 
         if show_status:
             message = kwargs.get('status_message', False) or ' '.join(command)
