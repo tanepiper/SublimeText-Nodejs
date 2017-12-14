@@ -80,18 +80,6 @@ class NodeCommand(sublime_plugin.TextCommand):
     def _is_output_panel_exist(self):
         return 'output.nodejs' in self.get_window().panels()
 
-    def _kill_node_processes(self):
-        node_pid = self.thread._read_pid()
-        if node_pid is not None and node_pid != "":
-            return
-
-        try:
-            p = psutil.Process(node_pid)
-            p.kill()
-            debug('_kill_node_processes', 'after call')
-        except psutil.NoSuchProcess:
-            return
-
 
     def scratch(self, output, title=False, position=None, **kwargs):
         scratch_file = self.get_window().new_file()
