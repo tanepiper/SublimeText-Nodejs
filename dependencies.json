@@ -2,7 +2,8 @@
     "*": {
         "*": [
             "shellenv",
-            "newterm"
+            "newterm",
+            "psutil"
         ]
     }
 }

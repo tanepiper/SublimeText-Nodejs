@@ -1,8 +1,10 @@
 import os
 import re
+
 import sublime
 import sublime_plugin
 
+import psutil
 import shellenv
 
 from .nodejs_debug import debug, info
@@ -40,8 +42,8 @@ class NodeCommand(sublime_plugin.TextCommand):
         if not callback:
             callback = self.generic_done
 
-        thread = CommandThread(command, callback, **kwargs)
-        thread.start()
+        self.thread = CommandThread(command, callback, **kwargs)
+        self.thread.start()
 
         if show_status:
             message = kwargs.get('status_message', False) or ' '.join(command)
@@ -79,12 +81,17 @@ class NodeCommand(sublime_plugin.TextCommand):
         return 'output.nodejs' in self.get_window().panels()
 
     def _kill_node_processes(self):
-        if os.name == 'nt':
-            cmd = "taskkill /F /im node*"
-        else:
-            cmd = """kill -9 `ps -ef | grep node | grep -v grep | awk '{print $2}'`"""
-        os.system(cmd)
-        debug('_kill_node_processes', 'after call')
+        node_pid = self.thread._read_pid()
+        if node_pid is not None and node_pid != "":
+            return
+
+        try:
+            p = psutil.Process(node_pid)
+            p.kill()
+            debug('_kill_node_processes', 'after call')
+        except psutil.NoSuchProcess:
+            return
+
 
     def scratch(self, output, title=False, position=None, **kwargs):
         scratch_file = self.get_window().new_file()
