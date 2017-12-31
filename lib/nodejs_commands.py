@@ -40,7 +40,6 @@ class NodeRunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        self._kill_node_processes()
         command = ['node', self.view.file_name()]
         self.run_command(command, self.command_done)
 
@@ -59,7 +58,6 @@ class NodeDrunCommand(NodeTextCommand):
     """
 
     def run(self, edit):
-        self._kill_node_processes()
 
         version = self.node_version()
         debug('node_version', version)
@@ -107,7 +105,6 @@ class NodeDrunArgumentsCommand(NodeTextCommand):
     """
 
     def on_input(self, message):
-        self._kill_node_processes()
         
         command = message.split()
         command.insert(0, self.view.file_name())

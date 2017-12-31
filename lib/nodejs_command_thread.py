@@ -8,6 +8,7 @@ import signal
 import sublime
 
 import shellenv
+import psutil
 
 from .nodejs_debug import debug
 from .nodejs_constants import PLUGIN_PATH
@@ -59,7 +60,9 @@ def run_os_command(cmd):
 
 class CommandThread(threading.Thread):
 
-    def __init__(self, command, on_done, working_dir="", fallback_encoding="", env={}):
+    def __init__(self, command, on_done, working_dir="", 
+                        fallback_encoding="", env={}, write_pid=False):
+
         threading.Thread.__init__(self)
         self.command = command
         self.on_done = on_done
@@ -70,6 +73,11 @@ class CommandThread(threading.Thread):
 
         self.pid_file_name = '.debugger.pid'
 
+        pid_file_path = os.path.join(PLUGIN_PATH, self.pid_file_name)
+        if not os.path.exists(pid_file_path):
+            with open(pid_file_path, "x") as f:
+                pass
+
     def _write_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'w') as f:
             f.write(str(self.proc.pid))
@@ -78,10 +86,23 @@ class CommandThread(threading.Thread):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'r') as f:
             return f.read()
 
+    def _kill_debugger(self):
+        debugger_pid = self._read_pid()
+        debug("_kill_debugger: debugger_pid", debugger_pid)
+        if debugger_pid == "":
+            return
+
+        try:
+            p = psutil.Process(int(debugger_pid))
+            p.kill()
+            debug('_kill_node_processes', 'after call')
+        except psutil.NoSuchProcess:
+            return
+
     def run(self):
         try:
-            # Firstly check is there already a process is running NEED psutil
-            # os.kill(int(self._read_pid()), 0)
+            # kill previously started debugger
+            self._kill_debugger()
 
             # Per http://bugs.python.org/issue8557 shell=True is required to
             # get $PATH on Windows. Yay portable code.
@@ -104,7 +125,7 @@ class CommandThread(threading.Thread):
 1. Now you can open Google Chrome and navigate to chrome://inspect.
 2. Then click Open dedicated DevTools for Node. 
 3. After click Add connection and add connection to localhost:60123"""
-                #self._write_pid()
+                self._write_pid()
                 return main_thread(self.on_done, message)
 
             main_thread(self.on_done, output)
