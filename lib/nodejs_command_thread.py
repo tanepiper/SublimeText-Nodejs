@@ -73,6 +73,11 @@ class CommandThread(threading.Thread):
 
         self.pid_file_name = '.debugger.pid'
 
+        pid_file_path = os.path.join(PLUGIN_PATH, self.pid_file_name)
+        if not os.path.exists(pid_file_path):
+            with open(pid_file_path, "x") as f:
+                pass
+
     def _write_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'w') as f:
             f.write(str(self.proc.pid))
@@ -83,7 +88,8 @@ class CommandThread(threading.Thread):
 
     def _kill_debugger(self):
         debugger_pid = self._read_pid()
-        if debugger_pid is not None and debugger_pid != "":
+        debug("_kill_debugger: debugger_pid", debugger_pid)
+        if debugger_pid == "":
             return
 
         try:
