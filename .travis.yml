@@ -3,13 +3,13 @@ env:
     - NVM_SYMLINK_CURRENT=true
     - PACKAGE="Nodejs" # Package name
     - SUBLIME_TEXT_VERSION="3"
+    - PLUGIN_VERSION="2.0.3"
     # use UNITTESTING_TAG to specific tag of UnitTesting
     # - UNITTESTING_TAG="master"
 
 branches:
   only:
     - master
-    - kill-only-node-started-by-plugin
 
 # mutliple os matrix
 # https://docs.travis-ci.com/user/multi-os/#Python-example-(unsupported-languages)

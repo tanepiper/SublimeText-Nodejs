@@ -61,7 +61,7 @@ def run_os_command(cmd):
 class CommandThread(threading.Thread):
 
     def __init__(self, command, on_done, working_dir="", 
-                        fallback_encoding="", env={}, write_pid=False):
+                        fallback_encoding="", env={}, shell=False):
 
         threading.Thread.__init__(self)
         self.command = command
@@ -70,6 +70,7 @@ class CommandThread(threading.Thread):
         self.fallback_encoding = fallback_encoding
         self.env = os.environ.copy()
         self.env.update(env)
+        self.shell = shell
 
         self.pid_file_name = '.debugger.pid'
 
@@ -81,6 +82,7 @@ class CommandThread(threading.Thread):
     def _write_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'w') as f:
             f.write(str(self.proc.pid))
+        debug("_write_pid: debugger pid:", str(self.proc.pid))
 
     def _read_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'r') as f:
@@ -94,9 +96,10 @@ class CommandThread(threading.Thread):
 
         try:
             p = psutil.Process(int(debugger_pid))
+            debug("_kill_debugger: process:", p)
             p.kill()
-            debug('_kill_node_processes', 'after call')
-        except psutil.NoSuchProcess:
+        except psutil.NoSuchProcess as e:
+            debug("_kill_debugger: NoSuchProcess exception is occurred", e)
             return
 
     def run(self):
@@ -106,17 +109,17 @@ class CommandThread(threading.Thread):
 
             # Per http://bugs.python.org/issue8557 shell=True is required to
             # get $PATH on Windows. Yay portable code.
-            shell = os.name == 'nt'
+            debug("CommandThread: run: self.shell", self.shell)
             if self.working_dir != "":
                 os.chdir(self.working_dir)
           
             self.proc = subprocess.Popen(self.command, 
                                                 stdout=subprocess.PIPE,
                                                 stderr=subprocess.STDOUT, 
-                                                shell=shell, 
+                                                shell=self.shell, 
                                                 universal_newlines=False,
                                                 env=self.env)
-
+            debug("CommandThread: run: self.proc.pid", self.proc.pid)
 
             try:
                 output = self.proc.communicate(timeout=5)[0].decode()

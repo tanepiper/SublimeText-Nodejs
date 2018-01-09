@@ -3,7 +3,7 @@ import re
 import shellenv
 
 from .nodejs_debug import debug
-from .nodejs_command_thread import run_os_command
+
 
 class Nvm(object):
     """

@@ -16,6 +16,9 @@ class NodeCommand(sublime_plugin.TextCommand):
 
     def run_command(self, command, callback=None, show_status=True,
                     filter_empty_args=True, **kwargs):
+
+        shell = False
+
         if filter_empty_args:
             command = [arg for arg in command if arg]
 
@@ -41,6 +44,17 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         if not callback:
             callback = self.generic_done
+
+        if os.name == 'nt':
+            shell = True
+            # doing exception for debugger commands to be able 
+            # get PID of node.exe on Windows not cmd.exe
+            debug("NodeCommand: run_command: class name", self.__class__.__name__)
+            if self.__class__.__name__.lower().find("drun") != -1:
+                shell = False
+        
+        kwargs['shell'] = shell
+        debug("NodeCommand: run_command: kwargs", kwargs)
 
         thread = CommandThread(command, callback, **kwargs)
         thread.start()
