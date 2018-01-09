@@ -109,7 +109,7 @@ class CommandThread(threading.Thread):
 
             # Per http://bugs.python.org/issue8557 shell=True is required to
             # get $PATH on Windows. Yay portable code.
-            shell = self.shell or os.name == 'nt'
+            shell = self.shell
             if self.working_dir != "":
                 os.chdir(self.working_dir)
           
