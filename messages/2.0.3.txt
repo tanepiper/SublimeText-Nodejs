@@ -1,0 +1,6 @@
+Version 2.0.3
+-------------
+This is a new release version
+
+* Fix. Kill only Nodejs process started by the plugin not all Nodejs processes 
+in OS. Now works on Windows platform.

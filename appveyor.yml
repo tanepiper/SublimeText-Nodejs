@@ -1,17 +1,16 @@
 environment:
   global:
     PACKAGE: "Nodejs"
+    PLUGIN_VERSION: "2.0.3"
     SUBLIME_TEXT_VERSION : "3"
 
   matrix:
     - nodejs_version: "6"
     - nodejs_version: "8"
 
-
 branches:
   only:
     - master
-    - kill-only-node-started-by-plugin
 
 install:
   - ps: Install-Product node $env:nodejs_version
