@@ -61,7 +61,7 @@ def run_os_command(cmd):
 class CommandThread(threading.Thread):
 
     def __init__(self, command, on_done, working_dir="", 
-                        fallback_encoding="", env={}, write_pid=False):
+                        fallback_encoding="", env={}, shell=False):
 
         threading.Thread.__init__(self)
         self.command = command
@@ -70,6 +70,7 @@ class CommandThread(threading.Thread):
         self.fallback_encoding = fallback_encoding
         self.env = os.environ.copy()
         self.env.update(env)
+        self.shell = shell
 
         self.pid_file_name = '.debugger.pid'
 
@@ -108,14 +109,14 @@ class CommandThread(threading.Thread):
 
             # Per http://bugs.python.org/issue8557 shell=True is required to
             # get $PATH on Windows. Yay portable code.
-            shell = os.name == 'nt'
+            shell = self.shell or os.name == 'nt'
             if self.working_dir != "":
                 os.chdir(self.working_dir)
           
             self.proc = subprocess.Popen(self.command, 
                                                 stdout=subprocess.PIPE,
                                                 stderr=subprocess.STDOUT, 
-                                                shell=False, 
+                                                shell=self.shell, 
                                                 universal_newlines=False,
                                                 env=self.env)
             debug("CommandThread: run: self.proc.pid", self.proc.pid)

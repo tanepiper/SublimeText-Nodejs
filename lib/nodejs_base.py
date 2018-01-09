@@ -16,6 +16,9 @@ class NodeCommand(sublime_plugin.TextCommand):
 
     def run_command(self, command, callback=None, show_status=True,
                     filter_empty_args=True, **kwargs):
+
+        shell = False
+
         if filter_empty_args:
             command = [arg for arg in command if arg]
 
@@ -41,6 +44,11 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         if not callback:
             callback = self.generic_done
+
+        if os.name == 'nt':
+            shell = True if __class__.__name__.lower().find("drun") != -1 else False
+        
+        kwargs['shell'] = shell
 
         thread = CommandThread(command, callback, **kwargs)
         thread.start()
