@@ -81,6 +81,7 @@ class CommandThread(threading.Thread):
     def _write_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'w') as f:
             f.write(str(self.proc.pid))
+        debug("_write_pid: debugger pid:", str(self.proc.pid))
 
     def _read_pid(self):
         with open(os.path.join(PLUGIN_PATH, self.pid_file_name), 'r') as f:
@@ -94,9 +95,10 @@ class CommandThread(threading.Thread):
 
         try:
             p = psutil.Process(int(debugger_pid))
+            debug("_kill_debugger: process:", p)
             p.kill()
-            debug('_kill_node_processes', 'after call')
-        except psutil.NoSuchProcess:
+        except psutil.NoSuchProcess as e:
+            debug("_kill_debugger: NoSuchProcess exception is occurred", e)
             return
 
     def run(self):
@@ -116,7 +118,7 @@ class CommandThread(threading.Thread):
                                                 shell=shell, 
                                                 universal_newlines=False,
                                                 env=self.env)
-
+            debug("CommandThread: run: self.proc.pid", self.proc.pid)
 
             try:
                 output = self.proc.communicate(timeout=5)[0].decode()
