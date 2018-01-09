@@ -47,8 +47,7 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         if os.name == 'nt':
             shell = True if __class__.__name__.lower().find("drun") != -1 else False
-        
-        kwargs['shell'] = shell
+            kwargs['shell'] = shell
 
         thread = CommandThread(command, callback, **kwargs)
         thread.start()
