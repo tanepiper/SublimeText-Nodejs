@@ -24,6 +24,7 @@ build: off
 test_script:
   - node --version
   - npm --version
+  - ps: New-Item c:\st\data\packages\nodejs\.debug_plugin -type file -force
   - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
 
 on_failure:
