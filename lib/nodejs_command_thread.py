@@ -115,7 +115,7 @@ class CommandThread(threading.Thread):
             self.proc = subprocess.Popen(self.command, 
                                                 stdout=subprocess.PIPE,
                                                 stderr=subprocess.STDOUT, 
-                                                shell=shell, 
+                                                shell=False, 
                                                 universal_newlines=False,
                                                 env=self.env)
             debug("CommandThread: run: self.proc.pid", self.proc.pid)
