@@ -1,4 +1,4 @@
-{
+\{
   "cmd": ["node", "$file"],
   "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
   "selector": "source.js",
@@ -6,7 +6,7 @@
   "encoding": "cp1252",
   "windows":
     {
-        "shell_cmd": "taskkill /F /IM node.exe & node $file"
+        "shell_cmd": "taskkill /F /IM node.exe & node \"$file\""
     },
     "linux":
     {
