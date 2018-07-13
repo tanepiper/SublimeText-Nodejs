@@ -3,7 +3,9 @@
         "*": [
             "shellenv",
             "newterm",
-            "psutil"
+        ],
+        ">=3000": [
+            "psutil",
         ]
     }
 }
