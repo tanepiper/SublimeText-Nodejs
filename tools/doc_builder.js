@@ -19,8 +19,9 @@ var stdLibs = [
 
 var saveCompletion = function(options, completions, callback) {
   var txt = JSON.stringify(completions, null, 4);
-  fs.writeFile(options.output, txt);
-  callback(null, txt)
+  fs.writeFile(options.output, txt, function() {
+    callback(null, txt)
+  });
 }
 
 /**
@@ -42,8 +43,9 @@ var saveFile = function(options, item, output, callback) {
       }
       var file_path = path.resolve(dest_path, 'node-' + item.type + '-' + item.name + '.sublime-snippet');
       console.log('Making file ' + file_path);
-      fs.writeFile(file_path, output);
-      callback(null, output, file_path);
+      fs.writeFile(file_path, output, function() {
+        callback(null, output, file_path);
+      });
     });
   } else {
     var output = [
