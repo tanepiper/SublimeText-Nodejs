@@ -31,12 +31,14 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         if command[0] == 'node':
             if s.get('node_command'):
-                command[0] = s.get('node_command')
+                self.insert_command_with_args(s.get('node_command'), command)
             if s.get('node_path'):
                 kwargs['env'] = {"NODE_PATH": str(s.get('node_path'))}
 
         if command[0] == 'npm' and s.get('npm_command'):
-            command[0] = s.get('npm_command')
+            self.insert_command_with_args(s.get('npm_command'), command)
+
+        debug("NodeCommand: run_command: command", command)
 
         # update paths for searching executables
         kwargs['env'] = {}
@@ -47,12 +49,12 @@ class NodeCommand(sublime_plugin.TextCommand):
 
         if os.name == 'nt':
             shell = True
-            # doing exception for debugger commands to be able 
+            # doing exception for debugger commands to be able
             # get PID of node.exe on Windows not cmd.exe
             debug("NodeCommand: run_command: class name", self.__class__.__name__)
             if self.__class__.__name__.lower().find("drun") != -1:
                 shell = False
-        
+
         kwargs['shell'] = shell
         debug("NodeCommand: run_command: kwargs", kwargs)
 
@@ -62,6 +64,14 @@ class NodeCommand(sublime_plugin.TextCommand):
         if show_status:
             message = kwargs.get('status_message', False) or ' '.join(command)
             sublime.status_message(message)
+
+    def insert_command_with_args(self, cmd_as_string, command_array):
+        cmds = reversed(cmd_as_string.split())
+        command_array.pop(0)
+
+        for c in cmds:
+            command_array.insert(0, c)
+        debug("NodeCommand: insert_command_with_args: command_array", command_array)
 
     def run_os_command(self, cmd):
         return run_os_command(cmd)
