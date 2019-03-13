@@ -17,32 +17,33 @@ matrix:
   include:
     - os: linux
       language: node_js
-      node_js: "6.12.2"
-      env: 
-        - NODEJS_VERSION="v6.12.2"
+      node_js: "10"
+      env:
+        - NODEJS_VERSION="v10"
     - os: linux
       language: node_js
-      node_js: "8.9.3"
+      node_js: "11"
       env:
-        - NODEJS_VERSION="v8.9.3"
+        - NODEJS_VERSION="v11"
     - os: osx
       language: node_js
-      node_js: "6.12.2"
+      node_js: "10"
       env:
-        - NODEJS_VERSION="v6.12.2"
+        - NODEJS_VERSION="v10"
     - os: osx
       language: node_js
-      node_js: "8.9.3"
+      node_js: "11"
       env:
-        - NODEJS_VERSION="v8.9.3"
+        - NODEJS_VERSION="v11"
 
 
 before_install:
   - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
   # enable gui, see https://docs.travis-ci.com/user/gui-and-headless-browsers
   - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
-          export DISPLAY=:99.0;
-          sh -e /etc/init.d/xvfb start;
+        export DISPLAY=:99.0
+        sh -e /etc/init.d/xvfb start
+        sleep 3 # give xvfb some time to start
     fi
   - export NVM_SYMLINK_CURRENT=true
 
@@ -84,4 +85,4 @@ after_success:
 
 notifications:
   email: false
-        
+
