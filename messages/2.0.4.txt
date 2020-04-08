@@ -1,0 +1,5 @@
+Version 2.0.4
+-------------
+This is a new release version
+
+* Fix. Annoying bug #103 - https://github.com/tanepiper/SublimeText-Nodejs/issues/103
