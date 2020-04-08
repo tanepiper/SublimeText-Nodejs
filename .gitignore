@@ -8,3 +8,10 @@ package-lock.json
 
 tests/data/node_modules
 tests/data/package-lock.json
+
+.idea/
+
+*.sublime-project
+*.sublime-workspace
+
+*.log

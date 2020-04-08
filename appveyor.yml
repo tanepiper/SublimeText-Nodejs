@@ -5,8 +5,8 @@ environment:
     SUBLIME_TEXT_VERSION : "3"
 
   matrix:
-    - nodejs_version: "6"
-    - nodejs_version: "8"
+    - nodejs_version: "10"
+    - nodejs_version: "11"
 
 branches:
   only:
@@ -24,7 +24,7 @@ test_script:
   - node --version
   - npm --version
   - ps: New-Item c:\st\data\packages\nodejs\.debug_plugin -type file -force
-  - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
+  - ps: .\appveyor.ps1 "run_tests" -verbose
 
 on_failure:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

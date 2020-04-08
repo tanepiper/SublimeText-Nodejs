@@ -17,33 +17,34 @@ matrix:
   include:
     - os: linux
       language: node_js
-      node_js: "6.12.2"
-      env: 
-        - NODEJS_VERSION="v6.12.2"
+      node_js: "10"
+      env:
+        - NODEJS_VERSION="v10"
     - os: linux
       language: node_js
-      node_js: "8.9.3"
+      node_js: "11"
       env:
-        - NODEJS_VERSION="v8.9.3"
+        - NODEJS_VERSION="v11"
     - os: osx
       language: node_js
-      node_js: "6.12.2"
+      node_js: "10"
       env:
-        - NODEJS_VERSION="v6.12.2"
+        - NODEJS_VERSION="v10"
     - os: osx
       language: node_js
-      node_js: "8.9.3"
+      node_js: "11"
       env:
-        - NODEJS_VERSION="v8.9.3"
+        - NODEJS_VERSION="v11"
 
 
 before_install:
-  - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
   # enable gui, see https://docs.travis-ci.com/user/gui-and-headless-browsers
-  - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
           export DISPLAY=:99.0;
           sh -e /etc/init.d/xvfb start;
+          sleep 3;
     fi
+  - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
   - export NVM_SYMLINK_CURRENT=true
 
 install:
@@ -61,7 +62,7 @@ install:
 
 script:
   # run tests with test coverage report
-  - sh travis.sh run_tests --coverage
+  - sh travis.sh run_tests
   # testing syntax_test files
   # - sh travis.sh run_syntax_tests
 
@@ -84,4 +85,4 @@ after_success:
 
 notifications:
   email: false
-        
+
