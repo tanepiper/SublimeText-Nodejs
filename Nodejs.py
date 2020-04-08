@@ -28,6 +28,16 @@ def generate_completions():
     sublime.active_window().run_command('node_builddocs')
 
 
+def is_there_node_exe():
+    # TODO: check if there is a some NODE executable exists on the system
+    pass
+
+
+def is_there_npm_exe():
+    # TODO: check if there is a some NPM executable exists on the system
+    pass
+
+
 def check_and_install_dependencies():
     """
     The function is dosen't check whether npm/node is installed or not.
@@ -62,7 +72,7 @@ def create_output_panel():
 
 def plugin_loaded():
     check_and_install_dependencies()
-    generate_completions()
+    generate_completions()      
     if Nvm.is_installed():
         info('Node.js version from NVM is ' + Nvm.node_version())
 
