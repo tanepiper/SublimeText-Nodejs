@@ -138,24 +138,19 @@ class NodeWindowCommand(NodeCommand, sublime_plugin.WindowCommand):
 
     def _active_file_name(self):
         view = self.active_view()
+        view_file_name = None
         if view and view.file_name() and len(view.file_name()) > 0:
-            return view.file_name()
+            view_file_name = view.file_name()
+
+        debug('NodeWindowCommand: _active_file_name: view_file_name', view_file_name)
+        return view_file_name
 
     def is_enabled(self):
-        return True  # A better test should be made. Fx. is this a js file?
+        return False
 
     def get_file_name(self):
         return ''
 
-    # If there is a file in the active view use that file's directory to
-    # search for the Git root.  Otherwise, use the only folder that is
-    # open.
-    def get_working_dir(self):
-        file_name = self._active_file_name()
-        if file_name:
-            return os.path.dirname(file_name)
-        else:
-            return self.window.folders()[0]
 
     def get_window(self):
         return self.window
@@ -189,9 +184,6 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
     def get_file_name(self):
         return os.path.basename(self.view.file_name())
 
-    def get_working_dir(self):
-        return os.path.dirname(self.view.file_name())
-
     def get_window(self):
         # Fun discovery: if you switch tabs while a command is working,
         # self.view.window() is None. (Admittedly this is a consequence
@@ -203,3 +195,18 @@ class NodeTextCommand(NodeWindowCommand, sublime_plugin.TextCommand):
         # the case of the quick panel.
         # So, this is not necessarily ideal, but it does work.
         return self.view.window() or sublime.active_window()
+
+
+    # If there is a file in the active view use that file's directory to
+    # search for the Git root.  Otherwise, use the only folder that is
+    # open.
+    def get_working_dir(self):
+        file_name = self._active_file_name()
+        dir_name = None
+        if file_name:
+            dir_name = os.path.dirname(file_name)
+        else:
+            dir_name = self.get_window().folders()[0]
+
+        debug('NodeWindowCommand: get_working_dir: file_name', dir_name)
+        return dir_name
