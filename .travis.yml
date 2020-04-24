@@ -41,9 +41,7 @@ services:
 
 before_install:
   - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  - pyenv update
-  - pyenv install 3.8.0
-  - pyenv global 3.8.0
+  - pyenv update; pyenv install 3.8.0
   - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
   - export NVM_SYMLINK_CURRENT=true
 
