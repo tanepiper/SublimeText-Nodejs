@@ -71,8 +71,7 @@ after_success:
           pip3 install coverage==4.5.4 codecov==2.0.15;
     fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-          apt-get update -y
-          apt-get install -y python3
+          pyenv install 3.8.1
           pip3 install python-coveralls;
           pip3 install coverage==4.5.4 codecov==2.0.15
     fi
