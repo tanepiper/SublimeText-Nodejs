@@ -40,6 +40,7 @@ services:
   - xvfb
 
 before_install:
+  - pyenv update
   - pyenv install 3.8.0
   - pyenv global 3.8.0
   - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
