@@ -28,7 +28,7 @@ install:
 build: off
 
 after_test:
-  - "SET PYTHON=C:\\Python33"
+  - "SET PYTHON=C:\\Python38"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - pip install coverage==4.5.4 codecov==2.0.15
   - codecov
