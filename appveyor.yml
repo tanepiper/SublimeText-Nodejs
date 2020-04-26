@@ -1,12 +1,18 @@
+image:
+  - Visual Studio 2019
+
+init:
+  - git config --global core.autocrlf true
+
 environment:
   global:
     PACKAGE: "Nodejs"
-    PLUGIN_VERSION: "2.0.3"
+    PLUGIN_VERSION: "2.0.5"
     SUBLIME_TEXT_VERSION : "3"
 
   matrix:
-    - nodejs_version: "10"
-    - nodejs_version: "11"
+    - nodejs_version: "12"
+    - nodejs_version: "13"
 
 branches:
   only:
@@ -14,17 +20,24 @@ branches:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - ps: start-filedownload "https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/appveyor.ps1"
+  - ps: appveyor DownloadFile "https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/appveyor.ps1"
   - ps: .\appveyor.ps1 "bootstrap" -verbose
   - ps: .\appveyor.ps1 "install_package_control" -verbose
 
+
 build: off
+
+after_test:
+  - "SET PYTHON=C:\\Python38"
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - pip install coverage==4.5.4 codecov==2.0.15
+  - codecov
 
 test_script:
   - node --version
   - npm --version
   - ps: New-Item c:\st\data\packages\nodejs\.debug_plugin -type file -force
-  - ps: .\appveyor.ps1 "run_tests" -verbose
+  - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
 
 on_failure:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))

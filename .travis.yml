@@ -3,9 +3,20 @@ env:
     - NVM_SYMLINK_CURRENT=true
     - PACKAGE="Nodejs" # Package name
     - SUBLIME_TEXT_VERSION="3"
-    - PLUGIN_VERSION="2.0.3"
+    - PLUGIN_VERSION="2.0.5"
     # use UNITTESTING_TAG to specific tag of UnitTesting
     # - UNITTESTING_TAG="master"
+
+addons:
+  homebrew:
+    packages:
+    - python
+  apt:
+    sources:
+    - deadsnakes
+    packages:
+    - python3.8
+
 
 branches:
   only:
@@ -17,41 +28,37 @@ matrix:
   include:
     - os: linux
       language: node_js
-      node_js: "10"
+      node_js: "12"
       env:
-        - NODEJS_VERSION="v10"
+        - NODEJS_VERSION="v12"
     - os: linux
       language: node_js
-      node_js: "11"
+      node_js: "13"
       env:
-        - NODEJS_VERSION="v11"
+        - NODEJS_VERSION="v13"
     - os: osx
       language: node_js
-      node_js: "10"
+      node_js: "12"
       env:
-        - NODEJS_VERSION="v10"
+        - NODEJS_VERSION="v12"
     - os: osx
       language: node_js
-      node_js: "11"
+      node_js: "13"
       env:
-        - NODEJS_VERSION="v11"
+        - NODEJS_VERSION="v13"
 
+services:
+  - xvfb
 
 before_install:
-  # enable gui, see https://docs.travis-ci.com/user/gui-and-headless-browsers
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-          export DISPLAY=:99.0;
-          sh -e /etc/init.d/xvfb start;
-          sleep 3;
-    fi
-  - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
+  - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
   - export NVM_SYMLINK_CURRENT=true
 
 install:
   - nvm alias default $NODEJS_VERSION; nvm use $NODEJS_VERSION
   # bootstrap the testing environment
   - sh travis.sh bootstrap
-  # install Package Control and package denepdencies
+  # install Package Control and package dependencies
   - sh travis.sh install_package_control
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
           touch "$HOME/Library/Application Support/Sublime Text 3/Packages/Nodejs/.debug_plugin";
@@ -59,27 +66,18 @@ install:
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
           touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin;
     fi
+  - rm -vf /home/travis/.config/sublime-text-3/Packages/UnitTesting/.python-version
+
 
 script:
   # run tests with test coverage report
-  - sh travis.sh run_tests
+  - sh travis.sh run_tests --coverage
   # testing syntax_test files
   # - sh travis.sh run_syntax_tests
 
 after_success:
-  # remove the following if `coveralls` is not needed
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-          brew update;
-          brew install python3;
-          pip3 install python-coveralls;
-          pip3 install codecov;
-    fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-          apt-get update -qq
-          apt-get install -qq python3
-          pip install python-coveralls;
-          pip install codecov;
-    fi
+  - pip3 install python-coveralls;
+  - pip3 install coverage==4.5.4 codecov==2.0.15
   - coveralls
   - codecov
 
