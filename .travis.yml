@@ -7,6 +7,18 @@ env:
     # use UNITTESTING_TAG to specific tag of UnitTesting
     # - UNITTESTING_TAG="master"
 
+addons:
+  homebrew:
+    packages:
+    - python
+    update: true
+  apt:
+    sources:
+    - deadsnakes
+    packages:
+    - python3.8
+
+
 branches:
   only:
     - master
@@ -40,8 +52,6 @@ services:
   - xvfb
 
 before_install:
-  - git clone https://github.com/pyenv/pyenv-update.git $(pyenv root)/plugins/pyenv-update
-  - pyenv update; pyenv install --list; pyenv install 3.8.0
   - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
   - export NVM_SYMLINK_CURRENT=true
 
@@ -65,17 +75,8 @@ script:
   # - sh travis.sh run_syntax_tests
 
 after_success:
-  # remove the following if `coveralls` is not needed
-  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-          brew update;
-          brew install python3;
-          pip3 install python-coveralls;
-          pip3 install coverage==4.5.4 codecov==2.0.15;
-    fi
-  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-          pip3 install python-coveralls;
-          pip3 install coverage==4.5.4 codecov==2.0.15
-    fi
+  - pip3 install python-coveralls;
+  - pip3 install coverage==4.5.4 codecov==2.0.15
   - coveralls
   - codecov
 
