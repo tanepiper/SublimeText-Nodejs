@@ -11,7 +11,6 @@ addons:
   homebrew:
     packages:
     - python
-    update: true
   apt:
     sources:
     - deadsnakes
@@ -67,6 +66,8 @@ install:
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
           touch $HOME/.config/sublime-text-3/Packages/Nodejs/.debug_plugin;
     fi
+  - rm -vf /home/travis/.config/sublime-text-3/Packages/UnitTesting/.python-version
+
 
 script:
   # run tests with test coverage report
