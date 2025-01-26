@@ -72,7 +72,9 @@ def create_output_panel():
 
 def plugin_loaded():
     check_and_install_dependencies()
-    generate_completions()      
+    st_pref = sublime.load_settings('NodeJS.sublime-settings')
+    if st_pref.get('run_builddocs_at_startup'):
+        generate_completions()
     if Nvm.is_installed():
         info('Node.js version from NVM is ' + Nvm.node_version())
 

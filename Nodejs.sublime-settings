@@ -8,6 +8,8 @@
   "npm_command": false,
   // as 'NODE_PATH' environment variable for node runtime
   "node_path": false,
+  // build completions on each startup
+  "run_builddocs_at_startup": false,
 
   "expert_mode": false,
 
